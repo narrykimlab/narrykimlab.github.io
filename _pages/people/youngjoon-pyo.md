@@ -21,7 +21,7 @@ viruses, from their own.
 ## Education
 
 <ul class="chronological">
-  <li><span>2017–2021</span> B.S. in Biological Sciences, Seoul National University</li>
+  <li><span>2017–2023</span> B.S. in Biological Sciences, Seoul National University</li>
 </ul>
 
 {% include publication_in_profile.html %}
