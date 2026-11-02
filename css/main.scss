@@ -1105,33 +1105,38 @@ span.publi_journal {
     color: var(--ink);
 }
 
-/* Lab members, current and former, are in bold, as on the old site; those
-   with a profile here are links as well. */
-.publi_author.lab, a.publi_author {
-    font-weight: 600;
-}
-
-span.publi_author.lab {
-    color: var(--ink);
-}
-
-/* Lab authors are told apart by weight and colour, so their links go
-   without the underline running-text links get (an id-free selector that
-   still outranks ".body-container p a"); it comes back on hover. */
+/* Every author is set alike. A lab member with a profile is a link to it,
+   told apart only by a light grey underline that darkens and thickens on
+   hover, so the link does not rely on colour (an id-free selector that
+   still outranks ".body-container p a"). */
 .body-container a.publi_author {
-    text-decoration: none;
+    color: inherit;
+    text-decoration-color: var(--grey);
 }
 
 .body-container a.publi_author:hover, .body-container a.publi_author:focus-visible {
-    text-decoration: underline;
+    text-decoration-color: currentColor;
+    text-decoration-thickness: 2px;
 }
 
 a.publi_title {
     font-weight: 700;
 }
 
-/* The key to the superscripts, under the buttons. */
+/* Under the title and journal, the links that go with a paper (the
+   supplementary data), on a line of their own and a step smaller. */
+.publi_links {
+    display: block;
+    margin-top: 2px;
+    font-size: 0.85em;
+}
+
+/* The key to the superscripts, under the buttons: its entries set apart
+   by space alone, wrapping whole on a narrow screen. */
 .publication-key {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1.5em;
     margin: 16px 0 0;
     font-size: 14px;
     color: var(--faint);

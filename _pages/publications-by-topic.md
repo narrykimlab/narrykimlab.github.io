@@ -12,7 +12,7 @@ permalink: /publications/by-topic/
 <a class="chip" href="{{ site.baseurl }}/publications/by-topic/" aria-current="page">By topic</a>
 <a class="chip" href="{{ site.baseurl }}/publications/by-journal/">By journal</a>
 </div>
-<p class="publication-key" markdown="0"><sup>1</sup> Co-first author &nbsp;&middot;&nbsp; <sup>*</sup> Co-corresponding author &nbsp;&middot;&nbsp; Lab members in bold</p>
+<p class="publication-key" markdown="0"><span><sup>1</sup> Co-first author</span> <span><sup>*</sup> Co-corresponding author</span></p>
 
 {%- comment -%}
   The topics in the order of _data/topics.yml, each one's papers newest

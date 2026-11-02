@@ -2,7 +2,8 @@
   One publication, without a wrapper (the caller puts it in a <p> or <li>):
   the title, linked where the entry has a `url`; the authors, a step
   smaller; the journal, the year and the volume and pages, and a link to
-  the supplementary data where the entry has a `supplement`.
+  the supplementary data where the entry has a `supplement`, on a line of
+  its own.
 
     {% for publi in site.data.publist %}<p>{% include publication_entry.html %}</p>{% endfor %}
 {%- endcomment -%}
@@ -15,4 +16,6 @@
 <span class="publi_authors">{% include publication_author_list.html -%}</span>
 <span class="publi_journal">{{ publi.journal }}</span>
 ({{ publi.year }}){% if publi.vip %}, {{ publi.vip }}{% endif %}
-{%- if publi.supplement %} &middot; <a href="{{ publi.supplement }}">Supplementary data</a>{% endif %}
+{%- if publi.supplement %}
+<span class="publi_links"><a href="{{ publi.supplement }}">Supplementary data</a></span>
+{%- endif %}

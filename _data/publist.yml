@@ -1,7 +1,7 @@
 # Publications, newest first, grouped by `year` on /publications/. Each
 # author is `name` as printed; `link` (a team.yml link) for a current or
-# former member with a profile, `lab: true` for any other lab member (set in
-# bold). `is_first` and `is_corresponding` add the superscripts. `vip` is the
+# former member with a profile, `lab: true` for any other lab member.
+# `is_first` and `is_corresponding` add the superscripts. `vip` is the
 # volume and pages; `url` is where the title links. `topics` names one or
 # more of _data/topics.yml; /publications/by-topic/ lists the paper under each.
 

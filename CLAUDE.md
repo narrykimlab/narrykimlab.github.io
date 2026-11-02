@@ -150,9 +150,10 @@ the templates read -- when a template starts reading a new field, update the mat
   links), `supplement` (optional, a link to supplementary data or code), and `topics`
   (one or more ids from topics.yml, a list: `[mirna-biogenesis, methods]`). Each author
   has `name` as printed ("J. J. Seo") and, for a lab member, either
-  `link` (a team.yml link, for someone with a profile page) or `lab: true` (bold, no
-  link), plus `is_first`/`is_corresponding` for the superscripts. Journal names are
-  spelled out in full and consistently, since /publications/by-journal/ groups by them.
+  `link` (a team.yml link, for someone with a profile page) or `lab: true` (no link;
+  every author is set alike), plus `is_first`/`is_corresponding` for the superscripts.
+  Journal names are spelled out in full and consistently, since
+  /publications/by-journal/ groups by them.
 - **topics.yml** — The topics of /publications/by-topic/, in the order it lists them
   (the Research page's sections first, in its order): `id`, which a paper's `topics`
   names, and `name`, the heading. A paper is listed under each of its topics; `other`
