@@ -12,7 +12,9 @@ image: /images/members/hyemin-choi.jpg
 permalink: /people/hyemin-choi
 ---
 
-Hyemin Choi is a graduate student.
+I am a graduate student with a passion for understanding how RNA is made, processed, and regulated.
+My research focuses on viral RNA poly(A) tailing, and how viruses modify and make use of this key feature of the transcript.
+To explore these questions, I work with a range of sequencing-based approaches, including next-generation sequencing (RNA-seq and CLIP-seq) and Nanopore direct RNA sequencing.
 
 ## Education
 
