@@ -26,6 +26,7 @@ RNA and enhance translation (*Cell*, 2026).
 ## Education
 
 <ul class="chronological">
+  <li><span>2023–present</span> M.S./Ph.D. Student, School of Biological Sciences, Seoul National University</li>
   <li><span>2019–2023</span> Pharm.D. in Pharmacy, Seoul National University</li>
   <li><span>2017–2019</span> Biomaterials Engineering (Pre-Pharmacy Studies), Seoul National University</li>
 </ul>
