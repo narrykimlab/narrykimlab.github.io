@@ -869,9 +869,12 @@ a.team-card:focus-visible {
     color: var(--ink);
 }
 
-/* A former member with a profile has the members' blue name; the others
-   stay plain. */
+/* Every former member's name is set alike, in the text colour, linked or
+   not, so that none stands out over the others. A name with a page about the
+   person links to it, which a small grey link icon after it shows; under the
+   pointer or keyboard focus the name is underlined and the icon darkens. */
 .alumni-name a {
+    color: inherit;
     text-decoration: none;
 }
 
@@ -879,6 +882,17 @@ a.team-card:focus-visible {
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
+}
+
+.alumni-name .icon {
+    margin-left: 0.4em;
+    font-size: 0.65em;
+    vertical-align: 0.1em;
+    color: var(--faint);
+}
+
+.alumni-name a:hover .icon, .alumni-name a:focus-visible .icon {
+    color: var(--ink);
 }
 
 .alumni-now {

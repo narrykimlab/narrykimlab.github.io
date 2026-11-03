@@ -12,7 +12,7 @@ permalink: /publications/by-journal/
 <a class="chip" href="{{ site.baseurl }}/publications/by-topic/">By topic</a>
 <a class="chip" href="{{ site.baseurl }}/publications/by-journal/" aria-current="page">By journal</a>
 </div>
-<p class="publication-key" markdown="0"><span><sup>1</sup> Co-first author</span> <span><sup>*</sup> Corresponding author</span></p>
+<p class="publication-key" markdown="0"><span><sup>1</sup> Co-first author</span> <span><sup aria-hidden="true">&#9993;&#xFE0E;</sup> Corresponding author</span></p>
 
 {%- comment -%}
   Journals in alphabetical order, whatever the case ("Science" before "STAR

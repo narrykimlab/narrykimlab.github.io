@@ -6,7 +6,7 @@
 # entry on /people/ (one that is not there is left unlinked, with a warning
 # in the build). `is_first` marks a co-first author (¹; a sole first author
 # is not marked), and `is_corresponding` every corresponding author, one or
-# several, each shown * (the build warns of a paper with none).
+# several, each shown ✉ (the build warns of a paper with none).
 # `vip` is the volume, issue and pages as volume(issue):pages, the last page
 # in full ("84(9):1764-1782.e10", "12:6026" for an article number; the
 # citations take it apart, and the build checks it); leave it out until the

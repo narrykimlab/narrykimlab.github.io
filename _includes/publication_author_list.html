@@ -3,7 +3,10 @@
   by commas and a final "and", all set alike. A lab member with a profile
   here is a link to it; a former member without one, whose `full_name` is
   a name in _data/alumni_members.yml, is a link to their entry on the
-  people page. Every corresponding author is marked *, one or several.
+  people page. Every corresponding author is marked ✉, one or several: the
+  envelope in its text form (U+2709 and the text variation selector, so no
+  phone draws it as a colour emoji), hidden from screen readers, which read
+  "corresponding author" instead.
 {%- endcomment -%}
 {%- for author in publi.authors -%}
 {%- if forloop.first -%}
@@ -24,6 +27,6 @@
   <span class="publi_author">{{ author.name }}</span>
 {%- endif -%}
 {%- if author.is_first -%}<sup>1</sup>{%- endif -%}
-{%- if author.is_corresponding -%}<sup>&#42;</sup>{%- endif -%}
+{%- if author.is_corresponding -%}<sup><span aria-hidden="true">&#9993;&#xFE0E;</span><span class="sr-only"> (corresponding author)</span></sup>{%- endif -%}
 {%- endfor -%}
 <br/>

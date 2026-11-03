@@ -18,7 +18,8 @@ permalink: /people/
 
 {%- comment -%}
   In the order of _data/alumni_members.yml, most recently departed first.
-  A name links to an outside page about the person where there is one.
+  Every name is set alike; where there is an outside page about the person
+  (`url`), the name links to it, with a small link icon after it.
   Each entry is an anchor, #alumni-<the name, slugified>, which the author
   lists of the publications link to (_includes/publication_author_list.html).
 {%- endcomment %}
@@ -26,7 +27,7 @@ permalink: /people/
 <div class="alumni-list" markdown="0">
 {%- for person in site.data.alumni_members %}
 <div class="alumni-item" id="alumni-{{ person.name | slugify }}">
-<div class="alumni-name">{% if person.url %}<a href="{{ person.url }}">{{ person.name }}</a>{% else %}{{ person.name }}{% endif %}</div>
+<div class="alumni-name">{% if person.url %}<a href="{{ person.url }}">{{ person.name }}{% include icon.html name="link" %}</a>{% else %}{{ person.name }}{% endif %}</div>
 <div>{{ person.position }}, {% if person.years.size > 1 %}{{ person.years[0] }}–{{ person.years[1] }}{% else %}{{ person.years[0] }}{% endif %}</div>
 {%- if person.current %}
 <div class="alumni-now"><span>Now</span> {{ person.current }}</div>
