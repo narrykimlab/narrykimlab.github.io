@@ -52,7 +52,7 @@
 - name: Eunji Kim
   photo: eunji-kim.jpg
   info: Technician
-  intro: "Keeping every machine humming, possibly by telepathy"  # placeholder
+  intro: "Keeping every machine humming, possibly by telepathy"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
   email: "beautifulej@naver.com"
   link: eunji-kim
   category: research-assistant
@@ -62,7 +62,7 @@
 - name: Eunju Shim
   photo: eunju-shim.jpg
   info: Senior Administrative Assistant
-  intro: "Defeating paperwork monsters before breakfast"  # placeholder
+  intro: "Defeating paperwork monsters before breakfast"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
   email: "shimej@snu.ac.kr"
   link: eunju-shim
   category: support
@@ -81,7 +81,7 @@
 - name: Hyemin Choi
   photo: hyemin-choi.jpg
   info: Graduate Student
-  intro: "Hearing poly(A) tails whisper their lengths"  # placeholder
+  intro: "Catching viruses as they tailor their poly(A) tails"
   link: hyemin-choi
   category: student
   sort-key: choi-hyemin
@@ -90,7 +90,7 @@
 - name: Hyojin Park
   photo: hyojin-park.jpg
   info: Administrative Assistant
-  intro: "Booking meeting rooms at the speed of light"  # placeholder
+  intro: "Booking meeting rooms at the speed of light"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
   email: "anita9992@snu.ac.kr"
   link: hyojin-park
   category: support
@@ -128,7 +128,7 @@
 - name: Mijoo Sung
   photo: mijoo-sung.jpg
   info: Lab Manager
-  intro: "Running mission control for everything in the lab"  # placeholder
+  intro: "Running mission control for everything in the lab"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
   email: "mjsung@snu.ac.kr"
   link: mijoo-sung
   category: support
@@ -156,7 +156,7 @@
 - name: Seojin Lee
   photo: seojin-lee.jpg
   info: Graduate Student
-  intro: "Squeezing in extra experiments with a time-turner"  # placeholder
+  intro: "Squeezing in extra experiments with a time-turner"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
   link: seojin-lee
   category: student
   sort-key: lee-seojin
@@ -183,7 +183,7 @@
 - name: Seongjae Ken Kim
   photo: seongjae-ken-kim.jpg
   info: Graduate Student
-  intro: "Seeing RNA fold in slow motion"  # placeholder
+  intro: "Seeing RNA fold in slow motion"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
   link: seongjae-ken-kim
   category: student
   sort-key: kim-seongjae-ken
@@ -192,7 +192,7 @@
 - name: Sunyoung Bang
   photo: sunyoung-bang.jpg
   info: Research Assistant
-  intro: "Raising the happiest cells in Gwanak"  # placeholder
+  intro: "Raising the happiest cells in Gwanak"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
   link: sunyoung-bang
   category: research-assistant
   sort-key: bang-sunyoung
@@ -201,7 +201,7 @@
 - name: Yeekyung Moon
   photo: yeekyung-moon.jpg
   info: Graduate Student
-  intro: "Locking a tractor beam onto RNA's toughest questions"  # placeholder
+  intro: "Locking a tractor beam onto RNA's toughest questions"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
   link: yeekyung-moon
   category: student
   sort-key: moon-yeekyung
@@ -210,7 +210,7 @@
 - name: Yejin Moon
   photo: yejin-moon.jpg
   info: Research Assistant
-  intro: "Running three experiments at once, with two hands"  # placeholder
+  intro: "Running three experiments at once, with two hands"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
   link: yejin-moon
   category: research-assistant
   sort-key: moon-yejin

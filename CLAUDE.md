@@ -274,9 +274,10 @@ bios of members with papers or a public profile are drawn from those; everything
 is invented, and so overblown (superpowers, starships, schools from films and cartoons
 such as Hogwarts) that no reader takes it for real: each such block in a profile follows
 a `{% comment %}PLACEHOLDER ...{% endcomment %}` line, a made-up card intro in
-`_data/team.yml` and a made-up email in a profile's front matter carry a
-`# placeholder` comment, and every made-up email ends in `.example`, a domain reserved
-never to deliver mail. `grep -rn -i placeholder _pages/people _data/team.yml` lists them.
+`_data/team.yml` carries the same words as a `# PLACEHOLDER ...` comment, a made-up
+email in a profile's front matter a `# placeholder` comment, and every made-up email
+ends in `.example`, a domain reserved never to deliver mail.
+`grep -rn -i placeholder _pages/people _data/team.yml` lists them.
 Replace the text and drop the marker. In a real Education entry, a year followed by `?`
 (`2011?–2017`) is an estimate: only the year the degree ended was known.
 
