@@ -263,6 +263,7 @@ body.inner {
     --ink: #222222;            /* headings, names, running text */
     --muted: #4a4a4e;          /* labels and secondary text, 8.8:1 on white */
     --faint: #6e6e73;          /* 5:1 on white */
+    --pale: #75757a;           /* the palest grey text may be: 4.6:1 on white */
     --charcoal: #3d3d3d;       /* the header and footer: a neutral grey, 24% lightness */
     color: var(--ink);
 }
@@ -1381,12 +1382,12 @@ html.cite-open {
 }
 
 /* "Recent papers": a step larger than the role lines it borrows from, and
-   paler, in --faint (on these pages --muted with a fifth of white mixed in;
-   5:1 on white). */
+   paler, in --pale, as pale as grey text may be (4.6:1 on white; a fifth
+   paler than --faint would be 3.4:1, short of the 4.5:1 text needs). */
 .research-papers .team-role {
     margin-bottom: 8px;
     font-size: 15px;
-    color: var(--faint);
+    color: var(--pale);
 }
 
 ul.paper-cards {
