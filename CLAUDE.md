@@ -206,10 +206,14 @@ the templates read -- when a template starts reading a new field, update the mat
   `images/photos/`; YouTube's `hqdefault.jpg` with the letterbox bars cut off).
 - **internship.yml** — The undergraduate internship, /join/intern/
   (`_includes/internship.html`): `form`, the application form's address (empty until
-  there is one: the page then says it will be linked there soon), and `notice`, the
-  call, always shown: each item a question (`q_en`, a section heading) and its answer
-  (`a_en`, Markdown). The interns' card on /join/ sums it up in a few facts; change
-  them with it.
+  there is one: the page then says it will be linked there soon); `notice`, the call,
+  always shown: each item a question (`q_en`, a section heading) and its answer
+  (`a_en`, Markdown), and optionally `projects`, each a title (`title_en`, a heading
+  under the question), its text (`text_en`) and `papers`, DOIs of papers in publist.yml
+  shown as cards under "Related papers" (the data check fails one that is not there);
+  and `faq`, further questions, each folded under its question until opened
+  (`<details>`, no script). The interns' card on /join/ sums it up in a few facts;
+  change them with it.
 
 ### Layouts (`_layouts/`)
 
@@ -258,7 +262,8 @@ pages opens with chips to the other, as the publication pages do.
 - **publication_entry.html** — One publication (title, authors, journal, year, volume,
   then, on the same line, its Cite button), used on the publication pages and the profiles;
   **research_papers.html** puts a Research section's newest two papers marked
-  `research` under it, each a card like a Notion bookmark (title, authors, journal and
+  `research` under it as **paper_cards.html** draws them, which the internship's
+  projects use too: each a card like a Notion bookmark (title, authors, journal and
   year, and the paper's `image` on the right, or on top in a narrow card; no Cite
   button): a click anywhere on it opens the paper, the title's link stretched over the
   card, while each author links to the people page as in the paper lists and the

@@ -1,0 +1,43 @@
+{%- comment -%}
+  Papers as cards like Notion bookmarks, under a small label: the Research
+  page's newest papers (_includes/research_papers.html) and the projects
+  of the internship (_includes/internship.html). `papers` is a list of
+  entries of _data/publist.yml, in the order shown; `label` the line above.
+
+  Each card holds the title in full, the authors (two lines at most), and
+  the journal and year beside a document icon, with the paper's `image`
+  (images/papers/) on the right, or on top in a narrow card. A click
+  anywhere on it opens the paper, the title's link being stretched over
+  the whole card (css/main.scss), but the authors and the journal are
+  links of their own, laid above it: an author to their profile or their
+  entry among the former members on the people page
+  (_includes/publication_author_name.html), the journal to the paper on
+  /publications/ (#paper-<cite_id>), with its volume, pages and the Cite
+  button these cards leave out.
+
+    {% include paper_cards.html papers=picked label="Recent papers" %}
+{%- endcomment -%}
+<div class="research-papers" markdown="0">
+<p class="team-role">{{ include.label }}</p>
+<ul class="paper-cards">
+{%- for publi in include.papers %}
+{%- if publi.url %}{% assign href = publi.url %}{% else %}{% assign href = "https://doi.org/" | append: publi.doi %}{% endif %}
+<li class="paper-card">
+<span class="paper-card-text">
+<a class="paper-card-title" href="{{ href }}">{{ publi.title }}</a>
+<span class="paper-card-authors">
+{%- for author in publi.authors -%}
+{%- if forloop.first -%}{%- elsif forloop.last and forloop.length >= 3 -%}, and {% else -%}, {% endif -%}
+{% include publication_author_name.html author=author %}
+{%- endfor -%}
+</span>
+<span class="paper-card-source">{% include icon.html name="file-alt" %}<span><a class="paper-card-journal" href="{{ site.baseurl }}/publications/#paper-{{ publi.cite_id }}">{{ publi.journal }}</a> ({{ publi.year }})</span></span>
+</span>
+{%- if publi.image %}
+<span class="paper-card-image">{% picture paper-card images/papers/{{ publi.image }} alt="" loading="lazy" %}</span>
+{%- endif %}
+</li>
+{%- endfor %}
+</ul>
+</div>
+{%- comment -%} No newline after the list, as when it was inline here. {%- endcomment -%}

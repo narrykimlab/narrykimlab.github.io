@@ -13,6 +13,7 @@ permalink: /join/postdoc/
 </div>
 
 ## Research on RNA biology and the development of RNA therapeutic technologies
+{: .long}
 
 Our laboratory seeks to uncover the fundamental principles of RNA
 regulation and, building on them, to develop new RNA technologies that

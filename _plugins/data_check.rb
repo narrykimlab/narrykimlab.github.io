@@ -239,28 +239,55 @@ module Jekyll
         names
       end
 
-      # The internship on /join/ (_includes/internship.html): every item of
-      # the notice is a question over its answer, and the form, once given,
-      # is a full address, since the page makes it a button.
+      # The internship, /join/intern/ (_includes/internship.html): every item
+      # of the notice and of the FAQ is a question over its answer, every
+      # project has a title and its text, a project's papers are DOIs of
+      # papers in publist.yml (else its card would be missing), and the
+      # form, once given, is a full address, since the page makes it a
+      # button.
       def check_internship
         data = @data["internship"]
         return if data.nil?
+        file = "_data/internship.yml"
         unless data.is_a?(Hash)
-          @problems << "_data/internship.yml: expected `form` and `notice`"
+          @problems << "#{file}: expected `form`, `notice` and `faq`"
           return
         end
         form = data["form"].to_s.strip
         unless form.empty? || form.match?(%r{\Ahttps://})
-          @problems << "_data/internship.yml: `form` must be a full https address, or left empty"
+          @problems << "#{file}: `form` must be a full https address, or left empty"
         end
         notice = data["notice"]
         unless notice.is_a?(Array) && !notice.empty?
-          @problems << "_data/internship.yml: `notice` must list at least one question"
+          @problems << "#{file}: `notice` must list at least one question"
           return
         end
-        notice.each_with_index do |item, i|
-          next problem("internship", item, i, "expected `q_en` and `a_en`") unless item.is_a?(Hash)
-          require_fields("internship", item, i, "q_en", "a_en")
+        # Exactly as written there: the page finds the paper by `where: "doi"`.
+        dois = list("publist").filter_map { |p| p["doi"].to_s if p.is_a?(Hash) && p["doi"] }
+        { "notice" => notice, "faq" => data["faq"] || [] }.each do |part, items|
+          unless items.is_a?(Array)
+            @problems << "#{file}: `#{part}` must be a list"
+            next
+          end
+          items.each_with_index do |item, i|
+            where = "#{file}, #{part} #{i + 1}"
+            unless item.is_a?(Hash)
+              @problems << "#{where}: expected `q_en` and `a_en`"
+              next
+            end
+            %w[q_en a_en].each { |f| @problems << "#{where}: missing `#{f}`" if item[f].to_s.strip.empty? }
+            Array(item["projects"]).each_with_index do |project, j|
+              at = "#{where}, project #{j + 1}"
+              unless project.is_a?(Hash)
+                @problems << "#{at}: expected `title_en` and `text_en`"
+                next
+              end
+              %w[title_en text_en].each { |f| @problems << "#{at}: missing `#{f}`" if project[f].to_s.strip.empty? }
+              Array(project["papers"]).each do |doi|
+                @problems << "#{at}: paper #{doi.inspect} is not a DOI in publist.yml" unless dois.include?(doi.to_s)
+              end
+            end
+          end
         end
       end
 

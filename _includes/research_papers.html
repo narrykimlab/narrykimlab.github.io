@@ -1,20 +1,10 @@
 {%- comment -%}
   Under a section of the Research page, its newest papers, two at most: the
   entries of _data/publist.yml whose `research` is one of the topics given
-  (the list is newest first, so the first two found). A section with none
+  (the list is newest first, so the first two found), as cards
+  (_includes/paper_cards.html) under "Recent papers". A section with none
   marked shows nothing. The data check knows these topics too
   (RESEARCH_TOPICS in _plugins/data_check.rb).
-
-  Each paper is a card like a Notion bookmark: the title in full, the
-  authors (two lines at most), and the journal and year beside a document
-  icon, with the paper's `image` (images/papers/) on the right, or on top
-  in a narrow card. A click anywhere on it opens the paper, the title's link
-  being stretched over the whole card (css/main.scss), but the authors and
-  the journal are links of their own, laid above it: an author to their
-  profile or their entry among the former members on the people page
-  (_includes/publication_author_name.html), the journal to the paper on
-  /publications/ (#paper-<cite_id>), with its volume, pages and the Cite
-  button these cards leave out.
 
     {% include research_papers.html topics="mirna-biogenesis mirna-function" %}
 {%- endcomment -%}
@@ -24,27 +14,5 @@
 {%- if picked.size < 2 and ids contains publi.research %}{% assign picked = picked | push: publi %}{% endif -%}
 {%- endfor -%}
 {%- if picked.size > 0 %}
-<div class="research-papers" markdown="0">
-<p class="team-role">Recent papers</p>
-<ul class="paper-cards">
-{%- for publi in picked %}
-{%- if publi.url %}{% assign href = publi.url %}{% else %}{% assign href = "https://doi.org/" | append: publi.doi %}{% endif %}
-<li class="paper-card">
-<span class="paper-card-text">
-<a class="paper-card-title" href="{{ href }}">{{ publi.title }}</a>
-<span class="paper-card-authors">
-{%- for author in publi.authors -%}
-{%- if forloop.first -%}{%- elsif forloop.last and forloop.length >= 3 -%}, and {% else -%}, {% endif -%}
-{% include publication_author_name.html author=author %}
-{%- endfor -%}
-</span>
-<span class="paper-card-source">{% include icon.html name="file-alt" %}<span><a class="paper-card-journal" href="{{ site.baseurl }}/publications/#paper-{{ publi.cite_id }}">{{ publi.journal }}</a> ({{ publi.year }})</span></span>
-</span>
-{%- if publi.image %}
-<span class="paper-card-image">{% picture paper-card images/papers/{{ publi.image }} alt="" loading="lazy" %}</span>
-{%- endif %}
-</li>
-{%- endfor %}
-</ul>
-</div>
+{% include paper_cards.html papers=picked label="Recent papers" -%}
 {%- endif %}

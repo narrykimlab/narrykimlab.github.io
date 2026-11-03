@@ -2,41 +2,125 @@
 # The interns' card on /join/ sums it up in a few facts (_pages/join.md):
 # change them with it.
 #
+# The English follows the lab's Korean FAQ sentence by sentence, in plain
+# words: keep it a close translation when either changes. Bold (**...**)
+# marks what the lab asked to stand out for applicants; the Korean, when it
+# comes, bolds the same.
+#
 # form: the application form's address (a Google Form). While it is empty,
 #   the page says the form will be linked there soon; once given, it is a
 #   button under the notice.
 # notice: the call itself, always shown, in this order: each a question
-#   (q_en, a heading) and its answer (a_en, Markdown).
+#   (q_en, a heading) and its answer (a_en, Markdown). A question may also
+#   list `projects`, each a title (title_en, a heading under it), what it
+#   is (text_en, Markdown) and, optionally, `papers`: DOIs of papers in
+#   publist.yml, shown as cards under "Related papers" as on the Research
+#   page. The data check fails a DOI that is not in publist.yml.
+# faq: the questions after the call, each folded under its question (q_en)
+#   until it is opened; the answer (a_en) is Markdown.
 
 form:
 
 notice:
-  - q_en: Who can apply?
+  - q_en: Who can apply for the internship?
     a_en: >-
-      Undergraduates of any major and from any university, including those
-      about to graduate and those on a leave of absence. We welcome people
-      who enjoy learning and thinking, and who believe in diligence, honesty
-      and consideration for others. So that interns can draw on their
-      coursework in the research, we give priority to those who will have
-      completed at least four semesters when the internship starts.
-      Biochemistry, genetics and cell biology are good courses to take
-      beforehand, and it helps to practise reading research papers for their
-      central question and main results.
+      You can apply regardless of your undergraduate major or university. Not
+      only **current students** but also students **about to graduate** and
+      students **on a leave of absence** can apply. We welcome people who enjoy learning
+      and thinking, and who believe in the values of diligence, honesty and
+      consideration for others. So that interns can take part in research
+      based on a basic knowledge of their major, we give priority to
+      undergraduates **who have completed four or more semesters** as of the
+      start of the internship. It helps to take **biochemistry, genetics**,
+      and **cell biology** beforehand. It is also good to build up,
+      beforehand, the ability to **read research papers** and understand
+      their key research question and main experimental results.
 
-  - q_en: When can I apply, and when would I start?
+  - q_en: When can I apply and take part?
     a_en: >-
-      We take applications all year round. Six months or more leaves time to
-      learn and to do real research, so we give priority to applicants who
-      can stay that long. The start calls for intensive training, so we
-      recommend starting in a vacation if you can, in January or July;
-      during vacations, interns work in the lab full time. During the
-      semester, we welcome interns who give the lab a high priority, put
-      enough time and effort into their research, and take an active part in
-      experiments and discussions.
+      We recruit interns **at any time**. However, because interns can learn
+      and do research sufficiently when they take part for **six months or
+      more**, we give priority to applicants who can take part for a long
+      period. Because focused training is needed at the start, we recommend
+      **starting in a vacation** if possible (we recommend starting in
+      **January** or **July**). During the vacation, you must take part in
+      research **full time**. Even
+      during the semester, we welcome those who give lab activities a high
+      priority, put enough time and effort into their assigned research, and
+      take an active part in experiments and discussions.
 
-  - q_en: How do I apply?
+  - q_en: If I take part as an intern, how can I grow as a researcher?
     a_en: >-
-      Fill in our online application form, attaching a personal statement
-      and your transcript, so please have both ready. We read every
-      application and get in touch to arrange an interview, where we talk
-      the internship over together.
+      As an intern, you take part in research under the direct guidance of
+      **one postdoctoral researcher or graduate student**. You will do things
+      such as reading papers, learning molecular and cell biology
+      experimental methods and doing experiments independently, analyzing
+      sequencing data, and presenting research results. In projects that are
+      mainly experimental, the primary training goal is to build the ability
+      to carry out molecular biology experiments independently. In the first two months, through experiments
+      such as plasmid cloning, cell culture, transfection and enzyme assays,
+      western blotting and RT-PCR, you complete one cycle of the basic
+      experiments needed for research on gene regulation. If you take part
+      in research further after the two-month internship, you will design
+      experiments according to the research goals. Interns who work mainly on bioinformatic analysis
+      learn the basic analysis steps, such as QC of RNA-seq data, quantification of gene expression, normalization and statistical
+      analysis of changes in expression. After two months, you can carry out
+      analyses that fit the project's research questions and interpret the
+      results biologically. The specific things you learn may differ
+      depending on the project, so please ask further questions during the
+      interview.
+
+  - q_en: If I take part in 2027 and 2028, which research will I take part in?
+    a_en: There are various projects, including the following.
+    projects:
+      - title_en: Measuring the decay rate of mRNA and studying its regulatory mechanisms
+        text_en: >-
+          The goal is to measure precisely how fast an mRNA therapeutic is
+          degraded after it enters the cytoplasm, and to find out which decay
+          factors regulate that rate. This research helps us understand the
+          basic principles of gene regulation through mRNA, and at the same
+          time can become a foundation for developing mRNA vaccine and
+          therapeutic technologies.
+        papers:
+          - 10.1038/s41587-025-02891-7
+          - 10.1126/science.aam5794
+      - title_en: Studying the mechanisms of RNA stabilization
+        text_en: >-
+          Our lab has found many RNA-stabilizing elements through
+          high-throughput screens, but some of the candidates have not yet been
+          tested by validation experiments. We plan to carry out validation
+          experiments on them, and to study the mechanisms of the elements
+          with clear stabilizing effects. This is expected to reveal new
+          principles of RNA regulation, and can also be used to improve the
+          performance of mRNA therapeutics.
+        papers:
+          - 10.1016/j.cell.2023.06.007
+          - 10.1016/j.cell.2026.07.038
+      - title_en: Biochemical and structural analysis of mRNA regulatory factors
+        text_en: >-
+          Our lab has discovered many new proteins that regulate mRNA, and is
+          now studying how they work. As an intern, you can learn protein
+          purification, enzyme assays, interaction assays, mutagenesis and so
+          on, and try doing research on RNA–protein complexes.
+
+  - q_en: How can I apply?
+    a_en: >-
+      Please apply using the **Google Form**. You will need to attach a
+      **personal statement** and a **transcript**, so it is good to prepare them in advance.
+      After reviewing the documents you submit, we will contact you
+      individually to schedule an interview, and at the interview we will
+      talk together about the internship activities.
+
+faq:
+  - q_en: Can the internship be linked to writing my undergraduate thesis?
+    a_en: Yes, it is possible.
+
+  - q_en: Is the internship linked to graduate school admission?
+    a_en: >-
+      It is not necessarily linked, but if you are considering applying to
+      graduate school, we strongly recommend doing an internship in the lab
+      before you apply. This is because we think it is important to spend
+      time together beforehand to see whether the research direction and the
+      lab culture suit you. You can also do an internship if you are not
+      considering graduate school. However, when there are many applicants,
+      we give priority to those who **wish to apply to graduate school**.

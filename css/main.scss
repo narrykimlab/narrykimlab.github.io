@@ -566,15 +566,20 @@ div#homeid > p.fineprint, .fineprint {
 
 /* Section headings in the text pages (research, join us, contact, about)
    are h2, right under the page's h1, set smaller than on the grid pages.
-   About's licence notes are smaller still (.minor). A long one stops where
-   the running text does (28em of 22px is 616px, the text's 36em of 17px
-   612px) and breaks into lines of even length, as a member's intro does. */
+   About's licence notes are smaller still (.minor). */
 div#textid h2 {
     margin-top: 35px;
-    max-width: 28em;
     font-size: 22px;
     font-weight: 650;
     line-height: 1.3;
+}
+
+/* A heading long enough to be a sentence (.long: the postdoctoral call's
+   opening line) stops where the running text does (28em of 22px is 616px,
+   the text's 36em of 17px 612px) and breaks into lines of even length, as
+   a member's intro does. */
+div#textid h2.long {
+    max-width: 28em;
     text-wrap: balance;
 }
 
@@ -696,6 +701,86 @@ ul.join-card-facts {
 .internship-form-soon {
     color: var(--muted);
     font-style: italic;
+}
+
+/* A part of a section, as the internship's projects under their question:
+   h3, the size of About's minor headings. */
+div#textid h3 {
+    margin-top: 26px;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+/* The internship's "More questions": each a row split from the next by a
+   hairline, as the former members are, its question in the display face
+   after a red caret that turns down when the answer is open. The answer
+   lines up with the question, past the caret. */
+.faq {
+    max-width: 36em;
+    border-top: 1px solid var(--hairline);
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--hairline);
+}
+
+.faq-item > summary {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 0;
+    cursor: pointer;
+    list-style: none;
+    font-family: var(--display);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.faq-item > summary::-webkit-details-marker {
+    display: none;
+}
+
+/* The caret, 1em tall, centred on the question's first line (1.4em). */
+.faq-item > summary .icon {
+    flex: none;
+    margin-top: 0.2em;
+    color: var(--link);
+    -webkit-transition: transform .15s ease-in;
+    transition: transform .15s ease-in;
+}
+
+.faq-item[open] > summary .icon {
+    transform: rotate(90deg);
+}
+
+/* Under the pointer the question is underlined, as a link is. */
+.faq-item > summary:hover span {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.faq-item > summary:focus-visible {
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: 2px;
+}
+
+.faq-answer {
+    padding: 0 0 16px 18px;
+}
+
+#textid .faq-answer p:last-child {
+    margin-bottom: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .faq-item > summary .icon {
+        -webkit-transition: none;
+        transition: none;
+    }
 }
 
 /* Grid overrides: the columns the layouts and footer use. */
