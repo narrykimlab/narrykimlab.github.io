@@ -110,7 +110,11 @@ Tech stack: Jekyll 4.x (Gemfile pins `~> 4.3`), Kramdown (GFM), Liquid templates
   nearly bare one (uridylation) -- blinking, winking, glancing about, and smiling with a
   hop after a delivery. Soon after U's land, a lime Pac-Man races in from the left,
   gobbles the tail from its 3' end, leaps over the head and shoots off to the right,
-  leaving the mRNA to fade. Two that linger side by side give each
+  leaving the mRNA to fade. Every 20 to 30 seconds a pair of scissors (an
+  endoribonuclease: white blades, ink finger rings with an eye in each) swims in from
+  the right against the stream, along the open water between the lanes, and snips the
+  longest-tailed mRNA no helper is at between its head and its tail; the tail drops
+  behind and sinks, and both pieces fade. Two that linger side by side give each
   other a high five (none seeks one out); a helper left outside by a narrowing window
   dashes back in, startled, and glides on a little; and none stays in one spot more than
   a few seconds (it turns back from an edge, and a watchdog sends a loiterer off). A
@@ -127,6 +131,32 @@ Tech stack: Jekyll 4.x (Gemfile pins `~> 4.3`), Kramdown (GFM), Liquid templates
   late or hold the main thread for over half the time between them; it stops while out
   of view or in a hidden tab, shows one still frame under `prefers-reduced-motion`, and
   starts the same on every visit (a fixed seed).
+- /join/ has a scene of its own over the two calls: `js/recruit.js` on
+  `<canvas class="recruit-scene">` (`_includes/recruit_scene.html`). It is the home
+  scene with its rules throughout -- the same mRNAs, tails, speeds and numbers, the
+  same four helpers, TUT4 and TUT7 and the Pac-Man, the high fives, the dash back in,
+  the scissors every 20 to 30 seconds -- but for what this page needs. It sits in a
+  band the column's width with rounded corners (220px high, 200px on a phone), its
+  characters drawn at home's size (not scaled up with the height), its lanes lower.
+  Each mRNA carries a recruiter on the strand behind its head -- ZCCHC14 or ZCCHC2
+  (navy, with a face) on a stem-loop, or Pt1, the stem-loop itself -- and TENT4A and
+  TENT4B, and PAPγ (amber, here only), do not go to a tail of their own accord: the
+  recruiter calls one over when home's TENT4 would have gone to that tail (two to
+  seven long and, for TENT4, not ending in a G; the effector rested, 5 to 10 seconds
+  after its last visit) and the effector is within 130px of it (as far as home's TUTs
+  notice a tail from). The recruiter waves and sends out rings; the effector shows a
+  "!", rushes along a dotted line drawn as the call goes out, docks beside the protein
+  on the side it was on (on top of Pt1), throws its bases (TENT4: AG, AAG or AAGA, as
+  on home; PAPγ: four A's), and lets go. The side and the route are settled from where
+  the two are when the call goes out (while its "!" shows, the effector drifts along
+  with the mRNA, so the route still starts where it is): the line goes round the
+  recruiter, and no effector is called whose line would cross another mRNA's recruiter
+  or any head. One mRNA calls as the page opens. The Pac-Man leaps higher, to clear
+  the recruiter, and the scissors cut between the head and the stem-loop, from below,
+  as the recruiters sit above the strand. Recruiters' names and the helpers' show only
+  from 600px. Clock, reduced motion and fixed seed as on home. The script is a copy of
+  `js/tails.js` with these changes, so a change to anything the two share goes into
+  both.
 - Icons: Font Awesome Free 5.15.3 shapes as inline SVG (see Conventions). The site icon is
   the old site's black RNA strand on a white rounded square with transparent corners:
   `favicon.ico` (16, 32, 48px), `favicon-192.png`, and
@@ -248,7 +278,8 @@ the templates read -- when a template starts reading a new field, update the mat
 Content pages live here. Member profiles are in `_pages/people/[link].md`. The sections
 are People (/people/), Research, Publications (with /publications/by-topic/ and
 /publications/by-journal/), Photos, and the "Join us" button (/join/); Contact and About
-this site are linked from the footer, All news from the home page. /join/ holds the two
+this site are linked from the footer, All news from the home page. /join/ opens with a
+line on whom we are recruiting and the recruit scene (see above), then holds the two
 calls as cards, one under the other: /join/postdoc/ (`join-postdoc.md`, written in
 the page) and /join/intern/ (`join-intern.md`, from `internship.yml`); each of the two
 pages opens with chips to the other, as the publication pages do.

@@ -609,6 +609,27 @@ div#textid h2.minor {
     line-height: 1.35;
 }
 
+/* Join us: the recruiting scene over the cards (_includes/recruit_scene.html,
+   js/recruit.js), the home page's sea (.scene) in the column's width, its
+   bottom corners rounded as the cards' are (the top is the water's surface,
+   drawn by the script over the page's white). */
+.recruit-scene {
+    --sea-top: 20px;
+    display: block;
+    width: 100%;
+    height: 220px;
+    margin-top: 28px;
+    border-radius: 12px;
+    background: linear-gradient(var(--sea) calc(-1 * var(--sea-top)), var(--sea-deep))
+        0 var(--sea-top) / 100% calc(100% - var(--sea-top)) no-repeat;
+}
+
+@media (max-width: 699px) {
+    .recruit-scene {
+        height: 200px;
+    }
+}
+
 /* Join us: the two calls (/join/postdoc/, /join/intern/) as cards, side by
    side from 768px, one under the other below: a box in the buttons' rule
    and the photos' corners that tints on hover, holding the title, a line on

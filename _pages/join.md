@@ -7,9 +7,11 @@ permalink: /join/
 
 # Join us
 
-We are looking for postdoctoral researchers and undergraduate interns to
-join us in finding out how RNA is regulated, and in turning it into new
+We are **recruiting** postdoctoral researchers and undergraduate interns
+to join us in finding out how RNA is regulated, and in turning it into new
 molecular tools for further discoveries.
+
+{% include recruit_scene.html %}
 
 {%- comment -%}
   The two calls as cards, one under the other: each card's title links

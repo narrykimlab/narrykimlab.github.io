@@ -14,7 +14,10 @@
  * reaching for loses no beads, so no helper is seen near a tail as it
  * shrinks. Two helpers that happen to linger side by side give each other a
  * high five, and one left outside by a narrowing window dashes back in,
- * startled.
+ * startled. Every twenty to thirty seconds a pair of scissors (an
+ * endoribonuclease) swims in from the right, against the stream, and snips
+ * the longest-tailed mRNA no helper is at between its head and its tail:
+ * the two pieces drift apart and fade away.
  *
  * They swim in a sea: water under a slowly rippling surface, deepening
  * towards the bottom, with a few bubbles rising through it.
@@ -61,7 +64,10 @@
   // no smaller than 0.85 of that, so a phone's shorter scene keeps them legible.
   let W = 0, H = 0, u = 1, t = 0;
   const LANES = [0.3, 0.55, 0.8];
-  const tadpoles = [], crumbs = [], rings = [], claps = [], helpers = [], flights = [], eaters = [], bubbles = [];
+  const tadpoles = [], crumbs = [], rings = [], claps = [], helpers = [], flights = [], eaters = [], cutters = [], bubbles = [];
+  // When the next scissors come: the first some four seconds after the page
+  // opens, as the scene opens eight seconds in.
+  let snipIn = 12;
 
   function size() {
     const r = canvas.getBoundingClientRect();
@@ -123,13 +129,18 @@
 
   // ---- The mRNAs ---------------------------------------------------------------
   // x is the head's centre; the tail streams out to its left, one bead per base.
+  // Once the scissors have cut it (below), the tail lags behind the head and
+  // sinks: it is drawn from backX and backY.
 
+  const CUT = 16.3;                                     // where the scissors cut, behind the head's centre
   const headY = (p) => LANES[p.lane] * H + 2.2 * u * Math.sin(t * 1.3 + p.phase);
+  const backX = (p) => (p.cut ? p.cut.x : p.x);
+  const backY = (p) => headY(p) + (p.cut ? p.cut.sink : 0);
   const spacing = (p) => 10.3 * p.s * u;
   function beadAt(p, i) {
     const s = p.s * u;
     const amp = Math.min(1, (i + 1) / 5) * 5 * s;
-    return { x: p.x - 23 * s - i * spacing(p), y: headY(p) + amp * Math.sin(t * 3.2 + p.phase - i * 0.55) };
+    return { x: backX(p) - 23 * s - i * spacing(p), y: backY(p) + amp * Math.sin(t * 3.2 + p.phase - i * 0.55) };
   }
   const tailEnd = (p) => beadAt(p, Math.max(0, p.tail.length - 1));
 
@@ -138,7 +149,7 @@
     return {
       x, lane, s, v: between(16, 25) * s, phase: between(0, 2 * Math.PI), bag: BAGS[Math.floor(between(0, BAGS.length))],
       tail: Array(length).fill('A'), nibble: between(2.5, 5.5),
-      stalled: false, marked: false, doom: 0, held: false, fade: 1, dying: false, gone: false
+      stalled: false, marked: false, doom: 0, held: false, cut: null, fade: 1, dying: false, gone: false
     };
   }
 
@@ -507,6 +518,118 @@
     }
   }
 
+  // ---- The scissors --------------------------------------------------------------
+  // An endoribonuclease, every twenty to thirty seconds: a pair of scissors
+  // swims in from the right, against the stream, along the open water beside
+  // the lane of the longest-tailed mRNA in view that no helper is at. Level
+  // with the strand between its head and its tail it turns blades towards
+  // it, closes in and snips twice; the two pieces drift apart and fade away,
+  // and the scissors draw back and swim off to the left, pleased.
+
+  function sendCutter() {
+    let best = null;
+    for (const p of tadpoles) {
+      if (p.dying || p.marked || p.held || helpers.some((h) => h.target === p)) continue;
+      if (p.x < 0.3 * W || p.x > 0.75 * W) continue;
+      if (!best || p.tail.length > best.tail.length) best = p;
+    }
+    if (!best) return false;
+    best.marked = true;                                 // no helper comes to it now, and it loses no more beads
+    const cruise = (best.lane === 0 ? 0.425 : best.lane === 2 ? 0.675 : rand() < 0.5 ? 0.425 : 0.675) * H;
+    cutters.push({ p: best, x: W + 30 * u, y: cruise, cruise, v: 190 * u, angle: Math.PI, open: 0.1, k: 0, mode: 'come', happy: 0 });
+    return true;
+  }
+
+  function stepCutters(dt) {
+    for (let i = cutters.length - 1; i >= 0; i--) {
+      const c = cutters[i], p = c.p;
+      c.k += dt;
+      if (c.happy > 0) c.happy = Math.max(0, c.happy - dt);
+      if ((c.mode === 'come' || c.mode === 'close' || c.mode === 'snip') && (p.gone || p.dying)) c.mode = 'back';
+      const at = { x: p.x - CUT * p.s * u, y: headY(p) };   // where it cuts
+      const dir = Math.sign(at.y - c.cruise) || 1;          // the strand below the open water it came along, or above
+      const to = { x: at.x, y: at.y - dir * 8 * u };        // its pivot then, the strand across its blades
+      let aim = Math.PI, open = 0.06 + 0.08 * (1 - Math.cos(2 * Math.PI * c.k / 0.8));   // snapping idly as it goes
+      if (c.mode === 'come') {                          // in along the open water, to level with the cut
+        c.x = Math.max(to.x, c.x - c.v * dt);
+        c.y += (c.cruise - c.y) * Math.min(1, 6 * dt);
+        if (c.x <= to.x) c.mode = 'close';
+      } else if (c.mode === 'close') {                  // turning blades to the strand, wide open, and in
+        aim = dir * Math.PI / 2; open = 0.45;
+        c.x = to.x;
+        c.y += Math.max(-60 * u * dt, Math.min(60 * u * dt, to.y - c.y));
+        if (Math.abs(to.y - c.y) < 0.5 * u) { c.mode = 'snip'; c.k = 0; }
+      } else if (c.mode === 'snip') {                   // snip, snip: through on the second
+        aim = dir * Math.PI / 2; open = 0.45 * Math.abs(Math.cos(Math.PI * c.k / 0.2));
+        c.x = to.x; c.y = to.y;
+        if (c.k >= 0.3) {
+          p.cut = { x: p.x, sink: 0 };
+          p.dying = true;
+          rings.push({ x: at.x, y: at.y, life: 1, color: INK });
+          c.mode = 'back'; c.happy = 1.5; c.v = 60 * u;
+        }
+      } else if (c.mode === 'back') {                   // straight back to the open water, clear of the pieces
+        aim = dir * Math.PI / 2;
+        c.y += Math.max(-70 * u * dt, Math.min(70 * u * dt, c.cruise - c.y));
+        if (Math.abs(c.cruise - c.y) < 0.5 * u) c.mode = 'leave';
+      } else {                                          // and off to the left, faster and faster
+        c.v = Math.min(500 * u, c.v + 900 * u * dt);
+        c.x -= c.v * dt;
+        if (c.x < -40 * u) { cutters.splice(i, 1); continue; }
+      }
+      const turn = aim - c.angle;
+      c.angle += Math.atan2(Math.sin(turn), Math.cos(turn)) * Math.min(1, 9 * dt);
+      c.open += (open - c.open) * Math.min(1, 25 * dt);
+    }
+  }
+
+  // Two blades crossed at a pivot, white with an ink edge, and two ink
+  // finger rings with an eye in each, looking along the blades, or, once it
+  // has cut, pleased.
+  function drawCutter(c) {
+    ctx.save();
+    ctx.translate(c.x, c.y);
+    ctx.rotate(c.angle);
+    ctx.lineJoin = 'round';
+    ctx.strokeStyle = INK;
+    for (const side of [-1, 1]) {
+      ctx.save();
+      ctx.rotate(side * c.open);
+      ctx.beginPath();                                  // the blade: its edge along the middle, its back bowed out
+      ctx.moveTo(-1.5 * u, 0);
+      ctx.lineTo(15 * u, 0);
+      ctx.quadraticCurveTo(6 * u, side * 4.4 * u, -1.5 * u, side * 2.6 * u);
+      ctx.closePath();
+      ctx.fillStyle = '#ffffff'; ctx.fill();
+      ctx.lineWidth = 1.2 * u; ctx.stroke();
+      ctx.beginPath();                                  // its handle, crossing to the other side, and the ring
+      ctx.moveTo(-1 * u, -side * 0.6 * u);
+      ctx.lineTo(-6 * u, -side * 2.4 * u);
+      ctx.lineWidth = 2 * u; ctx.stroke();
+      ctx.beginPath();
+      ctx.arc(-9 * u, -side * 3.8 * u, 3.4 * u, 0, 2 * Math.PI);
+      ctx.fillStyle = '#ffffff'; ctx.fill();
+      ctx.lineWidth = 1.9 * u; ctx.stroke();
+      ctx.restore();
+    }
+    ctx.beginPath();
+    ctx.arc(0, 0, 1.3 * u, 0, 2 * Math.PI);
+    ctx.fillStyle = INK; ctx.fill();
+    ctx.restore();
+    for (const side of [-1, 1]) {
+      const a = c.angle + side * c.open, lx = -9 * u, ly = -side * 3.8 * u;
+      const ex = c.x + lx * Math.cos(a) - ly * Math.sin(a), ey = c.y + lx * Math.sin(a) + ly * Math.cos(a);
+      ctx.beginPath();
+      if (c.happy > 0) {
+        ctx.arc(ex, ey + 0.7 * u, 1.5 * u, Math.PI * 1.15, Math.PI * 1.85);
+        ctx.lineWidth = 1.2 * u; ctx.lineCap = 'round'; ctx.strokeStyle = INK; ctx.stroke(); ctx.lineCap = 'butt';
+      } else {
+        ctx.arc(ex + 0.9 * u * Math.cos(c.angle), ey + 0.9 * u * Math.sin(c.angle), 1.25 * u, 0, 2 * Math.PI);
+        ctx.fillStyle = INK; ctx.fill();
+      }
+    }
+  }
+
   // ---- Time --------------------------------------------------------------------
 
   function step(dt) {
@@ -522,8 +645,9 @@
         else if (gap < 40 * u) v = Math.min(v, q.v);
       }
       p.x += v * u * dt;
+      if (p.cut) { p.cut.x += 0.3 * v * u * dt; p.cut.sink += 5 * u * dt; }   // the tail falls behind
       // No bead is lost to a tail a helper is bringing a base to, nor to a
-      // uridylated one.
+      // uridylated one, nor to one the scissors are after.
       const attended = p.held || helpers.some((h) => h.target === p);
       if (!p.dying && !p.marked && !attended && (p.nibble -= dt) <= 0) nibble(p);
       if (p.doom > 0 && (p.doom -= dt) <= 0) eaters.push(eater(p));
@@ -547,7 +671,9 @@
     for (let i = rings.length - 1; i >= 0; i--) if (rings[i].life <= 0) rings.splice(i, 1);
     for (const c of claps) c.life -= dt / 0.4;
     for (let i = claps.length - 1; i >= 0; i--) if (claps[i].life <= 0) claps.splice(i, 1);
+    if ((snipIn -= dt) <= 0) snipIn = sendCutter() ? between(20, 30) : 1;
     stepEaters(dt);
+    stepCutters(dt);
     helpers.forEach((h) => stepHelper(h, dt));
     meet(dt);
     stepBubbles(dt);
@@ -617,9 +743,9 @@
     const s = p.s * u, x = p.x, y = headY(p), n = p.tail.length;
     ctx.globalAlpha = Math.max(0, p.fade);
     ctx.font = `600 ${8.4 * s}px ${FACE}`;
-    // the strand, then its beads from the 3' end in
+    // the strand (once cut, from the cut on), then its beads from the 3' end in
     ctx.beginPath();
-    ctx.moveTo(x - 14 * s, y);
+    ctx.moveTo(backX(p) - (p.cut ? CUT + 2 : 14) * s, backY(p));
     for (let i = 0; i < n; i++) { const b = beadAt(p, i); ctx.lineTo(b.x, b.y); }
     ctx.lineWidth = 1.4 * s; ctx.strokeStyle = STRAND; ctx.stroke();
     for (let i = n - 1; i >= 0; i--) { const b = beadAt(p, i); bead(b.x, b.y, p.tail[i], s); }
@@ -735,6 +861,7 @@
     ctx.globalAlpha = 1;
     [...tadpoles].sort((a, b) => a.s - b.s).forEach(drawTadpole);
     eaters.forEach(drawEater);
+    cutters.forEach(drawCutter);
     helpers.forEach(drawHelper);
     for (const c of claps) {                            // the slap of a high five: a few short strokes, flaring
       ctx.globalAlpha = Math.max(0, c.life);

@@ -1,0 +1,12 @@
+{%- comment -%}
+  The Join us page's scene (js/recruit.js), over the two calls: the home
+  page's sea, where mRNAs swim and their tails shorten, each carrying a
+  recruiter -- ZCCHC14 or ZCCHC2 on a stem-loop, or Pt1, an element of the
+  RNA itself -- that calls an effector over: TENT4 for mixed tailing, PAPγ
+  for cytoplasmic polyadenylation. As they recruit, so do we: the line
+  above says so in words. The canvas is hidden from screen readers.
+{%- endcomment -%}
+<div class="recruit" markdown="0">
+<canvas class="recruit-scene" aria-hidden="true"></canvas>
+</div>
+<script src="{{ '/js/recruit.js' | relative_url }}?v={{ '/js/recruit.js' | fingerprint }}" integrity="{{ '/js/recruit.js' | sri }}" defer></script>
