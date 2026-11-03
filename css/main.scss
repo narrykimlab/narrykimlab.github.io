@@ -1369,6 +1369,15 @@ ul.publications_in_profile .cite-button {
     gap: 10px;
 }
 
+/* Under the pointer an inner page's solid button turns white, for the one
+   on the charcoal header (.inner .button-solid:hover); on the white window
+   that would lose Copy against it, so here it keeps a red rule round it.
+   Selectors one class longer than that rule's, to outrank it. */
+.cite-dialog .cite-actions .cite-copy:hover,
+.cite-dialog .cite-actions .cite-copy:focus-visible {
+    border-color: var(--accent);
+}
+
 .cite-status {
     font-size: 14px;
     color: var(--muted);
