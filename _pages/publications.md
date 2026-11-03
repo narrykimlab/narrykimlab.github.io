@@ -12,7 +12,7 @@ permalink: /publications/
 <a class="chip" href="{{ site.baseurl }}/publications/by-topic/">By topic</a>
 <a class="chip" href="{{ site.baseurl }}/publications/by-journal/">By journal</a>
 </div>
-<p class="publication-key" markdown="0"><span><sup>1</sup> Co-first author</span> <span><sup>*</sup> Co-corresponding author</span></p>
+<p class="publication-key" markdown="0"><span><sup>1</sup> Co-first author</span> <span><sup>*</sup> Corresponding author</span> <span><sup>&#8224;</sup> Co-corresponding author</span></p>
 
 {%- comment -%}
   _data/publist.yml is newest first, so group_by gives the years newest first too.

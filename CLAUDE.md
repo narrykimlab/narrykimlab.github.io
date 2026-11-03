@@ -161,8 +161,9 @@ the templates read -- when a template starts reading a new field, update the mat
   has `name` as printed ("J. J. Seo") and, for a lab member, either
   `link` (a team.yml link, for someone with a profile page) or `lab: true` (no link;
   every author is set alike), plus `is_first`/`is_corresponding` for the superscripts
-  (`<sup>*</sup>` means co-corresponding: a paper with one corresponding author marks
-  none). A `lab: true` author may also have `full_name`, the former member the initials
+  (`is_corresponding` on every corresponding author; the template shows `*` for a
+  sole one and `†` when there are two or more, and the data check warns of a paper
+  with none). A `lab: true` author may also have `full_name`, the former member the initials
   stand for, spelled as in alumni_members.yml: the name then links to their entry on
   /people/ (`#alumni-<name slugified>`). Initials alone cannot say who it is ("Y. Lee"
   is three people over the years), hence a field on each author line rather than one
@@ -266,8 +267,8 @@ Add an entry to the top of `_data/publist.yml`. Give lab authors `link:` if they
 profile page, `lab: true` (and `full_name:`, for a former member) otherwise, and the paper
 its `topics` (`_data/topics.yml`). Write `vip` as `volume(issue):pages` with the last
 page in full, or leave it out while the paper is online only; mark `is_corresponding`
-only when there are two or more corresponding authors. The Cite button and its
-citations follow from the entry.
+on every corresponding author (one gets `*`, two or more `†`). The Cite button and
+its citations follow from the entry.
 
 ### Add news
 
@@ -305,7 +306,9 @@ description from `title` and `position`. `sitemap: false` excludes a page from t
   CSS sets their size per context; do not drop to `###`/`####` for size.
 - Member URL slugs: lowercase hyphenated (`jane-doe`); sort keys `lastname-firstname`.
 - Publication author superscripts: `<sup>1</sup>` = co-first author, `<sup>*</sup>` =
-  co-corresponding author.
+  the corresponding author, `<sup>†</sup>` = co-corresponding authors (from
+  `is_corresponding` and how many authors have it). Author names are links without
+  an underline, underlined only on hover and keyboard focus.
 - Custom plugins: `_plugins/sri.rb` adds an `sri` filter that hashes a local file at build
   time, and a `fingerprint` filter for its URL:
   `<script src="/js/x.js?v={{ '/js/x.js' | fingerprint }}" integrity="{{ '/js/x.js' | sri }}">`.

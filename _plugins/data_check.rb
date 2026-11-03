@@ -150,6 +150,10 @@ module Jekyll
             end
             check_full_name(file, p, i, a, j, alumni_names) if a.key?("full_name")
           end
+          # Every paper has a corresponding author (* alone, † when two or more).
+          if file == "publist" && authors.none? { |a| a.is_a?(Hash) && a["is_corresponding"] == true }
+            warning(file, p, i, "no corresponding author marked (`is_corresponding: true`)")
+          end
         end
       end
 

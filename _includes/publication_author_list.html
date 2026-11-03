@@ -3,8 +3,10 @@
   by commas and a final "and", all set alike. A lab member with a profile
   here is a link to it; a former member without one, whose `full_name` is
   a name in _data/alumni_members.yml, is a link to their entry on the
-  people page.
+  people page. A corresponding author is marked * when they are the only
+  one, and † when there are two or more.
 {%- endcomment -%}
+{%- assign corresponding = publi.authors | where: "is_corresponding", true -%}
 {%- for author in publi.authors -%}
 {%- if forloop.first -%}
 {%- elsif forloop.last and forloop.length >= 3 -%}
@@ -24,6 +26,6 @@
   <span class="publi_author">{{ author.name }}</span>
 {%- endif -%}
 {%- if author.is_first -%}<sup>1</sup>{%- endif -%}
-{%- if author.is_corresponding -%}<sup>&#42;</sup>{%- endif -%}
+{%- if author.is_corresponding -%}<sup>{% if corresponding.size > 1 %}&#8224;{% else %}&#42;{% endif %}</sup>{%- endif -%}
 {%- endfor -%}
 <br/>

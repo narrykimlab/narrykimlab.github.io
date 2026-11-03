@@ -1116,18 +1116,18 @@ span.publi_journal {
     color: var(--ink);
 }
 
-/* Every author is set alike. A lab member with a profile is a link to it,
-   told apart only by a light grey underline that darkens and thickens on
-   hover, so the link does not rely on colour (an id-free selector that
-   still outranks ".body-container p a"). */
+/* Every author is set alike, links included: a lab member's name links to
+   their profile or their entry among the former members, but shows it only
+   under the pointer or keyboard focus, where it is underlined (an id-free
+   selector that still outranks ".body-container p a"). */
 .body-container a.publi_author {
     color: inherit;
-    text-decoration-color: var(--grey);
+    text-decoration: none;
 }
 
 .body-container a.publi_author:hover, .body-container a.publi_author:focus-visible {
-    text-decoration-color: currentColor;
-    text-decoration-thickness: 2px;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
 }
 
 a.publi_title {
