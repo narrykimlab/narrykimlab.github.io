@@ -243,10 +243,15 @@ this site are linked from the footer, All news from the home page.
 - **publication_entry.html** — One publication (title, authors, journal, year, volume,
   then its Cite button), used on the publication pages and the profiles;
   **research_papers.html** puts a Research section's newest two papers marked
-  `research` under it, each a card like a Notion bookmark linking to the paper (title,
-  plain author names, journal and year, and the paper's `image` on the right, or on top
-  in a narrow card; no Cite button, which a link cannot hold);
-  **publication_author_list.html** formats its authors;
+  `research` under it, each a card like a Notion bookmark (title, authors, journal and
+  year, and the paper's `image` on the right, or on top in a narrow card; no Cite
+  button): a click anywhere on it opens the paper, the title's link stretched over the
+  card, while each author links to the people page as in the paper lists and the
+  journal to the paper's entry on /publications/ (`#paper-<cite_id>`, an anchor that
+  page alone has, since the topic page lists a paper more than once);
+  **publication_author_list.html** formats its authors, each name through
+  **publication_author_name.html** (a link to the profile, or to the former member's
+  entry on /people/, or plain);
   **publication_extras.html** is the book chapters and patents the publication pages end
   with; **cite_dialog.html** is the Cite window, included once by each page that lists
   papers.

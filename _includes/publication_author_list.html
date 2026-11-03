@@ -3,7 +3,8 @@
   by commas and a final "and", all set alike. A lab member with a profile
   here is a link to it; a former member without one, whose `full_name` is
   a name in _data/alumni_members.yml, is a link to their entry on the
-  people page. Every corresponding author is marked ✉, one or several: the
+  people page (_includes/publication_author_name.html). Every
+  corresponding author is marked ✉, one or several: the
   envelope in its text form (U+2709 and the text variation selector, so no
   phone draws it as a colour emoji), hidden from screen readers, which read
   "corresponding author" instead.
@@ -14,18 +15,7 @@
 , and
 {% else -%},
 {% endif -%}
-{%- if author.link -%}
-  <a class="publi_author" href="{{ site.baseurl }}/people/{{ author.link }}">{{ author.name }}</a>
-{%- elsif author.full_name -%}
-  {%- assign alumnus = site.data.alumni_members | where: "name", author.full_name | first -%}
-  {%- if alumnus -%}
-  <a class="publi_author" href="{{ site.baseurl }}/people/#alumni-{{ alumnus.name | slugify }}">{{ author.name }}</a>
-  {%- else -%}
-  <span class="publi_author">{{ author.name }}</span>
-  {%- endif -%}
-{%- else -%}
-  <span class="publi_author">{{ author.name }}</span>
-{%- endif -%}
+{%- include publication_author_name.html author=author -%}
 {%- if author.is_first -%}<sup>1</sup>{%- endif -%}
 {%- if author.is_corresponding -%}<sup><span aria-hidden="true">&#9993;&#xFE0E;</span><span class="sr-only"> (corresponding author)</span></sup>{%- endif -%}
 {%- endfor -%}

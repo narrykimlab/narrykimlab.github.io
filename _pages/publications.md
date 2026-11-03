@@ -16,13 +16,16 @@ permalink: /publications/
 
 {%- comment -%}
   _data/publist.yml is newest first, so group_by gives the years newest first too.
+  Each paper is the anchor #paper-<its cite_id>, which the Research page's
+  cards link their journal to (_includes/research_papers.html); it is here
+  only, as the topic page lists a paper under each of its topics.
 {%- endcomment %}
 {%- assign years = site.data.publist | group_by: "year" %}
 {%- for year in years %}
 <h2 class="pub-group" id="y{{ year.name }}">{{ year.name }}</h2>
 <div class="publication-list" markdown="0">
 {%- for publi in year.items %}
-<p>{% include publication_entry.html %}</p>
+<p id="paper-{{ publi.cite_id }}">{% include publication_entry.html %}</p>
 {%- endfor %}
 </div>
 {%- endfor %}

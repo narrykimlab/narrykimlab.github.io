@@ -1135,6 +1135,16 @@ ul.chronological span {
     margin: 0;
     padding: 14px 0;
     border-bottom: 1px solid var(--hairline);
+    scroll-margin-top: 24px;           /* a link to it stops short of the window's edge */
+}
+
+/* The paper a Research card's journal led to (/publications/#paper-...),
+   marked as a former member is on /people/ (.alumni-item:target). */
+.publication-list > p:target {
+    margin-inline: -12px;
+    padding-inline: 12px;
+    background: var(--band);
+    box-shadow: inset 3px 0 0 var(--accent);
 }
 
 ul.publications_in_profile li {
@@ -1343,12 +1353,15 @@ html.cite-open {
 
 /* The Research page's papers under each section
    (_includes/research_papers.html), each a card like a Notion bookmark: a
-   box in the buttons' rule and corners, the whole of it a link, holding the
-   title, the authors on two lines at most and the journal beside a document
-   icon in the buttons' red, and the paper's picture on the right; it tints
-   on hover. Its text keeps the ink colour and no underline, as the buttons
-   do. Unlike a bookmark's, the title is never cut short: on a phone it
-   takes three lines.
+   box in the buttons' rule and corners, holding the title, the authors on
+   two lines at most and the journal beside a document icon in the buttons'
+   red, and the paper's picture on the right; it tints on hover. A click
+   anywhere on it follows the title's link, whose ::after is stretched over
+   the whole card (and draws the focus ring round it), but the authors and
+   the journal are links of their own, laid above that, underlined on hover
+   like the paper lists' author names. Its text keeps the ink colour and no
+   underline, as the buttons do. Unlike a bookmark's, the title is never cut
+   short: on a phone it takes three lines.
    As in a bookmark, text and picture share a row that wraps in reverse
    (wrap-reverse): in a card too narrow for both (under 476px inside), the
    picture moves above the text. The pictures are made 3:2 on white
@@ -1376,23 +1389,60 @@ ul.paper-cards li {
     container-type: inline-size;
 }
 
-.research-papers a.paper-card {
+.research-papers .paper-card {
     display: flex;
     flex-wrap: wrap-reverse;
+    position: relative;
     overflow: hidden;
     border: 1px solid var(--chip-rule);
     border-radius: 8px;
     background: #ffffff;
     color: var(--ink);
-    text-decoration: none;
     -webkit-transition: background-color .15s ease-in;
     transition: background-color .15s ease-in;
 }
 
-.research-papers a.paper-card:hover, .research-papers a.paper-card:focus-visible {
+.research-papers .paper-card:hover,
+.research-papers .paper-card:has(.paper-card-title:focus-visible) {
     background: var(--tint);
+}
+
+.research-papers a.paper-card-title,
+.research-papers a.paper-card-title:hover,
+.research-papers a.paper-card-title:focus-visible {
     color: var(--ink);
     text-decoration: none;
+    outline: none;
+}
+
+.research-papers a.paper-card-title::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: 8px;
+}
+
+.research-papers a.paper-card-title:focus-visible::after {
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+.research-papers .paper-card-authors a,
+.research-papers a.paper-card-journal {
+    position: relative;
+    z-index: 2;
+}
+
+.research-papers a.paper-card-journal {
+    color: inherit;
+    text-decoration: none;
+}
+
+.research-papers a.paper-card-journal:hover,
+.research-papers a.paper-card-journal:focus-visible {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
 }
 
 .paper-card-text {
