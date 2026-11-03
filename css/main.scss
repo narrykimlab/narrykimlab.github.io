@@ -565,10 +565,8 @@ div#homeid > p.fineprint, .fineprint {
 
 /* Section headings in the text pages (research, join us, contact, about)
    are h2, right under the page's h1, set smaller than on the grid pages.
-   About's licence notes are smaller still (.minor). A section starts below
-   the figure of the one before (.qb-fig-right), never beside it. */
+   About's licence notes are smaller still (.minor). */
 div#textid h2 {
-    clear: right;
     margin-top: 35px;
     font-size: 22px;
     font-weight: 650;
@@ -1865,6 +1863,42 @@ div.footer-links img {
     float: right;
     clear: right;
     margin: 4px 0 16px 32px;
+}
+
+/* The sections of /research/ (<section class="research-section"> in
+   _pages/research.md), each with its figure. A section holds its figure
+   (the clearfix), so the next starts below it whatever the width. Below
+   992px, where the figure sits between paragraphs, it comes first, above
+   the heading (a column with the figure ordered first), with the room
+   above it a section's heading has otherwise. */
+.research-section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media (max-width: 991px) {
+    .research-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* #textid, to outrank the rules for every text page's figures and
+       headings */
+    #textid .research-section > p:has(> img.qb-fig-right:only-child) {
+        order: -1;
+        margin-top: 27px;
+    }
+
+    #textid .research-section:has(> p > img.qb-fig-right:only-child) > h2 {
+        margin-top: 0;
+    }
+
+    /* Under the opening paragraph, whose margin does not fold into the
+       column's the way it folds into a heading's */
+    #textid p + .research-section > p:has(> img.qb-fig-right:only-child) {
+        margin-top: 17px;
+    }
 }
 
 /* A figure beside a section of /research/, at the head of its section: each

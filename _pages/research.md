@@ -14,6 +14,8 @@ systems—from viruses to humans—and we aim to understand how regulatory
 RNAs and their associated factors shape cellular behavior and can be
 harnessed for therapeutic innovation.
 
+<section class="research-section" markdown="1">
+
 ## mRNA Stability and Modification
 
 {% picture figure-section images/research/mrna-stability.jpg alt="A diagram: a poly(A)+ mRNA is deadenylated rapidly and its body decays, unless TENT4A or TENT4B adds a mixed tail (AGAA), which CNOT6L or CNOT7 deadenylates only with delay" class="qb-fig-right qb-fig-section" %}
@@ -26,6 +28,10 @@ are dissecting the mechanisms of RNA tail modification to understand how
 they stabilize mRNAs and how this knowledge can enhance mRNA therapeutics.
 
 {% include research_papers.html topics="mrna-stability" %}
+
+</section>
+
+<section class="research-section" markdown="1">
 
 ## Viral Regulatory RNAs and mRNA Therapeutics
 
@@ -40,6 +46,10 @@ therapeutics and vaccines.
 
 {% include research_papers.html topics="viral-rna" %}
 
+</section>
+
+<section class="research-section" markdown="1">
+
 ## Cellular Regulation of Exogenous RNAs
 
 Cells mount distinct responses to foreign RNAs—including viral RNAs and
@@ -49,6 +59,10 @@ provides a framework for improving the stability, translation, and safety
 of therapeutic mRNAs.
 
 {% include research_papers.html topics="exogenous-rna" %}
+
+</section>
+
+<section class="research-section" markdown="1">
 
 ## microRNA Biogenesis and Function
 
@@ -61,3 +75,5 @@ determining their structures. We continue to investigate how microRNAs are
 produced and regulated.
 
 {% include research_papers.html topics="mirna-biogenesis mirna-function" %}
+
+</section>
