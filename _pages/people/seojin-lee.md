@@ -1,7 +1,7 @@
 ---
 layout: member
 title: Seojin Lee
-position: Graduate Student
+position: Former member (2024–2026)
 email: speedy@seojin.example  # placeholder
 github:
 orcid:
@@ -10,6 +10,7 @@ pubmed:
 cv:
 image: /images/members/seojin-lee.jpg
 permalink: /people/seojin-lee
+sitemap: false
 ---
 
 {% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}

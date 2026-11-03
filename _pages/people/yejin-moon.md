@@ -1,7 +1,7 @@
 ---
 layout: member
 title: Yejin Moon
-position: Research Assistant
+position: Former member (2025–2026)
 email: infinite.pipette@yejin.example  # placeholder
 github:
 orcid:
@@ -10,6 +10,7 @@ pubmed:
 cv:
 image: /images/members/yejin-moon.jpg
 permalink: /people/yejin-moon
+sitemap: false
 ---
 
 {% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}

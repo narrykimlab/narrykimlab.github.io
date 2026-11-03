@@ -5,6 +5,14 @@
 # to, through an author's `full_name` in publist.yml and chapters.yml: when a
 # name here changes, change those too (the build warns of any left over).
 
+- name: Yejin Moon
+  position: Research assistant
+  years: [2025, 2026]
+
+- name: Seojin Lee
+  position: M.S. student
+  years: [2024, 2026]
+
 - name: Soo-Jin Jung
   position: Postdoctoral fellow
   years: [2017, 2026]

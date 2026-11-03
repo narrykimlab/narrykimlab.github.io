@@ -160,7 +160,7 @@
   link: seojin-lee
   category: student
   sort-key: lee-seojin
-  active: true
+  active: false
 
 - name: Sunghan Lee
   photo: sunghan-lee.jpg
@@ -214,7 +214,7 @@
   link: yejin-moon
   category: research-assistant
   sort-key: moon-yejin
-  active: true
+  active: false
 
 - name: Yeonwoo Park
   photo: yeonwoo-park.jpg
