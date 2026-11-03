@@ -434,6 +434,7 @@
   doi: 10.1016/j.cell.2023.06.007
   url: "https://doi.org/10.1016/j.cell.2023.06.007"
   topics: [viral-rna]
+  image: j.cell.2023.06.007.jpg
 
 - authors:
     - name: S. Son
@@ -1477,6 +1478,7 @@
   doi: 10.1126/science.aam5794
   url: "http://science.sciencemag.org/content/early/2018/07/18/science.aam5794.full"
   topics: [mrna-stability]
+  image: science.aam5794.jpg
 
 - authors:
     - name: H. Yi
