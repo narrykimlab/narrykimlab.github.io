@@ -45,6 +45,7 @@ module Jekyll
         check_topics
         list("patents").each_with_index { |p, i| require_fields("patents", p, i, "title") }
         check_news
+        check_internship
         check_photos
         check_icons
         @problems
@@ -236,6 +237,31 @@ module Jekyll
           previous = years.last
         end
         names
+      end
+
+      # The internship on /join/ (_includes/internship.html): every item of
+      # the notice is a question over its answer, and the form, once given,
+      # is a full address, since the page makes it a button.
+      def check_internship
+        data = @data["internship"]
+        return if data.nil?
+        unless data.is_a?(Hash)
+          @problems << "_data/internship.yml: expected `form` and `notice`"
+          return
+        end
+        form = data["form"].to_s.strip
+        unless form.empty? || form.match?(%r{\Ahttps://})
+          @problems << "_data/internship.yml: `form` must be a full https address, or left empty"
+        end
+        notice = data["notice"]
+        unless notice.is_a?(Array) && !notice.empty?
+          @problems << "_data/internship.yml: `notice` must list at least one question"
+          return
+        end
+        notice.each_with_index do |item, i|
+          next problem("internship", item, i, "expected `q_en` and `a_en`") unless item.is_a?(Hash)
+          require_fields("internship", item, i, "q_en", "a_en")
+        end
       end
 
       # Dates are free text the templates print as is; requiring one of two

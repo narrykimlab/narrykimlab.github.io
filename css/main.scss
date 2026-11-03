@@ -566,12 +566,16 @@ div#homeid > p.fineprint, .fineprint {
 
 /* Section headings in the text pages (research, join us, contact, about)
    are h2, right under the page's h1, set smaller than on the grid pages.
-   About's licence notes are smaller still (.minor). */
+   About's licence notes are smaller still (.minor). A long one stops where
+   the running text does (28em of 22px is 616px, the text's 36em of 17px
+   612px) and breaks into lines of even length, as a member's intro does. */
 div#textid h2 {
     margin-top: 35px;
+    max-width: 28em;
     font-size: 22px;
     font-weight: 650;
     line-height: 1.3;
+    text-wrap: balance;
 }
 
 /* Running text on these pages stops at about 70 characters a line (36em,
@@ -598,6 +602,100 @@ div#textid h2.minor {
     font-size: 18px;
     font-weight: 600;
     line-height: 1.35;
+}
+
+/* Join us: the two calls (/join/postdoc/, /join/intern/) as cards, side by
+   side from 768px, one under the other below: a box in the buttons' rule
+   and the photos' corners that tints on hover, holding the title, a line on
+   what the work is, a few facts in grey and "Read the call" in red. The
+   title's link is stretched over the whole card (::after), so a click
+   anywhere on it follows the link, and draws the focus ring round it. */
+ul.join-cards {
+    display: grid;
+    gap: 16px;
+    margin: 28px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+@media (min-width: 768px) {
+    ul.join-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.join-card {
+    position: relative;
+    min-width: 0;
+    padding: 22px 24px 20px;
+    border: 1px solid var(--chip-rule);
+    border-radius: 12px;
+    background: #ffffff;
+    -webkit-transition: background-color .15s ease-in;
+    transition: background-color .15s ease-in;
+}
+
+.join-card:hover, .join-card:has(h2 a:focus-visible) {
+    background: var(--tint);
+}
+
+div#textid .join-card h2 {
+    margin: 0 0 8px;
+}
+
+.join-card h2 a, .join-card h2 a:hover, .join-card h2 a:focus-visible {
+    color: var(--ink);
+    text-decoration: none;
+    outline: none;
+}
+
+.join-card h2 a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+}
+
+.join-card h2 a:focus-visible::after {
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+#textid .join-card p {
+    margin: 0;
+}
+
+ul.join-card-facts {
+    margin: 12px 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--muted);
+}
+
+#textid .join-card p.join-card-more {
+    margin-top: 14px;
+    font-family: var(--display);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--link);
+}
+
+/* The application form's button, once its address is given: under the
+   pointer an inner page's solid button turns white, for the one on the
+   charcoal header (.inner .button-solid:hover), which on this white page
+   would leave it red letters with nothing round them; it keeps a red rule
+   round it, as Copy does in the Cite window. */
+.inner .internship .button-solid:hover,
+.inner .internship .button-solid:focus-visible {
+    border-color: var(--accent);
+}
+
+/* Until the application form's address is given (_data/internship.yml). */
+.internship-form-soon {
+    color: var(--muted);
+    font-style: italic;
 }
 
 /* Grid overrides: the columns the layouts and footer use. */

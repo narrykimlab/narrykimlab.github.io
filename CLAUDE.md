@@ -204,6 +204,12 @@ the templates read -- when a template starts reading a new field, update the mat
   "2021–2025"), `date` ("May 2025"), `caption`, and either `photo` (a file in
   `images/photos/`) or `youtube` (a video id) with `thumb` (its thumbnail, also in
   `images/photos/`; YouTube's `hqdefault.jpg` with the letterbox bars cut off).
+- **internship.yml** — The undergraduate internship, /join/intern/
+  (`_includes/internship.html`): `form`, the application form's address (empty until
+  there is one: the page then says it will be linked there soon), and `notice`, the
+  call, always shown: each item a question (`q_en`, a section heading) and its answer
+  (`a_en`, Markdown). The interns' card on /join/ sums it up in a few facts; change
+  them with it.
 
 ### Layouts (`_layouts/`)
 
@@ -211,7 +217,8 @@ the templates read -- when a template starts reading a new field, update the mat
   `hero:` front matter), the content and the footer.
 - **homelay.html** — Two-column (8/4) with news sidebar.
 - **gridlay.html** — Full-width grid (people, publications, photos).
-- **textlay.html** — Full-width text (research, join, contact, all news, about, 404).
+- **textlay.html** — Full-width text (research, join and its two calls, contact, all news,
+  about, 404).
 - **redirected.html** — A stub that sends an old address on to its new one with a meta
   refresh (no script, for the CSP). Used by `_pages/redirects/`, one file per address of
   the old WordPress site (`/en/members/` → `/people/`, the Korean pages to their English
@@ -229,7 +236,10 @@ the templates read -- when a template starts reading a new field, update the mat
 Content pages live here. Member profiles are in `_pages/people/[link].md`. The sections
 are People (/people/), Research, Publications (with /publications/by-topic/ and
 /publications/by-journal/), Photos, and the "Join us" button (/join/); Contact and About
-this site are linked from the footer, All news from the home page.
+this site are linked from the footer, All news from the home page. /join/ holds the two
+calls as cards, one under the other: /join/postdoc/ (`join-postdoc.md`, written in
+the page) and /join/intern/ (`join-intern.md`, from `internship.yml`); each of the two
+pages opens with chips to the other, as the publication pages do.
 
 ### Key includes (`_includes/`)
 

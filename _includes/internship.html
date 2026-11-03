@@ -1,0 +1,19 @@
+{%- comment -%}
+  The undergraduate internship, the body of /join/intern/, from
+  _data/internship.yml: the notice, each question a section heading over
+  its answer, then the application form as a button, or, while the form's
+  address is not yet given, a line saying it will be linked here.
+{%- endcomment -%}
+{%- assign internship = site.data.internship -%}
+{%- assign form = internship.form | strip -%}
+<div class="internship" markdown="0">
+{%- for item in internship.notice %}
+<h2>{{ item.q_en }}</h2>
+{{ item.a_en | markdownify }}
+{%- endfor %}
+{%- if form != "" %}
+<p><a class="button button-solid" href="{{ form }}">Application form</a></p>
+{%- else %}
+<p class="internship-form-soon">The application form will be linked here soon.</p>
+{%- endif %}
+</div>

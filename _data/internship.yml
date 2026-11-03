@@ -1,0 +1,42 @@
+# The undergraduate internship, /join/intern/ (_includes/internship.html).
+# The interns' card on /join/ sums it up in a few facts (_pages/join.md):
+# change them with it.
+#
+# form: the application form's address (a Google Form). While it is empty,
+#   the page says the form will be linked there soon; once given, it is a
+#   button under the notice.
+# notice: the call itself, always shown, in this order: each a question
+#   (q_en, a heading) and its answer (a_en, Markdown).
+
+form:
+
+notice:
+  - q_en: Who can apply?
+    a_en: >-
+      Undergraduates of any major and from any university, including those
+      about to graduate and those on a leave of absence. We welcome people
+      who enjoy learning and thinking, and who believe in diligence, honesty
+      and consideration for others. So that interns can draw on their
+      coursework in the research, we give priority to those who will have
+      completed at least four semesters when the internship starts.
+      Biochemistry, genetics and cell biology are good courses to take
+      beforehand, and it helps to practise reading research papers for their
+      central question and main results.
+
+  - q_en: When can I apply, and when would I start?
+    a_en: >-
+      We take applications all year round. Six months or more leaves time to
+      learn and to do real research, so we give priority to applicants who
+      can stay that long. The start calls for intensive training, so we
+      recommend starting in a vacation if you can, in January or July;
+      during vacations, interns work in the lab full time. During the
+      semester, we welcome interns who give the lab a high priority, put
+      enough time and effort into their research, and take an active part in
+      experiments and discussions.
+
+  - q_en: How do I apply?
+    a_en: >-
+      Fill in our online application form, attaching a personal statement
+      and your transcript, so please have both ready. We read every
+      application and get in touch to arrange an interview, where we talk
+      the internship over together.
