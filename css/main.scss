@@ -1382,8 +1382,13 @@ html.cite-open {
     max-width: 36em;
 }
 
+/* "Recent papers": a step larger than the role lines it borrows from, and
+   paler, in --faint (on these pages --muted with a fifth of white mixed in;
+   5:1 on white). */
 .research-papers .team-role {
     margin-bottom: 8px;
+    font-size: 15px;
+    color: var(--faint);
 }
 
 ul.paper-cards {
