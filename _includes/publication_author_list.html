@@ -1,7 +1,9 @@
 {%- comment -%}
   An entry's authors, as printed in the data (initials and surname), joined
   by commas and a final "and", all set alike. A lab member with a profile
-  here is a link to it.
+  here is a link to it; a former member without one, whose `full_name` is
+  a name in _data/alumni_members.yml, is a link to their entry on the
+  people page.
 {%- endcomment -%}
 {%- for author in publi.authors -%}
 {%- if forloop.first -%}
@@ -11,8 +13,13 @@
 {% endif -%}
 {%- if author.link -%}
   <a class="publi_author" href="{{ site.baseurl }}/people/{{ author.link }}">{{ author.name }}</a>
-{%- elsif author.lab -%}
-  <span class="publi_author lab">{{ author.name }}</span>
+{%- elsif author.full_name -%}
+  {%- assign alumnus = site.data.alumni_members | where: "name", author.full_name | first -%}
+  {%- if alumnus -%}
+  <a class="publi_author" href="{{ site.baseurl }}/people/#alumni-{{ alumnus.name | slugify }}">{{ author.name }}</a>
+  {%- else -%}
+  <span class="publi_author">{{ author.name }}</span>
+  {%- endif -%}
 {%- else -%}
   <span class="publi_author">{{ author.name }}</span>
 {%- endif -%}

@@ -71,6 +71,13 @@ Tech stack: Jekyll 4.x (Gemfile pins `~> 4.3`), Kramdown (GFM), Liquid templates
   screen (992px up) that stays in view as the list scrolls (`position: sticky`), and the
   script marks the one being read (`aria-current`, a red rule): the last heading above a
   line a third of the way down the window. On a narrower screen they are a list on top.
+  Every paper and book chapter in a list (the publication pages, a member's profile) has
+  a Cite button, which opens `<dialog class="cite-dialog">` (`_includes/cite_dialog.html`,
+  once per page) with its citation as APA, Nature, BibTeX, EndNote or RIS, fetched from
+  `/publications/cite.json` the first time; Copy puts it on the clipboard (or selects it
+  to copy by hand) and the last three can be downloaded as files. It closes like the
+  photo viewer and hands focus back to the button. Without scripts the buttons stay
+  hidden.
 - Home's first screen fills the window, as on the Chang lab site: the masthead is at
   least `100svh`, the hero text sits 7:3 in the space it has, and the scene lies along
   the window's bottom edge, the masthead's 8px bottom border in the sea floor's colour
@@ -146,13 +153,21 @@ the templates read -- when a template starts reading a new field, update the mat
   `link`, the slug of the profile page `_pages/people/<link>.md`.
 - **publist.yml** — Papers, newest first; /publications/ groups them by `year` as they
   come, so the order matters (the data check enforces it). Fields: `authors`, `title`,
-  `journal`, `year`, `vip` (volume and pages, optional), `doi`, `url` (where the title
+  `journal`, `year`, `vip` (optional: `volume(issue):pages` with the last page in full,
+  "84(9):1764-1782.e10", or "12:6026" for an article number; the data check enforces
+  the form, since the citations take it apart), `doi`, `url` (where the title
   links), `supplement` (optional, a link to supplementary data or code), and `topics`
   (one or more ids from topics.yml, a list: `[mirna-biogenesis, methods]`). Each author
   has `name` as printed ("J. J. Seo") and, for a lab member, either
   `link` (a team.yml link, for someone with a profile page) or `lab: true` (no link;
-  every author is set alike), plus `is_first`/`is_corresponding` for the superscripts.
-  Journal names are spelled out in full and consistently, since
+  every author is set alike), plus `is_first`/`is_corresponding` for the superscripts
+  (`<sup>*</sup>` means co-corresponding: a paper with one corresponding author marks
+  none). A `lab: true` author may also have `full_name`, the former member the initials
+  stand for, spelled as in alumni_members.yml: the name then links to their entry on
+  /people/ (`#alumni-<name slugified>`). Initials alone cannot say who it is ("Y. Lee"
+  is three people over the years), hence a field on each author line rather than one
+  table; a `full_name` that is not in alumni_members.yml stays unlinked and the build
+  warns. Journal names are spelled out in full and consistently, since
   /publications/by-journal/ groups by them.
 - **topics.yml** — The topics of /publications/by-topic/, in the order it lists them
   (the Research page's sections first, in its order): `id`, which a paper's `topics`
@@ -162,7 +177,9 @@ the templates read -- when a template starts reading a new field, update the mat
 - **patents.yml** — Patents, by `title`.
 - **alumni_members.yml** — Former members, most recently departed first (the people page
   keeps file order): `name`, `position`, `years` ([first, last] or [last]), `current`
-  (where they are now), optional `url` (an outside page about them).
+  (where they are now), optional `url` (an outside page about them). Each entry is the
+  anchor `/people/#alumni-<name slugified>` the publications' `full_name` links point
+  at, so a renamed entry needs those changed too (the build warns of any left over).
 - **news.yml** — Announcements, newest first: `date` ("Feb 26, 2025", or a year alone,
   "2025", when the day is not known) and `headline` (HTML allowed).
 - **photos.yml** — The photos page, newest first: `period` (the heading it falls under,
@@ -211,10 +228,11 @@ this site are linked from the footer, All news from the home page.
   `order="monthly"` they are shuffled into an order seeded by the month in Korea
   (`_plugins/monthly_shuffle.rb`); `TEAM_ORDER_MONTH=2026-11` builds as if it were
   another month.
-- **publication_entry.html** — One publication (title, authors, journal, year, volume),
-  used on both publication pages and the profiles; **publication_author_list.html**
-  formats its authors; **publication_extras.html** is the book chapters and patents both
-  publication pages end with.
+- **publication_entry.html** — One publication (title, authors, journal, year, volume,
+  then its Cite button), used on the publication pages and the profiles;
+  **publication_author_list.html** formats its authors; **publication_extras.html** is
+  the book chapters and patents the publication pages end with; **cite_dialog.html** is
+  the Cite window, included once by each page that lists papers.
 
 ## Common Content Tasks
 
@@ -245,7 +263,11 @@ Replace the text and drop the marker.
 ### Add a publication
 
 Add an entry to the top of `_data/publist.yml`. Give lab authors `link:` if they have a
-profile page, `lab: true` otherwise, and the paper its `topics` (`_data/topics.yml`).
+profile page, `lab: true` (and `full_name:`, for a former member) otherwise, and the paper
+its `topics` (`_data/topics.yml`). Write `vip` as `volume(issue):pages` with the last
+page in full, or leave it out while the paper is online only; mark `is_corresponding`
+only when there are two or more corresponding authors. The Cite button and its
+citations follow from the entry.
 
 ### Add news
 
@@ -289,7 +311,9 @@ description from `title` and `position`. `sitemap: false` excludes a page from t
   `<script src="/js/x.js?v={{ '/js/x.js' | fingerprint }}" integrity="{{ '/js/x.js' | sri }}">`.
   Use both for every script tag. Without the fingerprint, a browser holding the old file in
   its cache finds it fails the new page's integrity check and runs no script at all.
-  `_plugins/data_check.rb` validates `_data/` (see above).
+  `_plugins/data_check.rb` validates `_data/` (see above). `_plugins/citations.rb`
+  gives each paper and chapter a `cite_id` (its BibTeX key) and writes every citation
+  into `/publications/cite.json`, with Liquid off for that file (BibTeX's `{{`).
 - Photos go through `{% picture <preset> <path> alt="..." %}` (`_plugins/picture.rb`), not a
   bare `<img>`: it publishes WebP copies at the widths of the preset (`pictures:` in
   `_config.yml`) with `srcset`/`sizes` and the right `width`/`height`, so commit the

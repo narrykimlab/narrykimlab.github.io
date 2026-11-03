@@ -45,3 +45,5 @@ permalink: /publications/by-topic/
 {% include publication_extras.html %}
 </div>
 </div>
+
+{% include cite_dialog.html %}

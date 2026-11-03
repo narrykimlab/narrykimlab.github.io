@@ -1,6 +1,9 @@
 # Former members, most recently departed first (the order /people/ lists
 # them in). `years` is [first, last], or [last] alone when the first is not
 # known; `current` is where they are now; `url` is an outside page about them.
+# Each entry is the anchor /people/#alumni-<name> that the publications link
+# to, through an author's `full_name` in publist.yml and chapters.yml: when a
+# name here changes, change those too (the build warns of any left over).
 
 - name: Soo-Jin Jung
   position: Postdoctoral fellow

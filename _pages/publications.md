@@ -28,3 +28,5 @@ permalink: /publications/
 {%- endfor %}
 
 {% include publication_extras.html %}
+
+{% include cite_dialog.html %}

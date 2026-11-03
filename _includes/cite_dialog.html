@@ -1,0 +1,30 @@
+{%- comment -%}
+  The Cite window, once on each page with a list of papers (the three
+  publication pages, a member's profile): a Cite button under a paper
+  (_includes/publication_entry.html) opens it with that paper's citation,
+  in the form chosen above it. js/site.js fills it from
+  /publications/cite.json (_plugins/citations.rb), copies the text, and
+  saves the reference-manager forms as files.
+{%- endcomment -%}
+<dialog class="cite-dialog" aria-labelledby="cite-heading" tabindex="-1" data-src="{{ '/publications/cite.json' | relative_url }}" markdown="0">
+<div class="cite-box">
+<div class="cite-head">
+<h2 id="cite-heading">Cite this paper</h2>
+<button type="button" class="cite-close" aria-label="Close">{% include icon.html name="times" %}</button>
+</div>
+<p class="cite-paper"></p>
+<div class="cite-formats" role="group" aria-label="Citation format">
+<button type="button" class="chip" data-format="apa" aria-pressed="true">APA</button>
+<button type="button" class="chip" data-format="nature" aria-pressed="false">Nature</button>
+<button type="button" class="chip" data-format="bibtex" aria-pressed="false">BibTeX</button>
+<button type="button" class="chip" data-format="endnote" aria-pressed="false">EndNote</button>
+<button type="button" class="chip" data-format="ris" aria-pressed="false">RIS</button>
+</div>
+<pre class="cite-text" tabindex="0"></pre>
+<div class="cite-actions">
+<button type="button" class="button button-solid cite-copy">Copy</button>
+<button type="button" class="button button-outline cite-save" hidden>Download</button>
+<span class="cite-status" role="status"></span>
+</div>
+</div>
+</dialog>

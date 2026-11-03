@@ -1,9 +1,15 @@
 {%- comment -%}
   One publication, without a wrapper (the caller puts it in a <p> or <li>):
   the title, linked where the entry has a `url`; the authors, a step
-  smaller; the journal, the year and the volume and pages, and a link to
-  the supplementary data where the entry has a `supplement`, on a line of
-  its own.
+  smaller; the journal, the year and the volume and pages; and, on a line
+  of their own, a Cite button and a link to the supplementary data where
+  the entry has a `supplement`.
+
+  The button opens the Cite window (_includes/cite_dialog.html, which the
+  page includes once) on this entry's `cite_id`, set by
+  _plugins/citations.rb. It is hidden until js/site.js has a window to open,
+  so a browser without scripts shows no button that does nothing; the hidden
+  words after "Cite" tell a screen reader which paper it cites.
 
     {% for publi in site.data.publist %}<p>{% include publication_entry.html %}</p>{% endfor %}
 {%- endcomment -%}
@@ -16,6 +22,5 @@
 <span class="publi_authors">{% include publication_author_list.html -%}</span>
 <span class="publi_journal">{{ publi.journal }}</span>
 ({{ publi.year }}){% if publi.vip %}, {{ publi.vip }}{% endif %}
-{%- if publi.supplement %}
-<span class="publi_links"><a href="{{ publi.supplement }}">Supplementary data</a></span>
-{%- endif %}
+<span class="publi_links"><button type="button" class="cite-button" data-cite="{{ publi.cite_id }}" hidden>Cite<span class="sr-only">: {{ publi.title }}</span></button>
+{%- if publi.supplement %} <a href="{{ publi.supplement }}">Supplementary data</a>{% endif %}</span>

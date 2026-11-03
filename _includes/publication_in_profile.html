@@ -1,7 +1,8 @@
 {%- comment -%}
   A member's papers with the lab, at the end of their profile page's body:
   the entries of _data/publist.yml and _data/chapters.yml with an author
-  whose `link` is this page's file name.
+  whose `link` is this page's file name, with the Cite window their Cite
+  buttons open.
 {%- endcomment -%}
 {%- assign authorid = page.name | split: "." | first -%}
 {%- assign all_publications = site.data.publist | concat: site.data.chapters -%}
@@ -20,4 +21,6 @@
 <li>{% include publication_entry.html %}</li>
 {%- endfor %}
 </ul>
+
+{% include cite_dialog.html %}
 {% endif %}

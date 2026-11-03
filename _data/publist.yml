@@ -1,9 +1,16 @@
 # Publications, newest first, grouped by `year` on /publications/. Each
 # author is `name` as printed; `link` (a team.yml link) for a current or
-# former member with a profile, `lab: true` for any other lab member.
-# `is_first` and `is_corresponding` add the superscripts. `vip` is the
-# volume and pages; `url` is where the title links. `topics` names one or
-# more of _data/topics.yml; /publications/by-topic/ lists the paper under each.
+# former member with a profile, `lab: true` for any other lab member. A
+# `lab: true` author's `full_name` says which former member the initials
+# are; spelled as in alumni_members.yml, it makes the name a link to their
+# entry on /people/ (one that is not there is left unlinked, with a warning
+# in the build). `is_first` and `is_corresponding` add the superscripts.
+# `vip` is the volume, issue and pages as volume(issue):pages, the last page
+# in full ("84(9):1764-1782.e10", "12:6026" for an article number; the
+# citations take it apart, and the build checks it); leave it out until the
+# paper has them. `url` is where the title links. `topics`
+# names one or more of _data/topics.yml; /publications/by-topic/ lists the
+# paper under each.
 
 - authors:
     - name: Y. Park
@@ -22,6 +29,7 @@
 - authors:
     - name: J. J. Seo
       lab: true
+      full_name: Jenny Seo
       is_first: true
     - name: C. Lee
       link: chemin-lee
@@ -32,6 +40,7 @@
       link: minseok-jeong
     - name: S.-J. Jung
       lab: true
+      full_name: Soo-Jin Jung
     - name: V. N. Kim
       link: v-narry-kim
   title: Functional atlas of vertebrate viral RNA elements that stabilize RNA and enhance translation
@@ -44,16 +53,21 @@
 - authors:
     - name: Y. Park
       link: youngran-park
+      is_corresponding: true
     - name: J. Lim
     - name: H. Cho
     - name: A. Son
       lab: true
+      full_name: Ahyeon Son
     - name: M. Jeong
       link: minseok-jeong
     - name: Y.-s. Lee
       lab: true
+      full_name: Young-suk Lee
+      is_corresponding: true
     - name: V. N. Kim
       link: v-narry-kim
+      is_corresponding: true
   title: Identification of the SARS-CoV-2 genome packaging signal in the nsp12-coding region
   journal: Nature Communications
   year: 2026
@@ -64,6 +78,7 @@
 - authors:
     - name: Y.-Y. Lee
       lab: true
+      full_name: Young-Yoon Lee
       is_first: true
     - name: M. Jeong
       link: minseok-jeong
@@ -89,9 +104,11 @@
 - authors:
     - name: S.-J. Jung
       lab: true
+      full_name: Soo-Jin Jung
       is_first: true
     - name: J. J. Seo
       lab: true
+      full_name: Jenny Seo
       is_first: true
     - name: S. Lee
       link: sunghan-lee
@@ -117,13 +134,14 @@
 - authors:
     - name: H. Jang
       lab: true
+      full_name: Harim Jang
     - name: J. Park
       link: junyoung-park
     - name: V. N. Kim
       link: v-narry-kim
   title: ERH promotes primary microRNA processing beyond cluster assistance
   journal: Nature Communications
-  vip: 16(7913)
+  vip: "16(1):7913"
   year: 2025
   doi: 10.1038/s41467-025-63015-y
   url: "https://doi.org/10.1038/s41467-025-63015-y"
@@ -154,12 +172,14 @@
 - authors:
     - name: J. Kim
       lab: true
+      full_name: Jimi Kim
       is_first: true
     - name: Y. Park
       link: youngran-park
       is_first: true
     - name: D. Yoon
       lab: true
+      full_name: Doil Yoon
       is_first: true
     - name: S. Lee
       link: sunghan-lee
@@ -174,7 +194,6 @@
     - name: J.-S. Kim
     - name: V. N. Kim
       link: v-narry-kim
-      is_corresponding: true
   title: SARS-CoV-2 Nsp2 recruits GIGYF2 near viral replication sites and supports viral protein production
   journal: Nucleic Acids Research
   vip: "53(14):gkaf674"
@@ -194,12 +213,13 @@
       link: minseok-jeong
     - name: Y. Choi
       lab: true
+      full_name: Yeon Choi
     - name: V. N. Kim
       link: v-narry-kim
       is_corresponding: true
   title: Exogenous RNA surveillance by proton-sensing TRIM25
   journal: Science
-  vip: "388:eads4539"
+  vip: "388(6742):eads4539"
   year: 2025
   doi: 10.1126/science.ads4539
   url: "https://www.science.org/doi/10.1126/science.ads4539"
@@ -211,13 +231,13 @@
       is_first: true
     - name: Y.-Y. Lee
       lab: true
+      full_name: Young-Yoon Lee
       is_first: true
     - name: V. N. Kim
       link: v-narry-kim
-      is_corresponding: true
   title: The biogenesis and regulation of animal microRNAs
   journal: Nature Reviews Molecular Cell Biology
-  vip: "26:276–296"
+  vip: "26(4):276-296"
   year: 2024
   doi: 10.1038/s41580-024-00805-0
   url: "https://www.nature.com/articles/s41580-024-00805-0"
@@ -248,7 +268,7 @@
     - name: Y.-H. Hwang
     - name: M. Park
     - name: C.H. Li
-      lab: true
+      link: sunghan-lee
     - name: T. Lee
     - name: J.-A. Lee
     - name: Y.-M. Kim
@@ -263,7 +283,7 @@
       is_corresponding: true
   title: "Innate immune responses against mRNA vaccine promote cellular immunity through IFN-β at the injection site"
   journal: Nature Communications
-  vip: "15.1: 7226"
+  vip: "15(1):7226"
   year: 2024
   doi: 10.1038/s41467-024-51411-9
   url: "https://www.nature.com/articles/s41467-024-51411-9"
@@ -272,19 +292,22 @@
 - authors:
     - name: Y. Choi
       lab: true
+      full_name: Yeon Choi
       is_first: true
     - name: B. Um
       lab: true
+      full_name: Buyeon Um
       is_first: true
     - name: Y. Na
     - name: J. Kim
     - name: J.-S. Kim
+      is_corresponding: true
     - name: V. N. Kim
       link: v-narry-kim
       is_corresponding: true
   title: Time-resolved profiling of RNA binding proteins throughout the mRNA life cycle
   journal: Molecular Cell
-  vip: "84:1-19"
+  vip: "84(9):1764-1782.e10"
   year: 2024
   doi: 10.1016/j.molcel.2024.03.012
   url: "https://www.cell.com/molecular-cell/fulltext/S1097-2765(24)00222-3"
@@ -293,23 +316,25 @@
 - authors:
     - name: S. Baek
       lab: true
+      full_name: Seungchan Baek
       is_first: true
     - name: B. Kim
       lab: true
       is_first: true
     - name: H. Jang
       lab: true
+      full_name: Harim Jang
       is_first: true
     - name: K. Kim
       lab: true
+      full_name: Kijun Kim
     - name: I. Park
     - name: D.-H. Min
     - name: V. N. Kim
       link: v-narry-kim
-      is_corresponding: true
   title: Structural atlas of human primary microRNAs generated by SHAPE-MaP
   journal: Molecular Cell
-  vip: "84:1-15"
+  vip: "84(6):1158-1172.e6"
   year: 2024
   doi: 10.1016/j.molcel.2024.02.005
   url: "https://doi.org/10.1016/j.molcel.2024.02.005"
@@ -318,12 +343,14 @@
 - authors:
     - name: Y.-S. Lee
       lab: true
+      full_name: Young-suk Lee
       is_first: true
       is_corresponding: true
     - name: Y. Levdansky
       is_first: true
     - name: Y. Jung
       lab: true
+      full_name: Yoonseok Jung
     - name: V. N. Kim
       link: v-narry-kim
       is_corresponding: true
@@ -331,7 +358,7 @@
       is_corresponding: true
   title: Deadenylation kinetics of mixed poly(A) tails at single-nucleotide resolution
   journal: Nature Structural & Molecular Biology
-  vip: "1-9"
+  vip: "31(5):826-834"
   year: 2024
   doi: 10.1038/s41594-023-01187-1
   url: "https://www.nature.com/articles/s41594-023-01187-1#Sec1"
@@ -340,9 +367,11 @@
 - authors:
     - name: J. J. Seo
       lab: true
+      full_name: Jenny Seo
       is_first: true
     - name: S.-J. Jung
       lab: true
+      full_name: Soo-Jin Jung
       is_first: true
     - name: J. Yang
       link: jihye-yang
@@ -350,10 +379,9 @@
       link: da-eun-choi
     - name: V. N. Kim
       link: v-narry-kim
-      is_corresponding: true
   title: Functional viromic screens uncover regulatory RNA elements
   journal: Cell
-  vip: "186:3291-3306"
+  vip: "186(15):3291-3306.e21"
   year: 2023
   doi: 10.1016/j.cell.2023.06.007
   url: "https://doi.org/10.1016/j.cell.2023.06.007"
@@ -362,6 +390,7 @@
 - authors:
     - name: S. Son
       lab: true
+      full_name: Soomin Son
       is_first: true
     - name: B. Kim
       lab: true
@@ -370,7 +399,6 @@
       link: jihye-yang
     - name: V. N. Kim
       link: v-narry-kim
-      is_corresponding: true
   title: Role of the proline-rich disordered domain of DROSHA in intronic microRNA processing
   journal: Genes & Development
   vip: "37(9-10):383-397"
@@ -388,9 +416,11 @@
       is_first: true
     - name: H. Yi
       lab: true
+      full_name: Hyerim Yi
       is_first: true
     - name: K. Baeg
       lab: true
+      full_name: Kyungmin Baeg
       is_first: true
     - name: Y. Choi
       lab: true
@@ -398,9 +428,9 @@
       lab: true
     - name: J. Lim
       lab: true
+      full_name: Jaechul Lim
     - name: V. N. Kim
       link: v-narry-kim
-      is_corresponding: true
   title: Short poly(A) tails are protected from deadenylation by the LARP1-PABP complex
   journal: Nature Structural & Molecular Biology
   vip: "30(3):330-338"
@@ -418,10 +448,9 @@
       is_first: true
     - name: V. N. Kim
       link: v-narry-kim
-      is_corresponding: true
   title: Sequence determinant of small RNA production by DICER
   journal: Nature
-  vip: "615:323–330"
+  vip: "615(7951):323-330"
   year: 2023
   doi: 10.1038/s41586-023-05722-4
   url: "https://doi.org/10.1038/s41586-023-05722-4"
@@ -443,7 +472,7 @@
       is_corresponding: true
   title: Structure of the human DICER–pre-miRNA complex in a dicing state
   journal: Nature
-  vip: "615:331-338"
+  vip: "615(7951):331-338"
   year: 2023
   doi: 10.1038/s41586-023-05723-3
   url: "https://doi.org/10.1038/s41586-023-05723-3"
@@ -460,6 +489,7 @@
       is_first: true
     - name: S. Lee
       lab: true
+      full_name: Sungyul Lee
     - name: M. Kim
       link: myeonghwan-kim
     - name: S. Hwang
@@ -467,6 +497,7 @@
     - name: J. Kim
     - name: A. Son
       lab: true
+      full_name: Ahyeon Son
     - name: Y. Lee
       lab: true
     - name: V. N. Kim
@@ -474,12 +505,13 @@
     - name: J.-S. Kim
     - name: H. Chang
       lab: true
+      full_name: Hyeshik Chang
       is_corresponding: true
     - name: K. Ahn
       is_corresponding: true
   title: Functional and molecular dissection of HCMV long non-coding RNAs
   journal: Scientific Reports
-  vip: "12, Article number: 19303"
+  vip: "12(1):19303"
   year: 2022
   doi: 10.1038/s41598-022-23317-3
   url: "https://www.nature.com/articles/s41598-022-23317-3"
@@ -490,15 +522,16 @@
       is_first: true
     - name: D. Kim
       lab: true
+      full_name: Dongwan Kim
       is_first: true
     - name: V. N. Kim
       link: v-narry-kim
     - name: H. Chang
       lab: true
-      is_corresponding: true
+      full_name: Hyeshik Chang
   title: Analyzing viral epitranscriptomes using nanopore direct RNA sequencing
   journal: Journal of Microbiology
-  vip: 60, pages867–876
+  vip: "60(9):867-876"
   year: 2022
   doi: 10.1007/s12275-022-2324-4
   url: "https://link.springer.com/article/10.1007/s12275-022-2324-4"
@@ -507,6 +540,7 @@
 - authors:
     - name: K. Kim
       lab: true
+      full_name: Kijun Kim
       is_corresponding: true
     - name: V. N. Kim
       link: v-narry-kim
@@ -522,6 +556,7 @@
 - authors:
     - name: J. W. Bae
       lab: true
+      full_name: Jong Woo Bae
     - name: S. Kim
     - name: V. N. Kim
       link: v-narry-kim
@@ -530,7 +565,7 @@
       is_corresponding: true
   title: Photoactivatable ribonucleosides mark base-specific RNA-binding sites
   journal: Nature Communications
-  vip: "12:6026"
+  vip: "12(1):6026"
   year: 2021
   doi: 10.1038/s41467-021-26317-5
   url: "https://www.nature.com/articles/s41467-021-26317-5"
@@ -561,7 +596,7 @@
       is_corresponding: true
   title: The regulatory impact of RNA-binding proteins on microRNA targeting
   journal: Nature Communications
-  vip: "12:5057"
+  vip: "12(1):5057"
   year: 2021
   doi: 10.1038/s41467-021-25078-5
   url: "https://www.nature.com/articles/s41467-021-25078-5"
@@ -570,9 +605,11 @@
 - authors:
     - name: K. Kim
       lab: true
+      full_name: Kijun Kim
       is_first: true
     - name: S. Baek
       lab: true
+      full_name: Seungchan Baek
       is_first: true
     - name: Y. Lee
       lab: true
@@ -614,6 +651,7 @@
 - authors:
     - name: S. Lee
       lab: true
+      full_name: Sungyul Lee
       is_first: true
     - name: Y. Lee
       lab: true
@@ -622,6 +660,7 @@
       lab: true
     - name: A. Son
       lab: true
+      full_name: Ahyeon Son
     - name: Y. Park
       link: youngran-park
     - name: K.-M. Lee
@@ -631,7 +670,7 @@
       link: v-narry-kim
   title: The SARS-CoV-2 RNA interactome
   journal: Molecular Cell
-  vip: "81(13):2838-2850"
+  vip: "81(13):2838-2850.e6"
   year: 2021
   doi: 10.1016/j.molcel.2021.04.022
   url: "https://doi.org/10.1016/j.molcel.2021.04.022"
@@ -648,6 +687,7 @@
     - name: S. Shin
     - name: H. Yi
       lab: true
+      full_name: Hyerim Yi
     - name: H. Kim
     - name: M. Chang
     - name: C. Chang
@@ -660,7 +700,7 @@
     - name: C. Kang
   title: Coordinate regulation of the senescent state by selective autophagy
   journal: Developmental Cell
-  vip: "56(10):1512-1525"
+  vip: "56(10):1512-1525.e7"
   year: 2021
   doi: 10.1016/j.devcel.2021.04.008
   url: "https://doi.org/10.1016/j.devcel.2021.04.008"
@@ -683,7 +723,7 @@
       link: v-narry-kim
   title: RNA demethylation by FTO stabilizes the FOXJ1 mRNA for proper motile ciliogenesis
   journal: Developmental Cell
-  vip: "56(8):1118-1130"
+  vip: "56(8):1118-1130.e6"
   year: 2021
   doi: 10.1016/j.devcel.2021.03.006
   url: "https://doi.org/10.1016/j.devcel.2021.03.006"
@@ -699,6 +739,7 @@
     - name: J. H. Jung
     - name: S. C. Kwon
       lab: true
+      full_name: Sung-Chul Kwon
     - name: V. N. Kim
       link: v-narry-kim
       is_corresponding: true
@@ -722,13 +763,16 @@
     - name: H. Lee
     - name: Y. Jung
       lab: true
+      full_name: Yoonseok Jung
     - name: S. Shin
     - name: E. Kim
     - name: J. J. Seo
       lab: true
+      full_name: Jenny Seo
     - name: J. Kim
     - name: D. Kim
       lab: true
+      full_name: Dongwan Kim
     - name: H. Niida
     - name: V. N. Kim
       link: v-narry-kim
@@ -738,7 +782,7 @@
       is_corresponding: true
   title: Telomeres reforged with non-telomeric sequences in mouse embryonic stem cells
   journal: Nature Communications
-  vip: "12:1097"
+  vip: "12(1):1097"
   year: 2021
   doi: 10.1038/s41467-021-21341-x
   url: "https://doi.org/10.1038/s41467-021-21341-x"
@@ -752,6 +796,7 @@
     - name: K. Park
     - name: S. C. Baek
       lab: true
+      full_name: Seungchan Baek
     - name: H. Moon
     - name: H. Kim
     - name: B. Kim
@@ -773,7 +818,7 @@
       is_corresponding: true
   title: L1 retrotransposons exploit RNA m6A modification as an evolutionary driving force
   journal: Nature Communications
-  vip: "12:880"
+  vip: "12(1):880"
   year: 2021
   doi: 10.1038/s41467-021-21197-1
   url: "https://doi.org/10.1038/s41467-021-21197-1"
@@ -791,7 +836,7 @@
       is_corresponding: true
   title: Development of Multiplexed Immuno-N-Terminomics to Reveal the Landscape of Proteolytic Processing in Early Embryogenesis of Drosophila melanogaster
   journal: Analytical Chemistry
-  vip: 92(7), 4926-4934
+  vip: "92(7):4926-4934"
   year: 2020
   doi: 10.1021/acs.analchem.9b05035
   url: "https://pubs.acs.org/doi/10.1021/acs.analchem.9b05035"
@@ -800,20 +845,25 @@
 - authors:
     - name: S. C. Kwon
       lab: true
+      full_name: Sung-Chul Kwon
       is_first: true
     - name: H. Jang
       lab: true
+      full_name: Harim Jang
       is_first: true
     - name: S. Shen
       is_first: true
     - name: S. C. Baek
       lab: true
+      full_name: Seungchan Baek
     - name: K. Kim
       lab: true
+      full_name: Kijun Kim
     - name: J. Yang
       link: jihye-yang
     - name: J. Kim
       lab: true
+      full_name: Jimi Kim
     - name: J.-S. Kim
       lab: true
     - name: S. Wang
@@ -834,19 +884,23 @@
 - authors:
     - name: R. Shang
       is_first: true
+      is_corresponding: true
     - name: S. C. Baek
       lab: true
+      full_name: Seungchan Baek
       is_first: true
     - name: K. Kim
       lab: true
+      full_name: Kijun Kim
     - name: B. Kim
       lab: true
     - name: V. N. Kim
       link: v-narry-kim
     - name: E. C. Lai
+      is_corresponding: true
   title: Genomic Clustering Facilitates Nuclear Processing of Suboptimal Pri-miRNA Loci
   journal: Molecular Cell
-  vip: "78(2):303–316"
+  vip: "78(2):303-316.e4"
   year: 2020
   doi: 10.1016/j.molcel.2020.02.009
   url: "https://doi.org/10.1016/j.molcel.2020.02.009"
@@ -855,8 +909,10 @@
 - authors:
     - name: J. W. Bae
       lab: true
+      full_name: Jong Woo Bae
     - name: S. C. Kwon
       lab: true
+      full_name: Sung-Chul Kwon
     - name: Y. Na
     - name: V. N. Kim
       link: v-narry-kim
@@ -865,7 +921,7 @@
       is_corresponding: true
   title: Chemical RNA digestion enables robust RNA-binding site mapping at single amino acid-resolution
   journal: Nature Structural & Molecular Biology
-  vip: "27:678-682"
+  vip: "27(7):678-682"
   year: 2020
   doi: 10.1038/s41594-020-0436-2
   url: "https://www.nature.com/articles/s41594-020-0436-2"
@@ -874,6 +930,7 @@
 - authors:
     - name: D. Kim
       lab: true
+      full_name: Dongwan Kim
     - name: J.-Y. Lee
     - name: J.-S. Yang
     - name: J. W. Kim
@@ -896,11 +953,14 @@
       is_first: true
     - name: J. Kim
       lab: true
+      full_name: Jimi Kim
       is_first: true
     - name: S. Yu
       lab: true
+      full_name: Sha Yu
     - name: Y.-Y. Lee
       lab: true
+      full_name: Young-Yoon Lee
     - name: J. Park
     - name: R. J. Choi
     - name: S.-J. Yoon
@@ -918,11 +978,12 @@
 - authors:
     - name: S. Yu
       lab: true
+      full_name: Sha Yu
     - name: V. N. Kim
       link: v-narry-kim
   title: "A tale of noncanonical tails: gene regulation by post-transcriptional RNA tailing"
   journal: Nature Reviews Molecular Cell Biology
-  vip: "21:542-556"
+  vip: "21(9):542-556"
   year: 2020
   doi: 10.1038/s41580-020-0246-8
   url: "https://doi.org/10.1038/s41580-020-0246-8"
@@ -931,24 +992,31 @@
 - authors:
     - name: D. Kim
       lab: true
+      full_name: Dongwan Kim
       is_first: true
     - name: Y. Lee
       lab: true
       is_first: true
     - name: S.-J. Jung
       lab: true
+      full_name: Soo-Jin Jung
       is_first: true
     - name: J. Yeo
       lab: true
+      full_name: Jinah Yeo
       is_first: true
     - name: J. J. Seo
       lab: true
+      full_name: Jenny Seo
     - name: Y.-Y. Lee
       lab: true
+      full_name: Young-Yoon Lee
     - name: J. Lim
       lab: true
+      full_name: Jaechul Lim
     - name: H. Chang
       lab: true
+      full_name: Hyeshik Chang
     - name: J. Song
     - name: J. Yang
       link: jihye-yang
@@ -959,7 +1027,7 @@
       link: v-narry-kim
   title: Viral hijacking of the TENT4-ZCCHC14 complex protects viral RNAs via mixed tailing
   journal: Nature Structural & Molecular Biology
-  vip: "27:581–588"
+  vip: "27(6):581-588"
   year: 2020
   doi: 10.1038/s41594-020-0427-3
   url: "https://doi.org/10.1038/s41594-020-0427-3"
@@ -974,6 +1042,7 @@
     - name: B. Y. Choi
     - name: D. Kim
       lab: true
+      full_name: Dongwan Kim
     - name: H. Chang
     - name: V. N. Kim
       link: v-narry-kim
@@ -1007,7 +1076,7 @@
     - name: H. K. Yang
   title: microRNA-30a arbitrates intestinal-type early gastric carcinogenesis by directly targeting ITGA2.
   journal: Gastric Cancer
-  vip: "23:600-613"
+  vip: "23(4):600-613"
   year: 2020
   doi: 10.1007/s10120-020-01052-w
   url: "https://doi.org/10.1007/s10120-020-01052-w"
@@ -1019,6 +1088,7 @@
       is_first: true
     - name: K. Jeong
       lab: true
+      full_name: Kyowon Jeong
       is_first: true
     - name: S. Shin
       is_first: true
@@ -1037,7 +1107,7 @@
       is_corresponding: true
   title: MS1-level proteome quantification platform allowing maximally increased multiplexity for SILAC and in vitro chemical labeling
   journal: Analytical Chemistry
-  vip: "92(7):4980–4989"
+  vip: "92(7):4980-4989"
   year: 2020
   doi: 10.1021/acs.analchem.9b05148
   url: "https://doi.org/10.1021/acs.analchem.9b05148"
@@ -1048,11 +1118,13 @@
       is_first: true
     - name: Y. Jung
       lab: true
+      full_name: Yoonseok Jung
       is_first: true
     - name: H. Uhm
     - name: M. Song
     - name: S. Son
       lab: true
+      full_name: Soomin Son
     - name: J. Goo
     - name: C. Jeong
     - name: J.-J. Song
@@ -1061,7 +1133,7 @@
     - name: S. Hohng
   title: Quantification of purified endogenous miRNAs with high sensitivity and specificity
   journal: Nature Communications
-  vip: 11(6033)
+  vip: "11(1):6033"
   year: 2020
   doi: 10.1038/s41467-020-19865-9
   url: "https://doi.org/10.1038/s41467-020-19865-9"
@@ -1071,6 +1143,7 @@
     - name: J. K. Kim
     - name: J. Cho
       lab: true
+      full_name: Jun Cho
     - name: S. H. Kim
     - name: H. C. Kang
     - name: D. S. Kim
@@ -1097,6 +1170,7 @@
       lab: true
     - name: K. T. You
       lab: true
+      full_name: Kwontae You
     - name: M. J. Chang
     - name: C. B. Chang
     - name: S. B. Kang
@@ -1107,7 +1181,7 @@
     - name: J. H. Kim
   title: Stress-activated miR-204 governs senescent phenotypes of chondrocytes to promote osteoarthritis development
   journal: Science Translational Medicine
-  vip: "11(486): eaar6659"
+  vip: "11(486):eaar6659"
   year: 2019
   doi: 10.1126/scitranslmed.aar6659
   url: "https://stm.sciencemag.org/content/11/486/eaar6659"
@@ -1117,6 +1191,7 @@
     - name: J. Jung
     - name: K. Jeong
       lab: true
+      full_name: Kyowon Jeong
     - name: Y. Choi
       lab: true
     - name: S. A. Kim
@@ -1141,18 +1216,22 @@
       is_first: true
     - name: J. Kim
       lab: true
+      full_name: Jimi Kim
       is_first: true
     - name: K. Kim
       lab: true
+      full_name: Kijun Kim
     - name: H. Chang
       lab: true
+      full_name: Hyeshik Chang
     - name: K. You
       lab: true
+      full_name: Kwontae You
     - name: V. N. Kim
       link: v-narry-kim
   title: "Bias-minimized quantification of microRNA reveals widespread alternative processing and 3′ end modification"
   journal: Nucleic Acids Research
-  vip: "47(5): 2630-2640"
+  vip: "47(5):2630-2640"
   year: 2019
   doi: 10.1093/nar/gky1293
   url: "https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gky1293/5271499"
@@ -1161,8 +1240,10 @@
 - authors:
     - name: S. C. Kwon
       lab: true
+      full_name: Sung-Chul Kwon
     - name: S. C. Baek
       lab: true
+      full_name: Seungchan Baek
     - name: Y. G. Choi
     - name: J. Yang
       link: jihye-yang
@@ -1175,7 +1256,7 @@
       is_corresponding: true
   title: Molecular basis for the single-nucleotide precision of primary microRNA processing
   journal: Molecular Cell
-  vip: "73(3):505–518"
+  vip: "73(3):505-518.e5"
   year: 2019
   doi: 10.1016/j.molcel.2018.11.005
   url: "https://www.cell.com/molecular-cell/fulltext/S1097-2765(18)30947-X?rss=yes"
@@ -1196,7 +1277,7 @@
       is_corresponding: true
   title: miR-30a-5p as a tumor suppressor gene in gastric cancer
   journal: Journal of Clinical Oncology
-  vip: 36(4)
+  vip: "36(4_suppl):84"
   year: 2018
   doi: "10.1200/jco.2018.36.4_suppl.84"
   url: "https://ascopubs.org/doi/10.1200/JCO.2018.36.4_suppl.84"
@@ -1205,11 +1286,12 @@
 - authors:
     - name: J. Yeo
       lab: true
+      full_name: Jinah Yeo
     - name: V. N. Kim
       link: v-narry-kim
   title: U-tail as a guardian against invading RNAs
   journal: Nature Structural & Molecular Biology
-  vip: 25, 903–905
+  vip: "25(10):903-905"
   year: 2018
   doi: 10.1038/s41594-018-0139-0
   url: "https://www.nature.com/articles/s41594-018-0139-0"
@@ -1218,6 +1300,7 @@
 - authors:
     - name: Y. Kim
       lab: true
+      full_name: Yoosik Kim
       is_first: true
     - name: J. Park
       lab: true
@@ -1244,28 +1327,34 @@
 - authors:
     - name: J. Lim
       lab: true
+      full_name: Jaechul Lim
       is_first: true
     - name: D. Kim
       lab: true
+      full_name: Dongwan Kim
       is_first: true
     - name: Y. Lee
       lab: true
       is_first: true
     - name: M. Ha
       lab: true
+      full_name: Minju Ha
     - name: M. Lee
       lab: true
+      full_name: Mihye Lee
     - name: J. Yeo
       lab: true
+      full_name: Jinah Yeo
     - name: H. Chang
       lab: true
+      full_name: Hyeshik Chang
     - name: J. Song
     - name: K. Ahn
     - name: V. N. Kim
       link: v-narry-kim
   title: Mixed tailing by TENT4A and TENT4B shields mRNA from rapid deadenylation
   journal: Science
-  vip: eaam5794
+  vip: "361(6403):701-704"
   year: 2018
   doi: 10.1126/science.aam5794
   url: "http://science.sciencemag.org/content/early/2018/07/18/science.aam5794.full"
@@ -1274,16 +1363,20 @@
 - authors:
     - name: H. Yi
       lab: true
+      full_name: Hyerim Yi
       is_first: true
     - name: J. Park
       lab: true
       is_first: true
     - name: M. Ha
       lab: true
+      full_name: Minju Ha
     - name: J. Lim
       lab: true
+      full_name: Jaechul Lim
     - name: H. Chang
       lab: true
+      full_name: Hyeshik Chang
     - name: V. N. Kim
       link: v-narry-kim
   title: PABP Cooperates with the CCR4-NOT Complex to Promote mRNA Deadenylation and Block Precocious Decay
@@ -1301,7 +1394,7 @@
       link: v-narry-kim
   title: "fCLIP-seq for transcriptomic footprinting of dsRNA-binding proteins: Lessons from DROSHA"
   journal: Methods
-  vip: S1046-2023(18)30064-1
+  vip: "152:3-11"
   year: 2018
   doi: 10.1016/j.ymeth.2018.06.004
   url: "https://www.sciencedirect.com/science/article/pii/S1046202318300641?via%3Dihub"
@@ -1310,6 +1403,7 @@
 - authors:
     - name: T. A. Nguyen
       lab: true
+      full_name: Tuan Anh Nguyen
       is_first: true
     - name: J. Park
       lab: true
@@ -1329,9 +1423,11 @@
 - authors:
     - name: A. Son
       lab: true
+      full_name: Ahyeon Son
       is_first: true
     - name: J.-E. Park
       lab: true
+      full_name: Jong-Eun Park
       is_first: true
     - name: V. N. Kim
       link: v-narry-kim
@@ -1346,17 +1442,21 @@
 - authors:
     - name: H. Chang
       lab: true
+      full_name: Hyeshik Chang
       is_first: true
     - name: J. Yeo
       lab: true
+      full_name: Jinah Yeo
       is_first: true
     - name: J.-g. Kim
     - name: H. Kim
       lab: true
     - name: J. Lim
       lab: true
+      full_name: Jaechul Lim
     - name: M. Lee
       lab: true
+      full_name: Mihye Lee
     - name: H. H. Kim
     - name: J. Ohk
     - name: H.-Y. Jeon
@@ -1376,6 +1476,7 @@
 - authors:
     - name: K. Kim
       lab: true
+      full_name: Kijun Kim
       is_first: true
     - name: T. D. Nguyen
       is_first: true
@@ -1394,7 +1495,7 @@
       link: v-narry-kim
   title: RNA-targeting CRISPR comes of age
   journal: Nature Biotechnology
-  vip: "36:44–45"
+  vip: "36(1):44-45"
   year: 2018
   doi: 10.1038/nbt.4054
   url: "https://www.nature.com/articles/nbt.4054"
@@ -1406,12 +1507,13 @@
       is_first: true
     - name: K. Jeong
       lab: true
+      full_name: Kyowon Jeong
       is_first: true
     - name: V. N. Kim
       link: v-narry-kim
   title: Genome-wide Mapping of DROSHA Cleavage Sites on Primary MicroRNAs and Noncanonical Substrates
   journal: Molecular Cell
-  vip: "66(2):258-269"
+  vip: "66(2):258-269.e5"
   year: 2017
   doi: 10.1016/j.molcel.2017.03.013
   url: "http://www.cell.com/molecular-cell/fulltext/S1097-2765(17)30203-4"
@@ -1427,7 +1529,7 @@
       is_corresponding: true
   title: Response to Comment on Multiple repressive mechanisms in the hippocampus during memory formation
   journal: Science
-  vip: "353.6298: 453-453"
+  vip: "353(6298):453"
   year: 2016
   doi: 10.1126/science.aaf2081
   url: "https://www.science.org/doi/10.1126/science.aaf2081"
@@ -1437,6 +1539,7 @@
     - name: J. Choi
     - name: Y.-K. Kim
       lab: true
+      full_name: Young-Kook Kim
     - name: K. Park
     - name: J. Nah
     - name: S. S. Yoon
@@ -1455,19 +1558,23 @@
 - authors:
     - name: J. Lim
       lab: true
+      full_name: Jaechul Lim
       is_first: true
     - name: M. Lee
       lab: true
+      full_name: Mihye Lee
       is_first: true
     - name: A. Son
       lab: true
+      full_name: Ahyeon Son
     - name: H. Chang
       lab: true
+      full_name: Hyeshik Chang
     - name: V. N. Kim
       link: v-narry-kim
   title: mTAIL-seq reveals dynamic poly(A) tail regulation in oocyte-to-embryo development
   journal: Genes & Development
-  vip: "30:1671-1682"
+  vip: "30(14):1671-1682"
   year: 2016
   doi: 10.1101/gad.284802.116
   url: "http://genesdev.cshlp.org/content/30/14/1671.abstract"
@@ -1481,6 +1588,7 @@
     - name: T.-S. Han
     - name: Y.-K. Kim
       lab: true
+      full_name: Young-Kook Kim
     - name: K. Hur
     - name: B.-C. Kang
     - name: W. H. Kim
@@ -1500,15 +1608,18 @@
 - authors:
     - name: J.-E. Park
       lab: true
+      full_name: Jong-Eun Park
       is_first: true
     - name: H. Yi
       lab: true
+      full_name: Hyerim Yi
       is_first: true
     - name: Y. Kim
       lab: true
       is_first: true
     - name: H. Chang
       lab: true
+      full_name: Hyeshik Chang
     - name: V. N. Kim
       link: v-narry-kim
   title: Regulation of Poly(A) Tail and Translation during the Somatic Cell Cycle
@@ -1522,6 +1633,7 @@
 - authors:
     - name: Y.-K. Kim
       lab: true
+      full_name: Young-Kook Kim
       is_corresponding: true
     - name: B. Kim
       lab: true
@@ -1539,9 +1651,11 @@
 - authors:
     - name: S. C. Kwon
       lab: true
+      full_name: Sung-Chul Kwon
       is_first: true
     - name: T. A. Nguyen
       lab: true
+      full_name: Tuan Anh Nguyen
       is_first: true
     - name: Y.-G. Choi
       is_first: true
@@ -1563,13 +1677,14 @@
 - authors:
     - name: K. T. You
       lab: true
+      full_name: Kwontae You
     - name: J. Park
       lab: true
     - name: V. N. Kim
       link: v-narry-kim
   title: Role of the small subunit processome in the maintenance of pluripotent stem cells
   journal: Genes & Development
-  vip: "29:2004-2009"
+  vip: "29(19):2004-2009"
   year: 2015
   doi: 10.1101/gad.267112.115
   url: "http://genesdev.cshlp.org/content/29/19/2004.abstract"
@@ -1578,6 +1693,7 @@
 - authors:
     - name: J. Cho
       lab: true
+      full_name: Jun Cho
       is_first: true
     - name: N.-K. Yu
       is_first: true
@@ -1595,7 +1711,7 @@
       is_corresponding: true
   title: Multiple repressive mechanisms in the hippocampus during memory formation
   journal: Science
-  vip: "350(6256):82–87"
+  vip: "350(6256):82-87"
   year: 2015
   doi: 10.1126/science.aac7368
   url: "http://www.sciencemag.org/content/350/6256/82.abstract"
@@ -1603,6 +1719,7 @@
 
 - authors:
     - name: M. Kampmann
+      is_corresponding: true
     - name: M. A. Horlbeck
     - name: Y. Chena
     - name: J. C. Tsai
@@ -1611,11 +1728,14 @@
     - name: J. E. Villalta
     - name: S. C. Kwon
       lab: true
+      full_name: Sung-Chul Kwon
     - name: H. Chang
       lab: true
+      full_name: Hyeshik Chang
     - name: V. N. Kim
       link: v-narry-kim
     - name: J. S. Weissman
+      is_corresponding: true
   title: Next-generation libraries for robust RNA interference-based genome-wide screens
   journal: Proceedings of the National Academy of Sciences of the U.S.A.
   vip: "112(26):E3384-E3391"
@@ -1633,6 +1753,7 @@
     - name: Y. Hong
     - name: H. Chang
       lab: true
+      full_name: Hyeshik Chang
     - name: D. Baek
     - name: V. N. Kim
       link: v-narry-kim
@@ -1649,12 +1770,14 @@
 - authors:
     - name: T. A. Nguyen
       lab: true
+      full_name: Tuan Anh Nguyen
     - name: M. H. Jo
     - name: Y.-G. Choi
     - name: J. Park
       lab: true
     - name: S. C. Kwon
       lab: true
+      full_name: Sung-Chul Kwon
     - name: S. Hohng
     - name: V. N. Kim
       link: v-narry-kim
@@ -1675,11 +1798,13 @@
       is_first: true
     - name: M. Ha
       lab: true
+      full_name: Minju Ha
       is_first: true
     - name: L. Loeff
       is_first: true
     - name: H. Chang
       lab: true
+      full_name: Hyeshik Chang
     - name: D. K. Simanshu
     - name: S. Li
     - name: M. Fareh
@@ -1691,7 +1816,7 @@
       is_corresponding: true
   title: TUT7 controls the fate of precursor microRNAs by using three different uridylation mechanisms
   journal: EMBO Journal
-  vip: "35(2):115-236"
+  vip: "34(13):1801-1815"
   year: 2015
   doi: 10.15252/embj.201590931
   url: "http://emboj.embopress.org/content/early/2015/05/15/embj.201590931.long"
@@ -1708,6 +1833,7 @@
     - name: H. J. Shin
     - name: J. E. Park
       lab: true
+      full_name: Jong-Eun Park
     - name: K. Kim
     - name: C. R. Kim
     - name: H. Jang
@@ -1719,7 +1845,7 @@
     - name: S. H. Baek
   title: Pontin functions as an essential coactivator for Oct4-dependent lincRNA expression in mouse embryonic stem cells
   journal: Nature Communications
-  vip: "6:6810"
+  vip: "6(1):6810"
   year: 2015
   doi: 10.1038/ncomms7810
   url: "http://www.nature.com/ncomms/2015/150410/ncomms7810/full/ncomms7810.html"
@@ -1742,7 +1868,7 @@
     - name: H.-K. Yang
   title: MicroRNA-29c mediates initiation of gastric carcinogenesis by directly targeting ITGB1
   journal: Gut
-  vip: "64:203–214"
+  vip: "64(2):203-214"
   year: 2015
   doi: 10.1136/gutjnl-2013-306640
   url: "http://gut.bmj.com/content/64/2/203"
@@ -1753,6 +1879,7 @@
       is_first: true
     - name: H. Chang
       lab: true
+      full_name: Hyeshik Chang
       is_first: true
     - name: Y. Jun
     - name: S. Park
@@ -1764,7 +1891,7 @@
     - name: S. Lee
   title: "miRseqViewer: Multi-panel visualization of sequence, structure and expression for analysis of microRNA sequencing data"
   journal: Bioinformatics
-  vip: "31(4): 596-598"
+  vip: "31(4):596-598"
   year: 2015
   doi: 10.1093/bioinformatics/btu676
   url: "http://bioinformatics.oxfordjournals.org/content/31/4/596"
@@ -1773,15 +1900,19 @@
 - authors:
     - name: J. Lim
       lab: true
+      full_name: Jaechul Lim
       is_first: true
     - name: M. Ha
       lab: true
+      full_name: Minju Ha
       is_first: true
     - name: H. Chang
       lab: true
+      full_name: Hyeshik Chang
       is_first: true
     - name: S. C. Kwon
       lab: true
+      full_name: Sung-Chul Kwon
     - name: D. K. Simanshu
     - name: D. J. Patel
     - name: V. N. Kim
@@ -1797,16 +1928,22 @@
 - authors:
     - name: M. Lee
       lab: true
+      full_name: Mihye Lee
     - name: Y. Choi
       lab: true
+      full_name: Yeon Choi
     - name: K. Kim
       lab: true
+      full_name: Kijun Kim
     - name: H. Jin
       lab: true
+      full_name: Hua Jin
     - name: J. Lim
       lab: true
+      full_name: Jaechul Lim
     - name: T. A. Nguyen
       lab: true
+      full_name: Tuan Anh Nguyen
     - name: J. Yang
       link: jihye-yang
     - name: M. Jeong
@@ -1829,19 +1966,22 @@
       is_first: true
     - name: J. Yeo
       lab: true
+      full_name: Jinah Yeo
       is_first: true
     - name: J. H. Lee
       lab: true
+      full_name: JungHyun Lee
       is_first: true
     - name: J. Cho
       lab: true
+      full_name: Jun Cho
     - name: D. Seo
     - name: J. Kim
     - name: V. N. Kim
       link: v-narry-kim
   title: Deletion of human tarbp2 reveals cellular microRNA targets and cell cycle function of TRBP
   journal: Cell Reports
-  vip: "9:1061–1074"
+  vip: "9(3):1061-1074"
   year: 2014
   doi: 10.1016/j.celrep.2014.09.039
   url: "http://www.cell.com/cell-reports/abstract/S2211-1247(14)00822-5"
@@ -1850,13 +1990,14 @@
 - authors:
     - name: M. Lee
       lab: true
+      full_name: Mihye Lee
     - name: B. Kim
       lab: true
     - name: V. N. Kim
       link: v-narry-kim
   title: "Emerging roles of RNA modifications: m6A and U-tail"
   journal: Cell
-  vip: "158:980-987"
+  vip: "158(5):980-987"
   year: 2014
   doi: 10.1016/j.cell.2014.08.005
   url: "http://www.cell.com/cell/abstract/S0092-8674%2814%2901000-9"
@@ -1865,11 +2006,12 @@
 - authors:
     - name: M. Ha
       lab: true
+      full_name: Minju Ha
     - name: V. N. Kim
       link: v-narry-kim
   title: Regulation of microRNA biogenesis
   journal: Nature Reviews Molecular Cell Biology
-  vip: 15, 509–524
+  vip: "15(8):509-524"
   year: 2014
   doi: 10.1038/nrm3838
   url: "http://www.nature.com/nrm/journal/v15/n8/full/nrm3838.html"
@@ -1880,17 +2022,21 @@
       lab: true
     - name: J. H. Lee
       lab: true
+      full_name: JungHyun Lee
     - name: J.-E. Park
       lab: true
+      full_name: Jong-Eun Park
     - name: J. Cho
       lab: true
+      full_name: Jun Cho
     - name: H. Yi
       lab: true
+      full_name: Hyerim Yi
     - name: V. N. Kim
       link: v-narry-kim
   title: PKR is activated by cellular dsRNAs during mitosis and acts as a mitotic regulator
   journal: Genes & Development
-  vip: "28: 1310-1322"
+  vip: "28(12):1310-1322"
   year: 2014
   doi: 10.1101/gad.242644.114
   url: "http://genesdev.cshlp.org/content/28/12/1310.short?rss=1"
@@ -1899,12 +2045,15 @@
 - authors:
     - name: H. Chang
       lab: true
+      full_name: Hyeshik Chang
       is_first: true
     - name: J. Lim
       lab: true
+      full_name: Jaechul Lim
       is_first: true
     - name: M. Ha
       lab: true
+      full_name: Minju Ha
     - name: V. N. Kim
       link: v-narry-kim
   title: "TAIL-seq: Genome-wide Determination of Poly(A) Tail Length and 3′ End Modifications"
@@ -1935,14 +2084,16 @@
     - name: J.-B. Ma
     - name: J.-E. Park
       lab: true
+      full_name: Jong-Eun Park
     - name: I. Heo
       lab: true
+      full_name: Inha Heo
     - name: V. N. Kim
       link: v-narry-kim
     - name: D. J. Patel
   title: A Phosphate-Binding Pocket within the Platform-PAZ-Connector Helix Cassette of Human Dicer
   journal: Molecular Cell
-  vip: "53:606-616"
+  vip: "53(4):606-616"
   year: 2014
   doi: 10.1016/j.molcel.2014.01.003
   url: "http://www.cell.com/molecular-cell/abstract/S1097-2765(14)00031-8"
@@ -1951,6 +2102,7 @@
 - authors:
     - name: Y.-K. Kim
       lab: true
+      full_name: Young-Kook Kim
       is_first: true
     - name: G. Wee
       is_first: true
@@ -1974,13 +2126,16 @@
 - authors:
     - name: S. C. Kwon
       lab: true
+      full_name: Sung-Chul Kwon
     - name: H. Yi
       lab: true
+      full_name: Hyerim Yi
     - name: K. Eichelbaum
     - name: "S. Föhr"
     - name: B. Fischer
     - name: K. T. You
       lab: true
+      full_name: Kwontae You
     - name: A. Castello
     - name: J. Krijgsveld
     - name: M. W. Hentze
@@ -1999,11 +2154,13 @@
     - name: J. Lee
     - name: J. Yeo
       lab: true
+      full_name: Jinah Yeo
     - name: H.-K. Na
     - name: Y.-K. Kim
     - name: H. Jang
     - name: J. H. Lee
       lab: true
+      full_name: JungHyun Lee
     - name: S. W. Han
     - name: Y. Lee
     - name: V. N. Kim
@@ -2011,7 +2168,7 @@
     - name: D.-H. Min
   title: Quantitative and Multiplexed MicroRNA Sensing in Living Cells Based on Peptide Nucleic Acid and Nano Graphene Oxide (PANGO)
   journal: ACS Nano
-  vip: "7(7):5882–5891"
+  vip: "7(7):5882-5891"
   year: 2013
   doi: 10.1021/nn401183s
   url: "http://pubs.acs.org/doi/abs/10.1021/nn401183s"
@@ -2020,6 +2177,7 @@
 - authors:
     - name: C. Joo
       lab: true
+      full_name: Chirlmin Joo
     - name: M. Fareh
     - name: V. N. Kim
       link: v-narry-kim
@@ -2041,6 +2199,7 @@
     - name: I. Choi
     - name: H. Chang
       lab: true
+      full_name: Hyeshik Chang
     - name: D. Ryu
     - name: B. Lee
     - name: V. N. Kim
@@ -2049,7 +2208,7 @@
     - name: S. Lee
   title: "miRGator v3.0: a microRNA portal for deep sequencing, expression profiling and mRNA targeting"
   journal: Nucleic Acids Research
-  vip: "41 (D1): D252-D257"
+  vip: "41(D1):D252-D257"
   year: 2012
   doi: 10.1093/nar/gks1168
   url: "http://nar.oxfordjournals.org/content/41/D1/D252.abstract"
@@ -2058,12 +2217,15 @@
 - authors:
     - name: J. Cho
       lab: true
+      full_name: Jun Cho
       is_first: true
     - name: H. Chang
       lab: true
+      full_name: Hyeshik Chang
       is_first: true
     - name: S. C. Kwon
       lab: true
+      full_name: Sung-Chul Kwon
     - name: B. Kim
       lab: true
     - name: Y. Kim
@@ -2071,12 +2233,13 @@
     - name: J. Choe
     - name: M. Ha
       lab: true
+      full_name: Minju Ha
     - name: Y. K. Kim
     - name: V. N. Kim
       link: v-narry-kim
   title: LIN28A is a suppressor of ER-associated translation in embryonic stem cells
   journal: Cell
-  vip: "151: 765-777"
+  vip: "151(4):765-777"
   year: 2012
   doi: 10.1016/j.cell.2012.10.019
   url: "http://www.cell.com/abstract/S0092-8674(12)01234-2"
@@ -2085,25 +2248,32 @@
 - authors:
     - name: I. Heo
       lab: true
+      full_name: Inha Heo
       is_first: true
     - name: M. Ha
       lab: true
+      full_name: Minju Ha
       is_first: true
     - name: J. Lim
       lab: true
+      full_name: Jaechul Lim
     - name: M.-J. Yoon
       lab: true
+      full_name: Mi-Jeong Yoon
     - name: J.-E. Park
       lab: true
+      full_name: Jong-Eun Park
     - name: S. C. Kwon
       lab: true
+      full_name: Sung-Chul Kwon
     - name: H. Chang
       lab: true
+      full_name: Hyeshik Chang
     - name: V. N. Kim
       link: v-narry-kim
   title: Mono-uridylation of pre-microRNA as a key step in the biogenesis of group II let-7 microRNAs
   journal: Cell
-  vip: "151: 521-532"
+  vip: "151(3):521-532"
   year: 2012
   doi: 10.1016/j.cell.2012.09.022
   url: "http://www.cell.com/abstract/S0092-8674(12)01129-4"
@@ -2115,6 +2285,7 @@
     - name: J. R. Kim
     - name: H. Jin
       lab: true
+      full_name: Hua Jin
     - name: V. N. Kim
       link: v-narry-kim
     - name: K. H. Cho
@@ -2129,15 +2300,17 @@
 - authors:
     - name: H. Jin
       lab: true
+      full_name: Hua Jin
     - name: V. N. Kim
       link: v-narry-kim
       is_corresponding: true
     - name: S. Hyun
       lab: true
+      full_name: Seogang Hyun
       is_corresponding: true
   title: Conserved microRNA miR-8 controls body size in response to steroid signaling in Drosophila
   journal: Genes & Development
-  vip: "26:1427-1432"
+  vip: "26(13):1427-1432"
   year: 2012
   doi: 10.1101/gad.192872.112
   url: "http://genesdev.cshlp.org/content/26/13/1427.abstract"
@@ -2146,17 +2319,20 @@
 - authors:
     - name: Y.-K. Kim
       lab: true
+      full_name: Young-Kook Kim
     - name: J. Yeo
       lab: true
+      full_name: Jinah Yeo
     - name: B. Kim
       lab: true
     - name: M. Ha
       lab: true
+      full_name: Minju Ha
     - name: V. N. Kim
       link: v-narry-kim
   title: Short Structured RNAs with Low GC Content Are Selectively Lost during Extraction from a Small Number of Cells
   journal: Molecular Cell
-  vip: "46:893-895"
+  vip: "46(6):893-895"
   year: 2012
   doi: 10.1016/j.molcel.2012.05.036
   url: "http://www.cell.com/molecular-cell/fulltext/S1097-2765%2812%2900481-9"
@@ -2169,7 +2345,7 @@
       link: v-narry-kim
   title: "MicroRNA Factory: RISC Assembly from Precursor MicroRNAs"
   journal: Molecular Cell
-  vip: "46:384-386"
+  vip: "46(4):384-386"
   year: 2012
   doi: 10.1016/j.molcel.2012.05.012
   url: "http://www.sciencedirect.com/science/article/pii/S1097276512003966"
@@ -2184,6 +2360,7 @@
     - name: D. Kim
     - name: Y.-K. Kim
       lab: true
+      full_name: Young-Kook Kim
     - name: Y.-E. Kim
     - name: J.-H. Ahn
     - name: S. R. Riddell
@@ -2193,7 +2370,7 @@
     - name: K. Ahn
   title: Human cytomegalovirus microRNA miR-US4-1 inhibits CD8+ T cell responses by targeting the aminopeptidase ERAP1
   journal: Nature Immunology
-  vip: "12:984-991"
+  vip: "12(10):984-991"
   year: 2011
   doi: 10.1038/ni.2097
   url: "http://www.nature.com/ni/journal/v12/n10/full/ni.2097.html"
@@ -2202,22 +2379,26 @@
 - authors:
     - name: J.-E. Park
       lab: true
+      full_name: Jong-Eun Park
       is_first: true
     - name: I. Heo
       lab: true
+      full_name: Inha Heo
       is_first: true
     - name: Y. Tian
     - name: D. K. Simanshu
     - name: H. Chang
       lab: true
+      full_name: Hyeshik Chang
     - name: D. Jee
       lab: true
+      full_name: David Jee
     - name: D. J. Patel
     - name: V. N. Kim
       link: v-narry-kim
   title: "Dicer recognizes the 5′ end of RNA for efficient and accurate processing"
   journal: Nature
-  vip: "475:201-205"
+  vip: "475(7355):201-205"
   year: 2011
   doi: 10.1038/nature10198
   url: "http://www.nature.com/nature/journal/v475/n7355/full/nature10198.html"
@@ -2226,8 +2407,10 @@
 - authors:
     - name: K.-H. Yeom
       lab: true
+      full_name: Kay Kyu-hyeon Yeom
     - name: I. Heo
       lab: true
+      full_name: Inha Heo
     - name: J. Lee
     - name: S. Hohng
     - name: V. N. Kim
@@ -2235,10 +2418,11 @@
       is_corresponding: true
     - name: C. Joo
       lab: true
+      full_name: Chirlmin Joo
       is_corresponding: true
   title: "Single-molecule approach to immunoprecipitated protein complexes: insights into miRNA uridylation"
   journal: EMBO Reports
-  vip: "12:690-969"
+  vip: "12(7):690-696"
   year: 2011
   doi: 10.1038/embor.2011.100
   url: "http://embor.embopress.org/content/12/7/690.long"
@@ -2247,13 +2431,15 @@
 - authors:
     - name: Y.-K. Kim
       lab: true
+      full_name: Young-Kook Kim
     - name: I. Heo
       lab: true
+      full_name: Inha Heo
     - name: V. N. Kim
       link: v-narry-kim
   title: Modifications of Small RNAs and Their Associated Proteins
   journal: Cell
-  vip: "143:703-709"
+  vip: "143(5):703-709"
   year: 2010
   doi: 10.1016/j.cell.2010.11.018
   url: "http://www.cell.com/abstract/S0092-8674%2810%2901298-5"
@@ -2262,24 +2448,29 @@
 - authors:
     - name: S. Hyun
       lab: true
+      full_name: Seogang Hyun
       is_first: true
     - name: J. H. Lee
       lab: true
+      full_name: JungHyun Lee
       is_first: true
     - name: H. Jin
       lab: true
+      full_name: Hua Jin
       is_first: true
     - name: J. Nam
       lab: true
+      full_name: Jin-Wu Nam
     - name: B. Namkoong
       lab: true
+      full_name: Bumjin Namkoong
     - name: Gina Lee
     - name: J. Chung
     - name: V. N. Kim
       link: v-narry-kim
   title: Conserved microRNA miR-8/miR-200 and its target USH/FOG2 control growth by regulating PI3K
   journal: Cell
-  vip: "139:1096-1108"
+  vip: "139(6):1096-1108"
   year: 2009
   doi: 10.1016/j.cell.2009.11.020
   url: "http://www.cell.com/abstract/S0092-8674%2809%2901432-9"
@@ -2288,11 +2479,12 @@
 - authors:
     - name: I. Heo
       lab: true
+      full_name: Inha Heo
     - name: V. N. Kim
       link: v-narry-kim
   title: "Regulating the Regulators: Posttranslational Modifications of RNA Silencing Factors"
   journal: Cell
-  vip: "139:28-31"
+  vip: "139(1):28-31"
   year: 2009
   doi: 10.1016/j.cell.2009.09.013
   url: "http://www.cell.com/abstract/S0092-8674%2809%2901173-8"
@@ -2301,27 +2493,35 @@
 - authors:
     - name: H. Jin
       lab: true
+      full_name: Hua Jin
       is_first: true
     - name: M. R. Suh
       lab: true
+      full_name: Mi Ra Suh
       is_first: true
     - name: J. Han
       lab: true
+      full_name: Jinju Han
     - name: K.-H. Yeom
       lab: true
+      full_name: Kay Kyu-hyeon Yeom
     - name: Y. Lee
       lab: true
+      full_name: Yoontae Lee
     - name: I. Heo
       lab: true
+      full_name: Inha Heo
     - name: M. Ha
       lab: true
+      full_name: Minju Ha
     - name: S. Hyun
       lab: true
+      full_name: Seogang Hyun
     - name: V. N. Kim
       link: v-narry-kim
   title: Human UPF1 Participates in Small RNA-Induced mRNA Downregulation
   journal: Molecular and Cellular Biology
-  vip: "20(21):5789-99"
+  vip: "29(21):5789-5799"
   year: 2009
   doi: 10.1128/mcb.00653-09
   url: "http://mcb.asm.org/content/29/21/5789.abstract"
@@ -2330,28 +2530,36 @@
 - authors:
     - name: I. Heo
       lab: true
+      full_name: Inha Heo
       is_first: true
     - name: C. Joo
       lab: true
+      full_name: Chirlmin Joo
       is_first: true
     - name: Y.-K. Kim
       lab: true
+      full_name: Young-Kook Kim
       is_first: true
     - name: M. Ha
       lab: true
+      full_name: Minju Ha
     - name: M.-J. Yoon
       lab: true
+      full_name: Mi-Jeong Yoon
     - name: J. Cho
       lab: true
+      full_name: Jun Cho
     - name: K.-H. Yeom
       lab: true
+      full_name: Kay Kyu-hyeon Yeom
     - name: J. Han
       lab: true
+      full_name: Jinju Han
     - name: V. N. Kim
       link: v-narry-kim
   title: TUT4 in Concert with Lin28 Suppresses MicroRNA Biogenesis through Pre-MicroRNA Uridylation
   journal: Cell
-  vip: "138:696-708"
+  vip: "138(4):696-708"
   year: 2009
   doi: 10.1016/j.cell.2009.08.002
   url: "http://www.cell.com/abstract/S0092-8674(09)00964-7"
@@ -2360,14 +2568,18 @@
 - authors:
     - name: Y.-K. Kim
       lab: true
+      full_name: Young-Kook Kim
     - name: J. Yu
     - name: T. S. Han
     - name: S. Y. Park
       lab: true
+      full_name: Sabina Sung-yeon Park
     - name: B. Namkoong
       lab: true
+      full_name: Bumjin Namkoong
     - name: D. H. Kim
       lab: true
+      full_name: Donghyuk Kim
     - name: K. Hur
     - name: M. W. Yoo
     - name: H. J. Lee
@@ -2378,7 +2590,7 @@
       is_corresponding: true
   title: "Functional links between clustered microRNAs: suppression of cell-cycle inhibitors by microRNA clusters in gastric cancer"
   journal: Nucleic Acids Research
-  vip: "37:1672-1681"
+  vip: "37(5):1672-1681"
   year: 2009
   doi: 10.1093/nar/gkp002
   url: "http://nar.oxfordjournals.org/content/37/5/1672.short"
@@ -2390,11 +2602,12 @@
       is_corresponding: true
     - name: J. Han
       lab: true
+      full_name: Jinju Han
     - name: M. C. Siomi
       is_corresponding: true
   title: Biogenesis of small RNAs in animals
   journal: Nature Reviews Molecular Cell Biology
-  vip: "10:126-139"
+  vip: "10(2):126-139"
   year: 2009
   doi: 10.1038/nrm2632
   url: "http://www.nature.com/nrm/journal/v10/n2/pdf/nrm2632.pdf"
@@ -2403,14 +2616,18 @@
 - authors:
     - name: J. Han
       lab: true
+      full_name: Jinju Han
     - name: J. S. Pederson
     - name: S. C. Kwon
       lab: true
+      full_name: Sung-Chul Kwon
     - name: C. D. Belair
     - name: Y.-K. Kim
       lab: true
+      full_name: Young-Kook Kim
     - name: K. H. Yeom
       lab: true
+      full_name: Kay Kyu-hyeon Yeom
     - name: W. Y. Yang
       lab: true
     - name: D. Haussler
@@ -2419,7 +2636,7 @@
       link: v-narry-kim
   title: Posttranscriptional crossregulation between Drosha and DGCR8
   journal: Cell
-  vip: "136:75-84"
+  vip: "136(1):75-84"
   year: 2009
   doi: 10.1016/j.cell.2008.10.053
   url: "http://www.cell.com/retrieve/pii/S0092867408014906"
@@ -2428,19 +2645,23 @@
 - authors:
     - name: S. Y. Park
       lab: true
+      full_name: Sabina Sung-yeon Park
       is_first: true
     - name: J. H. Lee
       lab: true
+      full_name: JungHyun Lee
       is_first: true
     - name: M. Ha
       lab: true
+      full_name: Minju Ha
     - name: J. W. Nam
       lab: true
+      full_name: Jin-Wu Nam
     - name: V. N. Kim
       link: v-narry-kim
   title: miR-29 miRNAs activate p53 by targeting p85a and CDC42
   journal: Nature Structural & Molecular Biology
-  vip: "16(1):23-9"
+  vip: "16(1):23-29"
   year: 2009
   doi: 10.1038/nsmb.1533
   url: "http://www.nature.com/nsmb/journal/v16/n1/full/nsmb.1533.html"
@@ -2449,21 +2670,26 @@
 - authors:
     - name: I. Heo
       lab: true
+      full_name: Inha Heo
       is_first: true
     - name: C. Joo
       lab: true
+      full_name: Chirlmin Joo
       is_first: true
     - name: J. Cho
       lab: true
+      full_name: Jun Cho
     - name: M. Ha
       lab: true
+      full_name: Minju Ha
     - name: J. Han
       lab: true
+      full_name: Jinju Han
     - name: V. N. Kim
       link: v-narry-kim
   title: Lin28 mediates the terminal uridylation of let-7 precursor microRNA
   journal: Molecular Cell
-  vip: "32:276-284"
+  vip: "32(2):276-284"
   year: 2008
   doi: 10.1016/j.molcel.2008.09.014
   url: "http://www.cell.com/molecular-cell/abstract/S1097-2765(08)00660-6"
@@ -2474,7 +2700,7 @@
       link: v-narry-kim
   title: Cell cycle micromanagement in embryonic stem cells
   journal: Nature Genetics
-  vip: "40(12):1391-2"
+  vip: "40(12):1391-1392"
   year: 2008
   doi: 10.1038/ng1208-1391
   url: "http://www.nature.com/ng/journal/v40/n12/abs/ng1208-1391.html"
@@ -2485,7 +2711,7 @@
       link: v-narry-kim
   title: Sorting out small RNAs
   journal: Cell
-  vip: "133:25-26"
+  vip: "133(1):25-26"
   year: 2008
   doi: 10.1016/j.cell.2008.03.015
   url: "http://www.cell.com/abstract/S0092-8674(08)00390-5"
@@ -2497,6 +2723,7 @@
     - name: K. H. Kim
     - name: I. Heo
       lab: true
+      full_name: Inha Heo
     - name: S. K. Kim
     - name: O. Kim
     - name: H. K. Kim
@@ -2513,7 +2740,7 @@
     - name: S. W. Suh
   title: Structural and functional insights into Dom34, a key component of No-Go mRNA decay
   journal: Molecular Cell
-  vip: "27(6):938-50"
+  vip: "27(6):938-950"
   year: 2007
   doi: 10.1016/j.molcel.2007.07.019
   url: "http://www.cell.com/molecular-cell/abstract/S1097-2765(07)00492-3"
@@ -2527,12 +2754,13 @@
     - name: J. J. Kim
     - name: K. H. Yeom
       lab: true
+      full_name: Kay Kyu-hyeon Yeom
     - name: V. N. Kim
       link: v-narry-kim
     - name: Y. Cho
   title: Crystal structure of human DGCR8 core
   journal: Nature Structural & Molecular Biology
-  vip: "14(9):847-53"
+  vip: "14(9):847-853"
   year: 2007
   doi: 10.1038/nsmb1294
   url: "http://www.nature.com/nsmb/journal/v14/n9/full/nsmb1294.html"
@@ -2541,11 +2769,12 @@
 - authors:
     - name: Y.-K. Kim
       lab: true
+      full_name: Young-Kook Kim
     - name: V. N. Kim
       link: v-narry-kim
   title: Processing of intronic microRNAs
   journal: EMBO Journal
-  vip: "26(3):775-83"
+  vip: "26(3):775-783"
   year: 2007
   doi: 10.1038/sj.emboj.7601512
   url: "http://www.nature.com/emboj/journal/v26/n3/full/7601512a.html"
@@ -2559,7 +2788,7 @@
     - name: S. Kim
   title: Control of Splicing Efficiency by the Mouse Histone H2a Element in a Murine Leukemia Virus-based Retroviral Vector
   journal: Molecular Therapy
-  vip: "15(1):167-72"
+  vip: "15(1):167-172"
   year: 2007
   doi: 10.1038/sj.mt.6300007
   url: "http://www.nature.com/mt/journal/v15/n1/full/6300007a.html"
@@ -2570,7 +2799,7 @@
       link: v-narry-kim
   title: "Small RNAs just got bigger: Piwi-interacting RNAs (piRNAs) in mammalian testes"
   journal: Genes & Development
-  vip: "20(15):1993-7"
+  vip: "20(15):1993-1997"
   year: 2006
   doi: 10.1101/gad.1456106
   url: "http://genesdev.cshlp.org/content/20/15/1993.abstract"
@@ -2579,17 +2808,21 @@
 - authors:
     - name: K. H. Yeom
       lab: true
+      full_name: Kay Kyu-hyeon Yeom
     - name: Y. Lee
       lab: true
+      full_name: Yoontae Lee
     - name: J. Han
       lab: true
+      full_name: Jinju Han
     - name: M. R. Suh
       lab: true
+      full_name: Mi Ra Suh
     - name: V. N. Kim
       link: v-narry-kim
   title: Characterization of DGCR8/Pasha, the essential cofactor for Drosha in primary miRNA processing
   journal: Nucleic Acids Research
-  vip: "34(16):4622-9"
+  vip: "34(16):4622-4629"
   year: 2006
   doi: 10.1093/nar/gkl458
   url: "http://nar.oxfordjournals.org/content/34/16/4622.short"
@@ -2600,9 +2833,10 @@
       link: v-narry-kim
     - name: J. W. Nam
       lab: true
+      full_name: Jin-Wu Nam
   title: Genomics of microRNA
   journal: Trends in Genetics
-  vip: "22(3):165-73"
+  vip: "22(3):165-173"
   year: 2006
   url: "http://www.cell.com/trends/genetics/abstract/S0168-9525(06)00021-7"
   topics: [mirna-function]
@@ -2622,7 +2856,7 @@
     - name: B. K. Kaang
   title: Regulation of ApC/EBP mRNA by the Aplysia AU-rich element-binding protein, ApELAV, and its effects on 5-hydroxytryptamine-induced long-term facilitation
   journal: Journal of Neurochemistry
-  vip: "98(2):420-9"
+  vip: "98(2):420-429"
   year: 2006
   doi: 10.1111/j.1471-4159.2006.03887.x
   url: "http://onlinelibrary.wiley.com/doi/10.1111/j.1471-4159.2006.03887.x/abstract"
@@ -2631,17 +2865,22 @@
 - authors:
     - name: J. Han
       lab: true
+      full_name: Jinju Han
       is_first: true
     - name: Y. Lee
       lab: true
+      full_name: Yoontae Lee
       is_first: true
     - name: K. H. Yeom
       lab: true
+      full_name: Kay Kyu-hyeon Yeom
       is_first: true
     - name: J. W. Nam
       lab: true
+      full_name: Jin-Wu Nam
     - name: I. Heo
       lab: true
+      full_name: Inha Heo
     - name: J. K. Rhee
     - name: S. Y. Sohn
     - name: Y. Cho
@@ -2659,22 +2898,26 @@
 - authors:
     - name: Y. Lee
       lab: true
+      full_name: Yoontae Lee
       is_first: true
     - name: I. Hur
       lab: true
       is_first: true
     - name: S. Y. Park
       lab: true
+      full_name: Sabina Sung-yeon Park
       is_first: true
     - name: Y.-K. Kim
       lab: true
+      full_name: Young-Kook Kim
     - name: M. R. Suh
       lab: true
+      full_name: Mi Ra Suh
     - name: V. N. Kim
       link: v-narry-kim
   title: The role of PACT in the RNA silencing pathway
   journal: EMBO Journal
-  vip: "25(3):522-32"
+  vip: "25(3):522-532"
   year: 2006
   doi: 10.1038/sj.emboj.7600942
   url: "http://emboj.embopress.org/content/25/3/522"
@@ -2683,17 +2926,20 @@
 - authors:
     - name: J. W. Nam
       lab: true
+      full_name: Jin-Wu Nam
     - name: K. R. Shin
     - name: J. Han
       lab: true
+      full_name: Jinju Han
     - name: Y. Lee
       lab: true
+      full_name: Yoontae Lee
     - name: V. N. Kim
       link: v-narry-kim
     - name: B. T. Zhang
   title: Human microRNA prediction through a probabilistic co-learning model of sequence and structure
   journal: Nucleic Acids Research
-  vip: "33(11):3570-81"
+  vip: "33(11):3570-3581"
   year: 2005
   doi: 10.1093/nar/gki668
   url: "http://nar.oxfordjournals.org/content/33/11/3570"
@@ -2721,7 +2967,7 @@
       link: v-narry-kim
   title: "MicroRNA biogenesis: coordinated cropping and dicing"
   journal: Nature Reviews Molecular Cell Biology
-  vip: "6(5):376-85"
+  vip: "6(5):376-385"
   year: 2005
   doi: 10.1038/nrm1644
   url: "http://www.nature.com/nrm/journal/v6/n5/full/nrm1644.html"
@@ -2741,21 +2987,26 @@
 - authors:
     - name: J. Han
       lab: true
+      full_name: Jinju Han
       is_first: true
     - name: Y. Lee
       lab: true
+      full_name: Yoontae Lee
       is_first: true
     - name: K. H. Yeom
       lab: true
+      full_name: Kay Kyu-hyeon Yeom
     - name: Y.-K. Kim
       lab: true
+      full_name: Young-Kook Kim
     - name: H. Jin
       lab: true
+      full_name: Hua Jin
     - name: V. N. Kim
       link: v-narry-kim
   title: The Drosha-DGCR8 complex in primary microRNA processing
   journal: Genes & Development
-  vip: "18(24):3016-27"
+  vip: "18(24):3016-3027"
   year: 2004
   doi: 10.1101/gad.1262504
   url: "http://genesdev.cshlp.org/content/18/24/3016.abstract"
@@ -2764,19 +3015,23 @@
 - authors:
     - name: Y. Lee
       lab: true
+      full_name: Yoontae Lee
     - name: M. Kim
       lab: true
+      full_name: Minju Kim
     - name: J. Han
       lab: true
+      full_name: Jinju Han
     - name: K. H. Yeom
       lab: true
+      full_name: Kay Kyu-hyeon Yeom
     - name: S. Lee
     - name: S. H. Baek
     - name: V. N. Kim
       link: v-narry-kim
   title: MicroRNA genes are transcribed by RNA polymerase II
   journal: EMBO Journal
-  vip: "23(20):4051-60"
+  vip: "23(20):4051-4060"
   year: 2004
   doi: 10.1038/sj.emboj.7600385
   url: "http://emboj.embopress.org/content/23/20/4051"
@@ -2785,8 +3040,10 @@
 - authors:
     - name: M. R. Suh
       lab: true
+      full_name: Mi Ra Suh
     - name: Y. Lee
       lab: true
+      full_name: Yoontae Lee
     - name: J. Y. Kim
     - name: S. K. Kim
     - name: S. H. Moon
@@ -2802,7 +3059,7 @@
       is_corresponding: true
   title: Human embryonic stem cells express a unique set of microRNAs
   journal: Developmental Biology
-  vip: "270(2):488-98"
+  vip: "270(2):488-498"
   year: 2004
   doi: 10.1016/j.ydbio.2004.02.019
   url: "http://www.sciencedirect.com/science/article/pii/S0012160604001381"
@@ -2813,7 +3070,7 @@
       link: v-narry-kim
   title: "MicroRNA precursors in motion: exportin-5 mediates their nuclear export"
   journal: Trends in Cell Biology
-  vip: "14(4):156-9"
+  vip: "14(4):156-159"
   year: 2004
   doi: 10.1016/j.tcb.2004.02.006
   url: "http://www.cell.com/trends/cell-biology/abstract/S0962-8924(04)00053-4"
@@ -2822,9 +3079,11 @@
 - authors:
     - name: Y. Lee
       lab: true
+      full_name: Yoontae Lee
     - name: C. Ahn
     - name: J. Han
       lab: true
+      full_name: Jinju Han
     - name: H. Choi
     - name: J. Kim
     - name: J. Yim
@@ -2836,7 +3095,7 @@
       link: v-narry-kim
   title: The nuclear RNase III Drosha initiates microRNA processing
   journal: Nature
-  vip: "425(6956):415-9"
+  vip: "425(6956):415-419"
   year: 2003
   doi: 10.1038/nature01957
   url: "http://www.nature.com/nature/journal/v425/n6956/full/nature01957.html"
@@ -2845,6 +3104,7 @@
 - authors:
     - name: Y. Lee
       lab: true
+      full_name: Yoontae Lee
     - name: K. Jeon
     - name: J. T. Lee
     - name: S. Kim
@@ -2852,7 +3112,7 @@
       link: v-narry-kim
   title: "MicroRNA maturation: stepwise processing and subcellular localization"
   journal: EMBO Journal
-  vip: "21(17):4663-70"
+  vip: "21(17):4663-4670"
   year: 2002
   doi: 10.1093/emboj/cdf476
   url: "http://www.ncbi.nlm.nih.gov/pmc/articles/PMC126204/"

@@ -849,6 +849,17 @@ a.team-card:focus-visible {
     padding: 18px 0;
     border-bottom: 1px solid var(--hairline);
     font-size: 15px;
+    scroll-margin-top: 24px;           /* a link to it stops short of the window's edge */
+}
+
+/* The entry a paper's author list led to (/people/#alumni-...): marked with
+   the band's grey and a red rule at its left, reaching a little into the
+   gutter so its text stays where it was. */
+.alumni-item:target {
+    margin-inline: -12px;
+    padding-inline: 12px;
+    background: var(--band);
+    box-shadow: inset 3px 0 0 var(--accent);
 }
 
 .alumni-name {
@@ -1123,12 +1134,169 @@ a.publi_title {
     font-weight: 700;
 }
 
-/* Under the title and journal, the links that go with a paper (the
-   supplementary data), on a line of their own and a step smaller. */
+/* Under the title and journal, on a line of their own and a step smaller:
+   the Cite button, and a link to the supplementary data where there is one. */
 .publi_links {
     display: block;
-    margin-top: 2px;
+    margin-top: 6px;
     font-size: 0.85em;
+}
+
+/* Cite: a small outlined button, ringed in the link colour on hover. No
+   `display` here, so its `hidden` attribute (until js/site.js has a window
+   for it to open) keeps it out of sight. */
+.cite-button {
+    margin-right: 10px;
+    padding: 1px 10px;
+    border: 1px solid var(--chip-rule);
+    border-radius: 6px;
+    background: #ffffff;
+    color: var(--ink);
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.cite-button:hover, .cite-button:focus-visible {
+    border-color: var(--link);
+}
+
+/* A Cite button the window handed focus back to after a mouse click. */
+.cite-button.quiet-focus:focus-visible {
+    outline: none;
+}
+
+/* The Cite window (_includes/cite_dialog.html, js/site.js): a white card
+   over the dimmed page, the citation in a grey box under the forms to
+   choose from, the reference-manager forms in a monospaced face. The
+   dialog has no padding of its own, so that a click on it is a click on
+   the page around .cite-box, which closes it. */
+.cite-dialog {
+    width: min(680px, calc(100vw - 32px));
+    max-height: calc(100vh - 32px);
+    max-height: calc(100dvh - 32px);
+    padding: 0;
+    border: 0;
+    border-radius: 12px;
+    background: #ffffff;
+    color: var(--ink);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Focus rests on the dialog itself when it opens, without a ring. */
+.cite-dialog:focus, .cite-dialog:focus-visible {
+    outline: none;
+}
+
+.cite-dialog::backdrop {
+    background: rgba(12, 12, 12, 0.55);
+}
+
+/* No scrolling the page behind the window. */
+html.cite-open {
+    overflow: hidden;
+}
+
+/* `hidden` must win over .button's display (the Download button). */
+.cite-dialog [hidden] {
+    display: none;
+}
+
+.cite-box {
+    padding: 18px 24px 24px;
+}
+
+.cite-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+#gridid .cite-head h2, .cite-head h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.cite-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: var(--band);
+    color: var(--ink);
+    font-size: 18px;
+}
+
+.cite-close:hover, .cite-close:focus-visible {
+    background: var(--hairline);
+}
+
+.cite-paper {
+    margin: 6px 0 16px;
+    font-size: 15px;
+    line-height: 1.45;
+    color: var(--muted);
+}
+
+.cite-formats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.cite-formats .chip {
+    padding: 5px 12px;
+    font-size: 14px;
+}
+
+.cite-formats .chip[aria-pressed="true"] {
+    border-color: var(--link);
+    color: var(--link);
+}
+
+.cite-text {
+    max-height: min(320px, 45vh);
+    max-height: min(320px, 45dvh);
+    margin: 14px 0 16px;
+    padding: 14px 16px;
+    overflow: auto;
+    border: 0;
+    border-radius: 8px;
+    background: var(--band);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-break: normal;
+    overflow-wrap: anywhere;
+}
+
+.cite-text.cite-code {
+    font-family: Monaco, Consolas, "Courier New", monospace;
+    font-size: 13px;
+}
+
+.cite-text:focus-visible {
+    outline: 2px solid var(--link);
+    outline-offset: 2px;
+}
+
+.cite-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.cite-status {
+    font-size: 14px;
+    color: var(--muted);
 }
 
 /* The key to the superscripts, under the buttons: its entries set apart

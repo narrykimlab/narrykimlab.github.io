@@ -3,6 +3,7 @@
 - authors:
     - name: Y. Lee
       lab: true
+      full_name: Yoontae Lee
     - name: V. N. Kim
       link: v-narry-kim
   title: In vitro and in vivo assays for the activity of drosha complex
@@ -15,17 +16,21 @@
 - authors:
     - name: Y. Lee
       lab: true
+      full_name: Yoontae Lee
     - name: J. Han
       lab: true
+      full_name: Jinju Han
     - name: K. H. Yeom
       lab: true
+      full_name: Kay Kyu-hyeon Yeom
     - name: H. Jin
       lab: true
+      full_name: Hua Jin
     - name: V. N. Kim
       link: v-narry-kim
   title: Drosha in primary microRNA processing
   journal: Cold Spring Harbor Symposia on Quantitative Biology
-  vip: "71:51-7"
+  vip: "71:51-57"
   year: 2006
   doi: 10.1101/sqb.2006.71.041
   url: "https://doi.org/10.1101/sqb.2006.71.041"
@@ -33,6 +38,7 @@
 - authors:
     - name: Y. Lee
       lab: true
+      full_name: Yoontae Lee
     - name: V. N. Kim
       link: v-narry-kim
   title: Preparation and analysis of Drosha

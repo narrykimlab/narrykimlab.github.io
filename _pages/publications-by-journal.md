@@ -30,3 +30,5 @@ permalink: /publications/by-journal/
 {%- endfor %}
 
 {% include publication_extras.html %}
+
+{% include cite_dialog.html %}

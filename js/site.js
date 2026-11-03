@@ -1,7 +1,8 @@
 /*
  * The site's script: the home page photo carousel, the photos page's
- * viewer, the topic list on /publications/by-topic/, and the email buttons
- * on the people and member pages. It drives Bootstrap 3's carousel classes
+ * viewer, the Cite window of the paper lists, the topic list on
+ * /publications/by-topic/, and the email buttons on the people and member
+ * pages. It drives Bootstrap 3's carousel classes
  * itself, without jQuery or Bootstrap's own JS.
  *
  * Loaded with `defer` from _includes/head.html, so it runs once the document
@@ -263,6 +264,151 @@
   }
 
   document.querySelectorAll('dialog.lightbox').forEach(lightbox);
+
+  // Cite window: <dialog class="cite-dialog"> (_includes/cite_dialog.html)
+  // on the pages that list papers. A Cite button under a paper opens it with
+  // that paper's citation in the form chosen at the top -- APA, Nature,
+  // BibTeX, EndNote or RIS -- from /publications/cite.json
+  // (_plugins/citations.rb), fetched the first time a button is pressed.
+  // Copy puts the text on the clipboard, or, where the browser will not,
+  // selects it to copy by hand; the three reference-manager forms can also
+  // be saved as a file. The close button, Escape and a click on the dimmed
+  // page close it, and focus goes back to the button it was opened from,
+  // ringed only if it was opened from the keyboard (as in the photo viewer).
+  // The buttons stay hidden where dialogs are not supported.
+  //
+  // Everything shown is set as text (textContent), never parsed as HTML.
+  function citeWindow(dialog) {
+    const buttons = document.querySelectorAll('button.cite-button');
+    if (!buttons.length || typeof dialog.showModal !== 'function') return;
+    const paper = dialog.querySelector('.cite-paper');
+    const text = dialog.querySelector('.cite-text');
+    const formats = [...dialog.querySelectorAll('[data-format]')];
+    const save = dialog.querySelector('.cite-save');
+    const status = dialog.querySelector('.cite-status');
+    // The forms that are also files: extension and media type.
+    const FILES = {
+      bibtex: ['bib', 'application/x-bibtex'],
+      endnote: ['enw', 'application/x-endnote-refer'],
+      ris: ['ris', 'application/x-research-info-systems'],
+    };
+    let citations = null;   // the fetch of cite.json, made once
+    let id = null;          // the paper shown
+    let entry = null;       // its citations, once loaded
+    let format = 'apa';
+    let opener = null;
+    let openedByKey = false;
+
+    // A failed fetch is forgotten, so the next Cite button tries again.
+    const load = () => citations || (citations = fetch(dialog.dataset.src, { cache: 'no-cache' })
+      .then((r) => {
+        if (!r.ok) throw new Error(`cite.json: ${r.status}`);
+        return r.json();
+      })
+      .catch((e) => {
+        citations = null;
+        throw e;
+      }));
+
+    function show() {
+      formats.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.format === format)));
+      const file = FILES[format];
+      text.classList.toggle('cite-code', Boolean(file));
+      text.textContent = entry ? entry[format] : text.textContent;
+      save.hidden = !(entry && file);
+      if (file) save.textContent = `Download .${file[0]}`;
+      status.textContent = '';
+    }
+
+    function open(button, byKey) {
+      opener = button;
+      openedByKey = byKey;
+      id = button.dataset.cite;
+      entry = null;
+      paper.textContent = button.closest('p, li')?.querySelector('.publi_title')?.textContent || '';
+      text.textContent = 'Loading…';
+      show();
+      document.documentElement.classList.add('cite-open');
+      dialog.showModal();
+      dialog.focus();
+      const asked = id;
+      load().then((all) => {
+        if (asked !== id || !dialog.open) return;   // closed, or another paper since
+        entry = Object.prototype.hasOwnProperty.call(all, id) ? all[id] : null;
+        if (!entry) text.textContent = 'No citation was found for this paper.';
+        show();
+      }, () => {
+        if (asked !== id || !dialog.open) return;
+        text.textContent = 'The citation could not be loaded. Close this and try again.';
+      });
+    }
+
+    buttons.forEach((button) => {
+      button.hidden = false;
+      // e.detail is the click count: 0 for Enter or Space.
+      button.addEventListener('click', (e) => open(button, e.detail === 0));
+    });
+
+    formats.forEach((b) => b.addEventListener('click', () => {
+      format = b.dataset.format;
+      show();
+    }));
+
+    dialog.querySelector('.cite-copy').addEventListener('click', () => {
+      if (!entry) return;
+      const byHand = () => {
+        const range = document.createRange();
+        range.selectNodeContents(text);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        status.textContent = 'Selected: press Ctrl+C (⌘C on a Mac) to copy.';
+      };
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(entry[format]).then(() => { status.textContent = 'Copied.'; }, byHand);
+      } else {
+        byHand();
+      }
+    });
+
+    save.addEventListener('click', () => {
+      const file = FILES[format];
+      if (!entry || !file) return;
+      const url = URL.createObjectURL(new Blob([entry[format]], { type: `${file[1]};charset=utf-8` }));
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `${id}.${file[0]}`;
+      dialog.append(link);   // inside the dialog: the page behind it is inert
+      link.click();
+      link.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 10000);
+    });
+
+    dialog.querySelector('.cite-close').addEventListener('click', () => dialog.close());
+
+    // The dialog's box is all .cite-box, so a click on the dialog itself is
+    // a click on the dimmed page around it -- if it began there too: a
+    // selection dragged out of the text ends in a click on the dialog.
+    let downOutside = false;
+    dialog.addEventListener('pointerdown', (e) => { downOutside = e.target === dialog; });
+    dialog.addEventListener('click', (e) => {
+      if (e.target === dialog && downOutside) dialog.close();
+    });
+
+    dialog.addEventListener('close', () => {
+      document.documentElement.classList.remove('cite-open');
+      id = null;
+      const button = opener;
+      if (!button) return;
+      if (!openedByKey) {
+        button.classList.add('quiet-focus');
+        button.addEventListener('blur', () => button.classList.remove('quiet-focus'), { once: true });
+      }
+      button.focus();
+    });
+  }
+
+  document.querySelectorAll('dialog.cite-dialog').forEach(citeWindow);
 
   // The topic list beside the papers on /publications/by-topic/ marks the
   // topic being read: the last heading to have scrolled above a line a third
