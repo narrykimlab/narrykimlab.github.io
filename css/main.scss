@@ -1193,17 +1193,29 @@ a.publi_title {
     font-weight: 700;
 }
 
-/* Under the title and journal, on a line of their own and a step smaller:
-   the Cite button, and a link to the supplementary data where there is one. */
+/* At the end of the journal line, a step smaller: the Cite button, and a
+   link to the supplementary data where there is one. Its own line height is
+   1, so that its smaller letters, set in a line height given in px (a
+   profile's list has one), do not hang below the line's and deepen it. */
 .publi_links {
-    display: block;
-    margin-top: 6px;
+    margin-left: 4px;
     font-size: 0.85em;
+    line-height: 1;
 }
 
 /* Cite: a small outlined button, ringed in the link colour on hover. No
    `display` here, so its `hidden` attribute (until js/site.js has a window
-   for it to open) keeps it out of sight. */
+   for it to open) keeps it out of sight. It sits in the journal's line,
+   centred on its capitals and figures: raised from the baseline (1px here,
+   1.5px in a profile) until there is as much of it above their tops as
+   below the baseline, its middle half a capital's height (6px) up. And it
+   fits the line as it stands, so the line keeps the height the others
+   have: "Cite" is set at a size that allows. In the publication pages'
+   lines that is the supplementary link's size beside it (14.45px;
+   measured in the browser, the largest that fits is about 15px at this
+   line height); a profile's closer lines leave less room, so there the
+   button loses its padding above and below and "Cite" is 12.5px (the
+   largest that fits is 13px). */
 .cite-button {
     margin-right: 10px;
     padding: 1px 10px;
@@ -1212,7 +1224,16 @@ a.publi_title {
     background: #ffffff;
     color: var(--ink);
     font-weight: 600;
-    line-height: 1.5;
+    line-height: 1.25;
+    vertical-align: 1px;
+}
+
+ul.publications_in_profile .cite-button {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 12.5px;
+    line-height: 1.2;
+    vertical-align: 1.5px;
 }
 
 .cite-button:hover, .cite-button:focus-visible {

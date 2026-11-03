@@ -246,7 +246,7 @@ this site are linked from the footer, All news from the home page.
   (`_plugins/monthly_shuffle.rb`); `TEAM_ORDER_MONTH=2026-11` builds as if it were
   another month.
 - **publication_entry.html** — One publication (title, authors, journal, year, volume,
-  then its Cite button), used on the publication pages and the profiles;
+  then, on the same line, its Cite button), used on the publication pages and the profiles;
   **research_papers.html** puts a Research section's newest two papers marked
   `research` under it, each a card like a Notion bookmark (title, authors, journal and
   year, and the paper's `image` on the right, or on top in a narrow card; no Cite
