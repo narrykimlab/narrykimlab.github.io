@@ -2,24 +2,32 @@
 layout: member
 title: Daniel Lee
 position: Graduate Student
-email: risc.rider@daniel.example  # placeholder
+email: leedaniel@snu.ac.kr
+github:
+orcid:
+scholar:
+pubmed:
+cv:
 image: /images/members/daniel-lee.jpg
 permalink: /people/daniel-lee
 ---
 
-Daniel Lee is a graduate student interested in the machinery of RNA
-silencing: how a microRNA is loaded into Argonaute to form the RNA-induced
-silencing complex (RISC), which then finds and represses its targets.
-Daniel contributed to a 2026 *Nature* study, made with structural
-biologists, that revealed the structural basis for chaperone-guided
-assembly of RISC.
+Daniel Lee is a graduate student interested in how regulatory RNA elements
+shape RNA fate through interactions with RNA-binding proteins. He studies
+the molecular basis of these interactions using biochemical approaches
+and cell-based experiments, with a particular interest in RNA stability
+and post-transcriptional regulation.
 
-## Current project
+Daniel also contributed to a 2026 *Nature* study, conducted in collaboration
+with structural biologists, that revealed the structural basis for
+chaperone-guided assembly of the RNA-induced silencing complex (RISC).
 
-{% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}
-**Mission RISC Rider.** Teaching Argonaute to load microRNAs at warp
-speed, with a chaperone as co-pilot and a seatbelt for every guide strand.
-No guide strand has been lost to date, though two have asked to go
-again.
+## Education
+
+<ul class="chronological">
+  <li><span>2024–present</span> M.S./Ph.D. Student, School of Biological Sciences, Seoul National University</li>
+  <li><span>2022–2024</span> B.S. in Life Sciences, Korea University</li>
+  <li><span>2017–2019</span> Undergraduate Studies in Biology, University of Minnesota–Twin Cities</li>
+</ul>
 
 {% include publication_in_profile.html %}

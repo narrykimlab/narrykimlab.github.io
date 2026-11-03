@@ -44,7 +44,9 @@ Tech stack: Jekyll 4.x (Gemfile pins `~> 4.3`), Kramdown (GFM), Liquid templates
   other symbols) and Greek files for 400, 600 and 700, roman and italic; the browser
   fetches Pi or Greek only on a page with such a character (`fonts/IBMPlexSans-OFL.txt`).
   Each `unicode-range` lists exactly the characters its file has, so anything else falls
-  back to a system font.
+  back to a system font. Each family's stack is led by its cut that draws email addresses
+  (NKL Mail Display, NKL Mail Sans; see Conventions), whose range is the stretch of the
+  Private Use Area its table is drawn from.
   On the text pages (textlay: research, join, contact, about, news) running text stops at
   36em, about 70 characters a line; floated figures keep the column's right-hand side.
 - Only the home page (the one with `hero:` front matter) has the pale masthead -- a
@@ -57,7 +59,7 @@ Tech stack: Jekyll 4.x (Gemfile pins `~> 4.3`), Kramdown (GFM), Liquid templates
   `css/main.scss`): `.chip` icon buttons for links, `.team-role` for a bold grey role
   line, photos with 12px corners and no shadow, and rows split by `--hairline` rules.
 - JS: `js/site.js` runs the home carousel, driving Bootstrap 3's CSS classes directly (no
-  jQuery), and makes the email buttons mailto links. The carousel holds still while the
+  jQuery), and makes the email addresses mailto links (see Conventions). The carousel holds still while the
   mouse is over it or keyboard focus is in it (WCAG 2.2.2), stops autoplaying under
   `prefers-reduced-motion`, and its arrows answer Enter and Space. It also runs the photos
   page's viewer, a modal `<dialog class="lightbox">` in `_pages/photos.md`: a photo
@@ -81,12 +83,14 @@ Tech stack: Jekyll 4.x (Gemfile pins `~> 4.3`), Kramdown (GFM), Liquid templates
 - Home's first screen fills the window, as on the Chang lab site: the masthead is at
   least `100svh`, the hero text sits 7:3 in the space it has, and the scene lies along
   the window's bottom edge, the masthead's 8px bottom border in the sea floor's colour
-  (on touch screens the sea runs on 88px further, under a floating browser toolbar). Just
+  (on touch screens the sea runs on 88px past the window's bottom, since Safari on iOS 26
+  ends `100svh` at its floating toolbar's top edge and shows the page below the window
+  through the toolbar: only water lies there). Just
   above the sea, two wide chevrons cue that the page goes on below: a link to `#content`
   (the `<main>`), bobbing gently and scrolling smoothly unless motion is reduced. They
   take only room the text leaves over (`.cue-room`, a container query), so where there
   is none they are left out rather than push the scene down; on touch screens they sit
-  in the 88px of water below the scene instead. The scene is `js/tails.js` on `<canvas class="scene">`, an animation with no game: mRNAs
+  in that 88px of water below the window's bottom instead. The scene is `js/tails.js` on `<canvas class="scene">`, an animation with no game: mRNAs
   swim like tadpoles in a sea, the 5' cap worn as a red cap and a messenger bag slung
   across them (messengers, after all), their poly(A) tails shortening bead by bead
   (deadenylation) until an mRNA with none left fades away. Four enzymes wander among
@@ -203,12 +207,11 @@ the templates read -- when a template starts reading a new field, update the mat
   counterparts); `defaults` in `_config.yml` gives them this layout and `sitemap: false`,
   so a stub is just `permalink` (the old address) and `redirect_to`.
 - **member.html** — A member's profile: photo, name and position, then the links (CV,
-  GitHub, Google Scholar, PubMed, email) as icon buttons beside the text, and the member's
+  GitHub, ORCID, Google Scholar, PubMed, email) as icon buttons beside the text, and the member's
   papers from `{% include publication_in_profile.html %}` in the page body, which matches
   the page's file name against author `link`s (the PI's page leaves it out: it would be
   the whole list; hers has Education and Positions instead). The email button is
-  `_includes/email_chip.html`: text with a hidden word in the HTML, against harvesters,
-  which `js/site.js` makes a mailto link.
+  `_includes/email_chip.html` (see Email addresses under Conventions).
 
 ### Pages (`_pages/`)
 
@@ -243,9 +246,11 @@ this site are linked from the footer, All news from the home page.
 
 1. Add an entry to `_data/team.yml` with `active: true`
 2. Create `_pages/people/<link>.md` (copy an existing one): front matter `layout: member`,
-   `title` (the name), `position`, `image`, `permalink: /people/<link>`, and any of
-   `email`, `github`, `scholar` (the user id), `pubmed` (a full search URL), `cv` that
-   apply; then the body: a bio, `## Current project` (`## Role` for the office staff),
+   `title` (the name), `position`, then every link key, left empty where there is none
+   (an empty one shows no button, and the member can fill it in): `email`, `github`,
+   `orcid` (the iD, `0000-0000-0000-0000`), `scholar` (the user id), `pubmed` (a full
+   search URL), `cv`; then `image` and `permalink: /people/<link>`, in that order as in
+   every profile; then the body: a bio, `## Current project` (`## Role` for the office staff),
    `## Education` as a `<ul class="chronological">` where known, and
    `{% include publication_in_profile.html %}`
 3. Add the photo as `images/members/<link>.jpg`, at least 520px wide (the people page
@@ -255,13 +260,14 @@ this site are linked from the footer, All news from the home page.
 
 Much of what the profiles say is a stand-in until each member writes their own. The
 bios of members with papers or a public profile are drawn from those; everything else
-is invented, and so overblown (superpowers, starships, cartoon missions) that no
-reader takes it for real: each such block in a profile follows a
-`{% comment %}PLACEHOLDER ...{% endcomment %}` line, a made-up card intro in
+is invented, and so overblown (superpowers, starships, schools from films and cartoons
+such as Hogwarts) that no reader takes it for real: each such block in a profile follows
+a `{% comment %}PLACEHOLDER ...{% endcomment %}` line, a made-up card intro in
 `_data/team.yml` and a made-up email in a profile's front matter carry a
 `# placeholder` comment, and every made-up email ends in `.example`, a domain reserved
 never to deliver mail. `grep -rn -i placeholder _pages/people _data/team.yml` lists them.
-Replace the text and drop the marker.
+Replace the text and drop the marker. In a real Education entry, a year followed by `?`
+(`2011?–2017`) is an estimate: only the year the degree ended was known.
 
 ### Add a publication
 
@@ -333,6 +339,19 @@ description from `title` and `position`. `sitemap: false` excludes a page from t
   shapes live in `_data/icons.yml`, from Font Awesome Free 5.15.3 (CC BY 4.0); to add one,
   copy its `viewBox` and path from that version's SVG. The data check fails the build on
   a name that is not there.
+- Email addresses are drawn, not written, so that no program reading the HTML or the DOM
+  finds one: `{% include email_chip.html address=... name=... %}` for a button,
+  `{% include email_link.html address=... name=... %}` in running text. The `mail_glyphs`
+  filter (`_plugins/mail_glyphs.rb`) writes the address as code points of the Private Use
+  Area, by the table in `_data/mail_glyphs.yml`, and the fonts NKL Mail Display and NKL
+  Mail Sans (`fonts/NKLMail-*.woff2`: Montserrat's and Plex's own glyphs, mapped from those
+  code points, cut by `_tools/mail-fonts.py`) draw them, so it looks exactly as the
+  letters would. `js/site.js` holds the same table: it makes each a link whose mailto
+  address is filled in only while it is pointed at, focused or clicked, and copying a
+  selection copies the real address. Screen readers hear "Email <name>". The build fails
+  if a page shows a known address or a `mailto:` link as text, or if the script's table
+  differs from the data file's. A new table: `python3 _tools/mail-fonts.py --new-table`
+  (needs `pip install fonttools brotli`), then copy its two values into `js/site.js`.
 - No inline scripts, no `style="..."` attributes or `<style>` blocks, and no third-party
   scripts, fonts or images: the site should keep working under a strict
   Content-Security-Policy (`script-src 'self'`, no `'unsafe-inline'`). A one-off style
@@ -352,3 +371,7 @@ activity; re-enable the workflow in the Actions tab if the order stops changing)
 single "Broken external links" issue open while any fail; it ignores 403/429, which
 publishers send to every bot. Dependabot proposes action and gem updates monthly.
 There is no `CNAME` yet: add one holding `narrykim.org` when the domain moves here.
+Until then the site is served at narrykimlab.github.io while narrykim.org is still the
+old WordPress site, so `url` in `_config.yml` is `https://narrykimlab.github.io`: the
+canonical, Open Graph, sitemap and `robots.txt` addresses follow it, and a link preview
+(Notion, Slack) can load its image. Set it back to `https://narrykim.org` with the CNAME.

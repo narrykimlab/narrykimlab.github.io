@@ -11,9 +11,12 @@ description: > # this means to ignore newlines until "baseurl:"
   V. Narry Kim's RNA biology laboratory at the Institute for Basic Science and the
   School of Biological Sciences, Seoul National University, South Korea.
 baseurl: ""
-# Absolute base for canonical links and Open Graph tags. `jekyll serve`
-# overrides this with the local address, so it does not leak into dev.
-url: "https://narrykim.org"
+# Absolute base for canonical links, Open Graph tags, the sitemap and
+# robots.txt. `jekyll serve` overrides this with the local address, so it does
+# not leak into dev. narrykimlab.github.io for now, while narrykim.org is still
+# the old WordPress site (a link preview could not load its image from there);
+# back to "https://narrykim.org" when the domain moves here.
+url: "https://narrykimlab.github.io"
 
 destination: ./_site
 

@@ -3,7 +3,11 @@ layout: member
 title: Yeonwoo Park
 position: Postdoctoral Fellow
 email: whatdoidohaha@snu.ac.kr
+github:
+orcid:
 scholar: c-QaWs0AAAAJ
+pubmed:
+cv:
 image: /images/members/yeonwoo-park.jpg
 permalink: /people/yeonwoo-park
 ---
@@ -27,17 +31,12 @@ measuring the processing of more than a thousand ancestral and present-day
 primary microRNAs and all of their point mutants: the processing rate held
 steady while the molecular basis of the interaction kept drifting.
 
-## Current project
-
-{% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}
-**The Multiverse Expedition.** Visiting every universe in which a
-protein evolved differently, to ask each version how it is getting on.
-Postcards from 10<sup>20</sup> universes are being sorted.
-
 ## Education
 
 <ul class="chronological">
-  <li><span>2022</span> Ph.D., The University of Chicago, USA</li>
+  <li><span>2017?–2022</span> Ph.D., The University of Chicago, USA</li>
+{% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}
+  <li><span>2010–2014</span> B.S. in Dinosaur Resurrection, Isla Nublar Community College</li>
 </ul>
 
 {% include publication_in_profile.html %}

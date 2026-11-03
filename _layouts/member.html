@@ -8,8 +8,8 @@ layout: default
   card) goes under the position; a former member's is left out, as it
   describes work they have since left.
   The photo's alt is empty, since the name heading is right beside it.
-  The email address is a button too (_includes/email_chip.html), kept from
-  address harvesters.
+  The email address is a button too (_includes/email_chip.html), drawn by a
+  font from characters that mean nothing to address harvesters.
 {%- endcomment -%}
 {%- assign member = page -%}
 {%- assign slug = page.name | split: "." | first -%}
@@ -38,6 +38,9 @@ layout: default
         {%- if member.github %}
         <a class="chip" href="https://github.com/{{ member.github }}">{% include icon.html name="github-alt" %}GitHub</a>
         {%- endif %}
+        {%- if member.orcid %}
+        <a class="chip" href="https://orcid.org/{{ member.orcid }}">{% include icon.html name="orcid" %}ORCID</a>
+        {%- endif %}
         {%- if member.scholar %}
         <a class="chip" href="https://scholar.google.com/citations?user={{ member.scholar }}">{% include icon.html name="book" %}Google Scholar</a>
         {%- endif %}
@@ -45,7 +48,7 @@ layout: default
         <a class="chip" href="{{ member.pubmed }}">{% include icon.html name="search" %}PubMed</a>
         {%- endif %}
         {%- if member.email %}
-        {% include email_chip.html address=member.email %}
+        {% include email_chip.html address=member.email name=member.title %}
         {%- endif %}
   {%- endcapture %}
 

@@ -3,6 +3,11 @@ layout: member
 title: Seojin Lee
 position: Graduate Student
 email: speedy@seojin.example  # placeholder
+github:
+orcid:
+scholar:
+pubmed:
+cv:
 image: /images/members/seojin-lee.jpg
 permalink: /people/seojin-lee
 ---
@@ -16,11 +21,11 @@ experiment into the day.
 Seojin's lab notebook is so well kept that the lab's other notebooks have
 started asking it for advice.
 
-## Current project
+## Education
 
 {% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}
-**The Great Ribosome Race.** Clocking how fast a ribosome can zoom
-along an mRNA with the brakes off. The current record holder, a ribosome
-known as Speedy, refuses to give interviews.
+<ul class="chronological">
+  <li><span>2017–2021</span> B.S. in Arithmancy, Hogwarts School of Witchcraft and Wizardry</li>
+</ul>
 
 {% include publication_in_profile.html %}

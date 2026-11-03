@@ -33,6 +33,34 @@ $montserrat-latin: U+0020-007E, U+00A0-00AC, U+00AE-00FF, U+0131, U+0152-0153, U
   unicode-range: $montserrat-latin;
 }
 
+// The cuts that draw email addresses (_tools/mail-fonts.py): Montserrat's
+// and IBM Plex Sans's own glyphs for the characters of an address, mapped
+// from code points of the Private Use Area that mean nothing to a program
+// reading the page (_data/mail_glyphs.yml). Each leads its family's stack in
+// css/main.scss. Their unicode-range is the stretch the table is drawn from,
+// not the exact code points, so a new table needs no change here. `block`:
+// no other font can draw these characters, so wait for the file rather than
+// show empty boxes.
+$mail-range: U+E100-EAFF;
+
+@font-face {
+  font-family: 'NKL Mail Display';
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: block;
+  src: url("/fonts/NKLMail-Display.woff2") format("woff2");
+  unicode-range: $mail-range;
+}
+
+@font-face {
+  font-family: 'NKL Mail Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("/fonts/NKLMail-Sans.woff2") format("woff2");
+  unicode-range: $mail-range;
+}
+
 // IBM Plex Sans: IBM's own split files, unmodified, one per weight, style and
 // character set. Latin1 is what nearly every page needs; Pi (primes, thin
 // spaces, arrows, ...) and Greek are fetched only where those turn up, as in

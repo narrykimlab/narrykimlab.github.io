@@ -47,9 +47,11 @@
     --gutter: clamp(20px, 5vw, 48px);
     /* Two families (_sass/_fonts.scss): IBM Plex Sans for the text, and
        Montserrat for headings and the other display text -- the wordmark,
-       section links, buttons and member names. */
-    --sans: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
-    --display: 'Montserrat', var(--sans);
+       section links, buttons and member names. Each is led by its cut that
+       draws email addresses (NKL Mail Sans, NKL Mail Display), which holds
+       nothing else, so it takes only an address's characters. */
+    --sans: 'NKL Mail Sans', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+    --display: 'NKL Mail Display', 'Montserrat', var(--sans);
 }
 
 h1, h2, h3, h4, h5, h6, .wordmark, .site-nav nav, .button, .chip,
@@ -308,8 +310,9 @@ body.inner {
 }
 
 /* At least 40px, except where the column is too narrow for the title's
-   longest word ("regulation.", about 5.6 times the font size): below 320px
-   the size follows the column so that word still fits. */
+   longest word (room is kept for one as long as "regulation.", about 5.6
+   times the font size): below 320px the size follows the column so that
+   word still fits. */
 .hero h1 {
     margin: 0;
     max-width: 12em;
@@ -318,12 +321,26 @@ body.inner {
     text-wrap: balance;
 }
 
+/* A phrase in the title or the line under it kept on one line ("the fate",
+   "we decode"), so the text breaks before it rather than inside it: "RNA
+   steers / the fate of the cell.", "From microRNAs to mRNA tails, / we
+   decode ...". Only from 430px, where the title's second line fits the
+   column whole (370px of 387 at 430); a narrower phone breaks them as they
+   fall, rather than take a third line that would push the scene down. */
+@media (min-width: 430px) {
+    .hero .phrase {
+        white-space: nowrap;
+    }
+}
+
+/* Balanced like the title, so a line that wraps leaves no word on its own. */
 .hero p {
     margin: 24px 0 0;
     max-width: 34em;
     font-size: clamp(17px, 1.6vw, 20px);
     line-height: 1.52;
     color: var(--muted);
+    text-wrap: balance;
 }
 
 .hero-buttons {
@@ -436,14 +453,17 @@ body.inner {
 }
 
 /* On touch screens the browser may float its toolbar over the bottom of the
-   page (Safari on iOS draws its address bar there, inside 100svh). There
-   the masthead still fills the window, but the sea goes on for another 88px
-   below it, so the mRNAs swim above the toolbar and only water lies under it.
-   The scroll cue goes down into that water too, in the middle of it, out of
-   the hero's way, so it shows however little room the text leaves. */
+   page: Safari on iOS 26 ends 100svh at the toolbar's top edge and shows the
+   page below the window through the toolbar. So the first screen is laid
+   out as on a desktop, the scene along the window's bottom edge, and the
+   sea goes on for another 88px below it, under the toolbar (elsewhere just
+   below the fold), so that only water lies there. The scroll cue goes down
+   into that water too, in the middle of it, out of the hero's way. */
 @media (hover: none) and (pointer: coarse) {
     .masthead-hero {
         position: relative;
+        min-height: calc(100vh + 88px);
+        min-height: calc(100svh + 88px);
     }
 
     .masthead-hero::after {
@@ -978,6 +998,14 @@ a.team-card:focus-visible {
 
 .email-chip .icon {
     flex: none;
+}
+
+/* What a screen reader hears for an email address (_includes/email_chip.html,
+   _includes/email_link.html) stays out of a selection, so copying the address
+   copies only the address. */
+.mail-label {
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .member-body .post {
@@ -1628,10 +1656,6 @@ div.footer-links img {
  * Utility classes standing in for inline style="..." attributes (see the
  * note at the top of this file).
  */
-
-.qb-hidden {
-    display: none;
-}
 
 .nowrap {
     white-space: nowrap;

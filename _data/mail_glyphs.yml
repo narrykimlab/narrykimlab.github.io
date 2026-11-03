@@ -1,0 +1,11 @@
+# The table behind the site's email addresses (see _tools/mail-fonts.py).
+# A page holds an address as code points of Unicode's Private Use Area, which
+# mean nothing to a program reading it: code point `first` + i stands for the
+# i-th character of `characters`, and the fonts fonts/NKLMail-*.woff2 draw it
+# as that character. js/site.js holds the same table (MAIL_FIRST,
+# MAIL_CHARACTERS), to turn an address back into text for its mailto link and
+# for copying; the build fails if the two differ (_plugins/mail_glyphs.rb).
+# Do not edit by hand: `python3 _tools/mail-fonts.py --new-table` draws a new
+# table and cuts new fonts for it.
+first: 0xE38C
+characters: "1ys4MDSQEjiCHalXcNoPqKUL-52TROv7+f6e9VB_ArtYuW3h.pJknF0zGxIw@Zg8dmb"

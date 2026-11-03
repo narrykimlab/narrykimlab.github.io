@@ -26,6 +26,17 @@ module Jekyll
       Digest::SHA256.hexdigest(asset_bytes(path, "fingerprint"))[0, 12]
     end
 
+    # The stylesheet is compiled from a .scss file and the partials in
+    # _sass/, so its digest is taken over all of them: a change to any one is
+    # a new URL for /css/main.css, which no cache holds yet.
+    #   <link rel="stylesheet" href="/css/main.css?v={{ '/css/main.scss' | sass_fingerprint }}">
+    def sass_fingerprint(path)
+      source = @context.registers[:site].source
+      partials = Dir.glob(File.join(source, "_sass", "**", "*.scss")).sort
+      bytes = asset_bytes(path, "sass_fingerprint") + partials.map { |f| File.binread(f) }.join
+      Digest::SHA256.hexdigest(bytes)[0, 12]
+    end
+
     private
 
     def asset_bytes(path, filter)

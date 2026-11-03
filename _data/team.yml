@@ -6,7 +6,7 @@
   photo: v-narry-kim.jpg
   info: Principal Investigator
   email: "narrykim@snu.ac.kr"
-  intro: Finding out how RNA regulates genes, and putting it to work in RNA medicine
+  intro: Finding out how RNA regulates genes, and turning it into new molecular tools
   link: v-narry-kim
   category: principal-investigator
   sort-key: kim-v-narry
@@ -34,7 +34,7 @@
 - name: Daniel Lee
   photo: daniel-lee.jpg
   info: Graduate Student
-  intro: "Piecing together the silencing complex, part by part"
+  intro: "Exploring how the functions of RNA elements are shaped by proteins"
   link: daniel-lee
   category: student
   sort-key: lee-daniel
@@ -165,7 +165,7 @@
 - name: Sunghan Lee
   photo: sunghan-lee.jpg
   info: Graduate Student
-  intro: "Making modified mRNA medicines last longer"
+  intro: "Profiling the 3' UTR landscape"
   link: sunghan-lee
   category: student
   sort-key: lee-sunghan

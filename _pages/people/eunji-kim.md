@@ -3,6 +3,11 @@ layout: member
 title: Eunji Kim
 position: Technician
 email: beautifulej@naver.com
+github:
+orcid:
+scholar:
+pubmed:
+cv:
 image: /images/members/eunji-kim.jpg
 permalink: /people/eunji-kim
 ---
@@ -16,13 +21,11 @@ are said to spin a little faster to impress.
 No instrument has ever broken down on Eunji's watch. A few have tried, and
 were quietly talked out of it.
 
-## Current project
+## Education
 
 {% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}
-**Operation Eternal Stock.** A quest to make sure that no one in the
-lab ever again opens a box to find the last tube of buffer empty.
-Progress so far: 97% of all buffers accounted for. The remaining 3% are
-believed to have slipped into a parallel dimension, and a rescue mission is
-being planned.
+<ul class="chronological">
+  <li><span>2012–2016</span> B.S. in Droid Maintenance, Jedi Temple, Coruscant</li>
+</ul>
 
 {% include publication_in_profile.html %}

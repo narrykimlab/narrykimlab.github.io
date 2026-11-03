@@ -2,25 +2,28 @@
 layout: member
 title: Hyemin Choi
 position: Graduate Student
-email: tailwind@hyemin.example  # placeholder
+email: hyemming2024@gmail.com
+github: krchoihm
+orcid:
+scholar:
+pubmed:
+cv:
 image: /images/members/hyemin-choi.jpg
 permalink: /people/hyemin-choi
 ---
 
-{% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}
-Hyemin Choi is a graduate student who, according to entirely
-unverified reports, can hear mRNAs whispering their poly(A) tail lengths
-across a crowded room. Armed with a pipette in each hand and a third held
-by sheer willpower, Hyemin sets out each morning to ask RNA the hard
-questions, and RNA, a little intimidated, usually answers.
+Hyemin Choi is a graduate student with a passion for understanding how RNA
+is made, processed, and regulated. Hyemin's research focuses on viral RNA
+poly(A) tailing, and how viruses modify and make use of this key feature of
+the transcript. To explore these questions, Hyemin works with a range of
+sequencing-based approaches, including next-generation sequencing (RNA-seq
+and CLIP-seq) and Nanopore direct RNA sequencing.
 
-In spare moments Hyemin is teaching the lab's ribosomes to read aloud.
+## Education
 
-## Current project
-
-{% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}
-**Project TAILWIND.** Teaching poly(A) tails to fly in formation.
-Early results show the tails can already hold a respectable V shape;
-landing remains a work in progress.
+<ul class="chronological">
+  <li><span>2024–present</span> M.S./Ph.D. Student, School of Biological Sciences, Seoul National University</li>
+  <li><span>2020–2024</span> B.S. in Biological Sciences, Seoul National University</li>
+</ul>
 
 {% include publication_in_profile.html %}

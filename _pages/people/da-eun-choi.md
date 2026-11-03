@@ -3,7 +3,11 @@ layout: member
 title: Da-Eun Choi
 position: Research Assistant
 email: daeun7291@gmail.com
+github:
+orcid:
+scholar:
 pubmed: "https://pubmed.ncbi.nlm.nih.gov/?term=%28Kim+VN%29+AND+%28Choi+DE%29"
+cv:
 image: /images/members/da-eun-choi.jpg
 permalink: /people/da-eun-choi
 ---
@@ -13,11 +17,11 @@ screens of viral RNA. Da-Eun contributed to the functional viromic screens
 (*Cell*, 2023) that searched viral genomes for RNA elements regulating gene
 expression, work the lab has since built on to design better mRNAs.
 
-## Current project
+## Education
 
 {% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}
-**Operation Viral Treasure Hunt.** Sailing the seven seas of viral
-genomes in search of the legendary sequence that makes any mRNA immortal.
-The map is nearly complete; X marks a spot somewhere in the 3′ UTR.
+<ul class="chronological">
+  <li><span>2015–2019</span> B.A. in Archaeology, Marshall College (under Prof. Henry Jones Jr.)</li>
+</ul>
 
 {% include publication_in_profile.html %}

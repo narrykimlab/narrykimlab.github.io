@@ -3,9 +3,12 @@ layout: member
 title: V. Narry Kim
 position: Principal Investigator
 email: narrykim@snu.ac.kr
+github:
+orcid:
+scholar:
 pubmed: "https://pubmed.ncbi.nlm.nih.gov/?term=Kim+VN&cauthor_id=25480299"
-image: /images/members/v-narry-kim.jpg
 cv: /assets/cv/cv-narry-kim.pdf
+image: /images/members/v-narry-kim.jpg
 permalink: /people/v-narry-kim
 ---
 
@@ -27,7 +30,7 @@ and screened thousands of viral genomes for RNA elements that control
 translation and RNA stability, work that now feeds into the design of mRNA
 therapeutics.
 
-She studied microbiology at Seoul National University and received her
+She studied Microbiology at Seoul National University and received her
 Ph.D. in biochemistry from the University of Oxford in 1998. After
 postdoctoral training as a fellow of the Howard Hughes Medical Institute at
 the University of Pennsylvania, she returned to Seoul National University in
@@ -37,8 +40,8 @@ She is a Foreign Member of the Royal Society, a Foreign Associate of the US
 National Academy of Sciences and of EMBO, and a member of the Korean Academy
 of Science and Technology. Her honors include the L'Oréal-UNESCO Women in
 Science Award (2008), the Ho-Am Prize in Medicine (2009), the HUGO Chen
-Award (2017), the Asan Award in Medicine (2019) and the Lim Sung Ki
-Researcher Award (2024). She serves on the Board of Reviewing Editors of
+Award (2017), the Asan Award in Medicine (2019), the Lim Sung Ki
+Researcher Award (2024), and Human Frontier Science Program Nakasone Award (2027). She serves on the Board of Reviewing Editors of
 *Science* and on the editorial boards of *Cell*, *Molecular Cell*,
 *Genes & Development* and *The EMBO Journal*.
 

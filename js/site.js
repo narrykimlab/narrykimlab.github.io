@@ -1,9 +1,9 @@
 /*
  * The site's script: the home page photo carousel, the photos page's
  * viewer, the Cite window of the paper lists, the topic list on
- * /publications/by-topic/, and the email buttons on the people and member
- * pages. It drives Bootstrap 3's carousel classes
- * itself, without jQuery or Bootstrap's own JS.
+ * /publications/by-topic/, and the email addresses (the people and member
+ * pages' buttons, two in running text). It drives Bootstrap 3's carousel
+ * classes itself, without jQuery or Bootstrap's own JS.
  *
  * Loaded with `defer` from _includes/head.html, so it runs once the document
  * is parsed. It lives in a file, not inline, so the site works under a
@@ -445,16 +445,49 @@
     mark();
   });
 
-  // An email button holds the address as text with a hidden word inside it
-  // (_includes/email_chip.html), which address harvesters reading the HTML
-  // pick up as is. Here it becomes a mailto link like the buttons beside it.
-  document.querySelectorAll('span.email-chip').forEach((chip) => {
-    const copy = chip.cloneNode(true);
-    copy.querySelectorAll('.qb-hidden').forEach((el) => el.remove());
+  // Email addresses are drawn, not written (_includes/email_chip.html,
+  // _includes/email_link.html): the page holds code points of Unicode's
+  // Private Use Area, which the fonts NKL Mail Display and NKL Mail Sans draw
+  // as the address, and which mean nothing to a program reading the page.
+  // MAIL_FIRST + i stands for the i-th of MAIL_CHARACTERS; the table is
+  // _data/mail_glyphs.yml's, and the build fails if the two differ.
+  const MAIL_FIRST = 0xE38C;
+  const MAIL_CHARACTERS = '1ys4MDSQEjiCHalXcNoPqKUL-52TROv7+f6e9VB_ArtYuW3h.pJknF0zGxIw@Zg8dmb';
+  const unmail = (text) => Array.from(text, (c) => {
+    const i = c.codePointAt(0) - MAIL_FIRST;
+    return i >= 0 && i < MAIL_CHARACTERS.length ? MAIL_CHARACTERS[i] : c;
+  }).join('');
+
+  // Each becomes a link like the ones beside it. Its mailto address is filled
+  // in only while someone points at it, focuses it or clicks it (a browser
+  // reads the href only once the click's handlers have run), so the page at
+  // rest holds no address, even for a harvester that runs its scripts.
+  document.querySelectorAll('span[data-mail]').forEach((span) => {
+    const text = span.querySelector('.mail-text');
     const link = document.createElement('a');
-    link.className = chip.className;
-    link.href = 'mailto:' + copy.textContent.trim();
-    link.append(...chip.childNodes);
-    chip.replaceWith(link);
+    link.className = span.className;
+    link.href = 'mailto:';
+    const arm = () => { link.href = 'mailto:' + unmail(text.textContent); };
+    const disarm = () => { link.href = 'mailto:'; };
+    ['pointerenter', 'pointerdown', 'focus', 'click', 'auxclick', 'contextmenu']
+      .forEach((type) => link.addEventListener(type, arm));
+    link.addEventListener('pointerleave', () => {
+      if (document.activeElement !== link) disarm();
+    });
+    link.addEventListener('blur', () => {
+      if (!link.matches(':hover')) disarm();
+    });
+    link.append(...span.childNodes);
+    span.replaceWith(link);
+  });
+
+  // Copying a selection that takes in an address copies the address itself,
+  // not the characters the page holds.
+  document.addEventListener('copy', (event) => {
+    const selected = String(window.getSelection());
+    const plain = unmail(selected);
+    if (plain === selected || !event.clipboardData) return;
+    event.clipboardData.setData('text/plain', plain);
+    event.preventDefault();
   });
 })();

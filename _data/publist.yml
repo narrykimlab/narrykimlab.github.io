@@ -267,7 +267,7 @@
     - name: V. N. Kim
       link: v-narry-kim
       is_corresponding: true
-  title: "Small and long non-coding RNAs: Past, present, and future"
+  title: "Small and long non-coding RNAs: past, present, and future"
   journal: Cell
   vip: "187(23):6451-6485"
   year: 2024
@@ -896,7 +896,7 @@
       link: v-narry-kim
     - name: J.-S. Kim
       is_corresponding: true
-  title: Development of Multiplexed Immuno-N-Terminomics to Reveal the Landscape of Proteolytic Processing in Early Embryogenesis of Drosophila melanogaster
+  title: Development of multiplexed immuno-N-terminomics to reveal the landscape of proteolytic processing in early embryogenesis of Drosophila melanogaster
   journal: Analytical Chemistry
   vip: "92(7):4926-4934"
   year: 2020
@@ -960,7 +960,7 @@
       link: v-narry-kim
     - name: E. C. Lai
       is_corresponding: true
-  title: Genomic Clustering Facilitates Nuclear Processing of Suboptimal Pri-miRNA Loci
+  title: Genomic clustering facilitates nuclear processing of suboptimal pri-miRNA loci
   journal: Molecular Cell
   vip: "78(2):303-316.e4"
   year: 2020
@@ -1119,7 +1119,7 @@
       link: v-narry-kim
     - name: C. Justin Lee
       is_corresponding: true
-  title: Development of a Laboratory-safe and Low-cost Detection Protocol for SARS-CoV-2 of the Coronavirus Disease 2019 (COVID-19)
+  title: Development of a laboratory-safe and low-cost detection protocol for SARS-CoV-2 of the coronavirus disease 2019 (COVID-19)
   journal: Experimental Neurobiology
   vip: "29(2):107-119"
   year: 2020
@@ -1149,7 +1149,7 @@
       is_corresponding: true
     - name: H. K. Yang
       is_corresponding: true
-  title: microRNA-30a arbitrates intestinal-type early gastric carcinogenesis by directly targeting ITGA2.
+  title: microRNA-30a arbitrates intestinal-type early gastric carcinogenesis by directly targeting ITGA2
   journal: Gastric Cancer
   vip: "23(4):600-613"
   year: 2020
@@ -1285,7 +1285,7 @@
       link: v-narry-kim
     - name: K. P. Kim
     - name: J. S. Kim
-  title: Deuterium-Free, Three-Plexed Peptide Diethylation for Highly Accurate Quantitative Proteomics
+  title: Deuterium-free, three-plexed peptide diethylation for highly accurate quantitative proteomics
   journal: Journal of Proteome Research
   vip: "18(3):1078-1087"
   year: 2019
@@ -1474,7 +1474,7 @@
     - name: V. N. Kim
       link: v-narry-kim
       is_corresponding: true
-  title: PABP Cooperates with the CCR4-NOT Complex to Promote mRNA Deadenylation and Block Precocious Decay
+  title: PABP cooperates with the CCR4-NOT complex to promote mRNA deadenylation and block precocious decay
   journal: Molecular Cell
   vip: "70(6):1081-1088.e5"
   year: 2018
@@ -1489,7 +1489,7 @@
     - name: V. N. Kim
       link: v-narry-kim
       is_corresponding: true
-  title: "fCLIP-seq for transcriptomic footprinting of dsRNA-binding proteins: Lessons from DROSHA"
+  title: "fCLIP-seq for transcriptomic footprinting of dsRNA-binding proteins: lessons from DROSHA"
   journal: Methods
   vip: "152:3-11"
   year: 2018
@@ -1532,7 +1532,7 @@
     - name: V. N. Kim
       link: v-narry-kim
       is_corresponding: true
-  title: "PARN and TOE1 Constitute a 3′ End Maturation Module for Nuclear Non-coding RNAs"
+  title: PARN and TOE1 constitute a 3′ end maturation module for nuclear non-coding RNAs
   journal: Cell Reports
   vip: "23(3):888-898"
   year: 2018
@@ -1568,7 +1568,7 @@
     - name: V. N. Kim
       link: v-narry-kim
       is_corresponding: true
-  title: Terminal Uridylyltransferases Execute Programmed Clearance of Maternal Transcriptome in Vertebrate Embryos
+  title: Terminal uridylyltransferases execute programmed clearance of maternal transcriptome in vertebrate embryos
   journal: Molecular Cell
   vip: "70(1):72-82.e7"
   year: 2018
@@ -1620,7 +1620,7 @@
     - name: V. N. Kim
       link: v-narry-kim
       is_corresponding: true
-  title: Genome-wide Mapping of DROSHA Cleavage Sites on Primary MicroRNAs and Noncanonical Substrates
+  title: Genome-wide mapping of DROSHA cleavage sites on primary microRNAs and noncanonical substrates
   journal: Molecular Cell
   vip: "66(2):258-269.e5"
   year: 2017
@@ -1638,7 +1638,7 @@
       is_corresponding: true
     - name: B.-K. Kaang
       is_corresponding: true
-  title: Response to Comment on Multiple repressive mechanisms in the hippocampus during memory formation
+  title: "Response to comment on “Multiple repressive mechanisms in the hippocampus during memory formation”"
   journal: Science
   vip: "353(6298):453"
   year: 2016
@@ -1710,7 +1710,7 @@
       link: v-narry-kim
     - name: H.-K. Yang
       is_corresponding: true
-  title: Gastric Carcinogenesis in the miR-222/221 Transgenic Mouse Model
+  title: Gastric carcinogenesis in the miR-222/221 transgenic mouse model
   journal: Cancer Research and Treatment
   vip: "49(1):150-160"
   year: 2016
@@ -1737,7 +1737,7 @@
     - name: V. N. Kim
       link: v-narry-kim
       is_corresponding: true
-  title: Regulation of Poly(A) Tail and Translation during the Somatic Cell Cycle
+  title: Regulation of poly(A) tail and translation during the somatic cell cycle
   journal: Molecular Cell
   vip: "62(3):462-471"
   year: 2016
@@ -1782,7 +1782,7 @@
       is_corresponding: true
     - name: J.-S. Woo
       is_corresponding: true
-  title: Structure of Human DROSHA
+  title: Structure of human DROSHA
   journal: Cell
   vip: "164(1-2):81-90"
   year: 2016
@@ -1878,7 +1878,7 @@
     - name: S. Lee
     - name: K. Ahn
       is_corresponding: true
-  title: Temporal Landscape of MicroRNA-Mediated Host-Virus Crosstalk during Productive Human Cytomegalovirus Infection
+  title: Temporal landscape of microRNA-mediated host-virus crosstalk during productive human cytomegalovirus infection
   journal: Cell Host & Microbe
   vip: "17(6):838-851"
   year: 2015
@@ -1904,7 +1904,7 @@
       is_corresponding: true
     - name: J.-S. Woo
       is_corresponding: true
-  title: Functional Anatomy of the Human Microprocessor
+  title: Functional anatomy of the human Microprocessor
   journal: Cell
   vip: "161(6):1374-1387"
   year: 2015
@@ -2017,7 +2017,7 @@
     - name: V. N. Kim
       link: v-narry-kim
     - name: S. Lee
-  title: "miRseqViewer: Multi-panel visualization of sequence, structure and expression for analysis of microRNA sequencing data"
+  title: "miRseqViewer: multi-panel visualization of sequence, structure and expression for analysis of microRNA sequencing data"
   journal: Bioinformatics
   vip: "31(4):596-598"
   year: 2015
@@ -2193,7 +2193,7 @@
     - name: V. N. Kim
       link: v-narry-kim
       is_corresponding: true
-  title: "TAIL-seq: Genome-wide Determination of Poly(A) Tail Length and 3′ End Modifications"
+  title: "TAIL-seq: genome-wide determination of poly(A) tail length and 3′ end modifications"
   journal: Molecular Cell
   vip: "53(6):1044-1052"
   year: 2014
@@ -2206,7 +2206,7 @@
     - name: V. N. Kim
       link: v-narry-kim
       is_corresponding: true
-  title: MeCP2 Caught Moonlighting as a Suppressor of MicroRNA Processing
+  title: MeCP2 caught moonlighting as a suppressor of microRNA processing
   journal: Developmental Cell
   vip: "28(5):477-478"
   year: 2014
@@ -2230,7 +2230,7 @@
       link: v-narry-kim
     - name: D. J. Patel
       is_corresponding: true
-  title: A Phosphate-Binding Pocket within the Platform-PAZ-Connector Helix Cassette of Human Dicer
+  title: A phosphate-binding pocket within the platform-PAZ-connector helix cassette of human Dicer
   journal: Molecular Cell
   vip: "53(4):606-616"
   year: 2014
@@ -2306,7 +2306,7 @@
     - name: V. N. Kim
       link: v-narry-kim
     - name: D.-H. Min
-  title: Quantitative and Multiplexed MicroRNA Sensing in Living Cells Based on Peptide Nucleic Acid and Nano Graphene Oxide (PANGO)
+  title: Quantitative and multiplexed microRNA sensing in living cells based on peptide nucleic acid and nano graphene oxide (PANGO)
   journal: ACS Nano
   vip: "7(7):5882-5891"
   year: 2013
@@ -2478,7 +2478,7 @@
       full_name: Minju Ha
     - name: V. N. Kim
       link: v-narry-kim
-  title: Short Structured RNAs with Low GC Content Are Selectively Lost during Extraction from a Small Number of Cells
+  title: Short structured RNAs with low GC content are selectively lost during extraction from a small number of cells
   journal: Molecular Cell
   vip: "46(6):893-895"
   year: 2012
@@ -2492,7 +2492,7 @@
       full_name: Yoosik Kim
     - name: V. N. Kim
       link: v-narry-kim
-  title: "MicroRNA Factory: RISC Assembly from Precursor MicroRNAs"
+  title: "MicroRNA factory: RISC assembly from precursor microRNAs"
   journal: Molecular Cell
   vip: "46(4):384-386"
   year: 2012
@@ -2588,7 +2588,7 @@
       full_name: Inha Heo
     - name: V. N. Kim
       link: v-narry-kim
-  title: Modifications of Small RNAs and Their Associated Proteins
+  title: Modifications of small RNAs and their associated proteins
   journal: Cell
   vip: "143(5):703-709"
   year: 2010
@@ -2633,7 +2633,7 @@
       full_name: Inha Heo
     - name: V. N. Kim
       link: v-narry-kim
-  title: "Regulating the Regulators: Posttranslational Modifications of RNA Silencing Factors"
+  title: "Regulating the regulators: posttranslational modifications of RNA silencing factors"
   journal: Cell
   vip: "139(1):28-31"
   year: 2009
@@ -2671,7 +2671,7 @@
     - name: V. N. Kim
       link: v-narry-kim
       is_corresponding: true
-  title: Human UPF1 Participates in Small RNA-Induced mRNA Downregulation
+  title: Human UPF1 participates in small RNA-induced mRNA downregulation
   journal: Molecular and Cellular Biology
   vip: "29(21):5789-5799"
   year: 2009
@@ -2709,7 +2709,7 @@
       full_name: Jinju Han
     - name: V. N. Kim
       link: v-narry-kim
-  title: TUT4 in Concert with Lin28 Suppresses MicroRNA Biogenesis through Pre-MicroRNA Uridylation
+  title: TUT4 in concert with Lin28 suppresses microRNA biogenesis through pre-microRNA uridylation
   journal: Cell
   vip: "138(4):696-708"
   year: 2009
@@ -2894,7 +2894,7 @@
       link: v-narry-kim
     - name: C. M. Park
     - name: S. W. Suh
-  title: Structural and functional insights into Dom34, a key component of No-Go mRNA decay
+  title: Structural and functional insights into Dom34, a key component of no-go mRNA decay
   journal: Molecular Cell
   vip: "27(6):938-950"
   year: 2007
@@ -2943,7 +2943,7 @@
     - name: V. N. Kim
       link: v-narry-kim
     - name: S. Kim
-  title: Control of Splicing Efficiency by the Mouse Histone H2a Element in a Murine Leukemia Virus-based Retroviral Vector
+  title: Control of splicing efficiency by the mouse histone H2a element in a murine leukemia virus-based retroviral vector
   journal: Molecular Therapy
   vip: "15(1):167-172"
   year: 2007

@@ -1,11 +1,16 @@
 {%- comment -%}
-  An email address as a button (.chip) that address harvesters reading the
-  HTML cannot use: the page holds it as text with a hidden word inside it,
-  and js/site.js turns it into a mailto link once the page loads. Without
-  scripts it stays a box with the address in it. A long address that
-  must wrap breaks before the @ (<wbr>) rather than mid-word.
+  An email address as a button (.chip), out of address harvesters' reach.
+  The address is drawn, not written: the HTML holds code points of Unicode's
+  Private Use Area (the mail_glyphs filter, _plugins/mail_glyphs.rb), which
+  the font NKL Mail Display draws as the address in Montserrat's own glyphs,
+  and which mean nothing to a program reading the page, even one that runs
+  its scripts. js/site.js makes it a mailto link that holds the address only
+  while someone points at it, focuses it or clicks it, and copying it copies
+  the address. Screen readers hear "Email <name>" rather than characters that
+  mean nothing to them. Without scripts it stays a box showing the address.
+  A long address that must wrap breaks before the @ (<wbr>).
 
-    {% include email_chip.html address=member.email %}
+    {% include email_chip.html address=member.email name=member.name %}
 {%- endcomment -%}
-{%- assign parts = include.address | split: "@" -%}
-<span class="chip email-chip">{% include icon.html name="inbox" %}<span>{{ parts.first }}<span class="qb-hidden">obfuscate</span><wbr>@{{ parts.last }}</span></span>
+{%- assign parts = include.address | strip | split: "@" -%}
+<span class="chip email-chip" data-mail><span class="sr-only mail-label">Email {{ include.name }}</span>{% include icon.html name="inbox" %}<span class="mail-text" aria-hidden="true">{{ parts.first | mail_glyphs }}<wbr>{{ parts.last | prepend: "@" | mail_glyphs }}</span></span>

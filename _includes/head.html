@@ -51,7 +51,10 @@
       headings, IBM Plex Sans for the text (_sass/_fonts.scss). {%- endcomment %}
   <link rel="preload" href="{{ '/fonts/Montserrat-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="{{ '/fonts/IBMPlexSans-Regular-Latin1.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}">
+  {%- comment -%} With a digest of its sources in the URL, as the scripts have, so a
+      browser holding the old stylesheet (GitHub Pages lets it keep one for ten
+      minutes) fetches the new one with the new page. {%- endcomment %}
+  <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}?v={{ '/css/main.scss' | sass_fingerprint }}">
   {%- comment -%} The icon is the old site's strand of RNA, black on a white rounded square
       with transparent corners. The .ico holds 16, 32 and 48px; iOS gets a 180px PNG on
       white, square, and rounds it itself. {%- endcomment %}

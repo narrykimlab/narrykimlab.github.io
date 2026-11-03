@@ -3,6 +3,11 @@ layout: member
 title: Yejin Moon
 position: Research Assistant
 email: infinite.pipette@yejin.example  # placeholder
+github:
+orcid:
+scholar:
+pubmed:
+cv:
 image: /images/members/yejin-moon.jpg
 permalink: /people/yejin-moon
 ---
@@ -16,11 +21,11 @@ ask Yejin.
 Yejin's ice bucket never melts. Nobody knows why, and nobody wants to
 jinx it.
 
-## Current project
+## Education
 
 {% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}
-**Project Infinite Pipette.** An ongoing effort to prepare enough master
-mix for every experiment the lab will ever do, including several no one
-has thought of yet.
+<ul class="chronological">
+  <li><span>2016–2020</span> B.S. in Shadow Clone Techniques, Hidden Leaf Ninja Academy</li>
+</ul>
 
 {% include publication_in_profile.html %}

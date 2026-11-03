@@ -1,6 +1,9 @@
 # Announcements, newest first. `date` is "Feb 26, 2025", or the year alone
 # ("2025") when the day is not known. HTML is allowed in `headline`.
 
+- date: Jul 13, 2026
+  headline: 'Narry Kim wins the 2027 <a href="https://www.hfsp.org/awardees/hfsp-nakasone-award">HFSP Nakasone Award</a> for discovering noncanonical RNA tailing pathways.'
+
 - date: "2025"
   headline: "Congratulations on the award of Myeonghwan for the best thesis with a doctorate degree!"
 
@@ -13,7 +16,7 @@
 - date: Aug 28, 2024
   headline: "Congratulations on getting Ph.D. degree for Harim and Jenny!"
 
-- date: "2024"
+- date: Feb 26, 2024
   headline: "Congratulations on the award of Jong Woo for the best thesis with a doctorate degree!"
 
 - date: Feb 26, 2024
@@ -46,14 +49,20 @@
 - date: Aug 27, 2021
   headline: "Congratulations on getting Ph.D. degree for Haedong!"
 
+- date: May 6, 2021
+  headline: "Elected as a foreign member of the <a href=\"https://royalsociety.org/news/2021/05/new-fellows-announcement-2021/\">Royal Society</a>"
+
 - date: Apr 29, 2021
   headline: "[YTN Science] <a href=\"https://science.ytn.co.kr/program/view.php?mcd=0082&key=202104291115314402\">Proteins that suppress the COVID-19 virus found, laying the groundwork for treatments</a> (in Korean)"
 
 - date: "2021"
-  headline: "Elected as a foreign member of the <a href=\"https://royalsociety.org/news/2021/05/new-fellows-announcement-2021/\">Royal Society</a>"
-
-- date: "2021"
   headline: "Congratulations to Young-suk on his faculty appointment at KAIST!"
+
+- date: "2020"
+  headline: "Congratulations to Jong-Eun on his faculty appointment at KAIST!"
+
+- date: Sep 1, 2020
+  headline: "<a href=\"https://youtu.be/_C221Rq7fvo\">Lab tour video</a>"
 
 - date: "2020"
   headline: "Congratulations on the award of Yeon for his excellent thesis with a doctorate degree!"
@@ -61,35 +70,29 @@
 - date: Aug 28, 2020
   headline: "Congratulations on getting Ph.D. degrees for Kijun and Yeon!"
 
-- date: "2020"
-  headline: "Congratulations to Jong-Eun on his faculty appointment at KAIST!"
-
-- date: "2020"
-  headline: "<a href=\"https://youtu.be/_C221Rq7fvo\">Lab tour video</a>"
-
-- date: "2020"
-  headline: "<a href=\"https://www.ibs.re.kr/cop/bbs/BBSMSTR_000000000738/selectBoardArticle.do?nttId=18344\">COVID-19 science report</a>"
-
 - date: Aug 4, 2020
   headline: "[Introduction of Lab] “What Next?” Seoul National University <a href=\"https://www.youtube.com/watch?v=vKLg7v5zBbE\">Department of Biological science Professor V. Narry Kim (RNA Biology Lab)</a>_Korean and English subtitles"
 
 - date: May 26, 2020
   headline: "[Lecture] Korean Society for Molecular and Cellular Biology COVID-19 Lecture series “<a href=\"https://www.youtube.com/watch?v=Wh1yoIHNO7M\">Genetic properties and evolution on Coronaviruses</a>“"
 
+- date: Apr 9, 2020
+  headline: "<a href=\"https://www.ibs.re.kr/cop/bbs/BBSMSTR_000000000738/selectBoardArticle.do?nttId=18344\">COVID-19 science report</a>"
+
 - date: Dec 19, 2019
   headline: "[Lecture] <a href=\"https://www.youtube.com/watch?v=X3_7vnXbrgI&t=1703s\">Musical Note of Life, RNA</a>｜2019 Lectures in SNU College of natural science ‘Science melody’"
 
 - date: "2019"
-  headline: Asan Award in Medicine
+  headline: "Congratulations to Jun on his faculty appointment at GIST!"
 
-- date: "2019"
+- date: Mar 7, 2019
   headline: "We now have a <a href=\"https://www.youtube.com/channel/UCtSAWJedtlixoYkdj_qm-UQ\">Youtube channel</a>! Check it out!"
 
-- date: "2019"
+- date: Mar 1, 2019
   headline: "Congratulations to Hyeshik on his faculty appointment at SNU!"
 
-- date: "2019"
-  headline: "Congratulations to Jun on his faculty appointment at GIST!"
+- date: Jan 31, 2019
+  headline: Asan Award in Medicine
 
 - date: "2018"
   headline: "Minju became an editor at Nature Comm. Congratulations!"
@@ -101,10 +104,10 @@
   headline: "Congratulations to Mihye on her faculty appointment at Soonchunhyang University!"
 
 - date: "2017"
-  headline: "<a href=\"http://www.hugo-international.org/\">Human Genome Organisation</a> Chen Award."
-
-- date: "2016"
   headline: "Dr. Kim’s video talk “Biogenesis and Regulation of microRNA” is available on <a href=\"https://www.ibiology.org/genetics-and-gene-regulation/regulation-of-microrna/\">iBiology.org</a>."
+
+- date: "2017"
+  headline: "<a href=\"http://www.hugo-international.org/\">Human Genome Organisation</a> Chen Award."
 
 - date: "2016"
   headline: "Congratulations to <a href=\"http://life-sci.ust.hk/faculty/Dr.Nguyen/index.html\">Anh</a> on his faculty appointment at Hong Kong University of Science and Technology!"
@@ -112,13 +115,13 @@
 - date: "2016"
   headline: "Congratulations to <a href=\"https://qcbio.wordpress.com/home/\">Yoosik</a> on his faculty appointment at KAIST!"
 
-- date: "2016"
+- date: Jan 14, 2016
   headline: "<a href=\"https://www.youtube.com/watch?v=KdyepCiTW54\">A video abstract</a> of our recent <a href=\"http://www.cell.com/cell/abstract/S0092-8674(15)01643-8\">DROSHA structure paper</a>."
 
-- date: "2015"
+- date: Mar 1, 2015
   headline: "Congratulations to <a href=\"http://medicine.jnu.ac.kr/xprofessor/index.php?mode=view&number=271&smode=1&div1=1&div2=5&div3=0\">Young-Kook</a> on his faculty appointment at Chonnam National University!"
 
-- date: "2014"
+- date: Apr 29, 2014
   headline: "Elected as a foreign associate of <a href=\"http://www.nasonline.org/news-and-multimedia/news/april-29-2014-NAS-Election.html\">National Academy of Sciences</a> of the U.S.A."
 
 - date: Aug 18, 2011

@@ -72,7 +72,7 @@ jobs:
           bundle exec htmlproofer ./_site
           --disable-external
           --no-enforce-https
-          --swap-urls '^https\://narrykim\.org:'
+          --swap-urls '^https\://narrykim\.org:,^https\://narrykimlab\.github\.io:'
       - name: Upload artifact
         if: github.event_name != 'pull_request'
         # Uploads the './_site' directory by default

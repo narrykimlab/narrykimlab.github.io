@@ -2,24 +2,23 @@
 layout: member
 title: Sunghan Lee
 position: Graduate Student
-email: long.haul@sunghan.example  # placeholder
+email: hanbio999@gmail.com
+github: hanbio9
+orcid: 0009-0009-7313-4775
+scholar:
+pubmed:
+cv:
 image: /images/members/sunghan-lee.jpg
 permalink: /people/sunghan-lee
 ---
 
-Sunghan Lee is a graduate student working on the stability of RNA, in
-medicine and in viral infection. Sunghan is a co-first author of a 2025
-*Nature Biotechnology* study that found RNA stability enhancers able to
-make base-modified mRNA therapeutics last longer, and of a 2025 *Nucleic
-Acids Research* study showing that the SARS-CoV-2 protein Nsp2 recruits
-GIGYF2 near viral replication sites to support viral protein
-production.
+Sunghan Lee is a graduate student working on the 3'UTR-mediated stability regulation of mRNA.
 
-## Current project
+## Education
 
-{% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}
-**Operation Long Haul.** Engineering an mRNA that runs a marathon
-through the cytoplasm, refuels at every ribosome along the way, and still
-has the energy for a victory lap.
+<ul class="chronological">
+  <li><span>2021–present</span> M.S./Ph.D. Student, School of Biological Sciences, Seoul National University</li>
+  <li><span>2018–2021</span> B.S. in Biological Sciences, Seoul National University</li>
+</ul>
 
 {% include publication_in_profile.html %}

@@ -7,6 +7,14 @@ own split web fonts, unmodified, from the @ibm/plex-sans package, version
 loads the Pi and Greek files only for the characters they hold (primes, a
 Greek beta), which the Latin1 files lack.
 
+NKLMail-Sans.woff2 is a Modified Version of IBMPlexSans-Regular-Latin1.woff2,
+made by _tools/mail-fonts.py to draw the site's email addresses: it keeps the
+glyphs of the characters an address may hold (and their ligatures), with
+their outlines, spacing, kerning and hinting, maps them from code points of
+the Private Use Area instead of from the letters, drops the glyph names and
+shuffles the glyph order. As the licence below reserves the name "Plex", it is
+named NKL Mail Sans.
+
 Copyright © 2017 IBM Corp. with Reserved Font Name "Plex"
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.

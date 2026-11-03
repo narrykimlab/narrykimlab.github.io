@@ -3,6 +3,11 @@ layout: member
 title: Yeekyung Moon
 position: Graduate Student
 email: moonshot01@yeekyung.example  # placeholder
+github:
+orcid:
+scholar:
+pubmed:
+cv:
 image: /images/members/yeekyung-moon.jpg
 permalink: /people/yeekyung-moon
 ---
@@ -16,11 +21,11 @@ the crew.
 Yeekyung's gels are so straight that the lab uses them to check whether
 the benches are level.
 
-## Current project
+## Education
 
 {% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}
-**Moonshot-01.** Launching a fleet of tiny probes into the cytoplasm
-to map where every mRNA goes on its day off. Mission control expects the
-first postcards any day now.
+<ul class="chronological">
+  <li><span>2016–2020</span> B.S. in Exobiology, Starfleet Academy</li>
+</ul>
 
 {% include publication_in_profile.html %}
