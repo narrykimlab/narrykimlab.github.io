@@ -24,6 +24,8 @@ noncanonical tailing pathways such as uridylation and mixed tailing. We
 are dissecting the mechanisms of RNA tail modification to understand how
 they stabilize mRNAs and how this knowledge can enhance mRNA therapeutics.
 
+{% include research_papers.html topics="mrna-stability" %}
+
 ## Viral Regulatory RNAs and mRNA Therapeutics
 
 Viruses encode powerful RNA elements that modulate translation and RNA
@@ -33,6 +35,8 @@ activities and investigate how they remodel host pathways. These studies
 reveal new modes of RNA regulation and offer design principles for RNA
 therapeutics and vaccines.
 
+{% include research_papers.html topics="viral-rna" %}
+
 ## Cellular Regulation of Exogenous RNAs
 
 Cells mount distinct responses to foreign RNAs—including viral RNAs and
@@ -41,6 +45,8 @@ or cooperate with exogenous RNAs at the molecular level. This work
 provides a framework for improving the stability, translation, and safety
 of therapeutic mRNAs.
 
+{% include research_papers.html topics="exogenous-rna" %}
+
 ## microRNA Biogenesis and Function
 
 microRNAs are essential regulators of development, physiology, and
@@ -48,3 +54,7 @@ disease. Our lab has elucidated key steps in microRNA biogenesis by
 identifying core factors such as DROSHA, DGCR8, LIN28, and TUTases, and by
 determining their structures. We continue to investigate how microRNAs are
 produced and regulated.
+
+{% include research_papers.html topics="mirna-biogenesis mirna-function" %}
+
+{% include cite_dialog.html %}

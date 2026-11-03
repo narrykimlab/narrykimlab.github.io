@@ -14,6 +14,9 @@ require "date"
 
 module Jekyll
   module DataCheck
+    # The topics _pages/research.md has a section for
+    # (_includes/research_papers.html); a paper's `research` names one.
+    RESEARCH_TOPICS = %w[mrna-stability viral-rna exogenous-rna mirna-biogenesis mirna-function].freeze
     # The groups _pages/people.md lists; any other category is never shown.
     TEAM_CATEGORIES = %w[principal-investigator postdoc student research-assistant support].freeze
     MONTHS = Date::MONTHNAMES.compact.freeze
@@ -193,6 +196,13 @@ module Jekyll
           (topics - ids).each { |t| problem("publist", p, i, "unknown topic #{t.inspect} (one of: #{ids.join(", ")})") }
           problem("publist", p, i, "a topic is named twice") if topics.uniq.size < topics.size
           problem("publist", p, i, "`other` is for a paper no other topic fits; it goes alone") if topics.include?("other") && topics.size > 1
+          research = p["research"]
+          next if research.nil?
+          if !RESEARCH_TOPICS.include?(research)
+            problem("publist", p, i, "`research` #{research.inspect} is not a Research page section (one of: #{RESEARCH_TOPICS.join(", ")})")
+          elsif !topics.include?(research)
+            problem("publist", p, i, "`research` #{research.inspect} is not one of the paper's own `topics`")
+          end
         end
       end
 

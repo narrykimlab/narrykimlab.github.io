@@ -160,8 +160,11 @@ the templates read -- when a template starts reading a new field, update the mat
   `journal`, `year`, `vip` (optional: `volume(issue):pages` with the last page in full,
   "84(9):1764-1782.e10", or "12:6026" for an article number; the data check enforces
   the form, since the citations take it apart), `doi`, `url` (where the title
-  links), `supplement` (optional, a link to supplementary data or code), and `topics`
-  (one or more ids from topics.yml, a list: `[mirna-biogenesis, methods]`). Each author
+  links), `supplement` (optional, a link to supplementary data or code), `topics`
+  (one or more ids from topics.yml, a list: `[mirna-biogenesis, methods]`), and
+  `research` (optional, one of those topics: the section of the Research page the paper
+  goes under, which shows its newest two so marked; only the lab's own papers, not
+  reviews or collaborations it had a small part in). Each author
   has `name` as printed ("J. J. Seo") and, for a lab member, either
   `link` (a team.yml link, for someone with a profile page) or `lab: true` (no link;
   every author is set alike), plus `is_first`/`is_corresponding` for the superscripts
@@ -235,10 +238,12 @@ this site are linked from the footer, All news from the home page.
   (`_plugins/monthly_shuffle.rb`); `TEAM_ORDER_MONTH=2026-11` builds as if it were
   another month.
 - **publication_entry.html** — One publication (title, authors, journal, year, volume,
-  then its Cite button), used on the publication pages and the profiles;
-  **publication_author_list.html** formats its authors; **publication_extras.html** is
-  the book chapters and patents the publication pages end with; **cite_dialog.html** is
-  the Cite window, included once by each page that lists papers.
+  then its Cite button), used on the publication pages, the profiles and the Research
+  page; **research_papers.html** puts a Research section's newest two papers marked
+  `research` under it; **publication_author_list.html** formats its authors;
+  **publication_extras.html** is the book chapters and patents the publication pages end
+  with; **cite_dialog.html** is the Cite window, included once by each page that lists
+  papers.
 
 ## Common Content Tasks
 
@@ -278,7 +283,9 @@ page in full, or leave it out while the paper is online only; mark `is_correspon
 on every corresponding author (each gets `✉`) and `is_first` on co-first authors only.
 The Cite button and its citations follow from the entry. A lab member who co-authored
 from elsewhere (a former member in their own lab) still gets `lab: true` and
-`full_name`, so the name links to them.
+`full_name`, so the name links to them. If the paper is the lab's own work on one of
+the Research page's topics, give it `research:` too, naming that topic; it then shows
+under the section, pushing out the older of the two there.
 
 ### Add news
 

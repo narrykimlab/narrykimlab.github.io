@@ -13,6 +13,9 @@
 # paper has them. `url` is where the title links. `topics` names one or
 # more of _data/topics.yml; /publications/by-topic/ lists the paper under
 # each.
+# `research` (one of its topics) puts the paper under that section of the
+# Research page, which shows the newest two so marked: a paper of the lab's
+# own, not a review or a collaboration it had a small part in.
 
 - authors:
     - name: Y. Park
@@ -27,6 +30,7 @@
   doi: 10.1016/j.cels.2026.101736
   url: "https://www.cell.com/cell-systems/fulltext/S2405-4712(26)00218-8"
   topics: [mirna-biogenesis]
+  research: mirna-biogenesis
 
 - authors:
     - name: J. J. Seo
@@ -53,6 +57,7 @@
   doi: 10.1016/j.cell.2026.07.038
   url: "https://www.cell.com/cell/fulltext/S0092-8674(26)00870-6"
   topics: [viral-rna, mrna-stability]
+  research: viral-rna
 
 - authors:
     - name: Y. Park
@@ -79,6 +84,7 @@
   doi: 10.1038/s41467-026-75008-6
   url: "https://www.nature.com/articles/s41467-026-75008-6"
   topics: [viral-rna]
+  research: viral-rna
 
 - authors:
     - name: Y.-Y. Lee
@@ -106,6 +112,7 @@
   doi: 10.1038/s41586-026-10640-2
   url: "https://www.nature.com/articles/s41586-026-10640-2"
   topics: [mirna-biogenesis]
+  research: mirna-biogenesis
 
 - authors:
     - name: S.-J. Jung
@@ -139,6 +146,7 @@
   doi: 10.1038/s41587-025-02891-7
   url: "https://www.nature.com/articles/s41587-025-02891-7"
   topics: [viral-rna, mrna-stability]
+  research: mrna-stability
 
 - authors:
     - name: H. Jang
@@ -156,6 +164,7 @@
   doi: 10.1038/s41467-025-63015-y
   url: "https://doi.org/10.1038/s41467-025-63015-y"
   topics: [mirna-biogenesis]
+  research: mirna-biogenesis
 
 - authors:
     - name: S. Lee
@@ -217,6 +226,7 @@
   doi: 10.1093/nar/gkaf674
   url: "https://academic.oup.com/nar/article/53/14/gkaf674/8211931"
   topics: [viral-rna]
+  research: viral-rna
 
 - authors:
     - name: M. Kim
@@ -240,6 +250,7 @@
   doi: 10.1126/science.ads4539
   url: "https://www.science.org/doi/10.1126/science.ads4539"
   topics: [exogenous-rna]
+  research: exogenous-rna
 
 - authors:
     - name: H. Kim
@@ -387,6 +398,7 @@
   doi: 10.1038/s41594-023-01187-1
   url: "https://www.nature.com/articles/s41594-023-01187-1#Sec1"
   topics: [mrna-stability]
+  research: mrna-stability
 
 - authors:
     - name: J. J. Seo
@@ -469,6 +481,7 @@
   doi: 10.1038/s41594-023-00930-y
   url: "https://doi.org/10.1038/s41594-023-00930-y"
   topics: [mrna-stability]
+  research: mrna-stability
 
 - authors:
     - name: Y. Lee
