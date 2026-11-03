@@ -8,8 +8,9 @@
   Each paper is a card like a Notion bookmark, the whole of it a link to the
   paper: the title in full, the authors (two lines at most, as plain names,
   since a link cannot hold other links), and the journal and year beside a
-  document icon. The Cite button the other paper lists carry has no room in
-  a link; the publication pages have it.
+  document icon, with the paper's `image` (images/papers/) on the right, or
+  on top in a narrow card. The Cite button the other paper lists carry has
+  no room in a link; the publication pages have it.
 
     {% include research_papers.html topics="mirna-biogenesis mirna-function" %}
 {%- endcomment -%}
@@ -25,6 +26,7 @@
 {%- for publi in picked %}
 {%- if publi.url %}{% assign href = publi.url %}{% else %}{% assign href = "https://doi.org/" | append: publi.doi %}{% endif %}
 <li><a class="paper-card" href="{{ href }}">
+<span class="paper-card-text">
 <span class="paper-card-title">{{ publi.title }}</span>
 <span class="paper-card-authors">
 {%- for author in publi.authors -%}
@@ -33,6 +35,10 @@
 {%- endfor -%}
 </span>
 <span class="paper-card-source">{% include icon.html name="file-alt" %}<span><span class="paper-card-journal">{{ publi.journal }}</span> ({{ publi.year }})</span></span>
+</span>
+{%- if publi.image %}
+<span class="paper-card-image">{% picture paper-card images/papers/{{ publi.image }} alt="" loading="lazy" %}</span>
+{%- endif %}
 </a></li>
 {%- endfor %}
 </ul>

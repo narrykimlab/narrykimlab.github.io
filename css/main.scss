@@ -1345,9 +1345,15 @@ html.cite-open {
    (_includes/research_papers.html), each a card like a Notion bookmark: a
    box in the buttons' rule and corners, the whole of it a link, holding the
    title, the authors on two lines at most and the journal beside a document
-   icon in the buttons' red; it tints on hover. Its text keeps the ink colour
-   and no underline, as the buttons do. Unlike a bookmark's, the title is
-   never cut short: on a phone it takes three lines. */
+   icon in the buttons' red, and the paper's picture on the right; it tints
+   on hover. Its text keeps the ink colour and no underline, as the buttons
+   do. Unlike a bookmark's, the title is never cut short: on a phone it
+   takes three lines.
+   As in a bookmark, text and picture share a row that wraps in reverse
+   (wrap-reverse): in a card too narrow for both (under 440px inside), the
+   picture moves above the text, at half as tall as it is wide; beside the
+   text it is as tall as the card. Either way it fills its box, cut to fit
+   (object-fit: cover). */
 .research-papers {
     max-width: 36em;
 }
@@ -1365,9 +1371,14 @@ ul.paper-cards {
     list-style: none;
 }
 
+ul.paper-cards li {
+    container-type: inline-size;
+}
+
 .research-papers a.paper-card {
-    display: block;
-    padding: 12px 16px 13px;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    overflow: hidden;
     border: 1px solid var(--chip-rule);
     border-radius: 8px;
     background: #ffffff;
@@ -1381,6 +1392,40 @@ ul.paper-cards {
     background: var(--tint);
     color: var(--ink);
     text-decoration: none;
+}
+
+.paper-card-text {
+    display: block;
+    flex: 4 1 260px;
+    min-width: 0;
+    padding: 12px 16px 13px;
+}
+
+.paper-card-image {
+    display: block;
+    position: relative;
+    flex: 1 1 180px;
+    min-height: 120px;
+    background: var(--band);
+}
+
+/* Outranks img[width][height] (height: auto) and drops the margins and
+   rounding every img has. */
+.research-papers .paper-card-image img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
+    object-fit: cover;
+}
+
+@container (max-width: 441px) {
+    .paper-card-image {
+        min-height: 0;
+        aspect-ratio: 2 / 1;
+    }
 }
 
 .paper-card-authors {

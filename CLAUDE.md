@@ -164,7 +164,10 @@ the templates read -- when a template starts reading a new field, update the mat
   (one or more ids from topics.yml, a list: `[mirna-biogenesis, methods]`), and
   `research` (optional, one of those topics: the section of the Research page the paper
   goes under, which shows its newest two so marked; only the lab's own papers, not
-  reviews or collaborations it had a small part in). Each author
+  reviews or collaborations it had a small part in), and `image` (optional, the picture
+  on the right of its card there: a file in `images/papers/` named for the DOI,
+  `s41587-025-02891-7.jpg`, the article page's own og:image or a graphical abstract, at
+  least 480px wide; the data check fails on a missing file). Each author
   has `name` as printed ("J. J. Seo") and, for a lab member, either
   `link` (a team.yml link, for someone with a profile page) or `lab: true` (no link;
   every author is set alike), plus `is_first`/`is_corresponding` for the superscripts
@@ -241,7 +244,8 @@ this site are linked from the footer, All news from the home page.
   then its Cite button), used on the publication pages and the profiles;
   **research_papers.html** puts a Research section's newest two papers marked
   `research` under it, each a card like a Notion bookmark linking to the paper (title,
-  plain author names, journal and year; no Cite button, which a link cannot hold);
+  plain author names, journal and year, and the paper's `image` on the right, or on top
+  in a narrow card; no Cite button, which a link cannot hold);
   **publication_author_list.html** formats its authors;
   **publication_extras.html** is the book chapters and patents the publication pages end
   with; **cite_dialog.html** is the Cite window, included once by each page that lists
@@ -287,7 +291,10 @@ The Cite button and its citations follow from the entry. A lab member who co-aut
 from elsewhere (a former member in their own lab) still gets `lab: true` and
 `full_name`, so the name links to them. If the paper is the lab's own work on one of
 the Research page's topics, give it `research:` too, naming that topic; it then shows
-under the section, pushing out the older of the two there.
+under the section, pushing out the older of the two there; for the picture on its card,
+save the article page's og:image (or a graphical abstract) as `images/papers/<DOI
+suffix>.jpg` and name it in `image:`. The site serves its own copy: no image is loaded
+from the publisher.
 
 ### Add news
 

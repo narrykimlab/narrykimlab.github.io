@@ -62,6 +62,9 @@ pictures:
   figure-tall:    # 300px beside the text from 992px; below, at most 240px between paragraphs
     widths: [300, 600]
     sizes: "(min-width: 992px) 300px, 240px"
+  paper-card:     # Research page cards: about 215px on the right; on a phone, the card's width on top
+    widths: [240, 480, 720]
+    sizes: "(min-width: 500px) 215px, calc(100vw - 42px)"
   photo:          # photos page: three across at 305px, two from 640px, one below
     widths: [400, 800]
     sizes: "(min-width: 1100px) 305px, (min-width: 640px) calc(45vw - 46px), calc(90vw - 32px)"

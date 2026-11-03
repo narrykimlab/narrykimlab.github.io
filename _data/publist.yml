@@ -16,6 +16,9 @@
 # `research` (one of its topics) puts the paper under that section of the
 # Research page, which shows the newest two so marked: a paper of the lab's
 # own, not a review or a collaboration it had a small part in.
+# `image` is the picture on the right of its card there, a file in
+# images/papers/ named for the DOI: the article page's own (its og:image,
+# often Fig. 1) or a graphical abstract, at least 480px wide.
 
 - authors:
     - name: Y. Park
@@ -85,6 +88,7 @@
   url: "https://www.nature.com/articles/s41467-026-75008-6"
   topics: [viral-rna]
   research: viral-rna
+  image: s41467-026-75008-6.jpg
 
 - authors:
     - name: Y.-Y. Lee
@@ -113,6 +117,7 @@
   url: "https://www.nature.com/articles/s41586-026-10640-2"
   topics: [mirna-biogenesis]
   research: mirna-biogenesis
+  image: s41586-026-10640-2.jpg
 
 - authors:
     - name: S.-J. Jung
@@ -147,6 +152,7 @@
   url: "https://www.nature.com/articles/s41587-025-02891-7"
   topics: [viral-rna, mrna-stability]
   research: mrna-stability
+  image: s41587-025-02891-7.jpg
 
 - authors:
     - name: H. Jang
@@ -165,6 +171,7 @@
   url: "https://doi.org/10.1038/s41467-025-63015-y"
   topics: [mirna-biogenesis]
   research: mirna-biogenesis
+  image: s41467-025-63015-y.jpg
 
 - authors:
     - name: S. Lee
@@ -399,6 +406,7 @@
   url: "https://www.nature.com/articles/s41594-023-01187-1#Sec1"
   topics: [mrna-stability]
   research: mrna-stability
+  image: s41594-023-01187-1.jpg
 
 - authors:
     - name: J. J. Seo
@@ -482,6 +490,7 @@
   url: "https://doi.org/10.1038/s41594-023-00930-y"
   topics: [mrna-stability]
   research: mrna-stability
+  image: s41594-023-00930-y.jpg
 
 - authors:
     - name: Y. Lee
