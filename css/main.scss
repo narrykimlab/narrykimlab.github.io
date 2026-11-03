@@ -1371,11 +1371,13 @@ html.cite-open {
    underline, as the buttons do. Unlike a bookmark's, the title is never cut
    short: on a phone it takes three lines.
    As in a bookmark, text and picture share a row that wraps in reverse
-   (wrap-reverse): in a card too narrow for both (under 476px inside), the
+   (wrap-reverse): in a card too narrow for both (under 440px inside), the
    picture moves above the text. The pictures are made 3:2 on white
-   (_tools/paper-image.py), so the box is 3:2 too: 216 by 144px beside the
-   text (taller if the text is), the card's width on top. A picture is shown
-   whole (object-fit: contain) on white, never cut. */
+   (_tools/paper-image.py), so the box is 3:2 too beside the text: 180 by
+   120px, about the height of a two-line title and two lines of authors
+   (taller if the text is); on top, the card's width and half as tall. A
+   picture is shown whole (object-fit: contain) on white, never cut. The
+   lines are set closer than the running text's, as a caption's are. */
 .research-papers {
     max-width: 36em;
 }
@@ -1457,14 +1459,14 @@ ul.paper-cards li {
     display: block;
     flex: 1 1 260px;
     min-width: 0;
-    padding: 12px 16px 13px;
+    padding: 10px 14px 11px;
 }
 
 .paper-card-image {
     display: block;
     position: relative;
-    flex: 0 0 216px;
-    min-height: 144px;
+    flex: 0 0 180px;
+    min-height: 120px;
     background: #ffffff;
 }
 
@@ -1480,11 +1482,11 @@ ul.paper-cards li {
     object-fit: contain;
 }
 
-@container (max-width: 477px) {
+@container (max-width: 441px) {
     .paper-card-image {
         flex: 1 1 100%;
         min-height: 0;
-        aspect-ratio: 3 / 2;
+        aspect-ratio: 2 / 1;
     }
 }
 
@@ -1496,16 +1498,19 @@ ul.paper-cards li {
     overflow: hidden;
 }
 
+/* A block, so its lines are its own (as an inline span, they took the
+   paragraph's height). */
 .paper-card-title {
+    display: block;
     font-size: 16px;
     font-weight: 600;
-    line-height: 1.35;
+    line-height: 1.3;
 }
 
 .paper-card-authors {
-    margin-top: 4px;
+    margin-top: 3px;
     font-size: 14px;
-    line-height: 1.4;
+    line-height: 1.35;
     color: var(--muted);
 }
 
@@ -1513,7 +1518,7 @@ ul.paper-cards li {
     display: flex;
     align-items: center;
     gap: 7px;
-    margin-top: 8px;
+    margin-top: 6px;
     font-size: 14px;
     line-height: 1.3;
 }
@@ -1858,7 +1863,7 @@ div.footer-links img {
 }
 
 /* A figure beside a section of /research/, at the head of its section: each
-   is drawn as large as fits in 320 by 460px, keeping its shape, so a
+   is drawn as large as fits in 320 by 420px, keeping its shape, so a
    square diagram and a tall one weigh about the same and neither outgrows
    its section; between paragraphs on a narrow screen the box is 280 by
    340px, so it never fills a phone's screen. */
@@ -1866,7 +1871,7 @@ div.footer-links img {
     width: auto;
     height: auto;
     max-width: 320px;
-    max-height: 460px;
+    max-height: 420px;
 }
 
 @media (max-width: 991px) {

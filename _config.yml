@@ -59,12 +59,12 @@ pictures:
   member-card:    # people page photos, the PI's and everyone's: up to 180px wide
     widths: [260, 520]
     sizes: "(min-width: 500px) 180px, 42vw"
-  figure-section: # Research: a figure beside its section, at most 320 by 460px; between paragraphs below 992px, at most 280 by 340px
+  figure-section: # Research: a figure beside its section, at most 320 by 420px; between paragraphs below 992px, at most 280 by 340px
     widths: [320, 640, 960]
     sizes: "(min-width: 992px) 320px, 280px"
-  paper-card:     # Research page cards: 216px on the right; on a phone, the card's width on top
+  paper-card:     # Research page cards: 180px on the right; on a phone, the card's width on top
     widths: [240, 480, 720]
-    sizes: "(min-width: 520px) 216px, calc(100vw - 44px)"
+    sizes: "(min-width: 500px) 180px, calc(100vw - 44px)"
   photo:          # photos page: three across at 305px, two from 640px, one below
     widths: [400, 800]
     sizes: "(min-width: 1100px) 305px, (min-width: 640px) calc(45vw - 46px), calc(90vw - 32px)"

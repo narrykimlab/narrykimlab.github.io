@@ -50,7 +50,7 @@ Tech stack: Jekyll 4.x (Gemfile pins `~> 4.3`), Kramdown (GFM), Liquid templates
   On the text pages (textlay: research, join, contact, about, news) running text stops at
   36em, about 70 characters a line; floated figures keep the column's right-hand side.
   On /research/ each section but Exogenous RNAs has its own figure beside it
-  (`.qb-fig-section`, `images/research/`), drawn as large as fits 320 by 460px so figures
+  (`.qb-fig-section`, `images/research/`), drawn as large as fits 320 by 420px so figures
   of any shape weigh about the same, and a section's heading clears the figure before it.
 - Only the home page (the one with `hero:` front matter) has the pale masthead -- a
   gradient from `--tint` (`#f5f5f5`) to `--tint-deep` (`#ececec`), a step darker above
