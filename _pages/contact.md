@@ -3,6 +3,9 @@ title: "Contact"
 layout: textlay
 excerpt: "The Narry Kim lab's address, telephone and fax numbers."
 permalink: /contact/
+# The webmaster's address, shown below. Kept here so that the build fails if
+# any page gives it away as text (_plugins/mail_glyphs.rb).
+email: vicmin0216@snu.ac.kr
 ---
 
 # Contact
@@ -22,4 +25,4 @@ Fax: +82-2-887-0244
 
 ## Webmaster
 
-Sunghan Lee ({% include email_link.html address="hanbio999@gmail.com" name="Sunghan Lee" %})
+Seungmin Lee ({% include email_link.html address=page.email name="Seungmin Lee" %})
