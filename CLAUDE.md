@@ -238,9 +238,11 @@ this site are linked from the footer, All news from the home page.
   (`_plugins/monthly_shuffle.rb`); `TEAM_ORDER_MONTH=2026-11` builds as if it were
   another month.
 - **publication_entry.html** — One publication (title, authors, journal, year, volume,
-  then its Cite button), used on the publication pages, the profiles and the Research
-  page; **research_papers.html** puts a Research section's newest two papers marked
-  `research` under it; **publication_author_list.html** formats its authors;
+  then its Cite button), used on the publication pages and the profiles;
+  **research_papers.html** puts a Research section's newest two papers marked
+  `research` under it, each a card like a Notion bookmark linking to the paper (title,
+  plain author names, journal and year; no Cite button, which a link cannot hold);
+  **publication_author_list.html** formats its authors;
   **publication_extras.html** is the book chapters and patents the publication pages end
   with; **cite_dialog.html** is the Cite window, included once by each page that lists
   papers.

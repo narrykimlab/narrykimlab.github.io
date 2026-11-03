@@ -5,6 +5,12 @@
   marked shows nothing. The data check knows these topics too
   (RESEARCH_TOPICS in _plugins/data_check.rb).
 
+  Each paper is a card like a Notion bookmark, the whole of it a link to the
+  paper: the title in full, the authors (two lines at most, as plain names,
+  since a link cannot hold other links), and the journal and year beside a
+  document icon. The Cite button the other paper lists carry has no room in
+  a link; the publication pages have it.
+
     {% include research_papers.html topics="mirna-biogenesis mirna-function" %}
 {%- endcomment -%}
 {%- assign ids = include.topics | split: " " -%}
@@ -15,9 +21,19 @@
 {%- if picked.size > 0 %}
 <div class="research-papers" markdown="0">
 <p class="team-role">Recent papers</p>
-<ul class="publications_in_profile">
+<ul class="paper-cards">
 {%- for publi in picked %}
-<li>{% include publication_entry.html %}</li>
+{%- if publi.url %}{% assign href = publi.url %}{% else %}{% assign href = "https://doi.org/" | append: publi.doi %}{% endif %}
+<li><a class="paper-card" href="{{ href }}">
+<span class="paper-card-title">{{ publi.title }}</span>
+<span class="paper-card-authors">
+{%- for author in publi.authors -%}
+{%- if forloop.first -%}{%- elsif forloop.last and forloop.length >= 3 -%}, and {% else -%}, {% endif -%}
+{{ author.name }}
+{%- endfor -%}
+</span>
+<span class="paper-card-source">{% include icon.html name="file-alt" %}<span><span class="paper-card-journal">{{ publi.journal }}</span> ({{ publi.year }})</span></span>
+</a></li>
 {%- endfor %}
 </ul>
 </div>

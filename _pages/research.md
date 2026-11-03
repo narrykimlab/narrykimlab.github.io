@@ -56,5 +56,3 @@ determining their structures. We continue to investigate how microRNAs are
 produced and regulated.
 
 {% include research_papers.html topics="mirna-biogenesis mirna-function" %}
-
-{% include cite_dialog.html %}
