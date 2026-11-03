@@ -1271,11 +1271,6 @@ ul.publications_in_profile .cite-button {
     background: rgba(12, 12, 12, 0.55);
 }
 
-/* No scrolling the page behind the window. */
-html.cite-open {
-    overflow: hidden;
-}
-
 /* `hidden` must win over .button's display (the Download button). */
 .cite-dialog [hidden] {
     display: none;

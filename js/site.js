@@ -310,6 +310,47 @@
         throw e;
       }));
 
+    // While the window is open the page behind it keeps its scroll bar, so
+    // nothing there moves sideways as it would if the bar were taken away
+    // (overflow: hidden), yet it does not scroll: a wheel turn, a swipe or a
+    // scrolling key goes nowhere unless it scrolls something in the window
+    // (the citation's box, or the window itself on a short screen) that has
+    // room left to go that way. Space on a button still presses it. Over the
+    // dimmed page the event's target is the dialog too, but there it would
+    // scroll the page, so a point outside the window's box counts as not.
+    const SCROLL_KEYS = { ArrowUp: -1, PageUp: -1, Home: -1, ArrowDown: 1, PageDown: 1, End: 1, ' ': 1 };
+    const scrollsInWindow = (e, dy) => {
+      const at = e.touches ? e.touches[0] : e;
+      if (e.target === dialog && at.clientX !== undefined) {
+        const r = dialog.getBoundingClientRect();
+        if (at.clientX < r.left || at.clientX > r.right || at.clientY < r.top || at.clientY > r.bottom) return false;
+      }
+      for (let el = e.target instanceof Element ? e.target : null; el && dialog.contains(el); el = el.parentElement) {
+        const room = dy < 0 ? el.scrollTop : el.scrollHeight - el.clientHeight - el.scrollTop;
+        if (room > 1 && /auto|scroll/.test(getComputedStyle(el).overflowY)) return true;
+      }
+      return false;
+    };
+    let touchY = 0;
+    const holds = {
+      wheel: (e) => { if (!scrollsInWindow(e, e.deltaY)) e.preventDefault(); },
+      touchstart: (e) => { touchY = e.touches[0].clientY; },
+      touchmove: (e) => {
+        const y = e.touches[0].clientY;
+        if (!scrollsInWindow(e, touchY - y)) e.preventDefault();
+        touchY = y;
+      },
+      keydown: (e) => {
+        const dy = SCROLL_KEYS[e.key];
+        if (!dy || (e.key === ' ' && e.target.closest('button'))) return;
+        if (!scrollsInWindow(e, dy)) e.preventDefault();
+      },
+    };
+    const holdPage = (on) => Object.entries(holds).forEach(([type, f]) => {
+      if (on) document.addEventListener(type, f, { capture: true, passive: false });
+      else document.removeEventListener(type, f, { capture: true });
+    });
+
     function show() {
       formats.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.format === format)));
       const file = FILES[format];
@@ -328,7 +369,7 @@
       paper.textContent = button.closest('p, li')?.querySelector('.publi_title')?.textContent || '';
       text.textContent = 'Loading…';
       show();
-      document.documentElement.classList.add('cite-open');
+      holdPage(true);
       dialog.showModal();
       dialog.focus();
       const asked = id;
@@ -396,7 +437,7 @@
     });
 
     dialog.addEventListener('close', () => {
-      document.documentElement.classList.remove('cite-open');
+      holdPage(false);
       id = null;
       const button = opener;
       if (!button) return;
