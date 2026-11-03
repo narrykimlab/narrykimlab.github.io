@@ -166,8 +166,8 @@ the templates read -- when a template starts reading a new field, update the mat
   goes under, which shows its newest two so marked; only the lab's own papers, not
   reviews or collaborations it had a small part in), and `image` (optional, the picture
   on the right of its card there: a file in `images/papers/` named for the DOI,
-  `s41587-025-02891-7.jpg`, the article page's own og:image or a graphical abstract, at
-  least 480px wide; the data check fails on a missing file). Each author
+  `s41587-025-02891-7.jpg`, a panel or a graphical abstract made 3:2 on white by
+  `_tools/paper-image.py`; the data check fails on a missing file). Each author
   has `name` as printed ("J. J. Seo") and, for a lab member, either
   `link` (a team.yml link, for someone with a profile page) or `lab: true` (no link;
   every author is set alike), plus `is_first`/`is_corresponding` for the superscripts
@@ -292,10 +292,11 @@ The Cite button and its citations follow from the entry. A lab member who co-aut
 from elsewhere (a former member in their own lab) still gets `lab: true` and
 `full_name`, so the name links to them. If the paper is the lab's own work on one of
 the Research page's topics, give it `research:` too, naming that topic; it then shows
-under the section, pushing out the older of the two there; for the picture on its card,
-save the article page's og:image (or a graphical abstract) as `images/papers/<DOI
-suffix>.jpg` and name it in `image:`. The site serves its own copy: no image is loaded
-from the publisher.
+under the section, pushing out the older of the two there. For the picture on its card,
+crop a telling panel or the graphical abstract, paint out any fragment cut at its edge,
+make it 3:2 with `python3 _tools/paper-image.py <figure> images/papers/<DOI suffix>.jpg`
+(needs Pillow), and name it in `image:`. The site serves its own copy: no image is
+loaded from the publisher.
 
 ### Add news
 

@@ -1350,10 +1350,11 @@ html.cite-open {
    do. Unlike a bookmark's, the title is never cut short: on a phone it
    takes three lines.
    As in a bookmark, text and picture share a row that wraps in reverse
-   (wrap-reverse): in a card too narrow for both (under 440px inside), the
-   picture moves above the text, at half as tall as it is wide; beside the
-   text it is as tall as the card. Either way it fills its box, cut to fit
-   (object-fit: cover). */
+   (wrap-reverse): in a card too narrow for both (under 476px inside), the
+   picture moves above the text. The pictures are made 3:2 on white
+   (_tools/paper-image.py), so the box is 3:2 too: 216 by 144px beside the
+   text (taller if the text is), the card's width on top. A picture is shown
+   whole (object-fit: contain) on white, never cut. */
 .research-papers {
     max-width: 36em;
 }
@@ -1396,7 +1397,7 @@ ul.paper-cards li {
 
 .paper-card-text {
     display: block;
-    flex: 4 1 260px;
+    flex: 1 1 260px;
     min-width: 0;
     padding: 12px 16px 13px;
 }
@@ -1404,9 +1405,9 @@ ul.paper-cards li {
 .paper-card-image {
     display: block;
     position: relative;
-    flex: 1 1 180px;
-    min-height: 120px;
-    background: var(--band);
+    flex: 0 0 216px;
+    min-height: 144px;
+    background: #ffffff;
 }
 
 /* Outranks img[width][height] (height: auto) and drops the margins and
@@ -1418,13 +1419,14 @@ ul.paper-cards li {
     height: 100%;
     margin: 0;
     border-radius: 0;
-    object-fit: cover;
+    object-fit: contain;
 }
 
-@container (max-width: 441px) {
+@container (max-width: 477px) {
     .paper-card-image {
+        flex: 1 1 100%;
         min-height: 0;
-        aspect-ratio: 2 / 1;
+        aspect-ratio: 3 / 2;
     }
 }
 

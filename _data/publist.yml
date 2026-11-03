@@ -17,8 +17,8 @@
 # Research page, which shows the newest two so marked: a paper of the lab's
 # own, not a review or a collaboration it had a small part in.
 # `image` is the picture on the right of its card there, a file in
-# images/papers/ named for the DOI: the article page's own (its og:image,
-# often Fig. 1) or a graphical abstract, at least 480px wide.
+# images/papers/ named for the DOI: a panel or a graphical abstract, made
+# 3:2 on white by _tools/paper-image.py.
 
 - authors:
     - name: Y. Park
@@ -34,6 +34,7 @@
   url: "https://www.cell.com/cell-systems/fulltext/S2405-4712(26)00218-8"
   topics: [mirna-biogenesis]
   research: mirna-biogenesis
+  image: j.cels.2026.101736.jpg
 
 - authors:
     - name: J. J. Seo
@@ -61,6 +62,7 @@
   url: "https://www.cell.com/cell/fulltext/S0092-8674(26)00870-6"
   topics: [viral-rna, mrna-stability]
   research: viral-rna
+  image: j.cell.2026.07.038.jpg
 
 - authors:
     - name: Y. Park
