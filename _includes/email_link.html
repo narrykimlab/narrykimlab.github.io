@@ -1,0 +1,11 @@
+{%- comment -%}
+  An email address in running text, out of address harvesters' reach as the
+  email buttons are (_includes/email_chip.html): drawn by the font NKL Mail
+  Sans, in IBM Plex Sans's own glyphs, from code points that mean nothing to
+  a program reading the page, and made a mailto link by js/site.js. Screen
+  readers hear "Email <name>". A page that shows an address as plain text or
+  as a mailto: link fails the build (_plugins/mail_glyphs.rb).
+
+    Sunghan Lee ({% include email_link.html address="hanbio999@gmail.com" name="Sunghan Lee" %})
+{%- endcomment -%}
+<span class="email-link" data-mail><span class="sr-only mail-label">Email {{ include.name }}</span><span class="mail-text" aria-hidden="true">{{ include.address | strip | mail_glyphs }}</span></span>

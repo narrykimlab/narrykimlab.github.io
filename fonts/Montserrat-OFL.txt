@@ -12,6 +12,14 @@ Latin (Basic Latin, Latin-1 and common punctuation) with the default
 OpenType layout features; the files are converted to WOFF2. The licence
 below reserves no font name, so the fonts keep theirs.
 
+NKLMail-Display.woff2 is cut further from Montserrat-latin.woff2 by
+_tools/mail-fonts.py, to draw the site's email addresses: it keeps the glyphs
+of the characters an address may hold (and their ligatures), with their
+outlines, spacing, kerning, hinting and weight axis, maps them from code
+points of the Private Use Area instead of from the letters, drops the glyph
+names and shuffles the glyph order. It is named NKL Mail Display, to keep it
+apart from Montserrat itself.
+
 Copyright 2024 The Montserrat.Git Project Authors (https://github.com/JulietaUla/Montserrat.git)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.

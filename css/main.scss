@@ -47,9 +47,11 @@
     --gutter: clamp(20px, 5vw, 48px);
     /* Two families (_sass/_fonts.scss): IBM Plex Sans for the text, and
        Montserrat for headings and the other display text -- the wordmark,
-       section links, buttons and member names. */
-    --sans: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
-    --display: 'Montserrat', var(--sans);
+       section links, buttons and member names. Each is led by its cut that
+       draws email addresses (NKL Mail Sans, NKL Mail Display), which holds
+       nothing else, so it takes only an address's characters. */
+    --sans: 'NKL Mail Sans', 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+    --display: 'NKL Mail Display', 'Montserrat', var(--sans);
 }
 
 h1, h2, h3, h4, h5, h6, .wordmark, .site-nav nav, .button, .chip,
@@ -973,6 +975,14 @@ a.team-card:focus-visible {
     flex: none;
 }
 
+/* What a screen reader hears for an email address (_includes/email_chip.html,
+   _includes/email_link.html) stays out of a selection, so copying the address
+   copies only the address. */
+.mail-label {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
 .member-body .post {
     flex: 1 1 480px;
     min-width: 0;
@@ -1459,10 +1469,6 @@ div.footer-links img {
  * Utility classes standing in for inline style="..." attributes (see the
  * note at the top of this file).
  */
-
-.qb-hidden {
-    display: none;
-}
 
 .nowrap {
     white-space: nowrap;

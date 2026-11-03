@@ -22,4 +22,4 @@ Fax: +82-2-887-0244
 
 ## Webmaster
 
-Sunghan Lee ([hanbio999@gmail.com](mailto:hanbio999@gmail.com))
+Sunghan Lee ({% include email_link.html address="hanbio999@gmail.com" name="Sunghan Lee" %})

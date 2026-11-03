@@ -52,7 +52,7 @@ The researchers we appoint will work on the following topics:
 ## How to apply
 
 Please send the following to Hyojin Park
-([anita9992@snu.ac.kr](mailto:anita9992@snu.ac.kr)):
+({% include email_link.html address="anita9992@snu.ac.kr" name="Hyojin Park" %}):
 
 - A CV, including a list of publications
 - A statement of research interests and a cover letter

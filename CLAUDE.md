@@ -44,7 +44,9 @@ Tech stack: Jekyll 4.x (Gemfile pins `~> 4.3`), Kramdown (GFM), Liquid templates
   other symbols) and Greek files for 400, 600 and 700, roman and italic; the browser
   fetches Pi or Greek only on a page with such a character (`fonts/IBMPlexSans-OFL.txt`).
   Each `unicode-range` lists exactly the characters its file has, so anything else falls
-  back to a system font.
+  back to a system font. Each family's stack is led by its cut that draws email addresses
+  (NKL Mail Display, NKL Mail Sans; see Conventions), whose range is the stretch of the
+  Private Use Area its table is drawn from.
   On the text pages (textlay: research, join, contact, about, news) running text stops at
   36em, about 70 characters a line; floated figures keep the column's right-hand side.
 - Only the home page (the one with `hero:` front matter) has the pale masthead -- a
@@ -57,7 +59,7 @@ Tech stack: Jekyll 4.x (Gemfile pins `~> 4.3`), Kramdown (GFM), Liquid templates
   `css/main.scss`): `.chip` icon buttons for links, `.team-role` for a bold grey role
   line, photos with 12px corners and no shadow, and rows split by `--hairline` rules.
 - JS: `js/site.js` runs the home carousel, driving Bootstrap 3's CSS classes directly (no
-  jQuery), and makes the email buttons mailto links. The carousel holds still while the
+  jQuery), and makes the email addresses mailto links (see Conventions). The carousel holds still while the
   mouse is over it or keyboard focus is in it (WCAG 2.2.2), stops autoplaying under
   `prefers-reduced-motion`, and its arrows answer Enter and Space. It also runs the photos
   page's viewer, a modal `<dialog class="lightbox">` in `_pages/photos.md`: a photo
@@ -188,8 +190,7 @@ the templates read -- when a template starts reading a new field, update the mat
   papers from `{% include publication_in_profile.html %}` in the page body, which matches
   the page's file name against author `link`s (the PI's page leaves it out: it would be
   the whole list; hers has Education and Positions instead). The email button is
-  `_includes/email_chip.html`: text with a hidden word in the HTML, against harvesters,
-  which `js/site.js` makes a mailto link.
+  `_includes/email_chip.html` (see Email addresses under Conventions).
 
 ### Pages (`_pages/`)
 
@@ -305,6 +306,19 @@ description from `title` and `position`. `sitemap: false` excludes a page from t
   shapes live in `_data/icons.yml`, from Font Awesome Free 5.15.3 (CC BY 4.0); to add one,
   copy its `viewBox` and path from that version's SVG. The data check fails the build on
   a name that is not there.
+- Email addresses are drawn, not written, so that no program reading the HTML or the DOM
+  finds one: `{% include email_chip.html address=... name=... %}` for a button,
+  `{% include email_link.html address=... name=... %}` in running text. The `mail_glyphs`
+  filter (`_plugins/mail_glyphs.rb`) writes the address as code points of the Private Use
+  Area, by the table in `_data/mail_glyphs.yml`, and the fonts NKL Mail Display and NKL
+  Mail Sans (`fonts/NKLMail-*.woff2`: Montserrat's and Plex's own glyphs, mapped from those
+  code points, cut by `_tools/mail-fonts.py`) draw them, so it looks exactly as the
+  letters would. `js/site.js` holds the same table: it makes each a link whose mailto
+  address is filled in only while it is pointed at, focused or clicked, and copying a
+  selection copies the real address. Screen readers hear "Email <name>". The build fails
+  if a page shows a known address or a `mailto:` link as text, or if the script's table
+  differs from the data file's. A new table: `python3 _tools/mail-fonts.py --new-table`
+  (needs `pip install fonttools brotli`), then copy its two values into `js/site.js`.
 - No inline scripts, no `style="..."` attributes or `<style>` blocks, and no third-party
   scripts, fonts or images: the site should keep working under a strict
   Content-Security-Policy (`script-src 'self'`, no `'unsafe-inline'`). A one-off style
