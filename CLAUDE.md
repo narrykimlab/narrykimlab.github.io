@@ -161,8 +161,8 @@ the templates read -- when a template starts reading a new field, update the mat
   has `name` as printed ("J. J. Seo") and, for a lab member, either
   `link` (a team.yml link, for someone with a profile page) or `lab: true` (no link;
   every author is set alike), plus `is_first`/`is_corresponding` for the superscripts
-  (`is_corresponding` on every corresponding author; the template shows `*` for a
-  sole one and `†` when there are two or more, and the data check warns of a paper
+  (`is_first` only when two or more share first place; `is_corresponding` on every
+  corresponding author, sole or not, each shown `*`; the data check warns of a paper
   with none). A `lab: true` author may also have `full_name`, the former member the initials
   stand for, spelled as in alumni_members.yml: the name then links to their entry on
   /people/ (`#alumni-<name slugified>`). Initials alone cannot say who it is ("Y. Lee"
@@ -267,8 +267,10 @@ Add an entry to the top of `_data/publist.yml`. Give lab authors `link:` if they
 profile page, `lab: true` (and `full_name:`, for a former member) otherwise, and the paper
 its `topics` (`_data/topics.yml`). Write `vip` as `volume(issue):pages` with the last
 page in full, or leave it out while the paper is online only; mark `is_corresponding`
-on every corresponding author (one gets `*`, two or more `†`). The Cite button and
-its citations follow from the entry.
+on every corresponding author (each gets `*`) and `is_first` on co-first authors only.
+The Cite button and its citations follow from the entry. A lab member who co-authored
+from elsewhere (a former member in their own lab) still gets `lab: true` and
+`full_name`, so the name links to them.
 
 ### Add news
 
@@ -305,10 +307,10 @@ description from `title` and `position`. `sitemap: false` excludes a page from t
 - Headings never skip a level: a page has one `#` (its title), and its sections are `##`.
   CSS sets their size per context; do not drop to `###`/`####` for size.
 - Member URL slugs: lowercase hyphenated (`jane-doe`); sort keys `lastname-firstname`.
-- Publication author superscripts: `<sup>1</sup>` = co-first author, `<sup>*</sup>` =
-  the corresponding author, `<sup>†</sup>` = co-corresponding authors (from
-  `is_corresponding` and how many authors have it). Author names are links without
-  an underline, underlined only on hover and keyboard focus.
+- Publication author superscripts: `<sup>1</sup>` = co-first author (only when there
+  are two or more), `<sup>*</sup>` = corresponding author (every one, sole or not), as
+  journals and most lab sites mark them. Author names are links without an underline,
+  underlined only on hover and keyboard focus.
 - Custom plugins: `_plugins/sri.rb` adds an `sri` filter that hashes a local file at build
   time, and a `fingerprint` filter for its URL:
   `<script src="/js/x.js?v={{ '/js/x.js' | fingerprint }}" integrity="{{ '/js/x.js' | sri }}">`.

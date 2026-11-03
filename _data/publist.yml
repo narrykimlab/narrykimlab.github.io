@@ -4,9 +4,9 @@
 # `lab: true` author's `full_name` says which former member the initials
 # are; spelled as in alumni_members.yml, it makes the name a link to their
 # entry on /people/ (one that is not there is left unlinked, with a warning
-# in the build). `is_first` marks a co-first author (¹), and
-# `is_corresponding` every corresponding author: shown * when there is one,
-# † when there are two or more (the build warns of a paper with none).
+# in the build). `is_first` marks a co-first author (¹; a sole first author
+# is not marked), and `is_corresponding` every corresponding author, one or
+# several, each shown * (the build warns of a paper with none).
 # `vip` is the volume, issue and pages as volume(issue):pages, the last page
 # in full ("84(9):1764-1782.e10", "12:6026" for an article number; the
 # citations take it apart, and the build checks it); leave it out until the
@@ -126,6 +126,8 @@
     - name: S. Lee
     - name: Y. Lee
     - name: H. Chang
+      lab: true
+      full_name: Hyeshik Chang
     - name: H. Lee
     - name: J.-H. Kim
     - name: V. N. Kim
@@ -200,7 +202,9 @@
       is_first: true
     - name: K.-Y. Ban
     - name: J. Yang
+      link: jihye-yang
     - name: D.-E. Choi
+      link: da-eun-choi
     - name: J. Kim
     - name: J.-S. Kim
     - name: V. N. Kim
@@ -292,8 +296,12 @@
     - name: V. N. Kim
       link: v-narry-kim
     - name: J.-E. Park
+      lab: true
+      full_name: Jong-Eun Park
       is_corresponding: true
     - name: J. Yeo
+      lab: true
+      full_name: Jinah Yeo
       is_corresponding: true
   title: "Innate immune responses against mRNA vaccine promote cellular immunity through IFN-β at the injection site"
   journal: Nature Communications
@@ -616,10 +624,14 @@
     - name: M. Yoon
     - name: G. Chae
     - name: Y.-K. Kim
+      lab: true
+      full_name: Young-Kook Kim
     - name: V. N. Kim
       link: v-narry-kim
     - name: Y. K. Kim
     - name: J.-W. Nam
+      lab: true
+      full_name: Jin-Wu Nam
     - name: C. Shin
       is_corresponding: true
     - name: D. Baek
@@ -645,6 +657,8 @@
       lab: true
       full_name: Young-Yoon Lee
     - name: C. Bastiaanssen
+      lab: true
+      full_name: Carolien Bastiaanssen
     - name: J. Kim
     - name: H. Kim
       lab: true
@@ -875,6 +889,8 @@
     - name: J. H. Hong
     - name: Y. Na
     - name: M. Lee
+      lab: true
+      full_name: Mihye Lee
     - name: W.-J. Qian
     - name: V. N. Kim
       link: v-narry-kim
@@ -984,6 +1000,8 @@
       link: v-narry-kim
       is_corresponding: true
     - name: H. Chang
+      lab: true
+      full_name: Hyeshik Chang
       is_corresponding: true
   title: The architecture of SARS-CoV-2 transcriptome
   journal: Cell
@@ -1095,6 +1113,8 @@
       lab: true
       full_name: Dongwan Kim
     - name: H. Chang
+      lab: true
+      full_name: Hyeshik Chang
     - name: V. N. Kim
       link: v-narry-kim
     - name: C. Justin Lee
@@ -1565,6 +1585,8 @@
       is_first: true
     - name: S. Li
     - name: T. A. Nguyen
+      lab: true
+      full_name: Tuan Anh Nguyen
       is_corresponding: true
   title: SRSF3 recruits DROSHA to the basal junction of primary microRNAs
   journal: RNA
@@ -1608,6 +1630,8 @@
 
 - authors:
     - name: J. Cho
+      lab: true
+      full_name: Jun Cho
     - name: N.-K. Yu
     - name: V. N. Kim
       link: v-narry-kim
@@ -1907,6 +1931,8 @@
     - name: M. Fareh
     - name: D. J. Patel
     - name: C. Joo
+      lab: true
+      full_name: Chirlmin Joo
       is_corresponding: true
     - name: V. N. Kim
       link: v-narry-kim
