@@ -6,7 +6,7 @@ email: time.capsule@dongbin.example  # placeholder
 github:
 orcid:
 scholar:
-pubmed:
+pubmed: "https://pubmed.ncbi.nlm.nih.gov/?term=%28Kim+VN%5Bau%5D+OR+Narry+Kim+V%5Bau%5D%29+AND+%28Lim+Dongbin%5Bau%5D%29"
 cv:
 image: /images/members/dongbin-lim.jpg
 permalink: /people/dongbin-lim

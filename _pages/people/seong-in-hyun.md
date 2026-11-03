@@ -6,7 +6,7 @@ email: warp.shield@seongin.example  # placeholder
 github:
 orcid:
 scholar: rmal-awAAAAJ
-pubmed:
+pubmed: "https://pubmed.ncbi.nlm.nih.gov/?term=%28Kim+VN%5Bau%5D+OR+Narry+Kim+V%5Bau%5D%29+AND+%28Hyun+Seong-In%5Bau%5D%29"
 cv:
 image: /images/members/seong-in-hyun.jpg
 permalink: /people/seong-in-hyun

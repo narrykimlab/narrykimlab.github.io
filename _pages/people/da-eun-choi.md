@@ -6,7 +6,7 @@ email: daeun7291@gmail.com
 github:
 orcid:
 scholar:
-pubmed: "https://pubmed.ncbi.nlm.nih.gov/?term=%28Kim+VN%29+AND+%28Choi+DE%29"
+pubmed: "https://pubmed.ncbi.nlm.nih.gov/?term=%28Kim+VN%5Bau%5D+OR+Narry+Kim+V%5Bau%5D%29+AND+%28Choi+Da-Eun%5Bau%5D%29"
 cv:
 image: /images/members/da-eun-choi.jpg
 permalink: /people/da-eun-choi

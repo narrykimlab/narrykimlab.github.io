@@ -6,7 +6,7 @@ email: haengju@snu.ac.kr
 github:
 orcid:
 scholar: 230tVPYAAAAJ
-pubmed:
+pubmed: "https://pubmed.ncbi.nlm.nih.gov/?term=%28Kim+VN%5Bau%5D+OR+Narry+Kim+V%5Bau%5D%29+AND+%28Jeong+Minseok%5Bau%5D%29"
 cv:
 image: /images/members/minseok-jeong.jpg
 permalink: /people/minseok-jeong

@@ -6,7 +6,7 @@ email: cluster.cmdr@junyoung.example  # placeholder
 github:
 orcid:
 scholar:
-pubmed:
+pubmed: "https://pubmed.ncbi.nlm.nih.gov/?term=%28Kim+VN%5Bau%5D+OR+Narry+Kim+V%5Bau%5D%29+AND+%28Park+Junyoung%5Bau%5D%29"
 cv:
 image: /images/members/junyoung-park.jpg
 permalink: /people/junyoung-park

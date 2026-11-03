@@ -6,7 +6,7 @@ email: whatdoidohaha@snu.ac.kr
 github:
 orcid:
 scholar: c-QaWs0AAAAJ
-pubmed:
+pubmed: "https://pubmed.ncbi.nlm.nih.gov/?term=%28Kim+VN%5Bau%5D+OR+Narry+Kim+V%5Bau%5D%29+AND+%28Park+Yeonwoo%5Bau%5D%29"
 cv:
 image: /images/members/yeonwoo-park.jpg
 permalink: /people/yeonwoo-park

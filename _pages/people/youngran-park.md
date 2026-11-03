@@ -6,7 +6,7 @@ email: pack.and.go@youngran.example  # placeholder
 github:
 orcid:
 scholar: R_2N7cMAAAAJ
-pubmed:
+pubmed: "https://pubmed.ncbi.nlm.nih.gov/?term=%28Kim+VN%5Bau%5D+OR+Narry+Kim+V%5Bau%5D%29+AND+%28Park+Youngran%5Bau%5D%29"
 cv:
 image: /images/members/youngran-park.jpg
 permalink: /people/youngran-park

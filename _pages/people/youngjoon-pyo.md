@@ -6,7 +6,7 @@ email: jaden1076@gmail.com
 github:
 orcid:
 scholar:
-pubmed:
+pubmed: "https://pubmed.ncbi.nlm.nih.gov/?term=%28Kim+VN%5Bau%5D+OR+Narry+Kim+V%5Bau%5D%29+AND+%28Pyo+Youngjoon%5Bau%5D%29"
 cv:
 image: /images/members/youngjoon-pyo.jpg
 permalink: /people/youngjoon-pyo

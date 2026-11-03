@@ -6,7 +6,7 @@ email: ing0614@gmail.com
 github:
 orcid:
 scholar:
-pubmed: "https://pubmed.ncbi.nlm.nih.gov/?term=%28Kim+VN%29+AND+%28Yang+J%29"
+pubmed: "https://pubmed.ncbi.nlm.nih.gov/?term=%28Kim+VN%5Bau%5D+OR+Narry+Kim+V%5Bau%5D%29+AND+%28Yang+Jihye%5Bau%5D%29"
 cv:
 image: /images/members/jihye-yang.jpg
 permalink: /people/jihye-yang

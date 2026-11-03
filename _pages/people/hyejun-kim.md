@@ -6,7 +6,7 @@ email: hyejun.rna@gmail.com
 github: hyejun18
 orcid:
 scholar: YgDx6N8AAAAJ
-pubmed:
+pubmed: "https://pubmed.ncbi.nlm.nih.gov/?term=%28Kim+VN%5Bau%5D+OR+Narry+Kim+V%5Bau%5D%29+AND+%28Kim+Hyejun%5Bau%5D%29"
 cv:
 image: /images/members/hyejun-kim.jpg
 permalink: /people/hyejun-kim

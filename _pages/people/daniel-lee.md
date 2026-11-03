@@ -6,7 +6,7 @@ email: leedaniel@snu.ac.kr
 github:
 orcid:
 scholar:
-pubmed:
+pubmed: "https://pubmed.ncbi.nlm.nih.gov/?term=%28Kim+VN%5Bau%5D+OR+Narry+Kim+V%5Bau%5D%29+AND+%28Lee+Daniel%5Bau%5D%29"
 cv:
 image: /images/members/daniel-lee.jpg
 permalink: /people/daniel-lee
