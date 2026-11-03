@@ -697,6 +697,35 @@ ul.join-card-facts {
     border-color: var(--accent);
 }
 
+/* The internship's English | 한국어 switch (js/site.js): chips the size of
+   the Cite window's format chips, the chosen one marked as there. `hidden`
+   must win over its display until the script shows it. */
+.lang-switch {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.lang-switch[hidden] {
+    display: none;
+}
+
+.lang-switch .chip {
+    padding: 5px 12px;
+    font-size: 14px;
+}
+
+.lang-switch .chip[aria-pressed="true"] {
+    border-color: var(--link);
+    color: var(--link);
+}
+
+/* Korean breaks its lines between words, as it is written, not inside one. */
+.internship-text:lang(ko) {
+    word-break: keep-all;
+}
+
 /* Until the application form's address is given (_data/internship.yml). */
 .internship-form-soon {
     color: var(--muted);

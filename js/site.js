@@ -1,9 +1,10 @@
 /*
  * The site's script: the home page photo carousel, the photos page's
  * viewer, the Cite window of the paper lists, the topic list on
- * /publications/by-topic/, and the email addresses (the people and member
- * pages' buttons, two in running text). It drives Bootstrap 3's carousel
- * classes itself, without jQuery or Bootstrap's own JS.
+ * /publications/by-topic/, the email addresses (the people and member
+ * pages' buttons, two in running text), and the internship's English |
+ * 한국어 switch. It drives Bootstrap 3's carousel classes itself, without
+ * jQuery or Bootstrap's own JS.
  *
  * Loaded with `defer` from _includes/head.html, so it runs once the document
  * is parsed. It lives in a file, not inline, so the site works under a
@@ -530,5 +531,36 @@
     if (plain === selected || !event.clipboardData) return;
     event.clipboardData.setData('text/plain', plain);
     event.preventDefault();
+  });
+
+  // The internship's call is in English and in Korean, the Korean hidden
+  // (_includes/internship.html); the switch above it, hidden until here,
+  // shows one or the other, and the browser keeps the choice for the next
+  // visit (localStorage). Nothing but "en" or "ko" is ever written, and what
+  // is read back is used only if it is one of the languages on the page: the
+  // storage belongs to the whole origin, which any other page served from
+  // narrykimlab.github.io would share. Storage a browser refuses (a private
+  // window, blocked site data) throws, and the choice then lasts the visit.
+  const LANG_KEY = 'nkl-internship-lang';
+  document.querySelectorAll('.internship').forEach((box) => {
+    const toggle = box.querySelector('.lang-switch');
+    const texts = [...box.querySelectorAll('.internship-text[data-lang]')];
+    const buttons = toggle ? [...toggle.querySelectorAll('button[data-lang]')] : [];
+    const langs = texts.map((t) => t.dataset.lang);
+    if (texts.length < 2 || !buttons.length) return;
+    const show = (lang) => {
+      texts.forEach((t) => { t.hidden = t.dataset.lang !== lang; });
+      buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+    };
+    let saved = null;
+    try { saved = window.localStorage.getItem(LANG_KEY); } catch (e) { /* refused */ }
+    if (langs.includes(saved)) show(saved);
+    toggle.hidden = false;
+    buttons.forEach((b) => b.addEventListener('click', () => {
+      const lang = b.dataset.lang;
+      if (!langs.includes(lang)) return;
+      show(lang);
+      try { window.localStorage.setItem(LANG_KEY, lang); } catch (e) { /* refused */ }
+    }));
   });
 })();

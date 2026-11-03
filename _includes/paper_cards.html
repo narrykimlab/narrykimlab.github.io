@@ -2,7 +2,8 @@
   Papers as cards like Notion bookmarks, under a small label: the Research
   page's newest papers (_includes/research_papers.html) and the projects
   of the internship (_includes/internship.html). `papers` is a list of
-  entries of _data/publist.yml, in the order shown; `label` the line above.
+  entries of _data/publist.yml, in the order shown; `label` the line above;
+  `lang`, if given, the language of the cards (English, in the Korean text).
 
   Each card holds the title in full, the authors (two lines at most), and
   the journal and year beside a document icon, with the paper's `image`
@@ -17,7 +18,7 @@
 
     {% include paper_cards.html papers=picked label="Recent papers" %}
 {%- endcomment -%}
-<div class="research-papers" markdown="0">
+<div class="research-papers" markdown="0"{% if include.lang %} lang="{{ include.lang }}"{% endif %}>
 <p class="team-role">{{ include.label }}</p>
 <ul class="paper-cards">
 {%- for publi in include.papers %}

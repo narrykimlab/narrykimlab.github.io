@@ -2,22 +2,24 @@
 # The interns' card on /join/ sums it up in a few facts (_pages/join.md):
 # change them with it.
 #
-# The English follows the lab's Korean FAQ sentence by sentence, in plain
-# words: keep it a close translation when either changes. Bold (**...**)
-# marks what the lab asked to stand out for applicants; the Korean, when it
-# comes, bolds the same.
+# Each text is in English (_en) and in the lab's Korean (_ko), the Korean
+# as the lab wrote it and the English a close translation, sentence by
+# sentence, in plain words: keep them so when either changes. Bold (**...**)
+# marks what the lab asked to stand out for applicants, in both. The page
+# shows the English, and a switch shows the Korean instead (js/site.js).
 #
 # form: the application form's address (a Google Form). While it is empty,
 #   the page says the form will be linked there soon; once given, it is a
 #   button under the notice.
 # notice: the call itself, always shown, in this order: each a question
-#   (q_en, a heading) and its answer (a_en, Markdown). A question may also
-#   list `projects`, each a title (title_en, a heading under it), what it
-#   is (text_en, Markdown) and, optionally, `papers`: DOIs of papers in
-#   publist.yml, shown as cards under "Related papers" as on the Research
-#   page. The data check fails a DOI that is not in publist.yml.
-# faq: the questions after the call, each folded under its question (q_en)
-#   until it is opened; the answer (a_en) is Markdown.
+#   (q_en/q_ko, a heading) and its answer (a_en/a_ko, Markdown). A question
+#   may also list `projects`, each a title (title_en/title_ko, a heading
+#   under it), what it is (text_en/text_ko, Markdown) and, optionally,
+#   `papers`: DOIs of papers in publist.yml, shown as cards under "Related
+#   papers" as on the Research page. The data check fails a DOI that is not
+#   in publist.yml, and a text in one language without the other.
+# faq: the questions after the call, each folded under its question
+#   (q_en/q_ko) until it is opened; the answer (a_en/a_ko) is Markdown.
 
 form:
 
@@ -26,15 +28,22 @@ notice:
     a_en: >-
       You can apply regardless of your undergraduate major or university. Not
       only **current students** but also students **about to graduate** and
-      students **on a leave of absence** can apply. We welcome people who enjoy learning
-      and thinking, and who believe in the values of diligence, honesty and
-      consideration for others. So that interns can take part in research
-      based on a basic knowledge of their major, we give priority to
+      students **on a leave of absence** can apply. We welcome people who
+      enjoy learning and thinking, and who believe in the values of diligence,
+      honesty and consideration for others. So that interns can take part in
+      research based on a basic knowledge of their major, we give priority to
       undergraduates **who have completed four or more semesters** as of the
       start of the internship. It helps to take **biochemistry, genetics**,
       and **cell biology** beforehand. It is also good to build up,
-      beforehand, the ability to **read research papers** and understand
-      their key research question and main experimental results.
+      beforehand, the ability to **read research papers** and understand their
+      key research question and main experimental results.
+    q_ko: 인턴 신청은 어떤 사람이 할 수 있나요? 신청 자격에 대해 설명해 주세요.
+    a_ko: >-
+      학부 전공, 출신 대학에 관계없이 지원할 수 있습니다. **재학생**뿐 아니라 **졸업예정자**나 **휴학생**도 지원
+      가능합니다. 배우고 생각하는 걸 즐기고, 성실과 정직과 배려의 가치를 믿는 분을 환영합니다. 기초 전공 지식을 바탕으로 연구에
+      참여할 수 있도록, 인턴 시작 시점을 기준으로 **4학기 이상 이수한** 학부생을 우선적으로 선발합니다. **생화학, 유전학,
+      세포생물학**을 미리 수강하는 것이 도움이 됩니다. 또한 **학술 논문을 읽고** 연구의 핵심 질문과 주요 실험 결과를 이해하는
+      능력을 미리 키우면 좋습니다.
 
   - q_en: When can I apply and take part?
     a_en: >-
@@ -44,34 +53,54 @@ notice:
       period. Because focused training is needed at the start, we recommend
       **starting in a vacation** if possible (we recommend starting in
       **January** or **July**). During the vacation, you must take part in
-      research **full time**. Even
-      during the semester, we welcome those who give lab activities a high
-      priority, put enough time and effort into their assigned research, and
-      take an active part in experiments and discussions.
+      research **full time**. Even during the semester, we welcome those who
+      give lab activities a high priority, put enough time and effort into
+      their assigned research, and take an active part in experiments and
+      discussions.
+    q_ko: 언제 신청하고 참여할 수 있나요?
+    a_ko: >-
+      인턴은 **상시** 모집합니다. 다만 **6개월 이상** 참여할 때 충분한 학습과 연구가 가능하기 때문에, 장기 참여 가능한
+      신청자를 우선 선발합니다. 시작할 때는 집중적인 교육이 필요하기 때문에 가능하면 **방학 기간에 연구 참여를 시작**하는 것을
+      권장합니다(**1월** 혹은 **7월** 시작을 권장). 방학 중에는 **전일제**로 연구에 참여해야 합니다. 학기 중에도 연구실
+      활동에 높은 우선순위를 두고, 맡은 연구에 충분한 시간과 노력을 기울이며 실험과 토론에 적극적으로 참여할 수 있는 분을
+      환영합니다.
 
   - q_en: If I take part as an intern, how can I grow as a researcher?
     a_en: >-
       As an intern, you take part in research under the direct guidance of
       **one postdoctoral researcher or graduate student**. You will do things
-      such as reading papers, learning molecular and cell biology
-      experimental methods and doing experiments independently, analyzing
-      sequencing data, and presenting research results. In projects that are
-      mainly experimental, the primary training goal is to build the ability
-      to carry out molecular biology experiments independently. In the first two months, through experiments
-      such as plasmid cloning, cell culture, transfection and enzyme assays,
-      western blotting and RT-PCR, you complete one cycle of the basic
-      experiments needed for research on gene regulation. If you take part
-      in research further after the two-month internship, you will design
-      experiments according to the research goals. Interns who work mainly on bioinformatic analysis
-      learn the basic analysis steps, such as QC of RNA-seq data, quantification of gene expression, normalization and statistical
-      analysis of changes in expression. After two months, you can carry out
-      analyses that fit the project's research questions and interpret the
-      results biologically. The specific things you learn may differ
-      depending on the project, so please ask further questions during the
-      interview.
+      such as reading papers, learning molecular and cell biology experimental
+      methods and doing experiments independently, analyzing sequencing data,
+      and presenting research results. In projects that are mainly
+      experimental, the primary training goal is to build the ability to carry
+      out molecular biology experiments independently. In the first two
+      months, through experiments such as plasmid cloning, cell culture,
+      transfection and enzyme assays, western blotting and RT-PCR, you
+      complete one cycle of the basic experiments needed for research on gene
+      regulation. If you take part in research further after the two-month
+      internship, you will design experiments according to the research goals.
+      Interns who work mainly on bioinformatic analysis learn the basic
+      analysis steps, such as QC of RNA-seq data, quantification of gene
+      expression, normalization and statistical analysis of changes in
+      expression. After two months, you can carry out analyses that fit the
+      project's research questions and interpret the results biologically. The
+      specific things you learn may differ depending on the project, so please
+      ask further questions during the interview.
+    q_ko: 인턴으로 참여하면 연구자로서 어떤 성장을 이룰 수 있나요?
+    a_ko: >-
+      인턴으로 들어오면 **박사/대학원생 중 1인**의 직접적인 지도를 받으며 연구에 참여합니다. 논문 읽기, 분자세포생물학적 실험법
+      익히고 독립적으로 실험하기, 시퀀싱 데이터 분석, 연구 결과 발표 등을 하게 됩니다. 실험이 주가 되는 프로젝트에서는 분자생물학
+      실험법을 독립적으로 수행할 수 있는 능력을 키우는 것이 우선적인 교육 목표입니다. 첫 두 달 동안 플라스미드 클로닝, 세포 배양,
+      트랜스펙션 및 enzyme assay, western blotting, RT-PCR 같은 실험을 통해 유전자 조절 연구에 필요한
+      기초적인 실험을 한 사이클 완성합니다. 2달 인턴 후에 추가로 연구 참여를 하게 되면 연구 목표에 맞추어 실험을 설계하게 됩니다.
+      생물정보학 분석을 중심으로 참여하는 인턴은 RNA-seq 데이터의 QC, 유전자 발현량 정량, 정규화 및 발현 변화 통계 분석 등
+      기본적인 분석 과정을 익힙니다. 2달 이후에는 프로젝트의 연구 질문에 맞는 분석을 수행하고, 그 결과를 생물학적으로 해석할 수
+      있게 됩니다. 구체적인 학습 내용은 프로젝트에 따라 다를 수 있으니, 면담을 하면서 추가 문의해 주세요.
 
   - q_en: If I take part in 2027 and 2028, which research will I take part in?
     a_en: There are various projects, including the following.
+    q_ko: 2027년과 2028년에 참여하게 되는 경우 어떤 연구에 참여하게 될까요?
+    a_ko: 다음을 포함한 다양한 프로젝트가 있습니다.
     projects:
       - title_en: Measuring the decay rate of mRNA and studying its regulatory mechanisms
         text_en: >-
@@ -81,18 +110,29 @@ notice:
           basic principles of gene regulation through mRNA, and at the same
           time can become a foundation for developing mRNA vaccine and
           therapeutic technologies.
+        title_ko: mRNA의 분해 속도 측정 및 조절 메커니즘 연구
+        text_ko: >-
+          mRNA 치료제가 세포질로 들어간 후에 얼마나 빠르게 분해되는지 그 속도를 정밀하게 측정하고, 어떤 분해 인자들이 그
+          속도를 조절하는지를 밝히는 것이 목표입니다. mRNA를 통한 유전자 조절의 기본 원리를 이해함과 동시에, mRNA 백신 및
+          치료제 기술 개발의 초석이 될 수 있는 연구입니다.
         papers:
           - 10.1038/s41587-025-02891-7
           - 10.1126/science.aam5794
       - title_en: Studying the mechanisms of RNA stabilization
         text_en: >-
           Our lab has found many RNA-stabilizing elements through
-          high-throughput screens, but some of the candidates have not yet been
-          tested by validation experiments. We plan to carry out validation
-          experiments on them, and to study the mechanisms of the elements
-          with clear stabilizing effects. This is expected to reveal new
-          principles of RNA regulation, and can also be used to improve the
-          performance of mRNA therapeutics.
+          high-throughput screens, but some of the candidates have not yet
+          been tested by validation experiments. We plan to carry out
+          validation experiments on them, and to study the mechanisms of the
+          elements with clear stabilizing effects. This is expected to reveal
+          new principles of RNA regulation, and can also be used to improve
+          the performance of mRNA therapeutics.
+        title_ko: RNA 안정화 메커니즘 연구
+        text_ko: >-
+          우리 연구실에서는 high-throughput screen을 통해 다수의 RNA stabilizing element들을
+          찾아낸 바 있는데, 일부 후보들에 대해서는 아직 검증 실험이 이루어지지 않았습니다. 이들에 대한 검증 실험을 실시하고,
+          안정화 효과가 뚜렷한 element에 대해 메커니즘 연구를 실시하고자 합니다. RNA 조절의 새로운 원리를 밝힐 것으로
+          기대되며, 또한 mRNA 치료제의 성능을 향상시키는 데 활용될 수 있습니다.
         papers:
           - 10.1016/j.cell.2023.06.007
           - 10.1016/j.cell.2026.07.038
@@ -102,25 +142,41 @@ notice:
           now studying how they work. As an intern, you can learn protein
           purification, enzyme assays, interaction assays, mutagenesis and so
           on, and try doing research on RNA–protein complexes.
+        title_ko: mRNA 조절 인자에 대한 생화학적·구조적 분석
+        text_ko: >-
+          우리 연구실에서는 mRNA를 조절하는 새로운 단백질들을 다수 발견했고 현재 이들의 작동 메커니즘을 연구하고 있습니다.
+          인턴으로 참여하면 단백질 정제, enzyme assay, interaction assay, mutagenesis 등을
+          배우고 RNA-protein complex에 대한 연구를 해볼 수 있습니다.
 
   - q_en: How can I apply?
     a_en: >-
       Please apply using the **Google Form**. You will need to attach a
-      **personal statement** and a **transcript**, so it is good to prepare them in advance.
-      After reviewing the documents you submit, we will contact you
-      individually to schedule an interview, and at the interview we will
-      talk together about the internship activities.
+      **personal statement** and a **transcript**, so it is good to prepare
+      them in advance. After reviewing the documents you submit, we will
+      contact you individually to schedule an interview, and at the interview
+      we will talk together about the internship activities.
+    q_ko: 어떻게 신청할 수 있나요?
+    a_ko: >-
+      **구글 폼**을 이용해 신청해 주세요. **자기소개서**, **성적증명서**를 첨부해야 하니 미리 준비해 주시면 좋습니다.
+      제출해주신 서류를 검토한 뒤 개별적으로 연락드려 면담 일정을 잡고, 면담에서 인턴 활동에 대해 함께 이야기 나누겠습니다.
 
 faq:
   - q_en: Can the internship be linked to writing my undergraduate thesis?
     a_en: Yes, it is possible.
+    q_ko: 학부 졸업논문 작성과 연계할 수 있나요?
+    a_ko: 네, 가능합니다.
 
   - q_en: Is the internship linked to graduate school admission?
     a_en: >-
       It is not necessarily linked, but if you are considering applying to
       graduate school, we strongly recommend doing an internship in the lab
-      before you apply. This is because we think it is important to spend
-      time together beforehand to see whether the research direction and the
-      lab culture suit you. You can also do an internship if you are not
-      considering graduate school. However, when there are many applicants,
-      we give priority to those who **wish to apply to graduate school**.
+      before you apply. This is because we think it is important to spend time
+      together beforehand to see whether the research direction and the lab
+      culture suit you. You can also do an internship if you are not
+      considering graduate school. However, when there are many applicants, we
+      give priority to those who **wish to apply to graduate school**.
+    q_ko: 대학원 입학과 연계가 되나요?
+    a_ko: >-
+      필수적으로 연계되는 것은 아니지만, 대학원 지원을 고려한다면 지원 전에 실험실에서 인턴을 해 보는 것을 적극 권장합니다. 연구
+      방향과 실험실 문화가 잘 맞는지 미리 함께 생활해 보는 것이 중요하다고 생각하기 때문입니다. 대학원 지원을 고려하지 않는 경우에도
+      인턴이 가능합니다. 다만, 지원자가 많을 경우 **대학원 지원 희망자**를 우선 선발합니다.

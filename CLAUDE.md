@@ -84,7 +84,13 @@ Tech stack: Jekyll 4.x (Gemfile pins `~> 4.3`), Kramdown (GFM), Liquid templates
   `/publications/cite.json` the first time; Copy puts it on the clipboard (or selects it
   to copy by hand) and the last three can be downloaded as files. It closes like the
   photo viewer and hands focus back to the button. Without scripts the buttons stay
-  hidden.
+  hidden. On /join/intern/ it shows the English | 한국어 switch (hidden without
+  scripts, which leave the English) and swaps the two copies of the call; the choice is
+  kept in `localStorage` under `nkl-internship-lang`, the only thing the site stores
+  in a visitor's browser. Only "en" or "ko" is written, and a value read back is used
+  only if it is a language on the page, since the storage is the whole origin's (any
+  page served from narrykimlab.github.io shares it); storage the browser refuses is
+  caught, and the choice then lasts the visit.
 - Home's first screen fills the window, as on the Chang lab site: the masthead is at
   least `100svh`, the hero text sits 7:3 in the space it has, and the scene lies along
   the window's bottom edge, the masthead's 8px bottom border in the sea floor's colour
@@ -205,15 +211,17 @@ the templates read -- when a template starts reading a new field, update the mat
   `images/photos/`) or `youtube` (a video id) with `thumb` (its thumbnail, also in
   `images/photos/`; YouTube's `hqdefault.jpg` with the letterbox bars cut off).
 - **internship.yml** — The undergraduate internship, /join/intern/
-  (`_includes/internship.html`): `form`, the application form's address (empty until
-  there is one: the page then says it will be linked there soon); `notice`, the call,
-  always shown: each item a question (`q_en`, a section heading) and its answer
-  (`a_en`, Markdown), and optionally `projects`, each a title (`title_en`, a heading
-  under the question), its text (`text_en`) and `papers`, DOIs of papers in publist.yml
-  shown as cards under "Related papers" (the data check fails one that is not there);
-  and `faq`, further questions, each folded under its question until opened
-  (`<details>`, no script). The interns' card on /join/ sums it up in a few facts;
-  change them with it.
+  (`_includes/internship.html`), every text in English (`_en`) and Korean (`_ko`): the
+  Korean as the lab wrote it, the English a close translation in plain words, the same
+  parts in bold in both. `form`, the application form's address (empty until there is
+  one: the page then says it will be linked there soon); `notice`, the call, always
+  shown: each item a question (`q_*`, a section heading) and its answer (`a_*`,
+  Markdown), and optionally `projects`, each a title (`title_*`, a heading under the
+  question), its text (`text_*`) and `papers`, DOIs of papers in publist.yml shown as
+  cards under "Related papers"; and `faq`, further questions, each folded under its
+  question until opened (`<details>`, no script). The data check fails a text in one
+  language only and a DOI not in publist.yml. The interns' card on /join/ sums it up
+  in a few facts; change them with it.
 
 ### Layouts (`_layouts/`)
 

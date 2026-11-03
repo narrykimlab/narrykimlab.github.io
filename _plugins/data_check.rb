@@ -241,7 +241,9 @@ module Jekyll
 
       # The internship, /join/intern/ (_includes/internship.html): every item
       # of the notice and of the FAQ is a question over its answer, every
-      # project has a title and its text, a project's papers are DOIs of
+      # project has a title and its text, each in English and in Korean (the
+      # page shows one or the other, so a text missing in one language
+      # would leave a gap there), a project's papers are DOIs of
       # papers in publist.yml (else its card would be missing), and the
       # form, once given, is a full address, since the page makes it a
       # button.
@@ -272,17 +274,17 @@ module Jekyll
           items.each_with_index do |item, i|
             where = "#{file}, #{part} #{i + 1}"
             unless item.is_a?(Hash)
-              @problems << "#{where}: expected `q_en` and `a_en`"
+              @problems << "#{where}: expected `q_en`, `a_en`, `q_ko` and `a_ko`"
               next
             end
-            %w[q_en a_en].each { |f| @problems << "#{where}: missing `#{f}`" if item[f].to_s.strip.empty? }
+            %w[q_en a_en q_ko a_ko].each { |f| @problems << "#{where}: missing `#{f}`" if item[f].to_s.strip.empty? }
             Array(item["projects"]).each_with_index do |project, j|
               at = "#{where}, project #{j + 1}"
               unless project.is_a?(Hash)
-                @problems << "#{at}: expected `title_en` and `text_en`"
+                @problems << "#{at}: expected `title_en`, `text_en`, `title_ko` and `text_ko`"
                 next
               end
-              %w[title_en text_en].each { |f| @problems << "#{at}: missing `#{f}`" if project[f].to_s.strip.empty? }
+              %w[title_en text_en title_ko text_ko].each { |f| @problems << "#{at}: missing `#{f}`" if project[f].to_s.strip.empty? }
               Array(project["papers"]).each do |doi|
                 @problems << "#{at}: paper #{doi.inspect} is not a DOI in publist.yml" unless dois.include?(doi.to_s)
               end

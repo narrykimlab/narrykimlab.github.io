@@ -1,46 +1,68 @@
 {%- comment -%}
   The undergraduate internship, the body of /join/intern/, from
-  _data/internship.yml. First the call: each question a section heading
-  over its answer, a question's projects headings under it, each with its
-  papers as cards under "Related papers", as on the Research page
+  _data/internship.yml, in English and in Korean: two copies of the same
+  text, the Korean `hidden` until the switch above them (English | 한국어)
+  shows it. The switch is `hidden` too, and js/site.js shows it, so a
+  browser without scripts shows the English and no switch that does
+  nothing, as the Cite buttons are left out there.
+
+  Each copy: first the call, each question a section heading over its
+  answer, a question's projects headings under it, each with its papers
+  as cards under "Related papers", as on the Research page
   (_includes/paper_cards.html); then the application form as a button, or,
   while the form's address is not yet given, a line saying it will be
   linked here. Last, "More questions": each folded under its question
-  (<details>, which needs no script) until it is opened.
+  (<details>, which needs no script) until it is opened. The few words of
+  the page's own (the labels, the line on the form) are English in both,
+  marked lang="en" in the Korean.
 {%- endcomment -%}
 {%- assign internship = site.data.internship -%}
 {%- assign form = internship.form | strip -%}
+{%- assign langs = "en ko" | split: " " -%}
 <div class="internship" markdown="0">
+<div class="lang-switch" role="group" aria-label="Language" hidden>
+<button type="button" class="chip" data-lang="en" lang="en" aria-pressed="true">English</button>
+<button type="button" class="chip" data-lang="ko" lang="ko" aria-pressed="false">한국어</button>
+</div>
+{%- for lang in langs %}
+{%- assign q = "q_" | append: lang -%}
+{%- assign a = "a_" | append: lang -%}
+{%- assign t = "title_" | append: lang -%}
+{%- assign x = "text_" | append: lang -%}
+{%- if lang == "en" %}{% assign en = "" %}{% else %}{% assign en = ' lang="en"' %}{% endif %}
+<div class="internship-text" lang="{{ lang }}" data-lang="{{ lang }}"{% unless forloop.first %} hidden{% endunless %}>
 {%- for item in internship.notice %}
-<h2>{{ item.q_en }}</h2>
-{{ item.a_en | markdownify }}
+<h2>{{ item[q] }}</h2>
+{{ item[a] | markdownify }}
 {%- for project in item.projects %}
-<h3>{{ project.title_en }}</h3>
-{{ project.text_en | markdownify }}
+<h3>{{ project[t] }}</h3>
+{{ project[x] | markdownify }}
 {%- assign cards = "" | split: "" -%}
 {%- for doi in project.papers -%}
 {%- assign paper = site.data.publist | where: "doi", doi | first -%}
 {%- if paper %}{% assign cards = cards | push: paper %}{% endif -%}
 {%- endfor -%}
 {%- if cards.size > 0 %}
-{% include paper_cards.html papers=cards label="Related papers" -%}
+{% include paper_cards.html papers=cards label="Related papers" lang="en" -%}
 {%- endif %}
 {%- endfor %}
 {%- endfor %}
 {%- if form != "" %}
-<p><a class="button button-solid" href="{{ form }}">Application form</a></p>
+<p{{ en }}><a class="button button-solid" href="{{ form }}">Application form</a></p>
 {%- else %}
-<p class="internship-form-soon">The application form will be linked here soon.</p>
+<p class="internship-form-soon"{{ en }}>The application form will be linked here soon.</p>
 {%- endif %}
 {%- if internship.faq.size > 0 %}
-<h2>More questions</h2>
+<h2{{ en }}>More questions</h2>
 <div class="faq">
 {%- for item in internship.faq %}
 <details class="faq-item">
-<summary>{% include icon.html name="caret-right" %}<span>{{ item.q_en }}</span></summary>
-<div class="faq-answer">{{ item.a_en | markdownify }}</div>
+<summary>{% include icon.html name="caret-right" %}<span>{{ item[q] }}</span></summary>
+<div class="faq-answer">{{ item[a] | markdownify }}</div>
 </details>
 {%- endfor %}
 </div>
 {%- endif %}
+</div>
+{%- endfor %}
 </div>
