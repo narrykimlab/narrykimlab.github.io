@@ -41,7 +41,9 @@ National Academy of Sciences and of EMBO, and a member of the Korean Academy
 of Science and Technology. Her honors include the L'Oréal-UNESCO Women in
 Science Award (2008), the Ho-Am Prize in Medicine (2009), the HUGO Chen
 Award (2017), the Asan Award in Medicine (2019), the Lim Sung Ki
-Researcher Award (2024), and Human Frontier Science Program Nakasone Award (2027). She serves on the Board of Reviewing Editors of
+Researcher Award (2024), the Changjo Medal of the Order of Science and
+Technology Merit (2026), and the Human Frontier Science Program Nakasone
+Award (2027). She serves on the Board of Reviewing Editors of
 *Science* and on the editorial boards of *Cell*, *Molecular Cell*,
 *Genes & Development* and *The EMBO Journal*.
 
@@ -64,4 +66,79 @@ Researcher Award (2024), and Human Frontier Science Program Nakasone Award (2027
   <li><span>2004–2008</span> Assistant Professor, School of Biological Sciences, Seoul National University</li>
   <li><span>2001–2004</span> Research Associate Professor, Advanced Training Program for Biological Sciences, Seoul National University</li>
   <li><span>1999–2001</span> Postdoctoral Fellow, Howard Hughes Medical Institute, University of Pennsylvania</li>
+</ul>
+
+## Memberships
+
+<ul class="chronological">
+  <li><span>2021–present</span> Foreign Member, The Royal Society, UK</li>
+  <li><span>2014–present</span> Foreign Associate, National Academy of Sciences, USA</li>
+  <li><span>2014–present</span> Member, The Korean Academy of Science and Technology</li>
+  <li><span>2013–present</span> Foreign Associate, European Molecular Biology Organization (EMBO)</li>
+</ul>
+
+## Awards
+
+<ul class="chronological">
+  <li><span>2027</span> HFSP Nakasone Award, Human Frontier Science Program (selected in 2026)</li>
+  <li><span>2026</span> Changjo Medal (First Class), Order of Science and Technology Merit, Government of the Republic of Korea</li>
+  <li><span>2025</span> KSMCB Life Science Award, Korean Society for Molecular and Cellular Biology</li>
+  <li><span>2024</span> Lim Sung Ki Researcher Award, The LIM Foundation</li>
+  <li><span>2021</span> Lina 50+ Award Grand Prize, LINA Foundation</li>
+  <li><span>2019</span> Asan Award in Medicine, Asan Foundation</li>
+  <li><span>2017</span> Chen Award, Human Genome Organisation</li>
+  <li><span>2016</span> KSMCB Award for Women in Life Science, Korean Society for Molecular and Cellular Biology</li>
+  <li><span>2013</span> S-Oil Leading Scientist, S-Oil Science Prodigy and Culture Foundation</li>
+  <li><span>2013</span> Korea Science and Technology Award, The Korean Federation of Science and Technology Societies</li>
+  <li><span>2013</span> Gwanak Grand Prize, Honor Sector, Seoul National University</li>
+  <li><span>2010</span> National Honor Scientist, Ministry of Education, Science and Technology</li>
+  <li><span>2010</span> Amore Pacific Grand Prize, Amore Pacific and KOFWST</li>
+  <li><span>2009</span> Ho-Am Prize in Medicine, Ho-Am Foundation</li>
+  <li><span>2008</span> L'Oréal-UNESCO Women in Science Award, L'Oréal and UNESCO</li>
+  <li><span>2007</span> Woman Scientist of the Year, Ministry of Science and Technology</li>
+  <li><span>2007</span> Young Scientist Award, Ministry of Science and Technology</li>
+  <li><span>2007</span> Thomson Scientific Citation Award, Thomson Corporation</li>
+</ul>
+
+## Editorial boards
+
+<ul class="chronological">
+  <li><span>2015–present</span> Board of Reviewing Editors, <em>Science</em></li>
+  <li><span>2014–present</span> Editorial Board, <em>Molecular Cell</em></li>
+  <li><span>2012–present</span> Editorial Board, <em>Genes &amp; Development</em></li>
+  <li><span>2011–present</span> Editorial Board, <em>The EMBO Journal</em></li>
+  <li><span>2010–present</span> Editorial Board, <em>Cell</em></li>
+</ul>
+
+## Committees
+
+<ul class="chronological">
+  <li><span>2024–2027</span> Committee Member, Presidential Bio Committee, Republic of Korea</li>
+  <li><span>2013–2014</span> Council Member, Presidential Advisory Council on Science and Technology</li>
+  <li><span>2013–2014</span> Meetings Committee, The RNA Society</li>
+  <li><span>2011–2012</span> Director, The RNA Society</li>
+  <li><span>2006–2008</span> Council Member, Presidential Advisory Council on Science and Technology</li>
+</ul>
+
+## Meetings organized
+
+<ul class="chronological">
+  <li><span>2027</span> Organizer, Keystone Symposium on RNA: Regulatory RNAs, Non-Coding RNAs, RNA Modifications, Seoul, Republic of Korea</li>
+  <li><span>2027</span> Organizer, EMBL Conference: RNA-binding proteins, Kingdom of Saudi Arabia</li>
+  <li><span>2025</span> Organizer, Asia RNA Club Symposium, Seoul, Republic of Korea</li>
+  <li><span>2025</span> Scientific Organiser, EMBL Conference: The expanding world of RBPs: from posttranscriptional control to riboregulation, Heidelberg, Germany</li>
+  <li><span>2024</span> Co-Chair, AACR Special Conference in Cancer Research: RNAs as Drivers, Targets, and Therapeutics in Cancer, Bellevue, Washington, USA</li>
+  <li><span>2022–present</span> Organizer, Asia RNA Club meeting, virtual</li>
+  <li><span>2022</span> Scientific Organiser, EMBO Workshop: The Epitranscriptome, virtual</li>
+  <li><span>2021</span> Scientific Organiser, EMBO | EMBL Symposium: The Non-Coding Genome, virtual</li>
+  <li><span>2021</span> Organizer, IBS-SNU Mini-Symposia on RNA Biology &amp; Therapeutics, virtual</li>
+  <li><span>2021</span> Organizer, The 26th Annual Meeting of the RNA Society, virtual</li>
+  <li><span>2021</span> Organizer, International Conference of the Korean Society for Molecular and Cellular Biology, Jeju, Republic of Korea</li>
+  <li><span>2020</span> Organizer, CSHA COVID-19/SARS-CoV-2 Rapid Research Reports, virtual</li>
+  <li><span>2019</span> Scientific Organiser, EMBO | EMBL Symposium: The Non-Coding Genome, Heidelberg, Germany</li>
+  <li><span>2019</span> Organizer, Keystone Symposia, Whistler, British Columbia, Canada</li>
+  <li><span>2014</span> Co-Organizer, Keystone Symposia</li>
+  <li><span>2011</span> Co-Organizer, Keystone Symposia</li>
+  <li><span>2011</span> Co-Organizer, Cold Spring Harbor Asia–ISSCR</li>
+  <li><span>2009</span> Co-Organizer, The RNA Society</li>
 </ul>
