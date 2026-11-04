@@ -8,8 +8,9 @@
  * spreading out) when the home page's TENT4 would have gone to that tail --
  * it is two to seven long and, for TENT4, not ending in a G, and the
  * effector is rested (five to ten seconds after its last visit) and near:
- * here within 130px of the recruiter, as far as the home page's TUTs notice
- * a tail from. The effector looks up with a "!" and rushes over along a
+ * here within 180px of the recruiter, a little further than the home
+ * page's TUTs notice a tail from, so that recruiting is seen a little more
+ * often (and the TUTs find a little less to do). The effector looks up with a "!" and rushes over along a
  * dotted line, drawn as the call goes out, docks with a click on the side
  * it was on (on top, for Pt1), and only then throws its bases onto the
  * tail: TENT4A or TENT4B its few A's and a G (mixed tailing) just as on the
@@ -21,9 +22,9 @@
  *
  * The rest is the home page's: TUT4 and TUT7 add U's to a tail that is
  * nearly gone, and soon a Pac-Man races in, eats the tail and leaps off
- * over the head (higher here, to clear the recruiter); every twenty to
- * thirty seconds a pair of scissors (an endoribonuclease) swims in from the
- * right, against the stream, and snips the longest-tailed mRNA no helper is
+ * over the head (higher here, to clear the recruiter); every twenty-three
+ * to thirty-three seconds (a little less often than on the home page) a
+ * pair of scissors (an endoribonuclease) swims in from the right, against the stream, and snips the longest-tailed mRNA no helper is
  * at, here between its head and its stem-loop, and from below, as the
  * recruiters sit above the strand; helpers that linger side by side give
  * each other a high five, and one left outside by a narrowing window dashes
@@ -290,9 +291,9 @@
   // dashing back in, and rested.
   const free = (h) => !h.call && !h.dock && !h.five && !h.dash && h.cool <= 0;
 
-  // How far off a recruiter calls an effector from: as far as the home
-  // page's TUTs notice a tail from.
-  const FAR = 130;
+  // How far off a recruiter calls an effector from: a little further than
+  // the home page's TUTs notice a tail from (130).
+  const FAR = 180;
 
   // The call goes to the nearest of the effectors of its kind that can come
   // (ok), nearest the recruiter, within call and with a clear way there; if
@@ -698,7 +699,8 @@
   }
 
   // ---- The scissors --------------------------------------------------------------
-  // The home page's, every twenty to thirty seconds: a pair of scissors
+  // The home page's, if a little less often (every twenty-three to
+  // thirty-three seconds, there twenty to thirty): a pair of scissors
   // swims in from the right, against the stream, along the open water beside
   // the lane of the longest-tailed mRNA in view that no helper is at, turns
   // blades towards the strand, closes in and snips twice; the two pieces
@@ -856,7 +858,7 @@
     for (let i = rings.length - 1; i >= 0; i--) if (rings[i].life <= 0) rings.splice(i, 1);
     for (const c of claps) c.life -= dt / 0.4;
     for (let i = claps.length - 1; i >= 0; i--) if (claps[i].life <= 0) claps.splice(i, 1);
-    if ((snipIn -= dt) <= 0) snipIn = sendCutter() ? between(20, 30) : 1;
+    if ((snipIn -= dt) <= 0) snipIn = sendCutter() ? between(23, 33) : 1;
     stepEaters(dt);
     stepCutters(dt);
     helpers.forEach((h) => stepHelper(h, dt));

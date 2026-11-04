@@ -135,7 +135,8 @@ Tech stack: Jekyll 4.x (Gemfile pins `~> 4.3`), Kramdown (GFM), Liquid templates
   `<canvas class="recruit-scene">` (`_includes/recruit_scene.html`). It is the home
   scene with its rules throughout -- the same mRNAs, tails, speeds and numbers, the
   same four helpers, TUT4 and TUT7 and the Pac-Man, the high fives, the dash back in,
-  the scissors every 20 to 30 seconds -- but for what this page needs. It sits in a
+  the scissors (here a little less often, every 23 to 33 seconds) -- but for what
+  this page needs. It sits in a
   band the column's width with rounded corners (220px high, 200px on a phone), its
   characters drawn at home's size (not scaled up with the height), its lanes lower.
   Each mRNA carries a recruiter on the strand behind its head -- ZCCHC14 or ZCCHC2
@@ -143,8 +144,8 @@ Tech stack: Jekyll 4.x (Gemfile pins `~> 4.3`), Kramdown (GFM), Liquid templates
   TENT4B, and PAPγ (amber, here only), do not go to a tail of their own accord: the
   recruiter calls one over when home's TENT4 would have gone to that tail (two to
   seven long and, for TENT4, not ending in a G; the effector rested, 5 to 10 seconds
-  after its last visit) and the effector is within 130px of it (as far as home's TUTs
-  notice a tail from). The recruiter waves and sends out rings; the effector shows a
+  after its last visit) and the effector is within 180px of it (a little further than
+  home's TUTs notice a tail from, 130px, so recruiting is seen a little more often). The recruiter waves and sends out rings; the effector shows a
   "!", rushes along a dotted line drawn as the call goes out, docks beside the protein
   on the side it was on (on top of Pt1), throws its bases (TENT4: AG, AAG or AAGA, as
   on home; PAPγ: four A's), and lets go. The side and the route are settled from where
