@@ -133,31 +133,30 @@ Tech stack: Jekyll 4.x (Gemfile pins `~> 4.3`), Kramdown (GFM), Liquid templates
   starts the same on every visit (a fixed seed).
 - /join/ has a scene of its own over the two calls: `js/recruit.js` on
   `<canvas class="recruit-scene">` (`_includes/recruit_scene.html`). It is the home
-  scene with its rules throughout -- the same mRNAs, tails, speeds and numbers, the
-  same four helpers, TUT4 and TUT7 and the Pac-Man, the high fives, the dash back in,
-  the scissors (here a little less often, every 23 to 33 seconds) -- but for what
-  this page needs. It sits in a
-  band the column's width with rounded corners (220px high, 200px on a phone), its
-  characters drawn at home's size (not scaled up with the height), its lanes lower.
+  scene with its rules throughout -- the same mRNAs, tails, speeds and numbers, the same
+  four helpers, TUT4 and TUT7 and the Pac-Man, the high fives, the dash back in, the
+  scissors (here less often, every 26 to 36 seconds) -- but for what this page needs. It
+  sits in a band the column's width with rounded corners (220px high, 200px on a phone),
+  its characters drawn at home's size (not scaled up with the height), its lanes lower.
   Each mRNA carries a recruiter on the strand behind its head -- ZCCHC14 or ZCCHC2
   (navy, with a face) on a stem-loop, or Pt1, the stem-loop itself -- and TENT4A and
   TENT4B, and PAPγ (amber, here only), do not go to a tail of their own accord: the
-  recruiter calls one over when home's TENT4 would have gone to that tail (two to
-  seven long and, for TENT4, not ending in a G; the effector rested, 5 to 10 seconds
-  after its last visit) and the effector is within 180px of it (a little further than
-  home's TUTs notice a tail from, 130px, so recruiting is seen a little more often). The recruiter waves and sends out rings; the effector shows a
-  "!", rushes along a dotted line drawn as the call goes out, docks beside the protein
-  on the side it was on (on top of Pt1), throws its bases (TENT4: AG, AAG or AAGA, as
-  on home; PAPγ: four A's), and lets go. The side and the route are settled from where
-  the two are when the call goes out (while its "!" shows, the effector drifts along
-  with the mRNA, so the route still starts where it is): the line goes round the
-  recruiter, and no effector is called whose line would cross another mRNA's recruiter
-  or any head. One mRNA calls as the page opens. The Pac-Man leaps higher, to clear
-  the recruiter, and the scissors cut between the head and the stem-loop, from below,
-  as the recruiters sit above the strand. Recruiters' names and the helpers' show only
-  from 600px. Clock, reduced motion and fixed seed as on home. The script is a copy of
-  `js/tails.js` with these changes, so a change to anything the two share goes into
-  both.
+  recruiter calls one over when home's TENT4 would have gone to that tail (two to seven
+  long and, for TENT4, not ending in a G; the effector rested, 5 to 10 seconds after its
+  last visit) and the effector is within 220px of it (further than home's TUTs notice a
+  tail from, 130px, so recruiting is seen more often). The recruiter waves and sends out
+  rings; the effector shows a "!", rushes along a dotted line drawn as the call goes
+  out, docks beside the protein on the side it was on (on top of Pt1), throws its bases
+  (TENT4: AG, AAG or AAGA, as on home; PAPγ: four A's), and lets go. The side and the
+  route are settled from where the two are when the call goes out (while its "!" shows,
+  the effector drifts along with the mRNA, so the route still starts where it is): the
+  line goes round the recruiter, and no effector is called whose line would cross
+  another mRNA's recruiter or any head. One mRNA calls as the page opens. The Pac-Man
+  leaps higher, to clear the recruiter, and the scissors cut between the head and the
+  stem-loop, from below, as the recruiters sit above the strand. Recruiters' names and
+  the helpers' show only from 600px. Clock, reduced motion and fixed seed as on home.
+  The script is a copy of `js/tails.js` with these changes, so a change to anything the
+  two share goes into both.
 - Icons: Font Awesome Free 5.15.3 shapes as inline SVG (see Conventions). The site icon is
   the old site's black RNA strand on a white rounded square with transparent corners:
   `favicon.ico` (16, 32, 48px), `favicon-192.png`, and
