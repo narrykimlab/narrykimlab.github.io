@@ -41,13 +41,24 @@ that last longer inside cells.
         <li data-slide-to="5"></li>
         <li data-slide-to="6"></li>
         <li data-slide-to="7"></li>
+        <li data-slide-to="8"></li>
+        <li data-slide-to="9"></li>
     </ol>
 
     <!-- Items -->
     <div class="carousel-inner" markdown="0">
 
-        <div class="item active">
-            {% picture slide images/home-slider/2511-asia-rna-club-symposium.jpg alt="Lab members at the Asia RNA Club Symposium, November 2025" %}
+        <!-- Two diagrams of our work come first, then the photos, newest
+             first. A diagram's item is marked "figure": on its white ground
+             the arrows turn grey (css/main.scss). -->
+        <div class="item active figure">
+            {% picture slide images/home-slider/noncanonical-tailing.jpg alt="Diagram of an mRNA's poly(A) tail: in the cytoplasm, a Tailon element in the 3′ UTR recruits ZCCHC2/14 with TENT4, which adds a mixed tail ending in G that blocks deadenylation, or PAPα/γ, which adds A's. Meanwhile the CNOT complex shortens the tail, PABP leaves, TUT4/7 add U's once fewer than about 25 A's are left, and the mRNA is decayed by DCP1/2, XRN1 and the exosome." %}
+        </div>
+        <div class="item figure">
+            {% picture slide images/home-slider/mirna-biogenesis.jpg alt="Diagram of microRNA biogenesis, each step with its structure: in the nucleus, Pol II transcribes a pri-miRNA that Drosha and DGCR8 cut into a pre-miRNA; Xpo5 carries it to the cytoplasm, where Dicer cuts it, and the Ago maturation complex, with Hsp90, loads one strand into Ago as the mature RISC, the other strand unused." loading="lazy" %}
+        </div>
+        <div class="item">
+            {% picture slide images/home-slider/2511-asia-rna-club-symposium.jpg alt="Lab members at the Asia RNA Club Symposium, November 2025" loading="lazy" %}
         </div>
         <div class="item">
             {% picture slide images/home-slider/2505-faobmb.jpg alt="Lab members at FAOBMB, May 2025" loading="lazy" %}

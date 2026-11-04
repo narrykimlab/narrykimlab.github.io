@@ -881,6 +881,18 @@ div#textid h3 {
     background-color: var(--accent);
 }
 
+/* A diagram among the photos (.item.figure, on a white ground): white arrows
+   would not show on it, so while one is up they are grey, without their
+   shadow -- 3.7:1 on white at the controls' opacity. The figure is placed
+   clear of them. */
+.carousel:has(.item.active.figure) .carousel-control {
+    color: var(--muted);
+}
+
+.carousel:has(.item.active.figure) .carousel-control .icon {
+    filter: none;
+}
+
 /* The base drops the arrows' focus outline; a keyboard user needs to see it. */
 .carousel-control:focus-visible {
     outline: 3px solid var(--link);

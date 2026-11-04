@@ -376,6 +376,11 @@ Put the file in `images/photos/` (`YYMM-what.jpg`, at most about 2000px on the l
 and add an entry to `_data/photos.yml` in date order, under its period. For the home
 carousel, crop a 3:2 copy into `images/home-slider/` and add a slide and a dot to the
 carousel in `_pages/home.md`; every slide but the first carries `loading="lazy"`.
+The carousel opens with two diagrams of the lab's work, ahead of the photos (their
+PDFs rendered, trimmed, and set whole on a 3:2 white ground, 1920 by 1280, with
+nothing in the middle band of the height within 10.5% of either side, where the
+arrows sit); their items carry the class `figure`, which turns the arrows grey while
+one is up.
 
 ### Move a member to former members
 
