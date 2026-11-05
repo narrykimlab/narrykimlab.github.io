@@ -187,18 +187,15 @@ invocation is in `.github/workflows/jekyll.yml` and README.md. Run it before pus
 
 All dynamic content lives in YAML data files. `_plugins/data_check.rb` checks them on every
 build and fails it with a list of problems: missing required fields, an author `link` that
-is not in team.yml, unknown categories or topics, a non-boolean `active` or `unconfirmed`,
-missing photos, years or dates out of order, icon names missing from `icons.yml`. Its rules
-mirror what the templates read -- when a template starts reading a new field, update the
-matching rule.
+is not in team.yml, unknown categories or topics, a non-boolean `active`, missing photos,
+years or dates out of order, icon names missing from `icons.yml`. Its rules mirror what
+the templates read -- when a template starts reading a new field, update the matching rule.
 
 - **team.yml** — Members, current (`active: true`, shown on /people/) and former. Fields:
   `name`, `photo` (file in `images/members/`), `info` (the role line), `category`
   (principal-investigator/postdoc/student/research-assistant/support), `sort-key`
   (lastname-firstname), `active`, optional `intro` (one line on the card), `email`, and
-  `link`, the slug of the profile page `_pages/people/<link>.md`. For now, while the
-  site is under review, `unconfirmed: true` marks a member who has not yet sent an
-  entry of their own: their card shows an asterisk after the name.
+  `link`, the slug of the profile page `_pages/people/<link>.md`.
 - **publist.yml** — Papers, newest first; /publications/ groups them by `year` as they
   come, so the order matters (the data check enforces it). Fields: `authors`, `title`,
   `journal`, `year`, `vip` (optional: `volume(issue):pages` with the last page in full,
@@ -345,8 +342,7 @@ a `{% comment %}PLACEHOLDER ...{% endcomment %}` line, a made-up card intro in
 email in a profile's front matter a `# placeholder` comment, and every made-up email
 ends in `.example`, a domain reserved never to deliver mail.
 `grep -rn -i placeholder _pages/people _data/team.yml` lists them.
-Replace the text and drop the marker, and the member's `unconfirmed` in
-`_data/team.yml` once their own entry is in. In a real Education entry, a year followed by `?`
+Replace the text and drop the marker. In a real Education entry, a year followed by `?`
 (`2011?–2017`) is an estimate: only the year the degree ended was known.
 
 ### Add a publication

@@ -3,9 +3,7 @@
   selected_categories, by sort-key, each a link to the profile. Photos are
   cropped to 4:5 by CSS, whatever shape the file is. With order="monthly"
   the cards are shuffled into an order that changes every month
-  (_plugins/monthly_shuffle.rb). For now, while the site is under review, a
-  member marked `unconfirmed` (no entry of their own yet) has an asterisk
-  after the name.
+  (_plugins/monthly_shuffle.rb).
 
     {% assign selected_categories = "student,postdoc" | split: ',' %}
     {% include team_list.html order="monthly" %}
@@ -20,7 +18,7 @@
 {%- for member in members_by_name %}
 {% if member.link %}<a class="team-card" href="{{ site.baseurl }}/people/{{ member.link }}">{% else %}<div class="team-card">{% endif %}
 {% picture member-card images/members/{{ member.photo }} alt="" %}
-<span class="team-card-name">{{ member.name }}{% if member.unconfirmed %}*{% endif %}</span>
+<span class="team-card-name">{{ member.name }}</span>
 <span class="team-role">{{ member.info }}</span>
 {%- if member.intro %}
 <span class="team-card-intro">{{ member.intro }}</span>

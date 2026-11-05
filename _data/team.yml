@@ -20,7 +20,6 @@
   category: student
   sort-key: lee-chemin
   active: true
-  unconfirmed: true
 
 - name: Da-Eun Choi
   photo: da-eun-choi.jpg
@@ -31,7 +30,6 @@
   category: research-assistant
   sort-key: choi-da-eun
   active: true
-  unconfirmed: true
 
 - name: Daniel Lee
   photo: daniel-lee.jpg
@@ -50,7 +48,6 @@
   category: student
   sort-key: lim-dongbin
   active: true
-  unconfirmed: true
 
 - name: Eunji Kim
   photo: eunji-kim.jpg
@@ -61,7 +58,6 @@
   category: research-assistant
   sort-key: kim-eunji
   active: true
-  unconfirmed: true
 
 - name: Eunju Shim
   photo: eunju-shim.jpg
@@ -72,7 +68,6 @@
   category: support
   sort-key: shim-eunju
   active: true
-  unconfirmed: true
 
 - name: Hyejun Kim
   photo: hyejun-kim.jpg
@@ -101,7 +96,6 @@
   category: support
   sort-key: park-hyojin
   active: true
-  unconfirmed: true
 
 - name: Jieun Lee
   photo: jieun-lee.jpg
@@ -111,7 +105,6 @@
   category: research-assistant
   sort-key: lee-jieun
   active: true
-  unconfirmed: true
 
 - name: Jihye Yang
   photo: jihye-yang.jpg
@@ -122,7 +115,6 @@
   category: research-assistant
   sort-key: yang-jihye
   active: true
-  unconfirmed: true
 
 - name: Junyoung Park
   photo: junyoung-park.jpg
@@ -132,7 +124,6 @@
   category: student
   sort-key: park-junyoung
   active: true
-  unconfirmed: true
 
 - name: Mijoo Sung
   photo: mijoo-sung.jpg
@@ -143,7 +134,6 @@
   category: support
   sort-key: sung-mijoo
   active: true
-  unconfirmed: true
 
 - name: Minseok Jeong
   photo: minseok-jeong.jpg
@@ -189,7 +179,6 @@
   category: postdoc
   sort-key: hyun-seong-in
   active: true
-  unconfirmed: true
 
 - name: Seongjae Ken Kim
   photo: seongjae-ken-kim.jpg
@@ -199,7 +188,6 @@
   category: student
   sort-key: kim-seongjae-ken
   active: true
-  unconfirmed: true
 
 - name: Sunyoung Bang
   photo: sunyoung-bang.jpg
@@ -209,7 +197,6 @@
   category: research-assistant
   sort-key: bang-sunyoung
   active: true
-  unconfirmed: true
 
 - name: Yeekyung Moon
   photo: yeekyung-moon.jpg
@@ -219,7 +206,6 @@
   category: student
   sort-key: moon-yeekyung
   active: true
-  unconfirmed: true
 
 - name: Yejin Moon
   photo: yejin-moon.jpg
@@ -238,7 +224,6 @@
   category: postdoc
   sort-key: park-yeonwoo
   active: true
-  unconfirmed: true
 
 - name: Youngjoon Pyo
   photo: youngjoon-pyo.jpg
@@ -257,4 +242,3 @@
   category: postdoc
   sort-key: park-youngran
   active: true
-  unconfirmed: true

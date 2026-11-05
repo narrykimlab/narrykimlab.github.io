@@ -100,9 +100,6 @@ module Jekyll
           unless [true, false].include?(m["active"])
             problem("team", m, i, "`active` must be true or false, not #{m["active"].inspect}")
           end
-          if m.key?("unconfirmed") && ![true, false].include?(m["unconfirmed"])
-            problem("team", m, i, "`unconfirmed` must be true or false, not #{m["unconfirmed"].inspect}")
-          end
           if m["category"] && !TEAM_CATEGORIES.include?(m["category"])
             problem("team", m, i, "unknown category #{m["category"].inspect} (one of: #{TEAM_CATEGORIES.join(", ")})")
           end
