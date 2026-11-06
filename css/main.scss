@@ -322,9 +322,9 @@ body.inner {
     text-wrap: balance;
 }
 
-/* A phrase in the title or the line under it kept on one line ("the fate",
+/* A phrase in the title or the line under it kept on one line ("cell fate",
    "we decode"), so the text breaks before it rather than inside it: "RNA
-   steers / the fate of the cell.", "From microRNAs to mRNA tails, / we
+   steers / cell fate", "From microRNAs to mRNA tails, / we
    decode ...". Only from 430px, where the title's second line fits the
    column whole (370px of 387 at 430); a narrower phone breaks them as they
    fall, rather than take a third line that would push the scene down. */
@@ -1815,14 +1815,6 @@ ul.paper-cards li {
     margin: 16px 0 0;
     font-size: 14px;
     color: var(--faint);
-}
-
-.patent-list {
-    padding-left: 1.2em;
-}
-
-.patent-list li {
-    padding: 6px 0;
 }
 
 blockquote {

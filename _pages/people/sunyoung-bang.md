@@ -1,7 +1,7 @@
 ---
 layout: member
 title: Sunyoung Bang
-position: Research Assistant
+position: Research Technician
 email: golden.flask@sunyoung.example  # placeholder
 github:
 orcid:
@@ -13,7 +13,7 @@ permalink: /people/sunyoung-bang
 ---
 
 {% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}
-Sunyoung Bang is a research assistant whose cell cultures are said to
+Sunyoung Bang is a research technician whose cell cultures are said to
 be the happiest in Gwanak. They grow, they divide, and on quiet evenings
 they hum along with the incubator. No contamination has ever dared to
 enter Sunyoung's hood; mold spores are reported to turn around at the

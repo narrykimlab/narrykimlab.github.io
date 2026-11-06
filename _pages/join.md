@@ -23,21 +23,20 @@ molecular tools for further discoveries.
 <ul class="join-cards" markdown="0">
 <li class="join-card">
 <h2><a href="{{ site.baseurl }}/join/postdoc/">Postdoctoral researchers</a></h2>
-<p>Research on RNA biology and the development of RNA therapeutic technologies</p>
+<p>Research in RNA biology, RNA technologies, and RNA therapeutics</p>
 <ul class="join-card-facts">
-<li>A PhD, or one expected soon</li>
-<li>Backgrounds in molecular biology, chemistry, bioinformatics or structural biology</li>
-<li>Projects on mRNA regulation, viral RNA elements, deep learning and RNA therapeutics</li>
+<li>PhD (completed or expected soon) in any field</li>
+<li>We welcome applicants from diverse backgrounds, including biology, chemistry, physics, computer science, and engineering</li>
+<li>We value curiosity, dedication, and a collaborative spirit</li>
 </ul>
 <p class="join-card-more" aria-hidden="true">Read the call →</p>
 </li>
 <li class="join-card">
 <h2><a href="{{ site.baseurl }}/join/intern/">Undergraduate interns</a></h2>
-<p>Hands-on research for undergraduates</p>
+<p>Hands-on research experience in molecular and cell biology, RNA biology, and computational biology</p>
 <ul class="join-card-facts">
-<li>Any major, any university</li>
-<li>Applications all year round</li>
-<li>Six months or more preferred</li>
+<li>Open to students from all majors</li>
+<li>Applications accepted year-round</li>
 </ul>
 <p class="join-card-more" aria-hidden="true">Read the call →</p>
 </li>

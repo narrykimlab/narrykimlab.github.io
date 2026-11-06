@@ -1,7 +1,7 @@
 ---
 layout: member
 title: Mijoo Sung
-position: Lab Manager
+position: Head of Administration Office
 email: mjsung@snu.ac.kr
 github:
 orcid:
@@ -13,7 +13,7 @@ permalink: /people/mijoo-sung
 ---
 
 {% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}
-Mijoo Sung is the lab manager, which is to say the lab's mission
+Mijoo Sung is the head of the administration office, which is to say the lab's mission
 control. From a console no one else has ever seen, Mijoo tracks every
 reagent, every instrument and every safety form in three dimensions at
 once, and still finds the spare box of gloves in your size.

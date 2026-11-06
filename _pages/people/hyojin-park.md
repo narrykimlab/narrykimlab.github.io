@@ -1,7 +1,7 @@
 ---
 layout: member
 title: Hyojin Park
-position: Administrative Assistant
+position: Administrative Officer
 email: anita9992@snu.ac.kr
 github:
 orcid:

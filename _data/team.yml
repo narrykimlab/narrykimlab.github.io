@@ -23,7 +23,7 @@
 
 - name: Da-Eun Choi
   photo: da-eun-choi.jpg
-  info: Research Assistant
+  info: Research Technician
   intro: "Combing viral genomes for regulatory RNA elements"
   email: "daeun7291@gmail.com"
   link: da-eun-choi
@@ -51,7 +51,7 @@
 
 - name: Eunji Kim
   photo: eunji-kim.jpg
-  info: Technician
+  info: Research Technician
   intro: "Keeping every machine humming, possibly by telepathy"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
   email: "beautifulej@naver.com"
   link: eunji-kim
@@ -61,7 +61,7 @@
 
 - name: Eunju Shim
   photo: eunju-shim.jpg
-  info: Senior Administrative Assistant
+  info: Administrative Officer
   intro: "Defeating paperwork monsters before breakfast"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
   email: "shimej@snu.ac.kr"
   link: eunju-shim
@@ -89,7 +89,7 @@
 
 - name: Hyojin Park
   photo: hyojin-park.jpg
-  info: Administrative Assistant
+  info: Administrative Officer
   intro: "Booking meeting rooms at the speed of light"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
   email: "anita9992@snu.ac.kr"
   link: hyojin-park
@@ -108,7 +108,7 @@
 
 - name: Jihye Yang
   photo: jihye-yang.jpg
-  info: Research Assistant
+  info: Lab Operations Manager
   intro: "Chasing microRNAs and RNA tails for over a decade"
   email: "ing0614@gmail.com"
   link: jihye-yang
@@ -127,7 +127,7 @@
 
 - name: Mijoo Sung
   photo: mijoo-sung.jpg
-  info: Lab Manager
+  info: Head of Administration Office
   intro: "Running mission control for everything in the lab"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
   email: "mjsung@snu.ac.kr"
   link: mijoo-sung
@@ -191,7 +191,7 @@
 
 - name: Sunyoung Bang
   photo: sunyoung-bang.jpg
-  info: Research Assistant
+  info: Research Technician
   intro: "Raising the happiest cells in Gwanak"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
   link: sunyoung-bang
   category: research-assistant

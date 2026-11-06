@@ -1,7 +1,7 @@
 ---
 layout: member
 title: Eunji Kim
-position: Technician
+position: Research Technician
 email: beautifulej@naver.com
 github:
 orcid:

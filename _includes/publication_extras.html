@@ -1,6 +1,6 @@
 {%- comment -%}
-  What follows the papers on both publication pages: the book chapters
-  (_data/chapters.yml) and the patents (_data/patents.yml).
+  What follows the papers on the publication pages: the book chapters
+  (_data/chapters.yml).
 {%- endcomment -%}
 <h2 class="pub-group" id="book-chapters">Book chapters</h2>
 <div class="publication-list">
@@ -8,10 +8,3 @@
 <p>{% include publication_entry.html %}</p>
 {%- endfor %}
 </div>
-
-<h2 class="pub-group" id="patents">Patents</h2>
-<ul class="patent-list">
-{%- for patent in site.data.patents %}
-<li>{{ patent.title }}</li>
-{%- endfor %}
-</ul>

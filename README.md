@@ -33,7 +33,7 @@ bundle exec htmlproofer ./_site --disable-external --no-enforce-https \
 
 Most changes are edits to YAML files in `_data/`: members (`team.yml`),
 former members (`alumni_members.yml`), publications (`publist.yml`,
-`chapters.yml`, `patents.yml`), news (`news.yml`) and photos (`photos.yml`).
+`chapters.yml`), news (`news.yml`) and photos (`photos.yml`).
 `CLAUDE.md` describes each file's fields and the usual content tasks. Every
 build checks these files and stops with a list of problems (an author `link`
 missing from `team.yml`, a year out of order, a photo file that is not there,

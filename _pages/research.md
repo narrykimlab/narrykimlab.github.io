@@ -7,16 +7,16 @@ permalink: /research/
 
 # Research
 
-Our laboratory explores the fundamental principles of RNA regulation and
-applies these insights to develop next-generation RNA-based therapeutics.
-RNA lies at the core of gene regulation across all biological
-systems—from viruses to humans—and we aim to understand how regulatory
-RNAs and their associated factors shape cellular behavior and can be
-harnessed for therapeutic innovation.
+RNA lies at the core of gene regulation across all biological systems,
+from viruses to humans. We explore the fundamental principles of RNA
+regulation and apply these insights to develop next-generation RNA-based
+therapeutics, asking how regulatory RNAs and their associated factors
+shape cellular behavior and how they can be harnessed for therapeutic
+innovation.
 
 <section class="research-section" markdown="1">
 
-## mRNA Stability and Modification
+## mRNA Stability, Tailing, and Modification
 
 {% picture figure-section images/research/mrna-stability.jpg alt="A diagram: a poly(A)+ mRNA is deadenylated rapidly and its body decays, unless TENT4A or TENT4B adds a mixed tail (AGAA), which CNOT6L or CNOT7 deadenylates only with delay" class="qb-fig-right qb-fig-section" %}
 

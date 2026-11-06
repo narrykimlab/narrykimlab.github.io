@@ -1,7 +1,7 @@
 ---
 layout: member
 title: Da-Eun Choi
-position: Research Assistant
+position: Research Technician
 email: daeun7291@gmail.com
 github:
 orcid:
@@ -12,7 +12,7 @@ image: /images/members/da-eun-choi.jpg
 permalink: /people/da-eun-choi
 ---
 
-Da-Eun Choi is a research assistant who supports the lab's large-scale
+Da-Eun Choi is a research technician who supports the lab's large-scale
 screens of viral RNA. Da-Eun contributed to the functional viromic screens
 (*Cell*, 2023) that searched viral genomes for RNA elements regulating gene
 expression, work the lab has since built on to design better mRNAs.

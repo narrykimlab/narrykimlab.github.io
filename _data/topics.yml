@@ -5,7 +5,7 @@
 # `other` is for a paper no other topic fits, and goes alone.
 
 - id: mrna-stability
-  name: mRNA Stability and Modification
+  name: mRNA Stability, Tailing, and Modification
 - id: viral-rna
   name: Viral Regulatory RNAs and mRNA Therapeutics
 - id: exogenous-rna

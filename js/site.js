@@ -455,7 +455,7 @@
   // The topic list beside the papers on /publications/by-topic/ marks the
   // topic being read: the last heading to have scrolled above a line a third
   // of the way down the window. Above the first topic, and past the last
-  // (the book chapters and patents), none is marked.
+  // (the book chapters), none is marked.
   document.querySelectorAll('.topic-nav').forEach((nav) => {
     const links = new Map([...nav.querySelectorAll('a[href^="#"]')].map((a) => [a.hash.slice(1), a]));
     const headings = [...document.querySelectorAll('.topic-sections h2[id]')];

@@ -43,7 +43,6 @@ module Jekyll
         check_publications("publist", team_links, alumni_names)
         check_publications("chapters", team_links, alumni_names)
         check_topics
-        list("patents").each_with_index { |p, i| require_fields("patents", p, i, "title") }
         check_news
         check_internship
         check_photos

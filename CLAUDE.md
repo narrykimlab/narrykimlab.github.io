@@ -226,7 +226,6 @@ the templates read -- when a template starts reading a new field, update the mat
   names, and `name`, the heading. A paper is listed under each of its topics; `other`
   is for a paper no other topic fits, and goes alone.
 - **chapters.yml** — Book chapters, the same fields as publist.yml but no `topics`.
-- **patents.yml** — Patents, by `title`.
 - **alumni_members.yml** — Former members, most recently departed first (the people page
   keeps file order): `name`, `position`, `years` ([first, last] or [last]), `current`
   (where they are now), optional `url` (an outside page about them; the name, in the
@@ -311,7 +310,7 @@ pages opens with chips to the other, as the publication pages do.
   **publication_author_list.html** formats its authors, each name through
   **publication_author_name.html** (a link to the profile, or to the former member's
   entry on /people/, or plain);
-  **publication_extras.html** is the book chapters and patents the publication pages end
+  **publication_extras.html** is the book chapters the publication pages end
   with; **cite_dialog.html** is the Cite window, included once by each page that lists
   papers.
 

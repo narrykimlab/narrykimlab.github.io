@@ -1,7 +1,7 @@
 ---
 layout: member
 title: Jihye Yang
-position: Research Assistant
+position: Lab Operations Manager
 email: ing0614@gmail.com
 github:
 orcid:
@@ -12,7 +12,7 @@ image: /images/members/jihye-yang.jpg
 permalink: /people/jihye-yang
 ---
 
-Jihye Yang is a research assistant and one of the lab's longest-serving
+Jihye Yang is the lab operations manager and one of the lab's longest-serving
 members, with a hand in its work on microRNAs and RNA tailing for more than
 a decade. Jihye contributed to studies of the adenylation of maternally
 inherited microRNAs by Wispy (*Molecular Cell*, 2014), the single-nucleotide
