@@ -138,7 +138,7 @@
 - name: Minseok Jeong
   photo: minseok-jeong.jpg
   info: Graduate Student
-  intro: "Picturing the silencing complex as it takes shape"
+  intro: "Watching molecules before they become themselves"
   link: minseok-jeong
   category: student
   sort-key: jeong-minseok
@@ -183,7 +183,7 @@
 - name: Seongjae Ken Kim
   photo: seongjae-ken-kim.jpg
   info: Graduate Student
-  intro: "Seeing RNA fold in slow motion"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
+  intro: "Mining for negative regulators of mRNA stability"
   link: seongjae-ken-kim
   category: student
   sort-key: kim-seongjae-ken

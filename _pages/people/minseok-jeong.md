@@ -12,16 +12,29 @@ image: /images/members/minseok-jeong.jpg
 permalink: /people/minseok-jeong
 ---
 
-Minseok Jeong is a graduate student whose interests span RNA biology,
-RNA therapeutics and structural biology. Minseok is a
-co-first author of a 2026 *Nature* study that revealed the structural basis
-for chaperone-guided assembly of the RNA-induced silencing complex, the
-machine through which microRNAs silence their targets.
+Minseok Jeong is a Ph.D. student interested in the interplay between
+RNA and proteins. Using biochemistry and cryo-EM, Minseok studies how RNA
+recruits or sculpts its protein partners, and how it can be chemically
+modified without breaking these finely tuned relationships. A background
+in pharmacy carries such molecular rules toward the rational design of
+RNA therapeutics.
+
+Minseok is a co-first author of a 2026 *Nature* study that resolved a
+long-standing question in RNA silencing: how a bulky small RNA duplex is
+loaded onto Argonaute (AGO). By capturing AGO with the HSP90 chaperone
+machinery and determining its structures by cryo-EM, Minseok and
+colleagues found that chaperones hold AGO in an open, largely unfolded
+state, and that RNA loading itself drives AGO folding. The work also
+showed which RNA features AGO requires, opening a way to design therapeutic
+siRNAs with less trial and error.
 
 Minseok has also contributed to the lab's work on how TRIM25 surveils
 foreign RNA (*Science*, 2025), on the genome packaging signal of SARS-CoV-2
 (*Nature Communications*, 2026) and on viral RNA elements that stabilize
 RNA and enhance translation (*Cell*, 2026).
+
+## Research interests
+RNA silencing · RNA–protein interactions · Structural biology · RNA therapeutics
 
 ## Education
 

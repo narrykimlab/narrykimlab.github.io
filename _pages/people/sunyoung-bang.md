@@ -2,7 +2,7 @@
 layout: member
 title: Sunyoung Bang
 position: Research Technician
-email: golden.flask@sunyoung.example  # placeholder
+email: sybang@snu.ac.kr
 github:
 orcid:
 scholar:
@@ -12,18 +12,12 @@ image: /images/members/sunyoung-bang.jpg
 permalink: /people/sunyoung-bang
 ---
 
-{% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}
-Sunyoung Bang is a research technician whose cell cultures are said to
-be the happiest in Gwanak. They grow, they divide, and on quiet evenings
-they hum along with the incubator. No contamination has ever dared to
-enter Sunyoung's hood; mold spores are reported to turn around at the
-door.
+Sunyoung Bang supports the lab's daily operations, from reagent and buffer preparation to inventory control, experimental assistance, and general administrative needs.
 
 ## Education
 
-{% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}
 <ul class="chronological">
-  <li><span>2015–2019</span> B.S. in Laugh Energy Engineering, Monsters University</li>
+  <li><span>2012–2014</span> M.S. in Medical Engineering, Kyung Hee University</li>
 </ul>
 
 {% include publication_in_profile.html %}

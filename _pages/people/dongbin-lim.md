@@ -2,7 +2,7 @@
 layout: member
 title: Dongbin Lim
 position: Graduate Student
-email: time.capsule@dongbin.example  # placeholder
+email: dongbin2000@snu.ac.kr
 github:
 orcid:
 scholar:
@@ -20,9 +20,8 @@ that may help make mRNA medicines more effective.
 
 ## Education
 
-{% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}
 <ul class="chronological">
-  <li><span>2016–2020</span> B.S. in Temporal Mechanics, Hill Valley College</li>
+  <li><span>2019–2025</span> B.S. in Biological Sciences, Seoul National University</li>
 </ul>
 
 {% include publication_in_profile.html %}
