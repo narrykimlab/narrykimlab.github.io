@@ -62,7 +62,7 @@
 - name: Eunju Shim
   photo: eunju-shim.jpg
   info: Administrative Officer
-  intro: "Every receipt in the right budget line"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
+  intro: "Keeping every grant on track, start to finish"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
   email: "shimej@snu.ac.kr"
   link: eunju-shim
   category: support
@@ -90,7 +90,7 @@
 - name: Hyojin Park
   photo: hyojin-park.jpg
   info: Administrative Officer
-  intro: "Looking after the center's guests and its building"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
+  intro: "The director's right hand, and the center's caretaker"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
   email: "anita9992@snu.ac.kr"
   link: hyojin-park
   category: support
@@ -192,7 +192,7 @@
 - name: Sunyoung Bang
   photo: sunyoung-bang.jpg
   info: Research Technician
-  intro: "Keeping the BL3 safe and the shelves stocked"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
+  intro: "Whatever the lab needs, often before it asks"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
   link: sunyoung-bang
   category: research-assistant
   sort-key: bang-sunyoung

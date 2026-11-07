@@ -22,12 +22,6 @@ anyone has noticed there was a rule to follow.
 Every semester and every January, Eunju's reminders arrive like
 clockwork, and thanks to them nobody's paperwork is left behind.
 
-## Role
-
-{% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}
-**Research funds.** Sees every grant through from the first purchase
-to the year-end settlement, and every imported reagent through customs.
-
 ## Education
 
 {% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}

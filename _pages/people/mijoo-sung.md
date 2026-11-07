@@ -22,13 +22,6 @@ When an IBS evaluation is on the horizon, Mijoo already has the rehearsal
 on the calendar, the documents in order and a calm answer ready for every
 question the reviewers might think to ask.
 
-## Role
-
-{% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}
-**Head of the administration office.** Leads the center's plans,
-budgets, reports and evaluations, steers its larger purchases through the
-rules, and keeps the PIs one step ahead of every deadline.
-
 ## Education
 
 {% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}
