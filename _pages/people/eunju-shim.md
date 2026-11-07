@@ -13,21 +13,20 @@ permalink: /people/eunju-shim
 ---
 
 {% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}
-Eunju Shim is the guardian of the lab's paperwork galaxy. Forms that
-would take mere mortals a week are completed in one dazzling afternoon, and
-deadlines, sensing Eunju's approach, quietly move themselves to a more
-convenient date.
+Eunju Shim manages the lab's research funds, and knows the rules for
+spending them better than most of the people who wrote them. Conference
+fees, sequencing runs, imported reagents and student stipends all find
+their way through Eunju's office to the right budget line, usually before
+anyone has noticed there was a rule to follow.
 
-Eunju is fluent in the ancient language of administrative regulation and
-can translate it into plain Korean or English on sight.
+Every semester and every January, Eunju's reminders arrive like
+clockwork, and thanks to them nobody's paperwork is left behind.
 
 ## Role
 
 {% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}
-**Chief Navigator of the Administrative Nebula.** Steers budgets,
-contracts and purchase orders through asteroid fields of rules, and has
-never once lost a receipt, not even the thermal-paper kind that fades in
-the sun.
+**Research funds.** Sees every grant through from the first purchase
+to the year-end settlement, and every imported reagent through customs.
 
 ## Education
 

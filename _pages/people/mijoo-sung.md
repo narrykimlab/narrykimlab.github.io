@@ -13,21 +13,21 @@ permalink: /people/mijoo-sung
 ---
 
 {% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}
-Mijoo Sung is the head of the administration office, which is to say the lab's mission
-control. From a console no one else has ever seen, Mijoo tracks every
-reagent, every instrument and every safety form in three dimensions at
-once, and still finds the spare box of gloves in your size.
+Mijoo Sung is the head of the administration office of the Center for RNA
+Research, and the reason the science always has a center to happen in.
+Plans, budgets, reports and evaluations all cross Mijoo's desk, and they
+tend to leave it in better shape than they arrived.
 
-It is widely believed that the lab would keep running for a month on
-Mijoo's checklists alone.
+When an IBS evaluation is on the horizon, Mijoo already has the rehearsal
+on the calendar, the documents in order and a calm answer ready for every
+question the reviewers might think to ask.
 
 ## Role
 
 {% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}
-**Captain of Starship Lab-Ops.** Keeps the shields up (safety), the
-engines fueled (orders and stock) and the crew on course, and is the
-reason the −80 °C freezer alarm has not gone off since the last ice
-age.
+**Head of the administration office.** Leads the center's plans,
+budgets, reports and evaluations, steers its larger purchases through the
+rules, and keeps the PIs one step ahead of every deadline.
 
 ## Education
 

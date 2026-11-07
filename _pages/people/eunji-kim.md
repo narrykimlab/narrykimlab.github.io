@@ -13,13 +13,15 @@ permalink: /people/eunji-kim
 ---
 
 {% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}
-Eunji Kim keeps the lab's machines humming, or, according to legend,
-simply asks them nicely. Freezers hold at −80 °C out of respect, pipettes
-recalibrate themselves when Eunji walks into the room, and the centrifuges
-are said to spin a little faster to impress.
+Eunji Kim is a research technician, and a good share of the lab's
+experiments begin at Eunji's bench, whether as a freshly cloned construct
+or as the everyday essentials that keep every other bench running. Eunji's
+constructs come out right so reliably that the sequencing results have lost
+most of their suspense.
 
-No instrument has ever broken down on Eunji's watch. A few have tried, and
-were quietly talked out of it.
+Since 2024 Eunji has also been the lab's environment and safety officer,
+able to tell you where every hazardous bottle lives, what it may share a
+shelf with, and why, before you have quite finished asking.
 
 ## Education
 

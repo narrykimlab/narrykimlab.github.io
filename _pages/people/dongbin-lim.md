@@ -21,6 +21,7 @@ that may help make mRNA medicines more effective.
 ## Education
 
 <ul class="chronological">
+  <li><span>2025–present</span> M.S./Ph.D. Student, School of Biological Sciences, Seoul National University</li>
   <li><span>2019–2025</span> B.S. in Biological Sciences, Seoul National University</li>
 </ul>
 

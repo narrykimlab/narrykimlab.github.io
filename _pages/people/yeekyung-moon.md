@@ -13,10 +13,15 @@ permalink: /people/yeekyung-moon
 ---
 
 {% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}
-Yeekyung Moon is a graduate student who studies RNA with the focus of
-a starship's tractor beam. Once Yeekyung locks onto a question, no answer
-can escape, and the occasional unexpected result is simply recruited into
-the crew.
+Yeekyung Moon is a graduate student who studies what makes an mRNA last,
+from the elements in its 3′ UTR to the tail at its end. Along the way
+Yeekyung has built tools the whole lab now relies on, from knockout cell
+lines to a finely tuned electroporation routine, and has taught most of the
+lab how to use them.
+
+Yeekyung also looks after the lab's MiSeq sequencer and has organized its
+journal club and data meetings, with the same calm precision Yeekyung
+brings to the bench.
 
 ## Education
 

@@ -5,7 +5,7 @@ position: Postdoctoral Fellow
 email: kimmh1242@gmail.com
 github:
 orcid:
-scholar:
+scholar: sksUV00AAAAJ
 pubmed: "https://pubmed.ncbi.nlm.nih.gov/?term=%28Kim+VN%5Bau%5D+OR+Narry+Kim+V%5Bau%5D%29+AND+%28Kim+Myeonghwan%5Bau%5D%29"
 cv:
 image: /images/members/myeonghwan-kim.jpg
@@ -22,7 +22,7 @@ Biology*, 2023).
 
 Myeonghwan has also contributed to work on the long non-coding RNAs of
 human cytomegalovirus (*Scientific Reports*, 2022) and on innate immune
-responses to mRNA vaccines (*Nature Communications*, 2024).
+responses to mRNA vaccines (*Nature Communications*, 2024). His current research focuses on uncovering new mechanisms of mRNA regulation and translating these insights into mRNA medicines.
 
 ## Education
 
