@@ -201,7 +201,7 @@
 - name: Yeekyung Moon
   photo: yeekyung-moon.jpg
   info: Graduate Student
-  intro: "Searching mRNAs for the secret of a long life"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
+  intro: "Investigating 3′ UTR-mediated mRNA stability"
   link: yeekyung-moon
   category: student
   sort-key: moon-yeekyung

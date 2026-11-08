@@ -12,16 +12,12 @@ image: /images/members/yeekyung-moon.jpg
 permalink: /people/yeekyung-moon
 ---
 
-{% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}
-Yeekyung Moon is a graduate student who studies what makes an mRNA last,
-from the elements in its 3′ UTR to the tail at its end. Along the way
-Yeekyung has built tools the whole lab now relies on, from knockout cell
-lines to a finely tuned electroporation routine, and has taught most of the
-lab how to use them.
-
-Yeekyung also looks after the lab's MiSeq sequencer and has organized its
-journal club and data meetings, with the same calm precision Yeekyung
-brings to the bench.
+Yeekyung is a graduate student combining strong passion with technical expertise
+to advance our understanding of mRNA stability. Her research focuses on uncovering
+unknown mechanisms of 3′ UTR-mediated human mRNA stabilization on a large scale.
+She utilizes massively parallel reporter assays to screen for mRNA-stabilizing sequences,
+identify interacting RNA-binding proteins, and define the precise molecular mechanisms
+driving mRNA stabilization.
 
 ## Education
 
