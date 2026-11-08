@@ -22,7 +22,9 @@ Biology*, 2023).
 
 Myeonghwan has also contributed to work on the long non-coding RNAs of
 human cytomegalovirus (*Scientific Reports*, 2022) and on innate immune
-responses to mRNA vaccines (*Nature Communications*, 2024). His current research focuses on uncovering new mechanisms of mRNA regulation and translating these insights into mRNA medicines.
+responses to mRNA vaccines (*Nature Communications*, 2024).
+
+His current research focuses on uncovering new mechanisms of mRNA regulation and translating these insights into mRNA medicines.
 
 ## Education
 

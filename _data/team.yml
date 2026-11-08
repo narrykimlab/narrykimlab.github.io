@@ -52,7 +52,7 @@
 - name: Eunji Kim
   photo: eunji-kim.jpg
   info: Research Technician
-  intro: "Clones made, plasmids prepped, lab kept safe"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
+  intro: "Cloning, prepping and keeping the whole lab safe"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
   email: "beautifulej@naver.com"
   link: eunji-kim
   category: research-assistant
@@ -90,7 +90,7 @@
 - name: Hyojin Park
   photo: hyojin-park.jpg
   info: Administrative Officer
-  intro: "The director's right hand, and the center's caretaker"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
+  intro: "Running the director's office and every corner of the center"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
   email: "anita9992@snu.ac.kr"
   link: hyojin-park
   category: support
@@ -128,7 +128,7 @@
 - name: Mijoo Sung
   photo: mijoo-sung.jpg
   info: Head of Administration Office
-  intro: "One step ahead of every deadline the center has"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
+  intro: "Keeping the center one step ahead of every deadline"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
   email: "mjsung@snu.ac.kr"
   link: mijoo-sung
   category: support
@@ -192,7 +192,7 @@
 - name: Sunyoung Bang
   photo: sunyoung-bang.jpg
   info: Research Technician
-  intro: "Whatever the lab needs, often before it asks"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
+  intro: "Getting the lab whatever it needs, often before it asks"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
   link: sunyoung-bang
   category: research-assistant
   sort-key: bang-sunyoung
