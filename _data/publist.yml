@@ -614,7 +614,7 @@
   vip: "3(1):101042"
   year: 2022
   doi: 10.1016/j.xpro.2021.101042
-  url: "https://star-protocols.cell.com/protocols/1338"
+  url: "https://doi.org/10.1016/j.xpro.2021.101042"
   topics: [mirna-biogenesis, methods]
 
 - authors:
@@ -2961,7 +2961,7 @@
   vip: "26(3):775-783"
   year: 2007
   doi: 10.1038/sj.emboj.7601512
-  url: "http://www.nature.com/emboj/journal/v26/n3/full/7601512a.html"
+  url: "https://doi.org/10.1038/sj.emboj.7601512"
   topics: [mirna-biogenesis]
 
 - authors:
@@ -2975,7 +2975,7 @@
   vip: "15(1):167-172"
   year: 2007
   doi: 10.1038/sj.mt.6300007
-  url: "http://www.nature.com/mt/journal/v15/n1/full/6300007a.html"
+  url: "https://doi.org/10.1038/sj.mt.6300007"
   topics: [other]
 
 - authors:
