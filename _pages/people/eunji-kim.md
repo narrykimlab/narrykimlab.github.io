@@ -2,7 +2,7 @@
 layout: member
 title: Eunji Kim
 position: Research Technician
-email: beautifulej@naver.com
+email: ej0819@snu.ac.kr
 github:
 orcid:
 scholar:
@@ -25,9 +25,8 @@ shelf with, and why, before you have quite finished asking.
 
 ## Education
 
-{% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}
 <ul class="chronological">
-  <li><span>2012–2016</span> B.S. in Droid Maintenance, Jedi Temple, Coruscant</li>
+  <li><span>2005–2009</span> B.S. in Biology, Chosun University</li>
 </ul>
 
 {% include publication_in_profile.html %}

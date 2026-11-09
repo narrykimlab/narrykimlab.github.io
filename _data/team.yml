@@ -52,8 +52,8 @@
 - name: Eunji Kim
   photo: eunji-kim.jpg
   info: Research Technician
-  intro: "Cloning, prepping and keeping the whole lab safe"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
-  email: "beautifulej@naver.com"
+  intro: "Preparing buffers, prepping plasmids and keeping the whole lab safe"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
+  email: "ej0819@snu.ac.kr"
   link: eunji-kim
   category: research-assistant
   sort-key: kim-eunji
@@ -109,7 +109,7 @@
 - name: Jihye Yang
   photo: jihye-yang.jpg
   info: Lab Operations Manager
-  intro: "Chasing microRNAs and RNA tails for over a decade"
+  intro: "Supporting research and keeping the lab running"
   email: "ing0614@gmail.com"
   link: jihye-yang
   category: research-assistant
@@ -192,7 +192,7 @@
 - name: Sunyoung Bang
   photo: sunyoung-bang.jpg
   info: Research Technician
-  intro: "Getting the lab whatever it needs, often before it asks"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
+  intro: "Getting the lab whatever it needs, often before it asks"
   link: sunyoung-bang
   category: research-assistant
   sort-key: bang-sunyoung
@@ -228,7 +228,7 @@
 - name: Youngjoon Pyo
   photo: youngjoon-pyo.jpg
   info: Graduate Student
-  intro: "Tracking TRIM25 as it sniffs out foreign RNA"
+  intro: "Studying how pH reshapes RNA–protein interactions"
   link: youngjoon-pyo
   category: student
   sort-key: pyo-youngjoon
@@ -237,7 +237,7 @@
 - name: Youngran Park
   photo: youngran-park.jpg
   info: Postdoctoral Fellow
-  intro: "Finding the tag SARS-CoV-2 uses to pack its genome"
+  intro: "Understanding exogenous RNA: from viruses to therapeutics"
   link: youngran-park
   category: postdoc
   sort-key: park-youngran

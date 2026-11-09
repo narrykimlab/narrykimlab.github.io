@@ -2,7 +2,7 @@
 layout: member
 title: Junyoung Park
 position: Graduate Student
-email: cluster.cmdr@junyoung.example  # placeholder
+email: jjun7793@snu.ac.kr
 github:
 orcid:
 scholar:
@@ -21,9 +21,9 @@ assisting microRNAs in clusters.
 
 ## Education
 
-{% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}
 <ul class="chronological">
-  <li><span>2016–2020</span> B.S. in Fleet Command, Starfleet Academy</li>
+  <li><span>2024–present</span> M.S./Ph.D. Student, School of Biological Sciences, Seoul National University</li>
+  <li><span>2020–2024</span> B.S. in Biological Sciences, Seoul National University</li>
 </ul>
 
 {% include publication_in_profile.html %}

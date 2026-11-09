@@ -13,8 +13,7 @@ permalink: /people/jihye-yang
 ---
 
 Jihye Yang is the lab operations manager and one of the lab's longest-serving
-members, with a hand in its work on microRNAs and RNA tailing for more than
-a decade. Jihye contributed to studies of the adenylation of maternally
+members. Jihye contributed to studies of the adenylation of maternally
 inherited microRNAs by Wispy (*Molecular Cell*, 2014), the single-nucleotide
 precision of primary microRNA processing (*Molecular Cell*, 2019), the
 roles of ERH (*Nucleic Acids Research*, 2020) and of DROSHA's proline-rich
@@ -25,10 +24,9 @@ that uncovered regulatory RNA elements (*Cell*, 2023).
 
 ## Education
 
-{% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}
 <ul class="chronological">
-  <li><span>2012–2014</span> M.S. in Library Science, Unseen University, Ankh-Morpork</li>
-  <li><span>2008–2012</span> B.S. in Ancient Runes, Hogwarts School of Witchcraft and Wizardry</li>
+  <li><span>2010–2012</span> M.S. in Microbiology, Ewha Womans University</li>
+  <li><span>2006–2010</span> B.S. in Chemistry, Duksung Women's University</li>
 </ul>
 
 {% include publication_in_profile.html %}

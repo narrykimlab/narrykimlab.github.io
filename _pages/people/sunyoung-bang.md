@@ -18,6 +18,7 @@ Sunyoung Bang supports the lab's daily operations, from reagent and buffer prepa
 
 <ul class="chronological">
   <li><span>2012–2014</span> M.S. in Medical Engineering, Kyung Hee University</li>
+  <li><span>2005–2007</span> B.S. in Biotechnology, The University of Suwon</li>
 </ul>
 
 {% include publication_in_profile.html %}
