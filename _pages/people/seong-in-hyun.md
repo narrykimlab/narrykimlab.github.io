@@ -2,7 +2,7 @@
 layout: member
 title: Seong-In Hyun
 position: Postdoctoral Fellow
-email: warp.shield@seongin.example  # placeholder
+email: sihyun9@gmail.com
 github:
 orcid:
 scholar: rmal-awAAAAJ
