@@ -149,7 +149,8 @@
       is_corresponding: true
   title: RNA stability enhancers for durable base-modified mRNA therapeutics
   journal: Nature Biotechnology
-  year: 2025
+  vip: "44(11):1831-1844"
+  year: 2026
   doi: 10.1038/s41587-025-02891-7
   url: "https://www.nature.com/articles/s41587-025-02891-7"
   topics: [viral-rna, mrna-stability]
