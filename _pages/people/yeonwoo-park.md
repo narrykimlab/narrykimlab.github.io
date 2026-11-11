@@ -34,9 +34,7 @@ steady while the molecular basis of the interaction kept drifting.
 ## Education
 
 <ul class="chronological">
-  <li><span>2017?–2022</span> Ph.D., The University of Chicago, USA</li>
-{% comment %}PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.{% endcomment %}
-  <li><span>2010–2014</span> B.S. in Dinosaur Resurrection, Isla Nublar Community College</li>
+  <li><span>2017–2022</span> Ph.D., The University of Chicago, USA</li>
 </ul>
 
 {% include publication_in_profile.html %}

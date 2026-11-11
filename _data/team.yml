@@ -52,7 +52,6 @@
 - name: Eunji Kim
   photo: eunji-kim.jpg
   info: Research Technician
-  intro: "Preparing buffers, prepping plasmids and keeping the whole lab safe"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
   email: "ej0819@snu.ac.kr"
   link: eunji-kim
   category: research-assistant
@@ -62,7 +61,6 @@
 - name: Eunju Shim
   photo: eunju-shim.jpg
   info: Administrative Officer
-  intro: "Keeping every grant on track, start to finish"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
   email: "shimej@snu.ac.kr"
   link: eunju-shim
   category: support
@@ -90,7 +88,6 @@
 - name: Hyojin Park
   photo: hyojin-park.jpg
   info: Administrative Officer
-  intro: "Running the director's office and every corner of the center"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
   email: "anita9992@snu.ac.kr"
   link: hyojin-park
   category: support
@@ -128,7 +125,6 @@
 - name: Mijoo Sung
   photo: mijoo-sung.jpg
   info: Head of Administration Office
-  intro: "Keeping the center one step ahead of every deadline"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
   email: "mjsung@snu.ac.kr"
   link: mijoo-sung
   category: support
@@ -152,15 +148,6 @@
   category: postdoc
   sort-key: kim-myeonghwan
   active: true
-
-- name: Seojin Lee
-  photo: seojin-lee.jpg
-  info: Graduate Student
-  intro: "Squeezing in extra experiments with a time-turner"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
-  link: seojin-lee
-  category: student
-  sort-key: lee-seojin
-  active: false
 
 - name: Sunghan Lee
   photo: sunghan-lee.jpg
@@ -206,15 +193,6 @@
   category: student
   sort-key: moon-yeekyung
   active: true
-
-- name: Yejin Moon
-  photo: yejin-moon.jpg
-  info: Research Assistant
-  intro: "Running three experiments at once, with two hands"  # PLACEHOLDER: invented, and over the top on purpose. Replace with the member's own.
-  link: yejin-moon
-  category: research-assistant
-  sort-key: moon-yejin
-  active: false
 
 - name: Yeonwoo Park
   photo: yeonwoo-park.jpg
