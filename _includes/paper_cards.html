@@ -28,7 +28,7 @@
 <a class="paper-card-title" href="{{ href }}">{{ publi.title }}</a>
 <span class="paper-card-authors">
 {%- for author in publi.authors -%}
-{%- if forloop.first -%}{%- elsif forloop.last and forloop.length >= 3 -%}, and {% else -%}, {% endif -%}
+{%- if forloop.first -%}{%- elsif forloop.last and forloop.length >= 3 -%}, and {% elsif forloop.last %} and {% else -%}, {% endif -%}
 {% include publication_author_name.html author=author %}
 {%- endfor -%}
 </span>

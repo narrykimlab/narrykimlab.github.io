@@ -13,6 +13,7 @@
 {%- if forloop.first -%}
 {%- elsif forloop.last and forloop.length >= 3 -%}
 , and
+{% elsif forloop.last %} and
 {% else -%},
 {% endif -%}
 {%- include publication_author_name.html author=author -%}
