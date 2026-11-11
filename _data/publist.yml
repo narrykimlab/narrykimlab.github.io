@@ -1477,7 +1477,7 @@
   vip: "361(6403):701-704"
   year: 2018
   doi: 10.1126/science.aam5794
-  url: "http://science.sciencemag.org/content/early/2018/07/18/science.aam5794.full"
+  url: "https://doi.org/10.1126/science.aam5794"
   topics: [mrna-stability]
   image: science.aam5794.jpg
 
@@ -1565,7 +1565,7 @@
   vip: "23(3):888-898"
   year: 2018
   doi: 10.1016/j.celrep.2018.03.089
-  url: "http://www.cell.com/cell-reports/abstract/S2211-1247(18)30450-9"
+  url: "https://doi.org/10.1016/j.celrep.2018.03.089"
   topics: [mrna-stability]
 
 - authors:
@@ -1601,7 +1601,7 @@
   vip: "70(1):72-82.e7"
   year: 2018
   doi: 10.1016/j.molcel.2018.03.004
-  url: "http://www.cell.com/molecular-cell/fulltext/S1097-2765(18)30185-0"
+  url: "https://doi.org/10.1016/j.molcel.2018.03.004"
   topics: [mrna-stability]
 
 - authors:
@@ -1621,7 +1621,7 @@
   vip: "24(7):892-898"
   year: 2018
   doi: 10.1261/rna.065862.118
-  url: "http://rnajournal.cshlp.org/content/24/7/892.long"
+  url: "https://doi.org/10.1261/rna.065862.118"
   topics: [mirna-biogenesis]
 
 - authors:
@@ -1653,7 +1653,7 @@
   vip: "66(2):258-269.e5"
   year: 2017
   doi: 10.1016/j.molcel.2017.03.013
-  url: "http://www.cell.com/molecular-cell/fulltext/S1097-2765(17)30203-4"
+  url: "https://doi.org/10.1016/j.molcel.2017.03.013"
   topics: [mirna-biogenesis]
 
 - authors:
@@ -1691,7 +1691,7 @@
   vip: "128(17):2117-2129"
   year: 2016
   doi: 10.1182/blood-2016-02-702464
-  url: "http://www.bloodjournal.org/content/128/17/2117.long?sso-checked=true"
+  url: "https://doi.org/10.1182/blood-2016-02-702464"
   topics: [mirna-function]
 
 - authors:
@@ -1717,7 +1717,7 @@
   vip: "30(14):1671-1682"
   year: 2016
   doi: 10.1101/gad.284802.116
-  url: "http://genesdev.cshlp.org/content/30/14/1671.abstract"
+  url: "https://doi.org/10.1101/gad.284802.116"
   topics: [mrna-stability, methods]
 
 - authors:
@@ -1743,7 +1743,7 @@
   vip: "49(1):150-160"
   year: 2016
   doi: 10.4143/crt.2015.462
-  url: "http://e-crt.org/journal/view.php?doi=10.4143/crt.2015.462"
+  url: "https://doi.org/10.4143/crt.2015.462"
   topics: [mirna-function]
 
 - authors:
@@ -1770,7 +1770,7 @@
   vip: "62(3):462-471"
   year: 2016
   doi: 10.1016/j.molcel.2016.04.007
-  url: "http://www.cell.com/molecular-cell/abstract/S1097-2765(16)30057-0"
+  url: "https://doi.org/10.1016/j.molcel.2016.04.007"
   topics: [mrna-stability]
 
 - authors:
@@ -1789,7 +1789,7 @@
   vip: "113(13):E1881-E1889"
   year: 2016
   doi: 10.1073/pnas.1602532113
-  url: "http://www.pnas.org/content/early/2016/03/11/1602532113.abstract"
+  url: "https://doi.org/10.1073/pnas.1602532113"
   topics: [mirna-biogenesis]
 
 - authors:
@@ -1815,7 +1815,7 @@
   vip: "164(1-2):81-90"
   year: 2016
   doi: 10.1016/j.cell.2015.12.019
-  url: "http://www.cell.com/cell/abstract/S0092-8674(15)01643-8"
+  url: "https://doi.org/10.1016/j.cell.2015.12.019"
   topics: [mirna-biogenesis]
 
 - authors:
@@ -1833,7 +1833,7 @@
   vip: "29(19):2004-2009"
   year: 2015
   doi: 10.1101/gad.267112.115
-  url: "http://genesdev.cshlp.org/content/29/19/2004.abstract"
+  url: "https://doi.org/10.1101/gad.267112.115"
   topics: [other]
 
 - authors:
@@ -1860,7 +1860,7 @@
   vip: "350(6256):82-87"
   year: 2015
   doi: 10.1126/science.aac7368
-  url: "http://www.sciencemag.org/content/350/6256/82.abstract"
+  url: "https://doi.org/10.1126/science.aac7368"
   topics: [other]
 
 - authors:
@@ -1887,7 +1887,7 @@
   vip: "112(26):E3384-E3391"
   year: 2015
   doi: 10.1073/pnas.1508821112
-  url: "http://www.pnas.org/content/early/2015/06/09/1508821112.abstract"
+  url: "https://doi.org/10.1073/pnas.1508821112"
   topics: [methods]
 
 - authors:
@@ -1911,7 +1911,7 @@
   vip: "17(6):838-851"
   year: 2015
   doi: 10.1016/j.chom.2015.05.014
-  url: "http://www.cell.com/cell-host-microbe/abstract/S1931-3128%2815%2900218-8"
+  url: "https://doi.org/10.1016/j.chom.2015.05.014"
   topics: [viral-rna, mirna-function]
 
 - authors:
@@ -1937,7 +1937,7 @@
   vip: "161(6):1374-1387"
   year: 2015
   doi: 10.1016/j.cell.2015.05.010
-  url: "http://www.cell.com/cell/abstract/S0092-8674(15)00558-9"
+  url: "https://doi.org/10.1016/j.cell.2015.05.010"
   topics: [mirna-biogenesis]
 
 - authors:
@@ -1970,7 +1970,7 @@
   vip: "34(13):1801-1815"
   year: 2015
   doi: 10.15252/embj.201590931
-  url: "http://emboj.embopress.org/content/early/2015/05/15/embj.201590931.long"
+  url: "https://doi.org/10.15252/embj.201590931"
   supplement: "https://github.com/hyeshik/bskim-2015-pre-miRNA"
   topics: [mirna-biogenesis]
 
@@ -2002,7 +2002,7 @@
   vip: "6(1):6810"
   year: 2015
   doi: 10.1038/ncomms7810
-  url: "http://www.nature.com/ncomms/2015/150410/ncomms7810/full/ncomms7810.html"
+  url: "https://doi.org/10.1038/ncomms7810"
   topics: [other]
 
 - authors:
@@ -2027,7 +2027,7 @@
   vip: "64(2):203-214"
   year: 2015
   doi: 10.1136/gutjnl-2013-306640
-  url: "http://gut.bmj.com/content/64/2/203"
+  url: "https://doi.org/10.1136/gutjnl-2013-306640"
   topics: [mirna-function]
 
 - authors:
@@ -2050,7 +2050,7 @@
   vip: "31(4):596-598"
   year: 2015
   doi: 10.1093/bioinformatics/btu676
-  url: "http://bioinformatics.oxfordjournals.org/content/31/4/596"
+  url: "https://doi.org/10.1093/bioinformatics/btu676"
   topics: [mirna-function, methods]
 
 - authors:
@@ -2079,7 +2079,7 @@
   vip: "159(6):1365-1376"
   year: 2014
   doi: 10.1016/j.cell.2014.10.055
-  url: "http://www.cell.com/abstract/S0092-8674(14)01427-5"
+  url: "https://doi.org/10.1016/j.cell.2014.10.055"
   topics: [mrna-stability]
 
 - authors:
@@ -2115,7 +2115,7 @@
   vip: "56(5):696-707"
   year: 2014
   doi: 10.1016/j.molcel.2014.10.011
-  url: "http://www.cell.com/molecular-cell/abstract/S1097-2765(14)00795-3#"
+  url: "https://doi.org/10.1016/j.molcel.2014.10.011"
   topics: [mirna-biogenesis]
 
 - authors:
@@ -2144,7 +2144,7 @@
   vip: "9(3):1061-1074"
   year: 2014
   doi: 10.1016/j.celrep.2014.09.039
-  url: "http://www.cell.com/cell-reports/abstract/S2211-1247(14)00822-5"
+  url: "https://doi.org/10.1016/j.celrep.2014.09.039"
   topics: [mirna-biogenesis, mirna-function]
 
 - authors:
@@ -2162,7 +2162,7 @@
   vip: "158(5):980-987"
   year: 2014
   doi: 10.1016/j.cell.2014.08.005
-  url: "http://www.cell.com/cell/abstract/S0092-8674%2814%2901000-9"
+  url: "https://doi.org/10.1016/j.cell.2014.08.005"
   topics: [mrna-stability]
 
 - authors:
@@ -2176,7 +2176,7 @@
   vip: "15(8):509-524"
   year: 2014
   doi: 10.1038/nrm3838
-  url: "http://www.nature.com/nrm/journal/v15/n8/full/nrm3838.html"
+  url: "https://doi.org/10.1038/nrm3838"
   topics: [mirna-biogenesis]
 
 - authors:
@@ -2203,7 +2203,7 @@
   vip: "28(12):1310-1322"
   year: 2014
   doi: 10.1101/gad.242644.114
-  url: "http://genesdev.cshlp.org/content/28/12/1310.short?rss=1"
+  url: "https://doi.org/10.1101/gad.242644.114"
   topics: [exogenous-rna]
 
 - authors:
@@ -2226,7 +2226,7 @@
   vip: "53(6):1044-1052"
   year: 2014
   doi: 10.1016/j.molcel.2014.02.007
-  url: "http://www.cell.com/molecular-cell/abstract/S1097-2765(14)00121-X"
+  url: "https://doi.org/10.1016/j.molcel.2014.02.007"
   topics: [mrna-stability, methods]
 
 - authors:
@@ -2239,7 +2239,7 @@
   vip: "28(5):477-478"
   year: 2014
   doi: 10.1016/j.devcel.2014.02.015
-  url: "http://www.cell.com/developmental-cell/retrieve/pii/S1534580714001312"
+  url: "https://doi.org/10.1016/j.devcel.2014.02.015"
   topics: [mirna-biogenesis]
 
 - authors:
@@ -2263,7 +2263,7 @@
   vip: "53(4):606-616"
   year: 2014
   doi: 10.1016/j.molcel.2014.01.003
-  url: "http://www.cell.com/molecular-cell/abstract/S1097-2765(14)00031-8"
+  url: "https://doi.org/10.1016/j.molcel.2014.01.003"
   topics: [mirna-biogenesis]
 
 - authors:
@@ -2339,7 +2339,7 @@
   vip: "7(7):5882-5891"
   year: 2013
   doi: 10.1021/nn401183s
-  url: "http://pubs.acs.org/doi/abs/10.1021/nn401183s"
+  url: "https://doi.org/10.1021/nn401183s"
   topics: [mirna-function, methods]
 
 - authors:
@@ -2355,7 +2355,7 @@
   vip: "38(1):30-37"
   year: 2013
   doi: 10.1016/j.tibs.2012.10.005
-  url: "http://www.sciencedirect.com/science/article/pii/S0968000412001600"
+  url: "https://doi.org/10.1016/j.tibs.2012.10.005"
   topics: [methods]
 
 - authors:
@@ -2382,7 +2382,7 @@
   vip: "41(D1):D252-D257"
   year: 2012
   doi: 10.1093/nar/gks1168
-  url: "http://nar.oxfordjournals.org/content/41/D1/D252.abstract"
+  url: "https://doi.org/10.1093/nar/gks1168"
   topics: [mirna-function, methods]
 
 - authors:
@@ -2416,7 +2416,7 @@
   vip: "151(4):765-777"
   year: 2012
   doi: 10.1016/j.cell.2012.10.019
-  url: "http://www.cell.com/abstract/S0092-8674(12)01234-2"
+  url: "https://doi.org/10.1016/j.cell.2012.10.019"
   topics: [rna-binding-proteins]
 
 - authors:
@@ -2450,7 +2450,7 @@
   vip: "151(3):521-532"
   year: 2012
   doi: 10.1016/j.cell.2012.09.022
-  url: "http://www.cell.com/abstract/S0092-8674(12)01129-4"
+  url: "https://doi.org/10.1016/j.cell.2012.09.022"
   topics: [mirna-biogenesis]
 
 - authors:
@@ -2469,7 +2469,7 @@
   vip: "40(18):8849-8861"
   year: 2012
   doi: 10.1093/nar/gks664
-  url: "http://nar.oxfordjournals.org/content/40/18/8849"
+  url: "https://doi.org/10.1093/nar/gks664"
   topics: [other]
 
 - authors:
@@ -2488,7 +2488,7 @@
   vip: "26(13):1427-1432"
   year: 2012
   doi: 10.1101/gad.192872.112
-  url: "http://genesdev.cshlp.org/content/26/13/1427.abstract"
+  url: "https://doi.org/10.1101/gad.192872.112"
   topics: [mirna-function]
 
 - authors:
@@ -2511,7 +2511,7 @@
   vip: "46(6):893-895"
   year: 2012
   doi: 10.1016/j.molcel.2012.05.036
-  url: "http://www.cell.com/molecular-cell/fulltext/S1097-2765%2812%2900481-9"
+  url: "https://doi.org/10.1016/j.molcel.2012.05.036"
   topics: [mirna-function, methods]
 
 - authors:
@@ -2525,7 +2525,7 @@
   vip: "46(4):384-386"
   year: 2012
   doi: 10.1016/j.molcel.2012.05.012
-  url: "http://www.sciencedirect.com/science/article/pii/S1097276512003966"
+  url: "https://doi.org/10.1016/j.molcel.2012.05.012"
   topics: [mirna-biogenesis]
 
 - authors:
@@ -2551,7 +2551,7 @@
   vip: "12(10):984-991"
   year: 2011
   doi: 10.1038/ni.2097
-  url: "http://www.nature.com/ni/journal/v12/n10/full/ni.2097.html"
+  url: "https://doi.org/10.1038/ni.2097"
   topics: [viral-rna, mirna-function]
 
 - authors:
@@ -2580,7 +2580,7 @@
   vip: "475(7355):201-205"
   year: 2011
   doi: 10.1038/nature10198
-  url: "http://www.nature.com/nature/journal/v475/n7355/full/nature10198.html"
+  url: "https://doi.org/10.1038/nature10198"
   topics: [mirna-biogenesis]
 
 - authors:
@@ -2604,7 +2604,7 @@
   vip: "12(7):690-696"
   year: 2011
   doi: 10.1038/embor.2011.100
-  url: "http://embor.embopress.org/content/12/7/690.long"
+  url: "https://doi.org/10.1038/embor.2011.100"
   topics: [mirna-biogenesis, methods]
 
 - authors:
@@ -2621,7 +2621,7 @@
   vip: "143(5):703-709"
   year: 2010
   doi: 10.1016/j.cell.2010.11.018
-  url: "http://www.cell.com/abstract/S0092-8674%2810%2901298-5"
+  url: "https://doi.org/10.1016/j.cell.2010.11.018"
   topics: [mirna-biogenesis]
 
 - authors:
@@ -2652,7 +2652,7 @@
   vip: "139(6):1096-1108"
   year: 2009
   doi: 10.1016/j.cell.2009.11.020
-  url: "http://www.cell.com/abstract/S0092-8674%2809%2901432-9"
+  url: "https://doi.org/10.1016/j.cell.2009.11.020"
   topics: [mirna-function]
 
 - authors:
@@ -2666,7 +2666,7 @@
   vip: "139(1):28-31"
   year: 2009
   doi: 10.1016/j.cell.2009.09.013
-  url: "http://www.cell.com/abstract/S0092-8674%2809%2901173-8"
+  url: "https://doi.org/10.1016/j.cell.2009.09.013"
   topics: [mirna-biogenesis]
 
 - authors:
@@ -2704,7 +2704,7 @@
   vip: "29(21):5789-5799"
   year: 2009
   doi: 10.1128/mcb.00653-09
-  url: "http://mcb.asm.org/content/29/21/5789.abstract"
+  url: "https://doi.org/10.1128/mcb.00653-09"
   topics: [mirna-function]
 
 - authors:
@@ -2742,7 +2742,7 @@
   vip: "138(4):696-708"
   year: 2009
   doi: 10.1016/j.cell.2009.08.002
-  url: "http://www.cell.com/abstract/S0092-8674(09)00964-7"
+  url: "https://doi.org/10.1016/j.cell.2009.08.002"
   topics: [mirna-biogenesis]
 
 - authors:
@@ -2773,7 +2773,7 @@
   vip: "37(5):1672-1681"
   year: 2009
   doi: 10.1093/nar/gkp002
-  url: "http://nar.oxfordjournals.org/content/37/5/1672.short"
+  url: "https://doi.org/10.1093/nar/gkp002"
   topics: [mirna-function]
 
 - authors:
@@ -2790,7 +2790,7 @@
   vip: "10(2):126-139"
   year: 2009
   doi: 10.1038/nrm2632
-  url: "http://www.nature.com/nrm/journal/v10/n2/pdf/nrm2632.pdf"
+  url: "https://doi.org/10.1038/nrm2632"
   topics: [mirna-biogenesis]
 
 - authors:
@@ -2820,7 +2820,7 @@
   vip: "136(1):75-84"
   year: 2009
   doi: 10.1016/j.cell.2008.10.053
-  url: "http://www.cell.com/retrieve/pii/S0092867408014906"
+  url: "https://doi.org/10.1016/j.cell.2008.10.053"
   topics: [mirna-biogenesis]
 
 - authors:
@@ -2845,7 +2845,7 @@
   vip: "16(1):23-29"
   year: 2009
   doi: 10.1038/nsmb.1533
-  url: "http://www.nature.com/nsmb/journal/v16/n1/full/nsmb.1533.html"
+  url: "https://doi.org/10.1038/nsmb.1533"
   topics: [mirna-function]
 
 - authors:
@@ -2873,7 +2873,7 @@
   vip: "32(2):276-284"
   year: 2008
   doi: 10.1016/j.molcel.2008.09.014
-  url: "http://www.cell.com/molecular-cell/abstract/S1097-2765(08)00660-6"
+  url: "https://doi.org/10.1016/j.molcel.2008.09.014"
   topics: [mirna-biogenesis]
 
 - authors:
@@ -2885,7 +2885,7 @@
   vip: "40(12):1391-1392"
   year: 2008
   doi: 10.1038/ng1208-1391
-  url: "http://www.nature.com/ng/journal/v40/n12/abs/ng1208-1391.html"
+  url: "https://doi.org/10.1038/ng1208-1391"
   topics: [mirna-function]
 
 - authors:
@@ -2897,7 +2897,7 @@
   vip: "133(1):25-26"
   year: 2008
   doi: 10.1016/j.cell.2008.03.015
-  url: "http://www.cell.com/abstract/S0092-8674(08)00390-5"
+  url: "https://doi.org/10.1016/j.cell.2008.03.015"
   topics: [mirna-biogenesis]
 
 - authors:
@@ -2927,7 +2927,7 @@
   vip: "27(6):938-950"
   year: 2007
   doi: 10.1016/j.molcel.2007.07.019
-  url: "http://www.cell.com/molecular-cell/abstract/S1097-2765(07)00492-3"
+  url: "https://doi.org/10.1016/j.molcel.2007.07.019"
   topics: [mrna-stability]
 
 - authors:
@@ -2947,7 +2947,7 @@
   vip: "14(9):847-853"
   year: 2007
   doi: 10.1038/nsmb1294
-  url: "http://www.nature.com/nsmb/journal/v14/n9/full/nsmb1294.html"
+  url: "https://doi.org/10.1038/nsmb1294"
   topics: [mirna-biogenesis]
 
 - authors:
@@ -2988,7 +2988,7 @@
   vip: "20(15):1993-1997"
   year: 2006
   doi: 10.1101/gad.1456106
-  url: "http://genesdev.cshlp.org/content/20/15/1993.abstract"
+  url: "https://doi.org/10.1101/gad.1456106"
   topics: [mirna-biogenesis]
 
 - authors:
@@ -3012,7 +3012,7 @@
   vip: "34(16):4622-4629"
   year: 2006
   doi: 10.1093/nar/gkl458
-  url: "http://nar.oxfordjournals.org/content/34/16/4622.short"
+  url: "https://doi.org/10.1093/nar/gkl458"
   topics: [mirna-biogenesis]
 
 - authors:
@@ -3026,7 +3026,7 @@
   vip: "22(3):165-173"
   year: 2006
   doi: 10.1016/j.tig.2006.01.003
-  url: "http://www.cell.com/trends/genetics/abstract/S0168-9525(06)00021-7"
+  url: "https://doi.org/10.1016/j.tig.2006.01.003"
   topics: [mirna-function]
 
 - authors:
@@ -3048,7 +3048,7 @@
   vip: "98(2):420-429"
   year: 2006
   doi: 10.1111/j.1471-4159.2006.03887.x
-  url: "http://onlinelibrary.wiley.com/doi/10.1111/j.1471-4159.2006.03887.x/abstract"
+  url: "https://doi.org/10.1111/j.1471-4159.2006.03887.x"
   topics: [mrna-stability, rna-binding-proteins]
 
 - authors:
@@ -3081,7 +3081,7 @@
   vip: "125(5):887-901"
   year: 2006
   doi: 10.1016/j.cell.2006.03.043
-  url: "http://www.cell.com/abstract/S0092-8674(06)00516-2"
+  url: "https://doi.org/10.1016/j.cell.2006.03.043"
   topics: [mirna-biogenesis]
 
 - authors:
@@ -3110,7 +3110,7 @@
   vip: "25(3):522-532"
   year: 2006
   doi: 10.1038/sj.emboj.7600942
-  url: "http://emboj.embopress.org/content/25/3/522"
+  url: "https://doi.org/10.1038/sj.emboj.7600942"
   topics: [mirna-biogenesis]
 
 - authors:
@@ -3133,7 +3133,7 @@
   vip: "33(11):3570-3581"
   year: 2005
   doi: 10.1093/nar/gki668
-  url: "http://nar.oxfordjournals.org/content/33/11/3570"
+  url: "https://doi.org/10.1093/nar/gki668"
   topics: [mirna-biogenesis, methods]
 
 - authors:
@@ -3150,7 +3150,7 @@
   vip: "51(1):1-12"
   year: 2005
   doi: 10.1002/glia.20179
-  url: "http://onlinelibrary.wiley.com/doi/10.1002/glia.20179/abstract"
+  url: "https://doi.org/10.1002/glia.20179"
   topics: [other]
 
 - authors:
@@ -3162,7 +3162,7 @@
   vip: "6(5):376-385"
   year: 2005
   doi: 10.1038/nrm1644
-  url: "http://www.nature.com/nrm/journal/v6/n5/full/nrm1644.html"
+  url: "https://doi.org/10.1038/nrm1644"
   topics: [mirna-biogenesis]
 
 - authors:
@@ -3174,7 +3174,7 @@
   vip: "19(1):1-15"
   year: 2005
   doi: 10.1016/s1016-8478(23)13130-x
-  url: "http://www.ncbi.nlm.nih.gov/pubmed/15750334"
+  url: "https://doi.org/10.1016/s1016-8478(23)13130-x"
   topics: [mirna-biogenesis, mirna-function]
 
 - authors:
@@ -3203,7 +3203,7 @@
   vip: "18(24):3016-3027"
   year: 2004
   doi: 10.1101/gad.1262504
-  url: "http://genesdev.cshlp.org/content/18/24/3016.abstract"
+  url: "https://doi.org/10.1101/gad.1262504"
   topics: [mirna-biogenesis]
 
 - authors:
@@ -3229,7 +3229,7 @@
   vip: "23(20):4051-4060"
   year: 2004
   doi: 10.1038/sj.emboj.7600385
-  url: "http://emboj.embopress.org/content/23/20/4051"
+  url: "https://doi.org/10.1038/sj.emboj.7600385"
   topics: [mirna-biogenesis]
 
 - authors:
@@ -3257,7 +3257,7 @@
   vip: "270(2):488-498"
   year: 2004
   doi: 10.1016/j.ydbio.2004.02.019
-  url: "http://www.sciencedirect.com/science/article/pii/S0012160604001381"
+  url: "https://doi.org/10.1016/j.ydbio.2004.02.019"
   topics: [mirna-function]
 
 - authors:
@@ -3269,7 +3269,7 @@
   vip: "14(4):156-159"
   year: 2004
   doi: 10.1016/j.tcb.2004.02.006
-  url: "http://www.cell.com/trends/cell-biology/abstract/S0962-8924(04)00053-4"
+  url: "https://doi.org/10.1016/j.tcb.2004.02.006"
   topics: [mirna-biogenesis]
 
 - authors:
@@ -3294,7 +3294,7 @@
   vip: "425(6956):415-419"
   year: 2003
   doi: 10.1038/nature01957
-  url: "http://www.nature.com/nature/journal/v425/n6956/full/nature01957.html"
+  url: "https://doi.org/10.1038/nature01957"
   topics: [mirna-biogenesis]
 
 - authors:
@@ -3312,5 +3312,5 @@
   vip: "21(17):4663-4670"
   year: 2002
   doi: 10.1093/emboj/cdf476
-  url: "http://www.ncbi.nlm.nih.gov/pmc/articles/PMC126204/"
+  url: "https://doi.org/10.1093/emboj/cdf476"
   topics: [mirna-biogenesis]
