@@ -13,7 +13,7 @@ permalink: /people/jieun-lee
 ---
 
 Jieun Lee is a research assistant working on mRNA therapeutics. Jieun
-contributed to a 2025 *Nature Biotechnology* study that identified RNA
+contributed to a 2026 *Nature Biotechnology* study that identified RNA
 stability enhancers able to make base-modified mRNA therapeutics last
 longer in cells, part of the lab's effort to bring what it has learned
 about RNA stability to medicine.

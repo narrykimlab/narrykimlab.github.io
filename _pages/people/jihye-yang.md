@@ -26,7 +26,7 @@ that uncovered regulatory RNA elements (*Cell*, 2023).
 
 <ul class="chronological">
   <li><span>2010–2012</span> M.S. in Microbiology, Ewha Womans University</li>
-  <li><span>2006–2010</span> B.S. in Chemistry, Duksung Women's University</li>
+  <li><span>2006–2010</span> B.S. in Chemistry, Duksung Women’s University</li>
 </ul>
 
 {% include publication_in_profile.html %}

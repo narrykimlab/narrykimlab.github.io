@@ -38,7 +38,7 @@ the University of Pennsylvania, she returned to Seoul National University in
 
 She is a Foreign Member of the Royal Society, a Foreign Associate of the US
 National Academy of Sciences and of EMBO, and a member of the Korean Academy
-of Science and Technology. Her honors include the L'Oréal-UNESCO Women in
+of Science and Technology. Her honors include the L’Oréal-UNESCO Women in
 Science Award (2008), the Ho-Am Prize in Medicine (2009), the HUGO Chen
 Award (2017), the Asan Award in Medicine (2019), the Lim Sung Ki
 Researcher Award (2024), the Changjo Medal of the Order of Science and
@@ -94,7 +94,7 @@ Award (2027). She serves on the Board of Reviewing Editors of
   <li><span>2010</span> National Honor Scientist, Ministry of Education, Science and Technology</li>
   <li><span>2010</span> Amore Pacific Grand Prize, Amore Pacific and KOFWST</li>
   <li><span>2009</span> Ho-Am Prize in Medicine, Ho-Am Foundation</li>
-  <li><span>2008</span> L'Oréal-UNESCO Women in Science Award, L'Oréal and UNESCO</li>
+  <li><span>2008</span> L’Oréal-UNESCO Women in Science Award, L’Oréal and UNESCO</li>
   <li><span>2007</span> Woman Scientist of the Year, Ministry of Science and Technology</li>
   <li><span>2007</span> Young Scientist Award, Ministry of Science and Technology</li>
   <li><span>2007</span> Thomson Scientific Citation Award, Thomson Corporation</li>
@@ -126,16 +126,16 @@ Award (2027). She serves on the Board of Reviewing Editors of
   <li><span>2027</span> Organizer, Keystone Symposium on RNA: Regulatory RNAs, Non-Coding RNAs, RNA Modifications, Seoul, Republic of Korea</li>
   <li><span>2027</span> Organizer, EMBL Conference: RNA-binding proteins, Kingdom of Saudi Arabia</li>
   <li><span>2025</span> Organizer, Asia RNA Club Symposium, Seoul, Republic of Korea</li>
-  <li><span>2025</span> Scientific Organiser, EMBL Conference: The expanding world of RBPs: from posttranscriptional control to riboregulation, Heidelberg, Germany</li>
+  <li><span>2025</span> Scientific Organizer, EMBL Conference: The expanding world of RBPs: from posttranscriptional control to riboregulation, Heidelberg, Germany</li>
   <li><span>2024</span> Co-Chair, AACR Special Conference in Cancer Research: RNAs as Drivers, Targets, and Therapeutics in Cancer, Bellevue, Washington, USA</li>
   <li><span>2022–present</span> Organizer, Asia RNA Club meeting, virtual</li>
-  <li><span>2022</span> Scientific Organiser, EMBO Workshop: The Epitranscriptome, virtual</li>
-  <li><span>2021</span> Scientific Organiser, EMBO | EMBL Symposium: The Non-Coding Genome, virtual</li>
+  <li><span>2022</span> Scientific Organizer, EMBO Workshop: The Epitranscriptome, virtual</li>
+  <li><span>2021</span> Scientific Organizer, EMBO | EMBL Symposium: The Non-Coding Genome, virtual</li>
   <li><span>2021</span> Organizer, IBS-SNU Mini-Symposia on RNA Biology &amp; Therapeutics, virtual</li>
   <li><span>2021</span> Organizer, The 26th Annual Meeting of the RNA Society, virtual</li>
   <li><span>2021</span> Organizer, International Conference of the Korean Society for Molecular and Cellular Biology, Jeju, Republic of Korea</li>
   <li><span>2020</span> Organizer, CSHA COVID-19/SARS-CoV-2 Rapid Research Reports, virtual</li>
-  <li><span>2019</span> Scientific Organiser, EMBO | EMBL Symposium: The Non-Coding Genome, Heidelberg, Germany</li>
+  <li><span>2019</span> Scientific Organizer, EMBO | EMBL Symposium: The Non-Coding Genome, Heidelberg, Germany</li>
   <li><span>2019</span> Organizer, Keystone Symposia, Whistler, British Columbia, Canada</li>
   <li><span>2014</span> Co-Organizer, Keystone Symposia</li>
   <li><span>2011</span> Co-Organizer, Keystone Symposia</li>

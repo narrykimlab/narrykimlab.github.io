@@ -134,7 +134,7 @@
 - name: Minseok Jeong
   photo: minseok-jeong.jpg
   info: Graduate Student
-  intro: "Watching molecules before they become themselves"
+  intro: "Studying the chemistry between RNA and proteins"
   link: minseok-jeong
   category: student
   sort-key: jeong-minseok
@@ -143,7 +143,7 @@
 - name: Myeonghwan Kim
   photo: myeonghwan-kim.jpg
   info: Postdoctoral Fellow
-  intro: "Shadowing the cell's patrol for foreign RNA"
+  intro: "Shadowing the cell’s patrol for foreign RNA"
   link: myeonghwan-kim
   category: postdoc
   sort-key: kim-myeonghwan
@@ -152,7 +152,7 @@
 - name: Sunghan Lee
   photo: sunghan-lee.jpg
   info: Graduate Student
-  intro: "Profiling the 3' UTR landscape"
+  intro: "Profiling the 3′ UTR landscape"
   link: sunghan-lee
   category: student
   sort-key: lee-sunghan

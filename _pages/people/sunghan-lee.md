@@ -15,7 +15,7 @@ permalink: /people/sunghan-lee
 Sunghan Lee is a graduate student who studies how sequences in the 3′ untranslated
 region (3′ UTR) regulate mRNA stability. Sunghan was a co-first author of a study
 identifying viral RNA elements that enhance the stability and protein output of
-base-modified mRNAs (*Nature Biotechnology*, 2025), and of a study showing how
+base-modified mRNAs (*Nature Biotechnology*, 2026), and of a study showing how
 SARS-CoV-2 Nsp2 recruits the host protein GIGYF2 to support viral protein production
 (*Nucleic Acids Research*, 2025). Sunghan has also contributed to work on innate immune responses to mRNA vaccines
 (*Nature Communications*, 2024).
