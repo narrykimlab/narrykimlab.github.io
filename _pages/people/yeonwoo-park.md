@@ -12,29 +12,36 @@ image: /images/members/yeonwoo-park.jpg
 permalink: /people/yeonwoo-park
 ---
 
-Yeonwoo Park is a postdoctoral fellow who brings an evolutionary eye to
-molecular biology. In doctoral research at the University of Chicago with
-Joseph Thornton, Yeonwoo studied how epistasis and contingency shape the
-paths open to proteins as they evolve, showing that epistatic drift makes
-protein evolution gradually less predictable (*Science*, 2022) and that
-protein sequence–function relationships are, for the most part, simple
-(*Nature Communications*, 2024). Earlier work dealt with how mTORC1
-balances the supply of amino acids with the demand for protein synthesis
-(*Cell Reports*, 2017) and with the cis-regulatory evolution of FOXO1
-(*Molecular Biology and Evolution*, 2016).
+Yeonwoo studies molecular mechanisms as both evolving entities and tractable
+models for evolutionary questions. During his Ph.D. with Joseph Thornton at the
+University of Chicago, Yeonwoo showed that protein evolution is predictably
+uncertain: although epistatic interactions alter the effects of possible
+mutations as the protein evolves, each effect follows Brownian motion, drifting
+at a constant rate without bias (*Science*, 2022). Yeonwoo also showed that
+protein sequence–function relationships are simpler than previously thought,
+learnable from a tiny fraction of possible sequences (*Nature Communications*, 2024).
 
-In the lab, Yeonwoo studies how essential molecular interactions change
-over evolutionary time. In a 2026 *Cell Systems* paper with V. Narry Kim,
-Yeonwoo traced the interaction between primary microRNAs and their
-processing enzyme across 460 million years of vertebrate evolution,
-measuring the processing of more than a thousand ancestral and present-day
-primary microRNAs and all of their point mutants: the processing rate held
-steady while the molecular basis of the interaction kept drifting.
+Since joining the lab in late 2022, Yeonwoo established miRNA processing as a
+model to demonstrate that evolution constantly samples alternative mechanisms
+for the same molecular task (*Cell Systems*, 2026). He measured how quickly millions
+of miRNA precursors are cleaved by the human processing complex, and is
+collaborating with Hyejun Kim to train a neural network that can predict the cleavage
+rates of arbitrary sequences. They will use the network to find unknown miRNAs,
+noncanonical processing substrates, and processing-deficient genetic variants,
+as well as to reveal the rate and mechanism of miRNA birth. In another ongoing
+project, Yeonwoo built a pipeline to mine and assay millions of self-cleaving
+ribozymes, uncovering novel ribozyme classes and the first circular mRNA pathway
+in bacteria and phages.
+
+Yeonwoo is an avid cyclist; his favorite route is a 130-km riverside path from
+SNU to Chuncheon. Yeonwoo serves Miao Miao and Little Cat, an American Longhair
+and Siamese who accompanied his journey from Chicago to Seoul.
 
 ## Education
 
 <ul class="chronological">
-  <li><span>2017–2022</span> Ph.D., The University of Chicago, USA</li>
+  <li><span>2017–2022</span> Ph.D. in Genetics, Genomics &amp; Systems Biology, University of Chicago</li>
+  <li><span>2010–2014</span> B.S. in Molecular Biophysics &amp; Biochemistry, Yale University</li>
 </ul>
 
 {% include publication_in_profile.html %}
