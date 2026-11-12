@@ -539,7 +539,7 @@
   // visit (localStorage). Nothing but "en" or "ko" is ever written, and what
   // is read back is used only if it is one of the languages on the page: the
   // storage belongs to the whole origin, which any other page served from
-  // narrykimlab.github.io would share. Storage a browser refuses (a private
+  // narrykim.org would share. Storage a browser refuses (a private
   // window, blocked site data) throws, and the choice then lasts the visit.
   const LANG_KEY = 'nkl-internship-lang';
   document.querySelectorAll('.internship').forEach((box) => {

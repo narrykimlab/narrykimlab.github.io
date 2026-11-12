@@ -5,8 +5,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Project Overview
 
 Jekyll 4 static site for the Narry Kim Lab (RNA biology) at the Institute for Basic Science
-and Seoul National University, meant to go live at **narrykim.org** in place of the
-lab's WordPress site there. English only.
+and Seoul National University, live at **narrykim.org**, where it replaced the lab's
+WordPress site. English only.
 
 The design and the code are the Chang lab's site (qbio.io, `../ChangLabSNU.github.io`)
 with its colours changed; the content came from the old narrykim.org. When in doubt about
@@ -89,7 +89,7 @@ Tech stack: Jekyll 4.x (Gemfile pins `~> 4.3`), Kramdown (GFM), Liquid templates
   kept in `localStorage` under `nkl-internship-lang`, the only thing the site stores
   in a visitor's browser. Only "en" or "ko" is written, and a value read back is used
   only if it is a language on the page, since the storage is the whole origin's (any
-  page served from narrykimlab.github.io shares it); storage the browser refuses is
+  page served from narrykim.org shares it); storage the browser refuses is
   caught, and the choice then lasts the visit.
 - Home's first screen fills the window, as on the Chang lab site: the masthead is at
   least `100svh`, the hero text sits 7:3 in the space it has, and the scene lies along
@@ -456,8 +456,7 @@ activity; re-enable the workflow in the Actions tab if the order stops changing)
 `.github/workflows/external-links.yml` checks outbound links every Monday and keeps a
 single "Broken external links" issue open while any fail; it ignores 403/429, which
 publishers send to every bot. Dependabot proposes action and gem updates monthly.
-There is no `CNAME` yet: add one holding `narrykim.org` when the domain moves here.
-Until then the site is served at narrykimlab.github.io while narrykim.org is still the
-old WordPress site, so `url` in `_config.yml` is `https://narrykimlab.github.io`: the
-canonical, Open Graph, sitemap and `robots.txt` addresses follow it, and a link preview
-(Notion, Slack) can load its image. Set it back to `https://narrykim.org` with the CNAME.
+The `CNAME` file holds `narrykim.org`, the custom domain set in the repository's Pages
+settings (an Actions deployment takes it from there, not from the file), and `url` in
+`_config.yml` is `https://narrykim.org`: the canonical, Open Graph, sitemap and
+`robots.txt` addresses follow it. narrykimlab.github.io redirects there.
