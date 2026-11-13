@@ -1,6 +1,7 @@
 {%- comment -%}
   The people page's member cards: the active members whose category is in
-  selected_categories, by sort-key, each a link to the profile. Photos are
+  selected_categories, by sort-key, each a link to the profile (but for a
+  member with `has_profile: false`, who has none: _plugins/profiles.rb). Photos are
   cropped to 4:5 by CSS, whatever shape the file is. With order="monthly"
   the cards are shuffled into an order that changes every month
   (_plugins/monthly_shuffle.rb).
@@ -16,13 +17,13 @@
 {%- if include.order == "monthly" %}{% assign members_by_name = members_by_name | monthly_shuffle %}{% endif -%}
 <div class="team-grid" markdown="0">
 {%- for member in members_by_name %}
-{% if member.link %}<a class="team-card" href="{{ site.baseurl }}/people/{{ member.link }}">{% else %}<div class="team-card">{% endif %}
+{% if member.link and member.has_profile %}<a class="team-card" href="{{ site.baseurl }}/people/{{ member.link }}">{% else %}<div class="team-card">{% endif %}
 {% picture member-card images/members/{{ member.photo }} alt="" %}
 <span class="team-card-name">{{ member.name }}</span>
 <span class="team-role">{{ member.info }}</span>
 {%- if member.intro %}
 <span class="team-card-intro">{{ member.intro }}</span>
 {%- endif %}
-{% if member.link %}</a>{% else %}</div>{% endif %}
+{% if member.link and member.has_profile %}</a>{% else %}</div>{% endif %}
 {%- endfor %}
 </div>

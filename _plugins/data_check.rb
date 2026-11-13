@@ -89,7 +89,10 @@ module Jekyll
       end
 
       # A member without `link` has no profile: their card is not a link, and
-      # no author can point at them.
+      # no author can point at them. One with `link` says whether their
+      # profile page is built (`has_profile`, _plugins/profiles.rb); with
+      # `has_profile: false` the page may be kept or not, and authors may still
+      # name them by `link`, unlinked.
       def check_team
         links = {}
         @team_names = {}
@@ -104,8 +107,15 @@ module Jekyll
           end
           if (link = m["link"])
             problem("team", m, i, "link #{link.inspect} is used by an earlier entry too") if links.key?(link)
-            problem("team", m, i, "no profile page _pages/people/#{link}.md") unless member_page?(link)
+            unless [true, false].include?(m["has_profile"])
+              problem("team", m, i, "`has_profile` must be true or false, not #{m["has_profile"].inspect}")
+            end
+            if m["has_profile"] == true && !member_page?(link)
+              problem("team", m, i, "no profile page _pages/people/#{link}.md")
+            end
             links[link] = true
+          elsif m.key?("has_profile")
+            problem("team", m, i, "`has_profile` without a `link` to name the page")
           end
           if m["photo"] && !source_file?("images/members/#{m["photo"]}")
             problem("team", m, i, "photo images/members/#{m["photo"]} does not exist")

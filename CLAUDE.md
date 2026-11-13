@@ -187,15 +187,21 @@ invocation is in `.github/workflows/jekyll.yml` and README.md. Run it before pus
 
 All dynamic content lives in YAML data files. `_plugins/data_check.rb` checks them on every
 build and fails it with a list of problems: missing required fields, an author `link` that
-is not in team.yml, unknown categories or topics, a non-boolean `active`, missing photos,
-years or dates out of order, icon names missing from `icons.yml`. Its rules mirror what
-the templates read -- when a template starts reading a new field, update the matching rule.
+is not in team.yml, unknown categories or topics, a non-boolean `active` or `has_profile`,
+missing photos, years or dates out of order, icon names missing from `icons.yml`. Its
+rules mirror what the templates read -- when a template starts reading a new field,
+update the matching rule.
 
 - **team.yml** — Members, current (`active: true`, shown on /people/) and former. Fields:
   `name`, `photo` (file in `images/members/`), `info` (the role line), `category`
   (principal-investigator/postdoc/student/research-assistant/support), `sort-key`
-  (lastname-firstname), `active`, optional `intro` (one line on the card), `email`, and
-  `link`, the slug of the profile page `_pages/people/<link>.md`.
+  (lastname-firstname), `active`, optional `intro` (one line on the card), `email`,
+  `link`, the slug of the profile page `_pages/people/<link>.md`, and `has_profile`, true or
+  false, whether that page is built. With `has_profile: false` (the administration office's
+  staff, and anyone with nothing to say on a page) `_plugins/profiles.rb` leaves the page
+  out of the site, so its address is a 404 and the sitemap skips it, and nothing links to
+  it: the card is not a link, and as an author (still named by `link`) the name is plain.
+  The page's file stays, on the Notion page too, so setting `true` again brings it back.
 - **publist.yml** — Papers, newest first; /publications/ groups them by `year` as they
   come, so the order matters (the data check enforces it). Fields: `authors`, `title`,
   `journal`, `year`, `vip` (optional: `volume(issue):pages` with the last page in full,
@@ -293,10 +299,10 @@ pages opens with chips to the other, as the publication pages do.
 - **team_lead.html** — The people page's opening band: the PI's photo, role, name, intro
   and buttons (her full profile, email).
 - **team_list.html** — The member cards (4:5 photo, name, role, optional intro; each a link
-  to the profile), for the active members in `selected_categories`. With
-  `order="monthly"` they are shuffled into an order seeded by the month in Korea
-  (`_plugins/monthly_shuffle.rb`); `TEAM_ORDER_MONTH=2026-11` builds as if it were
-  another month.
+  to the profile, unless `has_profile: false`), for the active members in
+  `selected_categories`. With `order="monthly"` they are shuffled into an order seeded
+  by the month in Korea (`_plugins/monthly_shuffle.rb`); `TEAM_ORDER_MONTH=2026-11`
+  builds as if it were another month.
 - **publication_entry.html** — One publication (title, authors, journal, year, volume,
   then, on the same line, its Cite button), used on the publication pages and the profiles;
   **research_papers.html** puts a Research section's newest two papers marked
@@ -308,8 +314,8 @@ pages opens with chips to the other, as the publication pages do.
   journal to the paper's entry on /publications/ (`#paper-<cite_id>`, an anchor that
   page alone has, since the topic page lists a paper more than once);
   **publication_author_list.html** formats its authors, each name through
-  **publication_author_name.html** (a link to the profile, or to the former member's
-  entry on /people/, or plain);
+  **publication_author_name.html** (a link to the profile, unless its member has
+  `has_profile: false`, or to the former member's entry on /people/, or plain);
   **publication_extras.html** is the book chapters the publication pages end
   with; **cite_dialog.html** is the Cite window, included once by each page that lists
   papers.
@@ -318,7 +324,8 @@ pages opens with chips to the other, as the publication pages do.
 
 ### Add a team member
 
-1. Add an entry to `_data/team.yml` with `active: true`
+1. Add an entry to `_data/team.yml` with `active: true` and `has_profile: true` (`false`
+   for a member shown by card alone)
 2. Create `_pages/people/<link>.md` (copy an existing one): front matter `layout: member`,
    `title` (the name), `position`, then every link key, left empty where there is none
    (an empty one shows no button, and the member can fill it in): `email`, `github`,
@@ -411,7 +418,8 @@ description from `title` and `position`. `sitemap: false` excludes a page from t
   `<script src="/js/x.js?v={{ '/js/x.js' | fingerprint }}" integrity="{{ '/js/x.js' | sri }}">`.
   Use both for every script tag. Without the fingerprint, a browser holding the old file in
   its cache finds it fails the new page's integrity check and runs no script at all.
-  `_plugins/data_check.rb` validates `_data/` (see above). `_plugins/citations.rb`
+  `_plugins/data_check.rb` validates `_data/` (see above); `_plugins/profiles.rb` leaves
+  out the profile pages of members with `has_profile: false`. `_plugins/citations.rb`
   gives each paper and chapter a `cite_id` (its BibTeX key) and writes every citation
   into `/publications/cite.json`, with Liquid off for that file (BibTeX's `{{`).
 - Photos go through `{% picture <preset> <path> alt="..." %}` (`_plugins/picture.rb`), not a

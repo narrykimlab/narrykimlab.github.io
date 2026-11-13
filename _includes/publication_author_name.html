@@ -1,6 +1,7 @@
 {%- comment -%}
   One author's name, as printed in the data: a link to their profile for a
-  lab member with one (`link`), a link to their entry among the former
+  lab member with one (`link`, to a team.yml entry without `has_profile: false`;
+  a member without a profile page is left plain), a link to their entry among the former
   members on the people page for one whose `full_name` is a name in
   _data/alumni_members.yml, and plain text otherwise. Used by the paper
   lists (_includes/publication_author_list.html) and the Research page's
@@ -9,7 +10,12 @@
     {% include publication_author_name.html author=author %}
 {%- endcomment -%}
 {%- if include.author.link -%}
+  {%- assign member = site.data.team | where: "link", include.author.link | first -%}
+  {%- if member.has_profile -%}
   <a class="publi_author" href="{{ site.baseurl }}/people/{{ include.author.link }}">{{ include.author.name }}</a>
+  {%- else -%}
+  <span class="publi_author">{{ include.author.name }}</span>
+  {%- endif -%}
 {%- elsif include.author.full_name -%}
   {%- assign alumnus = site.data.alumni_members | where: "name", include.author.full_name | first -%}
   {%- if alumnus -%}

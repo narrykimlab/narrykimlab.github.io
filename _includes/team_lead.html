@@ -15,7 +15,7 @@
 <p class="team-lead-intro">{{ member.intro }}</p>
 {%- endif %}
 <div class="chip-row">
-{%- if member.link %}<a class="chip" href="{{ site.baseurl }}/people/{{ member.link }}">{% include icon.html name="user" %}Full profile</a>{% endif %}
+{%- if member.link and member.has_profile %}<a class="chip" href="{{ site.baseurl }}/people/{{ member.link }}">{% include icon.html name="user" %}Full profile</a>{% endif %}
 {%- if member.email %}{% include email_chip.html address=member.email name=member.name %}{% endif %}
 </div>
 </div>

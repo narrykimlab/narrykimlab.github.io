@@ -1,5 +1,7 @@
 # Lab members, current (active: true, on /people/) and former (active: false,
 # kept so their profile and the links to it from publist.yml keep working).
+# `has_profile: false` keeps a member's page _pages/people/<link>.md out of the
+# site (its address is a 404) and their name unlinked everywhere.
 # Fields are described in CLAUDE.md.
 
 - name: V. Narry Kim
@@ -8,6 +10,7 @@
   email: "narrykim@snu.ac.kr"
   intro: Finding out how RNA regulates genes, and turning it into new molecular tools
   link: v-narry-kim
+  has_profile: true
   category: principal-investigator
   sort-key: kim-v-narry
   active: true
@@ -17,6 +20,7 @@
   info: Graduate Student
   intro: "Hunting viral RNA elements that keep mRNAs stable and busy"
   link: chemin-lee
+  has_profile: true
   category: student
   sort-key: lee-chemin
   active: true
@@ -27,6 +31,7 @@
   intro: "Combing viral genomes for regulatory RNA elements"
   email: "daeun7291@gmail.com"
   link: da-eun-choi
+  has_profile: true
   category: research-assistant
   sort-key: choi-da-eun
   active: true
@@ -36,6 +41,7 @@
   info: Graduate Student
   intro: "Exploring how the functions of RNA elements are shaped by proteins"
   link: daniel-lee
+  has_profile: true
   category: student
   sort-key: lee-daniel
   active: true
@@ -45,6 +51,7 @@
   info: Graduate Student
   intro: "Finding RNA elements that make mRNAs last and work harder"
   link: dongbin-lim
+  has_profile: true
   category: student
   sort-key: lim-dongbin
   active: true
@@ -54,6 +61,7 @@
   info: Research Technician
   email: "ej0819@snu.ac.kr"
   link: eunji-kim
+  has_profile: false
   category: research-assistant
   sort-key: kim-eunji
   active: true
@@ -63,6 +71,7 @@
   info: Administrative Officer
   email: "shimej@snu.ac.kr"
   link: eunju-shim
+  has_profile: false
   category: support
   sort-key: shim-eunju
   active: true
@@ -72,6 +81,7 @@
   info: Graduate Student
   intro: "Turning sequencing data into stories about RNA"
   link: hyejun-kim
+  has_profile: true
   category: student
   sort-key: kim-hyejun
   active: true
@@ -81,6 +91,7 @@
   info: Graduate Student
   intro: "Catching viruses as they tailor their poly(A) tails"
   link: hyemin-choi
+  has_profile: true
   category: student
   sort-key: choi-hyemin
   active: true
@@ -90,6 +101,7 @@
   info: Administrative Officer
   email: "anita9992@snu.ac.kr"
   link: hyojin-park
+  has_profile: false
   category: support
   sort-key: park-hyojin
   active: true
@@ -99,6 +111,7 @@
   info: Research Assistant
   intro: "Helping mRNA medicines last longer in cells"
   link: jieun-lee
+  has_profile: true
   category: research-assistant
   sort-key: lee-jieun
   active: true
@@ -109,6 +122,7 @@
   intro: "Supporting research and keeping the lab running"
   email: "ing0614@gmail.com"
   link: jihye-yang
+  has_profile: true
   category: research-assistant
   sort-key: yang-jihye
   active: true
@@ -118,6 +132,7 @@
   info: Graduate Student
   intro: "Catching ERH as it helps the Microprocessor make microRNAs"
   link: junyoung-park
+  has_profile: true
   category: student
   sort-key: park-junyoung
   active: true
@@ -127,6 +142,7 @@
   info: Head of Administration Office
   email: "mjsung@snu.ac.kr"
   link: mijoo-sung
+  has_profile: false
   category: support
   sort-key: sung-mijoo
   active: true
@@ -136,6 +152,7 @@
   info: Graduate Student
   intro: "Studying the chemistry between RNA and proteins"
   link: minseok-jeong
+  has_profile: true
   category: student
   sort-key: jeong-minseok
   active: true
@@ -145,6 +162,7 @@
   info: Postdoctoral Fellow
   intro: "Shadowing the cell’s patrol for foreign RNA"
   link: myeonghwan-kim
+  has_profile: true
   category: postdoc
   sort-key: kim-myeonghwan
   active: true
@@ -154,6 +172,7 @@
   info: Graduate Student
   intro: "Profiling the 3′ UTR landscape"
   link: sunghan-lee
+  has_profile: true
   category: student
   sort-key: lee-sunghan
   active: true
@@ -163,6 +182,7 @@
   info: Postdoctoral Fellow
   intro: "Studying RNA alarms in cells, and mRNAs built to last"
   link: seong-in-hyun
+  has_profile: true
   category: postdoc
   sort-key: hyun-seong-in
   active: true
@@ -172,6 +192,7 @@
   info: Graduate Student
   intro: "Mining for negative regulators of mRNA stability"
   link: seongjae-ken-kim
+  has_profile: true
   category: student
   sort-key: kim-seongjae-ken
   active: true
@@ -181,6 +202,7 @@
   info: Research Technician
   intro: "Getting the lab whatever it needs, often before it asks"
   link: sunyoung-bang
+  has_profile: true
   category: research-assistant
   sort-key: bang-sunyoung
   active: true
@@ -190,6 +212,7 @@
   info: Graduate Student
   intro: "Investigating 3′ UTR-mediated mRNA stability"
   link: yeekyung-moon
+  has_profile: true
   category: student
   sort-key: moon-yeekyung
   active: true
@@ -199,6 +222,7 @@
   info: Postdoctoral Fellow
   intro: "Uncovering new RNA elements and their evolution"
   link: yeonwoo-park
+  has_profile: true
   category: postdoc
   sort-key: park-yeonwoo
   active: true
@@ -208,6 +232,7 @@
   info: Graduate Student
   intro: "Studying how pH reshapes RNA–protein interactions"
   link: youngjoon-pyo
+  has_profile: true
   category: student
   sort-key: pyo-youngjoon
   active: true
@@ -217,6 +242,7 @@
   info: Postdoctoral Fellow
   intro: "Understanding exogenous RNA: from viruses to therapeutics"
   link: youngran-park
+  has_profile: true
   category: postdoc
   sort-key: park-youngran
   active: true
