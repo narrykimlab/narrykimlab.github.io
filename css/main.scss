@@ -1060,12 +1060,28 @@ div#textid h3 {
 
 /* The card -- the link -- is only as wide as its photo; the rest of the
    column is plain grid space, so a click or focus ring frames the photo
-   instead of running past it. */
+   instead of running past it. A member without a profile page has a button
+   instead, which opens a window with their email (.contact-dialog), and
+   looks the same. */
 .team-card, a.team-card:hover, a.team-card:focus-visible {
     display: block;
     max-width: 180px;
     color: var(--muted);
     text-decoration: none;
+}
+
+/* A button stretched to its grid row's height would centre what it holds;
+   align-self keeps it as tall as the card, its photo level with the rest. */
+button.team-card {
+    align-self: start;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: none;
+    font: inherit;
+    line-height: inherit;
+    text-align: left;
+    cursor: pointer;
 }
 
 .team-card img {
@@ -1089,15 +1105,21 @@ div#textid h3 {
 }
 
 /* The name is already blue, so hovering underlines it instead. */
-a.team-card:hover .team-card-name, a.team-card:focus-visible .team-card-name {
+a.team-card:hover .team-card-name, a.team-card:focus-visible .team-card-name,
+button.team-card:hover .team-card-name, button.team-card:focus-visible .team-card-name {
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
 }
 
 /* The base sets focus rings 2px inside the link, over the text here. */
-a.team-card:focus-visible {
+a.team-card:focus-visible, button.team-card:focus-visible {
     outline-offset: 4px;
+}
+
+/* A card the contact window handed focus back to after a mouse click. */
+button.team-card.quiet-focus:focus-visible {
+    outline: none;
 }
 
 .team-card .team-role {
@@ -1494,8 +1516,9 @@ ul.publications_in_profile .cite-button {
    over the dimmed page, the citation in a grey box under the forms to
    choose from, the reference-manager forms in a monospaced face. The
    dialog has no padding of its own, so that a click on it is a click on
-   the page around .cite-box, which closes it. */
-.cite-dialog {
+   the page around .cite-box, which closes it. The people page's contact
+   windows (_includes/team_list.html) are the same card, narrower. */
+.cite-dialog, .contact-dialog {
     width: min(680px, calc(100vw - 32px));
     max-height: calc(100vh - 32px);
     max-height: calc(100dvh - 32px);
@@ -1508,11 +1531,12 @@ ul.publications_in_profile .cite-button {
 }
 
 /* Focus rests on the dialog itself when it opens, without a ring. */
-.cite-dialog:focus, .cite-dialog:focus-visible {
+.cite-dialog:focus, .cite-dialog:focus-visible,
+.contact-dialog:focus, .contact-dialog:focus-visible {
     outline: none;
 }
 
-.cite-dialog::backdrop {
+.cite-dialog::backdrop, .contact-dialog::backdrop {
     background: rgba(12, 12, 12, 0.55);
 }
 
@@ -1521,23 +1545,24 @@ ul.publications_in_profile .cite-button {
     display: none;
 }
 
-.cite-box {
+.cite-box, .contact-box {
     padding: 18px 24px 24px;
 }
 
-.cite-head {
+.cite-head, .contact-head {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 16px;
 }
 
-#gridid .cite-head h2, .cite-head h2 {
+#gridid .cite-head h2, .cite-head h2,
+#gridid .contact-head h2, .contact-head h2 {
     margin: 0;
     font-size: 22px;
 }
 
-.cite-close {
+.cite-close, .contact-close {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1552,8 +1577,21 @@ ul.publications_in_profile .cite-button {
     font-size: 18px;
 }
 
-.cite-close:hover, .cite-close:focus-visible {
+.cite-close:hover, .cite-close:focus-visible,
+.contact-close:hover, .contact-close:focus-visible {
     background: var(--hairline);
+}
+
+.contact-dialog {
+    width: min(420px, calc(100vw - 32px));
+}
+
+.contact-box .team-role {
+    margin-top: 4px;
+}
+
+.contact-box .chip-row {
+    margin-top: 18px;
 }
 
 .cite-paper {

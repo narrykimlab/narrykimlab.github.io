@@ -1,9 +1,9 @@
 /*
  * The site's script: the home page photo carousel, the photos page's
- * viewer, the Cite window of the paper lists, the topic list on
- * /publications/by-topic/, the email addresses (the people and member
- * pages' buttons, two in running text), and the internship's English |
- * 한국어 switch. It drives Bootstrap 3's carousel classes itself, without
+ * viewer, the Cite window of the paper lists, the people page's contact
+ * windows, the topic list on /publications/by-topic/, the email addresses
+ * (the people and member pages' buttons, two in running text), and the
+ * internship's English | 한국어 switch. It drives Bootstrap 3's carousel classes itself, without
  * jQuery or Bootstrap's own JS.
  *
  * Loaded with `defer` from _includes/head.html, so it runs once the document
@@ -266,50 +266,15 @@
 
   document.querySelectorAll('dialog.lightbox').forEach(lightbox);
 
-  // Cite window: <dialog class="cite-dialog"> (_includes/cite_dialog.html)
-  // on the pages that list papers. A Cite button under a paper opens it with
-  // that paper's citation in the form chosen at the top -- APA, Nature,
-  // BibTeX, EndNote or RIS -- from /publications/cite.json
-  // (_plugins/citations.rb), fetched the first time a button is pressed.
-  // Copy puts the text on the clipboard, or, where the browser will not,
-  // selects it to copy by hand; the three reference-manager forms can also
-  // be saved as a file. The close button, Escape and a click on the dimmed
-  // page close it, and focus goes back to the button it was opened from,
-  // ringed only if it was opened from the keyboard (as in the photo viewer).
-  // The buttons stay hidden where dialogs are not supported.
-  //
-  // Everything shown is set as text (textContent), never parsed as HTML.
-  function citeWindow(dialog) {
-    const buttons = document.querySelectorAll('button.cite-button');
-    if (!buttons.length || typeof dialog.showModal !== 'function') return;
-    const paper = dialog.querySelector('.cite-paper');
-    const text = dialog.querySelector('.cite-text');
-    const formats = [...dialog.querySelectorAll('[data-format]')];
-    const save = dialog.querySelector('.cite-save');
-    const status = dialog.querySelector('.cite-status');
-    // The forms that are also files: extension and media type.
-    const FILES = {
-      bibtex: ['bib', 'application/x-bibtex'],
-      endnote: ['enw', 'application/x-endnote-refer'],
-      ris: ['ris', 'application/x-research-info-systems'],
-    };
-    let citations = null;   // the fetch of cite.json, made once
-    let id = null;          // the paper shown
-    let entry = null;       // its citations, once loaded
-    let format = 'apa';
+  // A window over the dimmed page, as <dialog>: the Cite window and the
+  // people page's contact windows. modal() sets up what they share and
+  // returns the function that opens it from a button: the close button,
+  // Escape and a click on the dimmed page close it, and focus goes back to
+  // the button it was opened from, ringed only if it was opened from the
+  // keyboard (as in the photo viewer). onClose, if given, runs as it closes.
+  function modal(dialog, closeButton, onClose) {
     let opener = null;
     let openedByKey = false;
-
-    // A failed fetch is forgotten, so the next Cite button tries again.
-    const load = () => citations || (citations = fetch(dialog.dataset.src, { cache: 'no-cache' })
-      .then((r) => {
-        if (!r.ok) throw new Error(`cite.json: ${r.status}`);
-        return r.json();
-      })
-      .catch((e) => {
-        citations = null;
-        throw e;
-      }));
 
     // While the window is open the page behind it keeps its scroll bar, so
     // nothing there moves sideways as it would if the bar were taken away
@@ -352,6 +317,80 @@
       else document.removeEventListener(type, f, { capture: true });
     });
 
+    closeButton.addEventListener('click', () => dialog.close());
+
+    // The dialog's box is all its inner box, so a click on the dialog itself
+    // is a click on the dimmed page around it -- if it began there too: a
+    // selection dragged out of the text ends in a click on the dialog.
+    let downOutside = false;
+    dialog.addEventListener('pointerdown', (e) => { downOutside = e.target === dialog; });
+    dialog.addEventListener('click', (e) => {
+      if (e.target === dialog && downOutside) dialog.close();
+    });
+
+    dialog.addEventListener('close', () => {
+      holdPage(false);
+      if (onClose) onClose();
+      const button = opener;
+      if (!button) return;
+      if (!openedByKey) {
+        button.classList.add('quiet-focus');
+        button.addEventListener('blur', () => button.classList.remove('quiet-focus'), { once: true });
+      }
+      button.focus();
+    });
+
+    return (button, byKey) => {
+      opener = button;
+      openedByKey = byKey;
+      holdPage(true);
+      dialog.showModal();
+      dialog.focus();
+    };
+  }
+
+  // Cite window: <dialog class="cite-dialog"> (_includes/cite_dialog.html)
+  // on the pages that list papers. A Cite button under a paper opens it with
+  // that paper's citation in the form chosen at the top -- APA, Nature,
+  // BibTeX, EndNote or RIS -- from /publications/cite.json
+  // (_plugins/citations.rb), fetched the first time a button is pressed.
+  // Copy puts the text on the clipboard, or, where the browser will not,
+  // selects it to copy by hand; the three reference-manager forms can also
+  // be saved as a file. It opens and closes as every modal() window does.
+  // The buttons stay hidden where dialogs are not supported.
+  //
+  // Everything shown is set as text (textContent), never parsed as HTML.
+  function citeWindow(dialog) {
+    const buttons = document.querySelectorAll('button.cite-button');
+    if (!buttons.length || typeof dialog.showModal !== 'function') return;
+    const paper = dialog.querySelector('.cite-paper');
+    const text = dialog.querySelector('.cite-text');
+    const formats = [...dialog.querySelectorAll('[data-format]')];
+    const save = dialog.querySelector('.cite-save');
+    const status = dialog.querySelector('.cite-status');
+    // The forms that are also files: extension and media type.
+    const FILES = {
+      bibtex: ['bib', 'application/x-bibtex'],
+      endnote: ['enw', 'application/x-endnote-refer'],
+      ris: ['ris', 'application/x-research-info-systems'],
+    };
+    let citations = null;   // the fetch of cite.json, made once
+    let id = null;          // the paper shown
+    let entry = null;       // its citations, once loaded
+    let format = 'apa';
+    const openWindow = modal(dialog, dialog.querySelector('.cite-close'), () => { id = null; });
+
+    // A failed fetch is forgotten, so the next Cite button tries again.
+    const load = () => citations || (citations = fetch(dialog.dataset.src, { cache: 'no-cache' })
+      .then((r) => {
+        if (!r.ok) throw new Error(`cite.json: ${r.status}`);
+        return r.json();
+      })
+      .catch((e) => {
+        citations = null;
+        throw e;
+      }));
+
     function show() {
       formats.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.format === format)));
       const file = FILES[format];
@@ -363,16 +402,12 @@
     }
 
     function open(button, byKey) {
-      opener = button;
-      openedByKey = byKey;
       id = button.dataset.cite;
       entry = null;
       paper.textContent = button.closest('p, li')?.querySelector('.publi_title')?.textContent || '';
       text.textContent = 'Loading…';
       show();
-      holdPage(true);
-      dialog.showModal();
-      dialog.focus();
+      openWindow(button, byKey);
       const asked = id;
       load().then((all) => {
         if (asked !== id || !dialog.open) return;   // closed, or another paper since
@@ -425,32 +460,27 @@
       link.remove();
       setTimeout(() => URL.revokeObjectURL(url), 10000);
     });
-
-    dialog.querySelector('.cite-close').addEventListener('click', () => dialog.close());
-
-    // The dialog's box is all .cite-box, so a click on the dialog itself is
-    // a click on the dimmed page around it -- if it began there too: a
-    // selection dragged out of the text ends in a click on the dialog.
-    let downOutside = false;
-    dialog.addEventListener('pointerdown', (e) => { downOutside = e.target === dialog; });
-    dialog.addEventListener('click', (e) => {
-      if (e.target === dialog && downOutside) dialog.close();
-    });
-
-    dialog.addEventListener('close', () => {
-      holdPage(false);
-      id = null;
-      const button = opener;
-      if (!button) return;
-      if (!openedByKey) {
-        button.classList.add('quiet-focus');
-        button.addEventListener('blur', () => button.classList.remove('quiet-focus'), { once: true });
-      }
-      button.focus();
-    });
   }
 
   document.querySelectorAll('dialog.cite-dialog').forEach(citeWindow);
+
+  // The people page's cards of members without a profile page
+  // (_includes/team_list.html): the card, a plain box until here, becomes a
+  // button that opens a window with the member's email, as a profile card is
+  // a link to the profile. Where dialogs are not supported it stays a box.
+  document.querySelectorAll('div.team-card[data-contact]').forEach((card) => {
+    const dialog = document.getElementById(card.dataset.contact);
+    if (!dialog || typeof dialog.showModal !== 'function') return;
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = card.className;
+    button.setAttribute('aria-haspopup', 'dialog');
+    button.append(...card.childNodes);
+    card.replaceWith(button);
+    const openWindow = modal(dialog, dialog.querySelector('.contact-close'));
+    // e.detail is the click count: 0 for Enter or Space.
+    button.addEventListener('click', (e) => openWindow(button, e.detail === 0));
+  });
 
   // The topic list beside the papers on /publications/by-topic/ marks the
   // topic being read: the last heading to have scrolled above a line a third

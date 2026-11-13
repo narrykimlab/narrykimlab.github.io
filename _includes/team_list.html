@@ -1,7 +1,10 @@
 {%- comment -%}
   The people page's member cards: the active members whose category is in
-  selected_categories, by sort-key, each a link to the profile (but for a
-  member with `has_profile: false`, who has none: _plugins/profiles.rb). Photos are
+  selected_categories, by sort-key, each a link to the profile. A member with
+  `has_profile: false` has none (_plugins/profiles.rb): their card opens a
+  window with their email instead (a <dialog class="contact-dialog"> after
+  the cards, one for each; js/site.js turns the card into its button, and
+  without scripts the card is a plain box). Photos are
   cropped to 4:5 by CSS, whatever shape the file is. With order="monthly"
   the cards are shuffled into an order that changes every month
   (_plugins/monthly_shuffle.rb).
@@ -17,7 +20,7 @@
 {%- if include.order == "monthly" %}{% assign members_by_name = members_by_name | monthly_shuffle %}{% endif -%}
 <div class="team-grid" markdown="0">
 {%- for member in members_by_name %}
-{% if member.link and member.has_profile %}<a class="team-card" href="{{ site.baseurl }}/people/{{ member.link }}">{% else %}<div class="team-card">{% endif %}
+{% if member.link and member.has_profile %}<a class="team-card" href="{{ site.baseurl }}/people/{{ member.link }}">{% elsif member.email %}<div class="team-card" data-contact="contact-{{ member['sort-key'] }}">{% else %}<div class="team-card">{% endif %}
 {% picture member-card images/members/{{ member.photo }} alt="" %}
 <span class="team-card-name">{{ member.name }}</span>
 <span class="team-role">{{ member.info }}</span>
@@ -27,3 +30,17 @@
 {% if member.link and member.has_profile %}</a>{% else %}</div>{% endif %}
 {%- endfor %}
 </div>
+{%- for member in members_by_name %}
+{%- unless member.link and member.has_profile %}{% if member.email %}
+<dialog class="contact-dialog" id="contact-{{ member['sort-key'] }}" aria-labelledby="contact-{{ member['sort-key'] }}-name" tabindex="-1" markdown="0">
+<div class="contact-box">
+<div class="contact-head">
+<h2 id="contact-{{ member['sort-key'] }}-name">{{ member.name }}</h2>
+<button type="button" class="contact-close" aria-label="Close">{% include icon.html name="times" %}</button>
+</div>
+<p class="team-role">{{ member.info }}</p>
+<div class="chip-row">{% include email_chip.html address=member.email name=member.name %}</div>
+</div>
+</dialog>
+{%- endif %}{% endunless %}
+{%- endfor %}

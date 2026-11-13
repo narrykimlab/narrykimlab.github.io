@@ -84,7 +84,10 @@ Tech stack: Jekyll 4.x (Gemfile pins `~> 4.3`), Kramdown (GFM), Liquid templates
   `/publications/cite.json` the first time; Copy puts it on the clipboard (or selects it
   to copy by hand) and the last three can be downloaded as files. It closes like the
   photo viewer and hands focus back to the button. Without scripts the buttons stay
-  hidden. On /join/intern/ it shows the English | 한국어 switch (hidden without
+  hidden. The people page's contact windows (`<dialog class="contact-dialog">`, a member
+  without a profile page) are the same white card, narrower, opened by the member's card
+  and closed the same way; the two share `modal()` in the script, which a new window of
+  the kind should use too. Without scripts such a card is a plain box. On /join/intern/ it shows the English | 한국어 switch (hidden without
   scripts, which leave the English) and swaps the two copies of the call; the choice is
   kept in `localStorage` under `nkl-internship-lang`, the only thing the site stores
   in a visitor's browser. Only "en" or "ko" is written, and a value read back is used
@@ -200,7 +203,8 @@ update the matching rule.
   false, whether that page is built. With `has_profile: false` (the administration office's
   staff, and anyone with nothing to say on a page) `_plugins/profiles.rb` leaves the page
   out of the site, so its address is a 404 and the sitemap skips it, and nothing links to
-  it: the card is not a link, and as an author (still named by `link`) the name is plain.
+  it: the card instead opens a window with the member's `email` (the people page's
+  contact windows, below), and as an author (still named by `link`) the name is plain.
   The page's file stays, on the Notion page too, so setting `true` again brings it back.
 - **publist.yml** — Papers, newest first; /publications/ groups them by `year` as they
   come, so the order matters (the data check enforces it). Fields: `authors`, `title`,
@@ -299,7 +303,9 @@ pages opens with chips to the other, as the publication pages do.
 - **team_lead.html** — The people page's opening band: the PI's photo, role, name, intro
   and buttons (her full profile, email).
 - **team_list.html** — The member cards (4:5 photo, name, role, optional intro; each a link
-  to the profile, unless `has_profile: false`), for the active members in
+  to the profile, or, with `has_profile: false`, a button that looks the same and opens
+  `<dialog class="contact-dialog">`, one after the cards for each such member, with
+  their name, role and email button), for the active members in
   `selected_categories`. With `order="monthly"` they are shuffled into an order seeded
   by the month in Korea (`_plugins/monthly_shuffle.rb`); `TEAM_ORDER_MONTH=2026-11`
   builds as if it were another month.
